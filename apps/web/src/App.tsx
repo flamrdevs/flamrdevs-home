@@ -1,10 +1,14 @@
+import { Suspense } from "solid-js";
+
 import Router from "~/Router";
 import Routes from "~/Routes";
 
 const App = () => {
 	return (
 		<Router>
-			<Routes />
+			<Suspense>
+				<Routes />
+			</Suspense>
 		</Router>
 	);
 };
