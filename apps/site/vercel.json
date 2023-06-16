@@ -1,0 +1,17 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"framework": "astro",
+	"buildCommand": "turbo build",
+	"outputDirectory": "dist",
+	"headers": [
+		{
+			"source": "/(.*)",
+			"headers": [
+				{
+					"key": "Cache-Control",
+					"value": "public, max-age=2592000"
+				}
+			]
+		}
+	]
+}

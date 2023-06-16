@@ -1,0 +1,6 @@
+{
+	"extends": "@flamrdevs/tsc/package-astro.json",
+	"compilerOptions": {
+		"types": ["astro/client"]
+	}
+}

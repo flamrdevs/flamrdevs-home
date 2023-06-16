@@ -1,0 +1,9 @@
+{
+	"$schema": "http://json.schemastore.org/tsconfig",
+	"extends": "./.json",
+	"compilerOptions": {
+		"types": ["astro/client"],
+		"jsx": "preserve",
+		"jsxImportSource": "solid-js"
+	}
+}

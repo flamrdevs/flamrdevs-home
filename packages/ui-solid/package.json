@@ -1,0 +1,14 @@
+{
+	"name": "@flamrdevs/ui-solid",
+	"private": true,
+	"dependencies": {
+		"@flamrdevs/const": "workspace:*",
+		"@flamrdevs/ui": "workspace:*",
+		"@flamrdevs/x": "workspace:*",
+		"@flamrdevs/x-solid": "workspace:*",
+		"solid-js": "^1.7.6"
+	},
+	"devDependencies": {
+		"@flamrdevs/tsc": "workspace:*"
+	}
+}

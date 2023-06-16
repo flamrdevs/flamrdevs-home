@@ -1,0 +1,12 @@
+{
+	"name": "@flamrdevs/x-astro",
+	"private": true,
+	"dependencies": {
+		"@flamrdevs/const": "workspace:*",
+		"@flamrdevs/x": "workspace:*",
+		"astro": "^2.6.4"
+	},
+	"devDependencies": {
+		"@flamrdevs/tsc": "workspace:*"
+	}
+}

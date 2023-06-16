@@ -1,0 +1,6 @@
+{
+	"extends": "@flamrdevs/tsc/package-solid.json",
+	"compilerOptions": {
+		"types": ["vite/client"]
+	}
+}

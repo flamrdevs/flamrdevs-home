@@ -1,0 +1,30 @@
+---
+import * as HOST from "@flamrdevs/utils/host";
+
+import "@flamrdevs/ui/core/globals.css";
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const TITLE_DEFAULT = "flamrdevs";
+const DESCRIPTION_DEFAULT = "flamrdevs";
+
+const { title = TITLE_DEFAULT, description = DESCRIPTION_DEFAULT } = Astro.props;
+---
+
+<html data-theme="dark">
+  <head>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="icon" type="image/x-icon" href={HOST.STATIC("favicon.ico")} />
+
+    <link rel="stylesheet" href={HOST.STATIC("stylesheets", "reset.css")} />
+    <link rel="stylesheet" href={HOST.STATIC("stylesheets", "fonts.css")} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

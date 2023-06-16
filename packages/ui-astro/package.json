@@ -1,0 +1,14 @@
+{
+	"name": "@flamrdevs/ui-astro",
+	"private": true,
+	"dependencies": {
+		"@flamrdevs/const": "workspace:*",
+		"@flamrdevs/ui": "workspace:*",
+		"@flamrdevs/x": "workspace:*",
+		"@flamrdevs/x-astro": "workspace:*",
+		"astro": "^2.6.4"
+	},
+	"devDependencies": {
+		"@flamrdevs/tsc": "workspace:*"
+	}
+}

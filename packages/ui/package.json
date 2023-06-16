@@ -1,0 +1,11 @@
+{
+  "name": "@flamrdevs/ui",
+  "private": true,
+  "dependencies": {
+    "@flamrdevs/const": "workspace:*",
+    "@flamrdevs/x": "workspace:*"
+  },
+  "devDependencies": {
+    "@flamrdevs/tsc": "workspace:*"
+  }
+}
