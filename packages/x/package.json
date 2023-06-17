@@ -2,7 +2,8 @@
   "name": "@flamrdevs/x",
   "private": true,
   "dependencies": {
-    "@flamrdevs/const": "workspace:*"
+    "@flamrdevs/const": "workspace:*",
+    "clsx": "^1.2.1"
   },
   "devDependencies": {
     "@flamrdevs/tsc": "workspace:*"

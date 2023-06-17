@@ -1,9 +1,13 @@
+import Text from "@flamrdevs/ui-solid/core/Text";
+
 import { Outlet } from "@flamrdevs/x-solid/modules/router";
 
 const DashLayout = () => {
 	return (
 		<div>
-			<h1>DashLayout</h1>
+			<Text family="mono" size="lg" weight={500} align="center">
+				DashLayout
+			</Text>
 			<div>
 				<Outlet />
 			</div>

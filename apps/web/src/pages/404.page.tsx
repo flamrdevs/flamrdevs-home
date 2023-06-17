@@ -1,7 +1,11 @@
+import Text from "@flamrdevs/ui-solid/core/Text";
+
 const NotFoundPage = () => {
 	return (
 		<>
-			<h1 id="head">404 | not found</h1>
+			<Text family="mono" size="xl" weight={700}>
+				404 | not found
+			</Text>
 		</>
 	);
 };

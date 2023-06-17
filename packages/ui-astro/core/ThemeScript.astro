@@ -1,0 +1,13 @@
+<script is:inline>
+(() => {
+  let theme;
+  try {
+    theme = storage.getItem("flamrdevs:theme");
+    if (theme) theme = JSON.parse(theme);
+  } catch (error) {
+  } finally {
+    if (theme !== "dark" && theme !== "light") theme = "dark";
+    document.documentElement.setAttribute("data-theme", theme);
+  }
+})();
+</script>

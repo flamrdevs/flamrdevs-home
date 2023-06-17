@@ -1,7 +1,9 @@
 ---
-import * as HOST from "@flamrdevs/utils/host";
+import "@flamrdevs/ui/core/styles/globals.css";
 
-import "@flamrdevs/ui/core/globals.css";
+import ThemeScript from "@flamrdevs/ui-astro/core/ThemeScript.astro";
+
+import * as HOST from "@flamrdevs/utils/host";
 
 type Props = {
   title?: string;
@@ -23,8 +25,15 @@ const { title = TITLE_DEFAULT, description = DESCRIPTION_DEFAULT } = Astro.props
 
     <link rel="stylesheet" href={HOST.STATIC("stylesheets", "reset.css")} />
     <link rel="stylesheet" href={HOST.STATIC("stylesheets", "fonts.css")} />
+
+    <ThemeScript />
   </head>
   <body>
     <slot />
+    <script>
+      import { initTheme } from "~/stores/theme";
+
+      initTheme();
+    </script>
   </body>
 </html>

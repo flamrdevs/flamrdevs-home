@@ -1,7 +1,11 @@
+import Text from "@flamrdevs/ui-solid/core/Text";
+
 const DashSettingsPage = () => {
 	return (
 		<div>
-			<h2>DashSettingsPage</h2>
+			<Text family="mono" size="md" weight={400} align="center">
+				DashSettingsPage
+			</Text>
 		</div>
 	);
 };

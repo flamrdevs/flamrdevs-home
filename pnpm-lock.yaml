@@ -10,6 +10,12 @@ importers:
       '@vanilla-extract/css':
         specifier: ^1.11.1
         version: 1.11.1
+      '@vanilla-extract/recipes':
+        specifier: ^0.4.0
+        version: 0.4.0(@vanilla-extract/css@1.11.1)
+      '@vanilla-extract/sprinkles':
+        specifier: ^1.6.0
+        version: 1.6.0(@vanilla-extract/css@1.11.1)
       '@vanilla-extract/vite-plugin':
         specifier: ^3.8.2
         version: 3.8.2(@types/node@20.3.1)(vite@4.3.9)
@@ -115,8 +121,6 @@ importers:
         specifier: workspace:*
         version: link:../tsc
 
-  packages/dev: {}
-
   packages/tsc: {}
 
   packages/ui:
@@ -191,6 +195,9 @@ importers:
       '@flamrdevs/const':
         specifier: workspace:*
         version: link:../const
+      clsx:
+        specifier: ^1.2.1
+        version: 1.2.1
     devDependencies:
       '@flamrdevs/tsc':
         specifier: workspace:*
@@ -1349,6 +1356,22 @@ packages:
     resolution: {integrity: sha512-17kVyLq3ePTKOkveHxXuIJZtGYs+cSoev7BlP+Lf4916qfDhk/HBjvlYDe8egrea7LNPHKwSZJK/bzZC+Q6AwQ==}
     dev: true
 
+  /@vanilla-extract/recipes@0.4.0(@vanilla-extract/css@1.11.1):
+    resolution: {integrity: sha512-gFgB7BofUYbtbxINHK6DhMv1JDFDXp/YI/Xm+cqKar+1I/2dfxPepeDxSexL6YB4ftfeaDw8Kn5zydMvHcGOEQ==}
+    peerDependencies:
+      '@vanilla-extract/css': ^1.0.0
+    dependencies:
+      '@vanilla-extract/css': 1.11.1
+    dev: true
+
+  /@vanilla-extract/sprinkles@1.6.0(@vanilla-extract/css@1.11.1):
+    resolution: {integrity: sha512-TDc/bKyYmt6PDd7/39a5HXUa+4mBI9PO0uw0jmxFMqe9EzrFEVevyRsjJ9KGK09ACItvVUotz98LIJTeliCbpQ==}
+    peerDependencies:
+      '@vanilla-extract/css': ^1.0.0
+    dependencies:
+      '@vanilla-extract/css': 1.11.1
+    dev: true
+
   /@vanilla-extract/vite-plugin@3.8.2(@types/node@20.3.1)(vite@4.3.9):
     resolution: {integrity: sha512-i0vpuBUoh10Obl0hJr0dWQa6M3Udu/irm4tnsg1lUze8DXTbv3ctHmVu/wrRZHKw1EzzW/v+nLoJJRvisApspQ==}
     peerDependencies:
@@ -1766,6 +1789,11 @@ packages:
   /clone@1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
+
+  /clsx@1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
 
   /color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}

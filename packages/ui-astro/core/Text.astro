@@ -1,0 +1,17 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+import * as TextCSS from "@flamrdevs/ui/core/Text.recipe.css";
+
+import clsx from "@flamrdevs/x/modules/clsx";
+
+type Props = HTMLAttributes<"div"> & TextCSS.Variants;
+
+const { family, size, weight, align, class: _class, "class:list": classList, ...attrs } = Astro.props;
+
+const className = clsx(TextCSS.Root({ family, size, weight, align }), _class, classList);
+---
+
+<div {...attrs} class={className}>
+  <slot />
+</div>
