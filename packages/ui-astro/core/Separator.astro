@@ -1,0 +1,15 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+import * as SeparatorCSS from "@flamrdevs/ui/core/Separator.style.css";
+
+import clsx from "@flamrdevs/x/modules/clsx";
+
+type Props = Omit<HTMLAttributes<"hr">, "orientation"> & { orientation?: "horizontal" | "vertical" };
+
+const { orientation = "horizontal", class: _class, "class:list": classList, ...attrs } = Astro.props;
+
+const className = clsx(SeparatorCSS.Root, _class, classList);
+---
+
+<hr {...attrs} class={className} data-orientation={orientation} />

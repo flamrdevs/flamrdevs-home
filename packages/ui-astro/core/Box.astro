@@ -1,0 +1,17 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
+
+import clsx from "@flamrdevs/x/modules/clsx";
+
+type Props = HTMLAttributes<"div"> & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
+
+const { m, mx, my, mt, mr, mb, ml, p, px, py, pt, pr, pb, pl, class: _class, "class:list": classList, ...attrs } = Astro.props;
+
+const className = clsx(Sprinkles.Margin({ m, mx, my, mt, mr, mb, ml }), Sprinkles.Padding({ p, px, py, pt, pr, pb, pl }), _class, classList);
+---
+
+<div {...attrs} class={className}>
+  <slot />
+</div>

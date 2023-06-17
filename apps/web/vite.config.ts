@@ -27,7 +27,7 @@ export default defineConfig(({ command }) => {
 						.replace(/{{TITLE}}/g, "flamrdevs")
 						.replace(/{{DESCRIPTION}}/g, "flamrdevs")
 						.replace(/{{FAVICON}}/g, STATIC("favicon.ico"))
-						.replace(/{{STYLESHEET_RESET}}/g, STATIC("stylesheets", "reset.css"))
+						.replace(/{{STYLESHEET_NORMALIZE}}/g, STATIC("stylesheets", "normalize.css"))
 						.replace(/{{STYLESHEET_FONTS}}/g, STATIC("stylesheets", "fonts.css"));
 				},
 			},

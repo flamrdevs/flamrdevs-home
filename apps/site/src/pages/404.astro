@@ -1,11 +1,19 @@
 ---
 import HTMLX from "~/components/core/HTMLX.astro";
 
+import Box from "@flamrdevs/ui-astro/core/Box.astro";
 import Text from "@flamrdevs/ui-astro/core/Text.astro";
+import Separator from "@flamrdevs/ui-astro/core/Separator.astro";
+
+import * as StyleCSS from "~/styles/pages/404.css";
 ---
 
 <HTMLX title="404" description="page not found">
   <div id="root">
-    <Text family="mono" size="xl" weight={700}>404 | not found</Text>
+    <Box p="md" class={StyleCSS.Root}>
+      <Text family="mono" size="xl" weight={700}>404</Text>
+      <Separator orientation="vertical" />
+      <Text family="mono" size="xl" weight={700}>not found</Text>
+    </Box>
   </div>
 </HTMLX>

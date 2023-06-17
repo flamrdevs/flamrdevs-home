@@ -6,6 +6,7 @@
     "@flamrdevs/x": "workspace:*"
   },
   "devDependencies": {
-    "@flamrdevs/tsc": "workspace:*"
+    "@flamrdevs/tsc": "workspace:*",
+    "@kobalte/vanilla-extract": "^0.4.0"
   }
 }

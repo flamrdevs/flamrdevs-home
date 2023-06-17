@@ -1,11 +1,26 @@
 ---
 import HTMLX from "~/components/core/HTMLX.astro";
 
+import Box from "@flamrdevs/ui-astro/core/Box.astro";
 import Text from "@flamrdevs/ui-astro/core/Text.astro";
+import Separator from "@flamrdevs/ui-astro/core/Separator.astro";
+import Button from "@flamrdevs/ui-astro/core/Button.astro";
+
+import * as StyleCSS from "~/styles/pages/index.css";
 ---
 
 <HTMLX>
   <div id="root">
-    <Text family="mono" size="xl" weight={700}>flamrdevs</Text>
+    <Box p="md" class={StyleCSS.Root}>
+      <Text family="mono" size="xl" weight={700} align="center">flamrdevs</Text>
+      <Separator orientation="horizontal" />
+      <Button id="toggle-theme-button" font="mono">theme</Button>
+    </Box>
   </div>
 </HTMLX>
+
+<script>
+  import { toggleTheme } from "~/stores/theme";
+
+  document.getElementById("toggle-theme-button")!.addEventListener("click", toggleTheme);
+</script>

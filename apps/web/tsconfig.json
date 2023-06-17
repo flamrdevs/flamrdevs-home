@@ -1,13 +1,14 @@
 {
-  "extends": "@flamrdevs/tsc/.json",
-  "compilerOptions": {
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js",
-    "baseUrl": "./",
-    "paths": {
-      "~/*": ["./src/*"]
-    }
-  },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+	"extends": "@flamrdevs/tsc/.json",
+	"compilerOptions": {
+		"strictNullChecks": true,
+		"jsx": "preserve",
+		"jsxImportSource": "solid-js",
+		"baseUrl": "./",
+		"paths": {
+			"~/*": ["./src/*"]
+		}
+	},
+	"include": ["src"],
+	"exclude": ["node_modules"]
 }

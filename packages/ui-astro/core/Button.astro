@@ -1,0 +1,23 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+import * as ButtonCSS from "@flamrdevs/ui/core/Button.recipe.css";
+
+import clsx from "@flamrdevs/x/modules/clsx";
+
+type Props = HTMLAttributes<"button"> & ButtonCSS.Variants & ButtonCSS.InnerVariants & ButtonCSS.ChildVariants;
+
+const { color, font, size, class: _class, "class:list": classList, ...attrs } = Astro.props;
+
+const className = clsx(ButtonCSS.Root({ color, size }), _class, classList);
+const innerClassName = ButtonCSS.Inner({ color });
+const childClassName = ButtonCSS.Child({ font, size });
+---
+
+<button {...attrs} class={className}>
+  <div class={innerClassName}>
+    <div class={childClassName}>
+      <slot />
+    </div>
+  </div>
+</button>

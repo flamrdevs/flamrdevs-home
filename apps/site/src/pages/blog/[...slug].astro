@@ -1,0 +1,29 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+import HTMLX from "~/components/core/HTMLX.astro";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const collection = await getCollection("blog");
+
+  return collection.map((item) => ({
+    params: { slug: item.slug },
+    props: { entry: item },
+  }));
+};
+
+type Props = {
+  entry: CollectionEntry<"blog">;
+};
+
+const { data, render } = Astro.props.entry;
+const { Content } = await render();
+---
+
+<HTMLX title={data.title} description={data.description}>
+  <div id="root">
+    <Content />
+  </div>
+</HTMLX>
