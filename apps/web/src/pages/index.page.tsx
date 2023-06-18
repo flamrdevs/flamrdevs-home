@@ -1,13 +1,19 @@
+import { Show } from "solid-js";
+
 import { Padding } from "@flamrdevs/ui/core/Sprinkles.css";
 
 import clsx from "@flamrdevs/x/modules/clsx";
 
-import { Box, Button, Center, Container, IconButton, Separator, Text } from "~/components/core";
-import { WeatherSunny } from "~/components/icons/fluent";
+import { useStore } from "@flamrdevs/x-solid/libs/store";
 
-import { toggleTheme } from "~/stores/theme";
+import { Box, Button, Center, Container, IconButton, Separator, Text } from "~/components/core";
+import { WeatherMoon, WeatherSunny } from "~/components/icons/fluent";
+
+import { ThemeStore, toggleTheme } from "~/stores/theme";
 
 const IndexPage = () => {
+	const theme = useStore(ThemeStore);
+
 	return (
 		<Container max="md" class={clsx(Padding({ p: "md" }))}>
 			<Text family="mono" size="xl" weight={700} align="center">
@@ -21,7 +27,9 @@ const IndexPage = () => {
 					theme
 				</Button>
 				<IconButton onClick={toggleTheme}>
-					<WeatherSunny />
+					<Show when={theme() === "dark"} fallback={<WeatherSunny />}>
+						<WeatherMoon />
+					</Show>
 				</IconButton>
 			</Center>
 		</Container>
