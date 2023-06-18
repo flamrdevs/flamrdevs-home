@@ -1,20 +1,22 @@
-import Box from "@flamrdevs/ui-solid/core/Box";
-import Text from "@flamrdevs/ui-solid/core/Text";
-import Separator from "@flamrdevs/ui-solid/core/Separator";
+import { Padding } from "@flamrdevs/ui/core/Sprinkles.css";
 
-import * as StyleCSS from "./404.page.css";
+import clsx from "@flamrdevs/x/modules/clsx";
+
+import { Box, Container, Separator, Text } from "~/components/core";
 
 const NotFoundPage = () => {
 	return (
-		<Box p="md" class={StyleCSS.Root}>
-			<Text family="mono" size="xl" weight={700}>
+		<Container max="md" class={clsx(Padding({ p: "md" }))}>
+			<Text family="mono" size="xl" weight={700} align="center">
 				404
 			</Text>
-			<Separator orientation="vertical" />
-			<Text family="mono" size="xl" weight={700}>
+			<Box py="md">
+				<Separator orientation="horizontal" />
+			</Box>
+			<Text family="mono" size="xl" weight={700} align="center">
 				not found
 			</Text>
-		</Box>
+		</Container>
 	);
 };
 

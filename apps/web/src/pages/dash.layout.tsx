@@ -1,6 +1,6 @@
-import Text from "@flamrdevs/ui-solid/core/Text";
-
 import { Outlet } from "@flamrdevs/x-solid/modules/router";
+
+import { Text } from "~/components/core";
 
 const DashLayout = () => {
 	return (

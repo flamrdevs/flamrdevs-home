@@ -1,4 +1,4 @@
-import Text from "@flamrdevs/ui-solid/core/Text";
+import { Text } from "~/components/core";
 
 const DashIndexPage = () => {
 	return (

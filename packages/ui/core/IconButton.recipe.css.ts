@@ -1,7 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import * as FONTS from "./styles/fonts";
 import { ColorsContract } from "./styles/contract.css";
 
 type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
@@ -33,6 +32,7 @@ const Root = recipe({
 		},
 		size: {
 			md: {
+				width: "1.750rem",
 				height: "1.750rem",
 				padding: 1,
 			},
@@ -85,26 +85,15 @@ const Child = recipe({
 		alignItems: "center",
 		width: "100%",
 		height: "100%",
-		fontSize: 16,
-		fontWeight: 500,
 	},
 	variants: {
-		font: {
-			sans: {
-				fontFamily: FONTS.SANS,
-			},
-			mono: {
-				fontFamily: FONTS.MONO,
-			},
-		},
 		size: {
 			md: {
-				padding: "0.2rem 1rem",
+				padding: "0.2rem",
 			},
 		},
 	},
 	defaultVariants: {
-		font: "sans",
 		size: "md",
 	},
 });

@@ -11,11 +11,10 @@ globalStyle("body", {
 	color: ColorsContract.neutral[12],
 });
 
-globalStyle("#root", {
-	display: "flex",
-	justifyContent: "center",
-	alignItems: "center",
-	width: "100vw",
-	height: "100vh",
-	overflow: "hidden",
+globalStyle(".fluent-icon", {
+	color: "currentcolor",
+});
+
+globalStyle(".fluent-icon > path", {
+	fill: "currentcolor",
 });

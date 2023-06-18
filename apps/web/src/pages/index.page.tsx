@@ -1,23 +1,30 @@
-import Box from "@flamrdevs/ui-solid/core/Box";
-import Text from "@flamrdevs/ui-solid/core/Text";
-import Separator from "@flamrdevs/ui-solid/core/Separator";
-import Button from "@flamrdevs/ui-solid/core/Button";
+import { Padding } from "@flamrdevs/ui/core/Sprinkles.css";
+
+import clsx from "@flamrdevs/x/modules/clsx";
+
+import { Box, Button, Center, Container, IconButton, Separator, Text } from "~/components/core";
+import { WeatherSunny } from "~/components/icons/fluent";
 
 import { toggleTheme } from "~/stores/theme";
 
-import * as StyleCSS from "./index.page.css";
-
 const IndexPage = () => {
 	return (
-		<Box p="md" class={StyleCSS.Root}>
+		<Container max="md" class={clsx(Padding({ p: "md" }))}>
 			<Text family="mono" size="xl" weight={700} align="center">
 				flamrdevs
 			</Text>
-			<Separator orientation="horizontal" />
-			<Button font="mono" onClick={toggleTheme}>
-				theme
-			</Button>
-		</Box>
+			<Box py="md">
+				<Separator orientation="horizontal" />
+			</Box>
+			<Center gap="sm">
+				<Button font="mono" onClick={toggleTheme}>
+					theme
+				</Button>
+				<IconButton onClick={toggleTheme}>
+					<WeatherSunny />
+				</IconButton>
+			</Center>
+		</Container>
 	);
 };
 

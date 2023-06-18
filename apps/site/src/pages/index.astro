@@ -1,26 +1,39 @@
 ---
-import HTMLX from "~/components/core/HTMLX.astro";
+import { Padding } from "@flamrdevs/ui/core/Sprinkles.css";
 
-import Box from "@flamrdevs/ui-astro/core/Box.astro";
-import Text from "@flamrdevs/ui-astro/core/Text.astro";
-import Separator from "@flamrdevs/ui-astro/core/Separator.astro";
-import Button from "@flamrdevs/ui-astro/core/Button.astro";
+import clsx from "@flamrdevs/x/modules/clsx";
 
-import * as StyleCSS from "~/styles/pages/index.css";
+import { HTMLX, Box, Button, Center, Container, IconButton, Separator, Text } from "~/components/core";
+import { WeatherMoon, WeatherSunny } from "~/components/icons/fluent";
 ---
 
 <HTMLX>
-  <div id="root">
-    <Box p="md" class={StyleCSS.Root}>
-      <Text family="mono" size="xl" weight={700} align="center">flamrdevs</Text>
+  <Container max="md" class={clsx(Padding({ p: "md" }))}>
+    <Text family="mono" size="xl" weight={700} align="center">flamrdevs</Text>
+    <Box py="md">
       <Separator orientation="horizontal" />
-      <Button id="toggle-theme-button" font="mono">theme</Button>
     </Box>
-  </div>
+    <Center gap="sm">
+      <Button id="toggle-theme-button" font="mono">theme</Button>
+
+      <IconButton id="light-theme-icon-button">
+        <WeatherSunny />
+      </IconButton>
+      <IconButton id="dark-theme-icon-button">
+        <WeatherMoon />
+      </IconButton>
+    </Center>
+  </Container>
 </HTMLX>
 
 <script>
-  import { toggleTheme } from "~/stores/theme";
+  import { changeTheme, toggleTheme } from "~/stores/theme";
 
   document.getElementById("toggle-theme-button")!.addEventListener("click", toggleTheme);
+  document.getElementById("light-theme-icon-button")!.addEventListener("click", () => {
+    changeTheme("light");
+  });
+  document.getElementById("dark-theme-icon-button")!.addEventListener("click", () => {
+    changeTheme("dark");
+  });
 </script>

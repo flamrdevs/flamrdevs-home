@@ -21,11 +21,11 @@ const DEFAULTCONDITION = "base" satisfies keyof typeof CONDITIONS;
 
 const SPACE = {
 	none: 0,
-	xs: "0.4rem",
-	sm: "0.8rem",
-	md: "1.2rem",
-	lg: "1.6rem",
-	xl: "2.0rem",
+	xs: "0.2rem",
+	sm: "0.6rem",
+	md: "1.0rem",
+	lg: "1.4rem",
+	xl: "1.8rem",
 };
 
 type MarginVariants = Parameters<typeof Margin>[0];
@@ -74,5 +74,23 @@ const PaddingProperties = defineProperties({
 });
 const Padding = createSprinkles(PaddingProperties);
 
-export type { MarginShorthandsVariants, PaddingShorthandsVariants };
-export { Margin, Padding };
+type GapVariants = Parameters<typeof Gap>[0];
+type GapShorthandsVariants = Omit<GapVariants, "rowGap" | "columnGap">;
+const GapProperties = defineProperties({
+	conditions: CONDITIONS,
+	defaultCondition: DEFAULTCONDITION,
+	properties: {
+		gap: SPACE,
+		rowGap: SPACE,
+		columnGap: SPACE,
+	},
+	shorthands: {
+		gapr: ["rowGap"],
+		gapc: ["columnGap"],
+	},
+});
+const Gap = createSprinkles(GapProperties);
+
+export type { MarginShorthandsVariants, PaddingShorthandsVariants, GapShorthandsVariants };
+export { SCREEN };
+export { Margin, Padding, Gap };

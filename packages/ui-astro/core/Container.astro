@@ -1,0 +1,17 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+import * as ContainerCSS from "@flamrdevs/ui/core/Container.recipe.css";
+
+import clsx from "@flamrdevs/x/modules/clsx";
+
+type Props = HTMLAttributes<"div"> & ContainerCSS.Variants;
+
+const { center, max, class: _class, "class:list": classList, ...attrs } = Astro.props;
+
+const className = clsx(ContainerCSS.Root({ center, max }), _class, classList);
+---
+
+<div {...attrs} class={className}>
+  <slot />
+</div>

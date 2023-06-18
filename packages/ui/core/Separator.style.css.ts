@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+
 import { ColorsContract } from "./styles/contract.css";
 
 const Root = style({

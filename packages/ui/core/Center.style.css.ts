@@ -2,10 +2,8 @@ import { style } from "@vanilla-extract/css";
 
 const Root = style({
 	display: "flex",
-	flexDirection: "row",
 	justifyContent: "center",
-	alignItems: "stretch",
-	gap: "0.5rem",
+	alignItems: "center",
 });
 
 export { Root };

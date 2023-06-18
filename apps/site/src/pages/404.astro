@@ -1,19 +1,17 @@
 ---
-import HTMLX from "~/components/core/HTMLX.astro";
+import { Padding } from "@flamrdevs/ui/core/Sprinkles.css";
 
-import Box from "@flamrdevs/ui-astro/core/Box.astro";
-import Text from "@flamrdevs/ui-astro/core/Text.astro";
-import Separator from "@flamrdevs/ui-astro/core/Separator.astro";
+import clsx from "@flamrdevs/x/modules/clsx";
 
-import * as StyleCSS from "~/styles/pages/404.css";
+import { HTMLX, Box, Container, Separator, Text } from "~/components/core";
 ---
 
 <HTMLX title="404" description="page not found">
-  <div id="root">
-    <Box p="md" class={StyleCSS.Root}>
-      <Text family="mono" size="xl" weight={700}>404</Text>
-      <Separator orientation="vertical" />
-      <Text family="mono" size="xl" weight={700}>not found</Text>
+  <Container max="md" class={clsx(Padding({ p: "md" }))}>
+    <Text family="mono" size="xl" weight={700} align="center">404</Text>
+    <Box py="md">
+      <Separator orientation="horizontal" />
     </Box>
-  </div>
+    <Text family="mono" size="xl" weight={700} align="center">not found</Text>
+  </Container>
 </HTMLX>

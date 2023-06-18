@@ -8,7 +8,7 @@ import clsx from "@flamrdevs/x/modules/clsx";
 type TextProps = JSX.IntrinsicElements["div"] & TextCSS.Variants;
 
 const Text = (props: TextProps) => {
-	const [classes, recipe, rest] = splitProps(props, ["class", "classList"], ["family", "size", "weight", "align"]);
+	const [classes, recipe, rest] = splitProps(props, ["class", "classList"], ["inline", "family", "size", "weight", "align"]);
 
 	const className = () => clsx(TextCSS.Root(recipe), classes.class, classes.classList);
 

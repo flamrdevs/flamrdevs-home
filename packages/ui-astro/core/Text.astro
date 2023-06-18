@@ -7,9 +7,9 @@ import clsx from "@flamrdevs/x/modules/clsx";
 
 type Props = HTMLAttributes<"div"> & TextCSS.Variants;
 
-const { family, size, weight, align, class: _class, "class:list": classList, ...attrs } = Astro.props;
+const { inline, family, size, weight, align, class: _class, "class:list": classList, ...attrs } = Astro.props;
 
-const className = clsx(TextCSS.Root({ family, size, weight, align }), _class, classList);
+const className = clsx(TextCSS.Root({ inline, family, size, weight, align }), _class, classList);
 ---
 
 <div {...attrs} class={className}>

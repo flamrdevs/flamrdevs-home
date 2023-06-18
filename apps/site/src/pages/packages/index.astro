@@ -1,22 +1,18 @@
 ---
 import { getCollection } from "astro:content";
 
-import HTMLX from "~/components/core/HTMLX.astro";
-
-import Text from "@flamrdevs/ui-astro/core/Text.astro";
+import { HTMLX, Text } from "~/components/core";
 
 const collection = await getCollection("packages");
 ---
 
 <HTMLX title="packages" description="packages">
-  <div id="root">
-    {
-      collection.map((item) => (
-        <div>
-          <Text>{item.id}</Text>
-          <Text>{item.data.name}</Text>
-        </div>
-      ))
-    }
-  </div>
+  {
+    collection.map((item) => (
+      <div>
+        <Text>{item.id}</Text>
+        <Text>{item.data.name}</Text>
+      </div>
+    ))
+  }
 </HTMLX>

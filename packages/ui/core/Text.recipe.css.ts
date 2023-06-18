@@ -10,6 +10,14 @@ const Root = recipe({
 		display: "inline-block",
 	},
 	variants: {
+		inline: {
+			true: {
+				display: "inline-block",
+			},
+			false: {
+				display: "block",
+			},
+		},
 		family: {
 			sans: {
 				fontFamily: FONTS.SANS,
@@ -44,7 +52,7 @@ const Root = recipe({
 				lineHeight: "2.000rem",
 			},
 			x3l: {
-				fontSize: "1.875rem",
+				fontSize: "1.750rem",
 				lineHeight: "2.250rem",
 			},
 			x4l: {
@@ -102,6 +110,7 @@ const Root = recipe({
 		},
 	},
 	defaultVariants: {
+		inline: false,
 		family: "sans",
 		size: "md",
 		weight: 400,
