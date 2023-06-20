@@ -100,7 +100,13 @@ const stats = () => {
 
 	return {
 		name: "stats",
-		closeBundle: start,
+		closeBundle: async () => {
+			try {
+				await start();
+			} catch (error) {
+				console.error(error);
+			}
+		},
 	} satisfies PluginOption;
 };
 

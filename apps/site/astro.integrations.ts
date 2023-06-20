@@ -78,7 +78,13 @@ const stats = () => {
 	return {
 		name: "stats",
 		hooks: {
-			"astro:build:done": start,
+			"astro:build:done": async () => {
+				try {
+					await start();
+				} catch (error) {
+					console.error(error);
+				}
+			},
 		},
 	} satisfies AstroIntegration;
 };
