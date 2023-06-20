@@ -1,15 +1,18 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 
-import * as SeparatorCSS from "@flamrdevs/ui/core/Separator.style.css";
+import * as SeparatorCSS from "@flamrdevs/ui/core/Separator.recipe.css";
 
-import clsx from "@flamrdevs/x/modules/clsx";
+import { splitProps, getRootClassesx, getSeparatorAttrs } from "./core";
+import type { SeparatorOptions } from "./core";
 
-type Props = Omit<HTMLAttributes<"hr">, "orientation"> & { orientation?: "horizontal" | "vertical" };
+type Props = Omit<HTMLAttributes<"hr">, "orientation"> & SeparatorOptions & SeparatorCSS.Variants;
 
-const { orientation = "horizontal", class: _class, "class:list": classList, ...attrs } = Astro.props;
+const [classes, props] = getRootClassesx(Astro.props);
 
-const className = clsx(SeparatorCSS.Root, _class, classList);
+const [options, recipe, attrs] = splitProps(props, ["orientation"], ["margin"]);
+
+const className = classes(SeparatorCSS.Root(recipe));
 ---
 
-<hr {...attrs} class={className} data-orientation={orientation} />
+<hr {...attrs} class={className} {...getSeparatorAttrs(options)} />

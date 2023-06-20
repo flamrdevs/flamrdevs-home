@@ -1,17 +1,40 @@
 ---
-import { Padding } from "@flamrdevs/ui/core/Sprinkles.css";
+import { MoonIcon, SunIcon } from "lucide-solid";
 
-import clsx from "@flamrdevs/x/modules/clsx";
-
-import { HTMLX, Box, Container, Separator, Text } from "~/components/core";
+import { HTMLX, ButtonLink, Center, Container, Flex, IconButton, Separator, Text } from "~/components/core";
 ---
 
 <HTMLX title="404" description="page not found">
-  <Container max="md" class={clsx(Padding({ p: "md" }))}>
-    <Text family="mono" size="xl" weight={700} align="center">404</Text>
-    <Box py="md">
-      <Separator orientation="horizontal" />
-    </Box>
-    <Text family="mono" size="xl" weight={700} align="center">not found</Text>
+  <Container max="md" p="4">
+    <Flex ai="center" jc="center" style="height: 1.75rem">
+      <Text family="mono" size="xl" weight={700} align="center">404</Text>
+      <Separator orientation="vertical" />
+      <Text family="mono" size="xl" weight={700} align="center">not found</Text>
+    </Flex>
+
+    <Separator orientation="horizontal" />
+
+    <Center gap="2">
+      <ButtonLink href="/">home</ButtonLink>
+
+      <IconButton id="light-theme-icon-button">
+        <SunIcon client:idle />
+      </IconButton>
+
+      <IconButton id="dark-theme-icon-button">
+        <MoonIcon client:idle />
+      </IconButton>
+    </Center>
   </Container>
 </HTMLX>
+
+<script>
+  import { changeTheme } from "~/stores/theme";
+
+  document.getElementById("light-theme-icon-button")!.addEventListener("click", () => {
+    changeTheme("light");
+  });
+  document.getElementById("dark-theme-icon-button")!.addEventListener("click", () => {
+    changeTheme("dark");
+  });
+</script>

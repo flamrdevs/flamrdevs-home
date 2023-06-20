@@ -3,13 +3,15 @@ import type { HTMLAttributes } from "astro/types";
 
 import * as TextCSS from "@flamrdevs/ui/core/Text.recipe.css";
 
-import clsx from "@flamrdevs/x/modules/clsx";
+import { splitProps, getRootClassesx } from "./core";
 
 type Props = HTMLAttributes<"div"> & TextCSS.Variants;
 
-const { inline, family, size, weight, align, class: _class, "class:list": classList, ...attrs } = Astro.props;
+const [classes, props] = getRootClassesx(Astro.props);
 
-const className = clsx(TextCSS.Root({ inline, family, size, weight, align }), _class, classList);
+const [recipe, attrs] = splitProps(props, ["inline", "family", "size", "weight", "align"]);
+
+const className = classes(TextCSS.Root(recipe));
 ---
 
 <div {...attrs} class={className}>

@@ -1,6 +1,8 @@
 {
-	"extends": "@flamrdevs/tsc/package-solid.json",
+	"extends": "@flamrdevs/tsc/.json",
 	"compilerOptions": {
-		"types": ["vite/client"]
+		"types": ["vite/client"],
+		"jsx": "preserve",
+		"jsxImportSource": "solid-js"
 	}
 }

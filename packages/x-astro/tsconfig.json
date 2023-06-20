@@ -1,6 +1,8 @@
 {
-	"extends": "@flamrdevs/tsc/package-astro.json",
+	"extends": "@flamrdevs/tsc/.json",
 	"compilerOptions": {
-		"types": ["astro/client"]
+		"types": ["astro/client"],
+		"jsx": "preserve",
+		"jsxImportSource": "solid-js"
 	}
 }

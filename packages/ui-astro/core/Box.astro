@@ -1,15 +1,18 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 
+import * as BoxCSS from "@flamrdevs/ui/core/Box.recipe.css";
 import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
 
-import clsx from "@flamrdevs/x/modules/clsx";
+import { splitProps, getRootClassesx } from "./core";
 
-type Props = HTMLAttributes<"div"> & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
+type Props = HTMLAttributes<"div"> & BoxCSS.Variants & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
 
-const { m, mx, my, mt, mr, mb, ml, p, px, py, pt, pr, pb, pl, class: _class, "class:list": classList, ...attrs } = Astro.props;
+const [classes, props] = getRootClassesx(Astro.props);
 
-const className = clsx(Sprinkles.Margin({ m, mx, my, mt, mr, mb, ml }), Sprinkles.Padding({ p, px, py, pt, pr, pb, pl }), _class, classList);
+const [recipe, margin, padding, attrs] = splitProps(props, ["inline"], Sprinkles.splitter.margin, Sprinkles.splitter.padding);
+
+const className = classes(BoxCSS.Root(recipe), Sprinkles.Margin(margin), Sprinkles.Padding(padding));
 ---
 
 <div {...attrs} class={className}>

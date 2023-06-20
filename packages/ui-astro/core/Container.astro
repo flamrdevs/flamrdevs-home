@@ -2,14 +2,17 @@
 import type { HTMLAttributes } from "astro/types";
 
 import * as ContainerCSS from "@flamrdevs/ui/core/Container.recipe.css";
+import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
 
-import clsx from "@flamrdevs/x/modules/clsx";
+import { splitProps, getRootClassesx } from "./core";
 
-type Props = HTMLAttributes<"div"> & ContainerCSS.Variants;
+type Props = HTMLAttributes<"div"> & ContainerCSS.Variants & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
 
-const { center, max, class: _class, "class:list": classList, ...attrs } = Astro.props;
+const [classes, props] = getRootClassesx(Astro.props);
 
-const className = clsx(ContainerCSS.Root({ center, max }), _class, classList);
+const [recipe, margin, padding, attrs] = splitProps(props, ["center", "max"], Sprinkles.splitter.margin, Sprinkles.splitter.padding);
+
+const className = classes(ContainerCSS.Root(recipe), Sprinkles.Margin(margin), Sprinkles.Padding(padding));
 ---
 
 <div {...attrs} class={className}>

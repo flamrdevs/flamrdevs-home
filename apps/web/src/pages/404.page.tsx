@@ -1,21 +1,56 @@
-import { Padding } from "@flamrdevs/ui/core/Sprinkles.css";
+import { Show } from "solid-js";
 
-import clsx from "@flamrdevs/x/modules/clsx";
+import { MoonIcon, SunIcon } from "lucide-solid";
 
-import { Box, Container, Separator, Text } from "~/components/core";
+import { useStore } from "@flamrdevs/x-solid/libs/store";
+
+import { Center, Container, Flex, IconButton, Separator, Text } from "~/components/core";
+import { ButtonLink } from "~/components/router";
+
+import { ThemeStore, changeTheme, toggleTheme } from "~/stores/theme";
 
 const NotFoundPage = () => {
+	const theme = useStore(ThemeStore);
+
 	return (
-		<Container max="md" class={clsx(Padding({ p: "md" }))}>
-			<Text family="mono" size="xl" weight={700} align="center">
-				404
-			</Text>
-			<Box py="md">
-				<Separator orientation="horizontal" />
-			</Box>
-			<Text family="mono" size="xl" weight={700} align="center">
-				not found
-			</Text>
+		<Container max="md" p="4">
+			<Flex ai="center" jc="center" style={{ height: "1.75rem" }}>
+				<Text family="mono" size="xl" weight={700} align="center">
+					404
+				</Text>
+				<Separator orientation="vertical" />
+				<Text family="mono" size="xl" weight={700} align="center">
+					not found
+				</Text>
+			</Flex>
+
+			<Separator orientation="horizontal" />
+
+			<Center gap="2">
+				<ButtonLink href="/">home</ButtonLink>
+
+				<IconButton onClick={toggleTheme}>
+					<Show when={theme() === "dark"} fallback={<MoonIcon />}>
+						<SunIcon />
+					</Show>
+				</IconButton>
+
+				<IconButton
+					onClick={() => {
+						changeTheme("light");
+					}}
+				>
+					<SunIcon />
+				</IconButton>
+
+				<IconButton
+					onClick={() => {
+						changeTheme("dark");
+					}}
+				>
+					<MoonIcon />
+				</IconButton>
+			</Center>
 		</Container>
 	);
 };

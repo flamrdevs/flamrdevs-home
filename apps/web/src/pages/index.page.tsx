@@ -1,35 +1,48 @@
 import { Show } from "solid-js";
 
-import { Padding } from "@flamrdevs/ui/core/Sprinkles.css";
-
-import clsx from "@flamrdevs/x/modules/clsx";
+import { MoonIcon, SunIcon } from "lucide-solid";
 
 import { useStore } from "@flamrdevs/x-solid/libs/store";
 
-import { Box, Button, Center, Container, IconButton, Separator, Text } from "~/components/core";
-import { WeatherMoon, WeatherSunny } from "~/components/icons/fluent";
+import { Center, Container, IconButton, Separator, Text } from "~/components/core";
+import { ButtonLink } from "~/components/router";
 
-import { ThemeStore, toggleTheme } from "~/stores/theme";
+import { ThemeStore, changeTheme, toggleTheme } from "~/stores/theme";
 
 const IndexPage = () => {
 	const theme = useStore(ThemeStore);
 
 	return (
-		<Container max="md" class={clsx(Padding({ p: "md" }))}>
+		<Container max="md" p="4">
 			<Text family="mono" size="xl" weight={700} align="center">
-				flamrdevs
+				home
 			</Text>
-			<Box py="md">
-				<Separator orientation="horizontal" />
-			</Box>
-			<Center gap="sm">
-				<Button font="mono" onClick={toggleTheme}>
-					theme
-				</Button>
+
+			<Separator orientation="horizontal" />
+
+			<Center gap="2">
+				<ButtonLink href="/not-found">not found</ButtonLink>
+
 				<IconButton onClick={toggleTheme}>
-					<Show when={theme() === "dark"} fallback={<WeatherSunny />}>
-						<WeatherMoon />
+					<Show when={theme() === "dark"} fallback={<MoonIcon />}>
+						<SunIcon />
 					</Show>
+				</IconButton>
+
+				<IconButton
+					onClick={() => {
+						changeTheme("light");
+					}}
+				>
+					<SunIcon />
+				</IconButton>
+
+				<IconButton
+					onClick={() => {
+						changeTheme("dark");
+					}}
+				>
+					<MoonIcon />
 				</IconButton>
 			</Center>
 		</Container>

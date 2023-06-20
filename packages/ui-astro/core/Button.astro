@@ -3,18 +3,21 @@ import type { HTMLAttributes } from "astro/types";
 
 import * as ButtonCSS from "@flamrdevs/ui/core/Button.recipe.css";
 
-import clsx from "@flamrdevs/x/modules/clsx";
+import { splitProps, getRootClassesx, getButtonAttrs } from "./core";
+import type { ButtonOptions } from "./core";
 
-type Props = HTMLAttributes<"button"> & ButtonCSS.Variants & ButtonCSS.InnerVariants & ButtonCSS.ChildVariants;
+type Props = HTMLAttributes<"button"> & ButtonOptions & ButtonCSS.Variants & ButtonCSS.InnerVariants & ButtonCSS.ChildVariants;
 
-const { color, font, size, class: _class, "class:list": classList, ...attrs } = Astro.props;
+const [classes, props] = getRootClassesx(Astro.props);
 
-const className = clsx(ButtonCSS.Root({ color, size }), _class, classList);
-const innerClassName = ButtonCSS.Inner({ color });
-const childClassName = ButtonCSS.Child({ font, size });
+const [options, recipe, attrs] = splitProps(props, ["disabled"], ["color", "font", "size"]);
+
+const className = classes(ButtonCSS.Root({ color: recipe.color, size: recipe.size }));
+const innerClassName = ButtonCSS.Inner({ color: recipe.color });
+const childClassName = ButtonCSS.Child({ font: recipe.font, size: recipe.size });
 ---
 
-<button {...attrs} class={className}>
+<button type="button" {...attrs} class={className} {...getButtonAttrs(options)}>
   <div class={innerClassName}>
     <div class={childClassName}>
       <slot />

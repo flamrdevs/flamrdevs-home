@@ -5,10 +5,12 @@ import * as TextCSS from "@flamrdevs/ui/core/Text.recipe.css";
 
 import clsx from "@flamrdevs/x/modules/clsx";
 
+import { splitter } from "./core";
+
 type TextProps = JSX.IntrinsicElements["div"] & TextCSS.Variants;
 
 const Text = (props: TextProps) => {
-	const [classes, recipe, rest] = splitProps(props, ["class", "classList"], ["inline", "family", "size", "weight", "align"]);
+	const [classes, recipe, rest] = splitProps(props, splitter.classes, ["inline", "family", "size", "weight", "align"]);
 
 	const className = () => clsx(TextCSS.Root(recipe), classes.class, classes.classList);
 

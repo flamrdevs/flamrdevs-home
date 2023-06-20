@@ -4,20 +4,15 @@ import type { HTMLAttributes } from "astro/types";
 import * as CenterCSS from "@flamrdevs/ui/core/Center.style.css";
 import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
 
-import clsx from "@flamrdevs/x/modules/clsx";
+import { splitProps, getRootClassesx } from "./core";
 
-type Props = HTMLAttributes<"div"> & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants & Sprinkles.GapShorthandsVariants;
+type Props = HTMLAttributes<"div"> & Sprinkles.GapShorthandsVariants & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
 
-const { m, mx, my, mt, mr, mb, ml, p, px, py, pt, pr, pb, pl, gap, gapr, gapc, class: _class, "class:list": classList, ...attrs } = Astro.props;
+const [classes, props] = getRootClassesx(Astro.props);
 
-const className = clsx(
-  CenterCSS.Root,
-  Sprinkles.Margin({ m, mx, my, mt, mr, mb, ml }),
-  Sprinkles.Padding({ p, px, py, pt, pr, pb, pl }),
-  Sprinkles.Gap({ gap, gapr, gapc }),
-  _class,
-  classList
-);
+const [gap, margin, padding, attrs] = splitProps(props, Sprinkles.splitter.gap, Sprinkles.splitter.margin, Sprinkles.splitter.padding);
+
+const className = classes(CenterCSS.Root, Sprinkles.Gap(gap), Sprinkles.Margin(margin), Sprinkles.Padding(padding));
 ---
 
 <div {...attrs} class={className}>

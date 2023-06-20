@@ -20,8 +20,8 @@ importers:
         specifier: ^3.8.2
         version: 3.8.2(@types/node@20.3.1)(vite@4.3.9)
       astro:
-        specifier: ^2.6.4
-        version: 2.6.4(@types/node@20.3.1)
+        specifier: ^2.6.5
+        version: 2.6.5(@types/node@20.3.1)
       turbo:
         specifier: ^1.10.3
         version: 1.10.3
@@ -58,16 +58,22 @@ importers:
       '@flamrdevs/x-solid':
         specifier: workspace:*
         version: link:../../packages/x-solid
+      '@flamrdevs/~web':
+        specifier: workspace:^
+        version: link:../web
       astro:
-        specifier: ^2.6.4
-        version: 2.6.4(@types/node@20.3.1)
+        specifier: ^2.6.5
+        version: 2.6.5(@types/node@20.3.1)
+      lucide-solid:
+        specifier: ^0.246.0
+        version: 0.246.0(solid-js@1.7.6)
       solid-js:
         specifier: ^1.7.6
         version: 1.7.6
     devDependencies:
       '@astrojs/mdx':
         specifier: ^0.19.7
-        version: 0.19.7(astro@2.6.4)
+        version: 0.19.7(astro@2.6.5)
       '@astrojs/sitemap':
         specifier: ^1.3.3
         version: 1.3.3
@@ -101,6 +107,9 @@ importers:
       '@flamrdevs/x-solid':
         specifier: workspace:*
         version: link:../../packages/x-solid
+      lucide-solid:
+        specifier: ^0.246.0
+        version: 0.246.0(solid-js@1.7.6)
       solid-js:
         specifier: ^1.7.6
         version: 1.7.6
@@ -154,8 +163,8 @@ importers:
         specifier: workspace:*
         version: link:../x-astro
       astro:
-        specifier: ^2.6.4
-        version: 2.6.4(@types/node@20.3.1)
+        specifier: ^2.6.5
+        version: 2.6.5(@types/node@20.3.1)
     devDependencies:
       '@flamrdevs/tsc':
         specifier: workspace:*
@@ -218,8 +227,8 @@ importers:
         specifier: workspace:*
         version: link:../x
       astro:
-        specifier: ^2.6.4
-        version: 2.6.4(@types/node@20.3.1)
+        specifier: ^2.6.5
+        version: 2.6.5(@types/node@20.3.1)
     devDependencies:
       '@flamrdevs/tsc':
         specifier: workspace:*
@@ -265,7 +274,7 @@ packages:
     dependencies:
       '@astrojs/compiler': 1.5.1
       '@jridgewell/trace-mapping': 0.3.18
-      '@vscode/emmet-helper': 2.8.9
+      '@vscode/emmet-helper': 2.9.0
       events: 3.3.0
       prettier: 2.8.8
       prettier-plugin-astro: 0.9.1
@@ -277,13 +286,13 @@ packages:
       vscode-languageserver-types: 3.17.3
       vscode-uri: 3.0.7
 
-  /@astrojs/markdown-remark@2.2.1(astro@2.6.4):
+  /@astrojs/markdown-remark@2.2.1(astro@2.6.5):
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.6.4(@types/node@20.3.1)
+      astro: 2.6.5(@types/node@20.3.1)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -299,11 +308,11 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/mdx@0.19.7(astro@2.6.4):
+  /@astrojs/mdx@0.19.7(astro@2.6.5):
     resolution: {integrity: sha512-mfEbBD7oi8yBHhcJucEjnrquREkJ3os+jioURP8BR2B8tOV2rV2j8trvmLUgfS+P/+HevGObxCTjcRYxn6T7eg==}
     engines: {node: '>=16.12.0'}
     dependencies:
-      '@astrojs/markdown-remark': 2.2.1(astro@2.6.4)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.6.5)
       '@astrojs/prism': 2.1.2
       '@mdx-js/mdx': 2.3.0
       acorn: 8.8.2
@@ -1576,8 +1585,8 @@ packages:
       - ts-node
     dev: true
 
-  /@vscode/emmet-helper@2.8.9:
-    resolution: {integrity: sha512-ygpVStaePHt9aI9zk4NNJWI/NsRaeDSW1vQsZVmtpVRVCOdwYlsc3BfB/eppUu1OucT0x3OHDAzKcxnitjcSXQ==}
+  /@vscode/emmet-helper@2.9.0:
+    resolution: {integrity: sha512-Fdk2tr48xm8f1KIos6+hCOu2++y2lGvkzj8zak4c9gtGSnJoANUMe9QbZ/3hXeLUhsEYSm1lB3RyI8RpkuolQg==}
     dependencies:
       emmet: 2.4.4
       jsonc-parser: 2.3.1
@@ -1598,6 +1607,12 @@ packages:
 
   /acorn@8.8.2:
     resolution: {integrity: sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: true
+
+  /acorn@8.9.0:
+    resolution: {integrity: sha512-jaVNAFBHNLXspO543WnNNPZFRtavh3skAkITqD0/2aeMkKZTN+254PyhwxFYrk3vQ1xfY+2wbesJMs/JC8/PwQ==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -1677,8 +1692,8 @@ packages:
       terser: 5.17.7
     dev: true
 
-  /astro@2.6.4(@types/node@20.3.1):
-    resolution: {integrity: sha512-YM5H9SLHflxCB/3H8S2Bi+1Lbwn/MA9Vl/eOZmkCT491gvBsyuKCTsoUas6fwggeKn+fIR2XpdYd2F+unQve3g==}
+  /astro@2.6.5(@types/node@20.3.1):
+    resolution: {integrity: sha512-5q/DAP3i1hM7DC6KfhhMFEiGjUPSjLHc/Df66DgIF2YMu747PvI4zPrzODJWkTB6WM9gHZfslg3ild/hKF7lxg==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -1690,7 +1705,7 @@ packages:
       '@astrojs/compiler': 1.5.1
       '@astrojs/internal-helpers': 0.1.0
       '@astrojs/language-server': 1.0.8
-      '@astrojs/markdown-remark': 2.2.1(astro@2.6.4)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.6.5)
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.5
@@ -1701,7 +1716,7 @@ packages:
       '@babel/types': 7.22.5
       '@types/babel__core': 7.20.1
       '@types/yargs-parser': 21.0.0
-      acorn: 8.8.2
+      acorn: 8.9.0
       boxen: 6.2.1
       chokidar: 3.5.3
       ci-info: 3.8.0
@@ -1729,7 +1744,7 @@ packages:
       preferred-pm: 3.0.3
       prompts: 2.4.2
       rehype: 12.0.1
-      semver: 7.5.1
+      semver: 7.5.2
       server-destroy: 1.0.1
       shiki: 0.14.2
       slash: 4.0.0
@@ -2943,6 +2958,14 @@ packages:
     dependencies:
       yallist: 4.0.0
 
+  /lucide-solid@0.246.0(solid-js@1.7.6):
+    resolution: {integrity: sha512-d2oZvm/tKEx2LTTSqaC0VXjhGeqXhbAP3DsUjPfX0kcfD3plhjXCrErVqtvZDdeFnDS+tiGedIdS1+5i1fsCpA==}
+    peerDependencies:
+      solid-js: ^1.4.7
+    dependencies:
+      solid-js: 1.7.6
+    dev: false
+
   /magic-string@0.27.0:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
     engines: {node: '>=12'}
@@ -4071,6 +4094,14 @@ packages:
 
   /semver@7.5.1:
     resolution: {integrity: sha512-Wvss5ivl8TMRZXXESstBA4uR5iXgEN/VC5/sOcuXdVLzcdkz4HWetIoRfG5gb5X+ij/G9rw9YoGn3QoQ8OCSpw==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      lru-cache: 6.0.0
+    dev: true
+
+  /semver@7.5.2:
+    resolution: {integrity: sha512-SoftuTROv/cRjCze/scjGyiDtcUyxw1rgYQSZY7XTmtR5hX+dm76iDbTH8TkLPHCQmlbQVSSbNZCPM2hb0knnQ==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:

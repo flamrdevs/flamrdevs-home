@@ -1,35 +1,32 @@
 ---
-import { Padding } from "@flamrdevs/ui/core/Sprinkles.css";
+import { MoonIcon, SunIcon } from "lucide-solid";
 
-import clsx from "@flamrdevs/x/modules/clsx";
-
-import { HTMLX, Box, Button, Center, Container, IconButton, Separator, Text } from "~/components/core";
-import { WeatherMoon, WeatherSunny } from "~/components/icons/fluent";
+import { HTMLX, ButtonLink, Center, Container, IconButton, Separator, Text } from "~/components/core";
 ---
 
 <HTMLX>
-  <Container max="md" class={clsx(Padding({ p: "md" }))}>
-    <Text family="mono" size="xl" weight={700} align="center">flamrdevs</Text>
-    <Box py="md">
-      <Separator orientation="horizontal" />
-    </Box>
-    <Center gap="sm">
-      <Button id="toggle-theme-button" font="mono">theme</Button>
+  <Container max="md" p="4">
+    <Text family="mono" size="xl" weight={700} align="center">home</Text>
+
+    <Separator orientation="horizontal" />
+
+    <Center gap="2">
+      <ButtonLink href="/not-found">not found</ButtonLink>
 
       <IconButton id="light-theme-icon-button">
-        <WeatherSunny />
+        <SunIcon client:idle />
       </IconButton>
+
       <IconButton id="dark-theme-icon-button">
-        <WeatherMoon />
+        <MoonIcon client:idle />
       </IconButton>
     </Center>
   </Container>
 </HTMLX>
 
 <script>
-  import { changeTheme, toggleTheme } from "~/stores/theme";
+  import { changeTheme } from "~/stores/theme";
 
-  document.getElementById("toggle-theme-button")!.addEventListener("click", toggleTheme);
   document.getElementById("light-theme-icon-button")!.addEventListener("click", () => {
     changeTheme("light");
   });

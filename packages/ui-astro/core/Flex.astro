@@ -1,0 +1,34 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+import * as FlexCSS from "@flamrdevs/ui/core/Flex.recipe.css";
+import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
+
+import { splitProps, getRootClassesx } from "./core";
+
+type Props = HTMLAttributes<"div"> &
+  FlexCSS.Variants &
+  Sprinkles.AlignShorthandsVariants &
+  Sprinkles.JustifyShorthandsVariants &
+  Sprinkles.GapShorthandsVariants &
+  Sprinkles.MarginShorthandsVariants &
+  Sprinkles.PaddingShorthandsVariants;
+
+const [classes, props] = getRootClassesx(Astro.props);
+
+const [flex, align, justify, gap, margin, padding, attrs] = splitProps(
+  props,
+  ["inline"],
+  Sprinkles.splitter.align,
+  Sprinkles.splitter.justify,
+  Sprinkles.splitter.gap,
+  Sprinkles.splitter.margin,
+  Sprinkles.splitter.padding
+);
+
+const className = classes(FlexCSS.Root(flex), Sprinkles.Align(align), Sprinkles.Justify(justify), Sprinkles.Gap(gap), Sprinkles.Margin(margin), Sprinkles.Padding(padding));
+---
+
+<div {...attrs} class={className}>
+  <slot />
+</div>

@@ -1,0 +1,26 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+import * as ButtonCSS from "@flamrdevs/ui/core/Button.recipe.css";
+
+import { splitProps, getRootClassesx, getButtonAttrs } from "./core";
+import type { ButtonOptions } from "./core";
+
+type Props = Omit<HTMLAttributes<"a">, "href"> & { href: string } & ButtonOptions & ButtonCSS.Variants & ButtonCSS.InnerVariants & ButtonCSS.ChildVariants;
+
+const [classes, props] = getRootClassesx(Astro.props);
+
+const [options, recipe, attrs] = splitProps(props, ["disabled"], ["color", "font", "size"]);
+
+const className = classes(ButtonCSS.Root({ color: recipe.color, size: recipe.size }));
+const innerClassName = ButtonCSS.Inner({ color: recipe.color });
+const childClassName = ButtonCSS.Child({ font: recipe.font, size: recipe.size });
+---
+
+<a role="button" {...attrs} class={className} {...getButtonAttrs(options)}>
+  <div class={innerClassName}>
+    <div class={childClassName}>
+      <slot />
+    </div>
+  </div>
+</a>

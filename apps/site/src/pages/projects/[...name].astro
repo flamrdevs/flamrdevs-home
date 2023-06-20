@@ -3,7 +3,7 @@ import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
-import { HTMLX, Text } from "~/components/core";
+import { HTMLX, Container, Text } from "~/components/core";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const collection = await getCollection("projects");
@@ -22,5 +22,7 @@ const { data } = Astro.props.entry;
 ---
 
 <HTMLX title={data.name} description={data.description}>
-  <Text>{data.name}</Text>
+  <Container>
+    <Text>{data.name}</Text>
+  </Container>
 </HTMLX>

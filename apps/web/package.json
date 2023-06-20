@@ -1,6 +1,7 @@
 {
 	"name": "@flamrdevs/~web",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -13,6 +14,7 @@
 		"@flamrdevs/utils": "workspace:*",
 		"@flamrdevs/x": "workspace:*",
 		"@flamrdevs/x-solid": "workspace:*",
+		"lucide-solid": "^0.246.0",
 		"solid-js": "^1.7.6"
 	},
 	"devDependencies": {

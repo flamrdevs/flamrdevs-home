@@ -1,6 +1,7 @@
 {
 	"name": "@flamrdevs/~site",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro build",
@@ -15,7 +16,8 @@
 		"@flamrdevs/x": "workspace:*",
 		"@flamrdevs/x-astro": "workspace:*",
 		"@flamrdevs/x-solid": "workspace:*",
-		"astro": "^2.6.4",
+		"astro": "^2.6.5",
+		"lucide-solid": "^0.246.0",
 		"solid-js": "^1.7.6"
 	},
 	"devDependencies": {
