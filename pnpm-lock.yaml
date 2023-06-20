@@ -58,9 +58,6 @@ importers:
       '@flamrdevs/x-solid':
         specifier: workspace:*
         version: link:../../packages/x-solid
-      '@flamrdevs/~web':
-        specifier: workspace:^
-        version: link:../web
       astro:
         specifier: ^2.6.5
         version: 2.6.5(@types/node@20.3.1)
