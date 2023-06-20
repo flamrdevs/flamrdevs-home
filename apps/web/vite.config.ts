@@ -62,6 +62,8 @@ const stats = () => {
 	const exts = "html,css,js".split(",").map((s) => `.${s}`);
 
 	const recursive = async (pathlike: string) => {
+		console.log(`recursive: pathlike=${pathlike}`);
+
 		const children: Child[] = [];
 
 		const dirents = await fs.readdir(pathlike, { withFileTypes: true });
@@ -77,7 +79,7 @@ const stats = () => {
 				const ext = path.extname(dirent.name);
 
 				if (exts.includes(ext)) {
-					const { size } = await fs.stat(path.resolve(dirent.path, dirent.name));
+					const { size } = await fs.stat(path.resolve(pathlike, dirent.name));
 					children.push({
 						type: "file",
 						name: dirent.name,
