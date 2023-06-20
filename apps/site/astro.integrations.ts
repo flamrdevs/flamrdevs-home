@@ -19,7 +19,7 @@ const stats = () => {
 
 	type Child = Directory | File;
 
-	const dist = (...paths: string[]) => path.resolve(process.cwd(), "dist", ...paths);
+	const dist = (...paths: string[]) => path.resolve("dist", ...paths);
 
 	const exts = "html,css,js".split(",").map((s) => `.${s}`);
 
