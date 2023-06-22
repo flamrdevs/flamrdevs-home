@@ -1,9 +1,0 @@
-{
-	"name": "@klass/solid",
-	"description": "klass for solid",
-	"type": {
-		"npm": {
-			"name": "@klass/solid"
-		}
-	}
-}

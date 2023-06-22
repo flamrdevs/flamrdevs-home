@@ -1,19 +1,19 @@
 ---
 import { getCollection } from "astro:content";
 
-import { HTMLX, Container, Text } from "~/components/core";
+import { HTMLX, Box, Container, Text } from "~/components/core";
 
 const collection = await getCollection("blog");
 ---
 
 <HTMLX title="blog" description="blog">
-  <Container>
+  <Container max="md" p="4">
     {
       collection.map((item) => (
-        <div>
-          <Text>{item.slug}</Text>
+        <Box p="1">
           <Text>{item.data.title}</Text>
-        </div>
+          <Text>{item.data.description}</Text>
+        </Box>
       ))
     }
   </Container>

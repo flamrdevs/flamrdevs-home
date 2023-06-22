@@ -1,18 +1,26 @@
 ---
 import { MoonIcon, SunIcon } from "lucide-solid";
 
-import { HTMLX, ButtonLink, Center, Container, IconButton, Separator, Text } from "~/components/core";
+import FLAMRDEVSSVG from "@flamrdevs/ui-astro/core/FLAMRDEVSSVG.astro";
+
+import { HTMLX, Center, Container, IconButton, Separator } from "~/components/core";
+
+import { flamrdevssvg } from "~/styles/pages/index.css";
 ---
 
 <HTMLX>
   <Container max="md" p="4">
-    <Text family="mono" size="xl" weight={700} align="center">home</Text>
+    <Separator orientation="horizontal" />
+  </Container>
 
+  <Center>
+    <FLAMRDEVSSVG class={flamrdevssvg} />
+  </Center>
+
+  <Container max="md" p="4">
     <Separator orientation="horizontal" />
 
     <Center gap="2">
-      <ButtonLink href="/not-found">not found</ButtonLink>
-
       <IconButton id="light-theme-icon-button">
         <SunIcon client:idle />
       </IconButton>

@@ -1,9 +1,0 @@
-{
-	"name": "haaveersiinee",
-	"description": "simple haversine",
-	"type": {
-		"npm": {
-			"name": "haaveersiinee"
-		}
-	}
-}

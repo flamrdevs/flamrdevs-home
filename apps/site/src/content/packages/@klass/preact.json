@@ -1,9 +1,0 @@
-{
-	"name": "@klass/preact",
-	"description": "klass for preact",
-	"type": {
-		"npm": {
-			"name": "@klass/preact"
-		}
-	}
-}

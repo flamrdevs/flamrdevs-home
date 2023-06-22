@@ -1,9 +1,0 @@
-{
-	"name": "@klass/core",
-	"description": "klass core library",
-	"type": {
-		"npm": {
-			"name": "@klass/core"
-		}
-	}
-}

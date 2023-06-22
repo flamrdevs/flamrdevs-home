@@ -2,50 +2,41 @@ import { Show } from "solid-js";
 
 import { MoonIcon, SunIcon } from "lucide-solid";
 
+import FLAMRDEVSSVG from "@flamrdevs/ui-solid/core/FLAMRDEVSSVG";
+
 import { useStore } from "@flamrdevs/x-solid/libs/store";
 
-import { Center, Container, IconButton, Separator, Text } from "~/components/core";
-import { ButtonLink } from "~/components/router";
+import { Center, Container, IconButton, Separator } from "~/components/core";
 
-import { ThemeStore, changeTheme, toggleTheme } from "~/stores/theme";
+import { ThemeStore, toggleTheme } from "~/stores/theme";
+
+import { flamrdevssvg } from "~/styles/pages/index.css";
 
 const IndexPage = () => {
 	const theme = useStore(ThemeStore);
 
 	return (
-		<Container max="md" p="4">
-			<Text family="mono" size="xl" weight={700} align="center">
-				home
-			</Text>
+		<>
+			<Container max="md" p="4">
+				<Separator orientation="horizontal" />
+			</Container>
 
-			<Separator orientation="horizontal" />
-
-			<Center gap="2">
-				<ButtonLink href="/not-found">not found</ButtonLink>
-
-				<IconButton onClick={toggleTheme}>
-					<Show when={theme() === "dark"} fallback={<MoonIcon />}>
-						<SunIcon />
-					</Show>
-				</IconButton>
-
-				<IconButton
-					onClick={() => {
-						changeTheme("light");
-					}}
-				>
-					<SunIcon />
-				</IconButton>
-
-				<IconButton
-					onClick={() => {
-						changeTheme("dark");
-					}}
-				>
-					<MoonIcon />
-				</IconButton>
+			<Center>
+				<FLAMRDEVSSVG class={flamrdevssvg} />
 			</Center>
-		</Container>
+
+			<Container max="md" p="4">
+				<Separator orientation="horizontal" />
+
+				<Center gap="2">
+					<IconButton onClick={toggleTheme}>
+						<Show when={theme() === "dark"} fallback={<MoonIcon />}>
+							<SunIcon />
+						</Show>
+					</IconButton>
+				</Center>
+			</Container>
+		</>
 	);
 };
 

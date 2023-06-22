@@ -3,7 +3,7 @@ import type { RecipeVariants } from "@vanilla-extract/recipes";
 
 import { ColorsContract } from "./styles/contract.css";
 
-import { buttonDisabledStyles, colorNeutralDisabledStyles } from "./core.css";
+import { buttonDisabledStyles, colorNeutralDisabledStyles, colorPrimaryDisabledStyles } from "./core.css";
 
 type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
 
@@ -43,6 +43,25 @@ const Root = recipe({
 				},
 				colorNeutralDisabledStyles,
 			],
+			primary: [
+				{
+					backgroundImage: `linear-gradient(130deg, ${ColorsContract.primary[11]}, ${ColorsContract.primary[8]}, ${ColorsContract.primary[6]})`,
+					color: ColorsContract.primary[11],
+
+					":hover": {
+						backgroundImage: `linear-gradient(130deg, ${ColorsContract.primary[12]}, ${ColorsContract.primary[8]}, ${ColorsContract.primary[7]})`,
+					},
+
+					":focus-visible": {
+						outlineColor: ColorsContract.primary[11],
+					},
+
+					":active": {
+						backgroundImage: `linear-gradient(130deg, ${ColorsContract.primary[12]}, ${ColorsContract.primary[9]}, ${ColorsContract.primary[8]})`,
+					},
+				},
+				colorPrimaryDisabledStyles,
+			],
 		},
 		size: {
 			md: {
@@ -80,6 +99,17 @@ const Inner = recipe({
 
 				":active": {
 					backgroundImage: `linear-gradient(130deg, ${ColorsContract.neutral[5]}, ${ColorsContract.neutral[2]})`,
+				},
+			},
+			primary: {
+				backgroundImage: `linear-gradient(130deg, ${ColorsContract.primary[3]}, ${ColorsContract.primary[1]})`,
+
+				":hover": {
+					backgroundImage: `linear-gradient(130deg, ${ColorsContract.primary[4]}, ${ColorsContract.primary[1]})`,
+				},
+
+				":active": {
+					backgroundImage: `linear-gradient(130deg, ${ColorsContract.primary[5]}, ${ColorsContract.primary[2]})`,
 				},
 			},
 		},

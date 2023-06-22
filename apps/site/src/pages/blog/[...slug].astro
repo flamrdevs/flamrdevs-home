@@ -3,7 +3,7 @@ import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
-import { HTMLX, Container } from "~/components/core";
+import { HTMLX, Box, Container } from "~/components/core";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const collection = await getCollection("blog");
@@ -23,7 +23,9 @@ const { Content } = await render();
 ---
 
 <HTMLX title={data.title} description={data.description}>
-  <Container>
-    <Content />
+  <Container max="md" p="4">
+    <Box p="1">
+      <Content />
+    </Box>
   </Container>
 </HTMLX>

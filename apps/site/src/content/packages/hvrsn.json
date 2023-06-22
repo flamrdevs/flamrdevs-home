@@ -1,9 +1,0 @@
-{
-	"name": "hvrsn",
-	"description": "simplest haversine",
-	"type": {
-		"npm": {
-			"name": "hvrsn"
-		}
-	}
-}

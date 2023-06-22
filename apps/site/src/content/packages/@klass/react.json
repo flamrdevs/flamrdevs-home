@@ -1,9 +1,0 @@
-{
-	"name": "@klass/react",
-	"description": "klass for react",
-	"type": {
-		"npm": {
-			"name": "@klass/react"
-		}
-	}
-}

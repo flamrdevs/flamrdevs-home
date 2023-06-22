@@ -1,8 +1,29 @@
 ---
 title: "Pengenalan klass"
-description: "Pengenalan klass sebagai utilitias untuk varian nama kelas"
+description: "Klass sebagai utilitas untuk varian nama class"
 ---
 
 # Pengenalan
 
 Apa itu klass?
+
+```tsx
+import { klass } from "@klass/core";
+
+const button = klass({
+	base: "inline-flex justify-center items-center outline-none rounded select-none",
+	variants: {
+		color: {
+			neutral: "bg-gray-700 text-white",
+			primary: "bg-indigo-700 text-white",
+		},
+		size: {
+			md: "h-8 px-4 py-1",
+		},
+	},
+	defaultVariants: {
+		color: "neutral",
+		size: "md",
+	},
+});
+```

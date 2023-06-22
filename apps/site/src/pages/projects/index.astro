@@ -1,19 +1,19 @@
 ---
-import { getCollection } from "astro:content";
+import { HTMLX, Box, Container, Text } from "~/components/core";
 
-import { HTMLX, Container, Text } from "~/components/core";
+import * as api from "~/libs/api";
 
-const collection = await getCollection("projects");
+const projects = await api.projects.find();
 ---
 
 <HTMLX title="projects" description="projects">
-  <Container>
+  <Container max="md" p="4">
     {
-      collection.map((item) => (
-        <div>
-          <Text>{item.id}</Text>
-          <Text>{item.data.name}</Text>
-        </div>
+      projects.map((item) => (
+        <Box p="1">
+          <Text>{item.name}</Text>
+          <Text>{item.description}</Text>
+        </Box>
       ))
     }
   </Container>
