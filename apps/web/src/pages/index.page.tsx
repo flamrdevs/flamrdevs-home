@@ -17,7 +17,7 @@ const IndexPage = () => {
 
 	return (
 		<>
-			<Container max="md" p="4">
+			<Container max="lg" p="4">
 				<Separator orientation="horizontal" />
 			</Container>
 
@@ -25,7 +25,7 @@ const IndexPage = () => {
 				<FLAMRDEVSSVG class={flamrdevssvg} />
 			</Center>
 
-			<Container max="md" p="4">
+			<Container max="lg" p="4">
 				<Separator orientation="horizontal" />
 
 				<Center gap="2">

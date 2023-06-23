@@ -8,7 +8,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 const UICorePage = () => {
 	return (
 		<>
-			<Container max="md" p="4">
+			<Container max="lg" p="4">
 				<Flex ai="center" style="height: 1.75rem">
 					<ButtonLink href="/">home</ButtonLink>
 					<Separator orientation="vertical" />
@@ -16,7 +16,7 @@ const UICorePage = () => {
 				</Flex>
 			</Container>
 
-			<Container max="md" p="4">
+			<Container max="lg" p="4">
 				<Box>
 					<Text family="mono" size="lg" weight={600}>
 						Color

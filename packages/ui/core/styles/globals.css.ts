@@ -16,6 +16,6 @@ globalStyle("body", {
 
 globalStyle(".lucide", {
 	strokeWidth: 1.5,
-	width: "1.125rem",
-	height: "1.125rem",
+	width: "1.25rem",
+	height: "1.25rem",
 });

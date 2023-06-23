@@ -3,7 +3,7 @@ import { ButtonLink } from "~/components/router";
 
 const NotFoundPage = () => {
 	return (
-		<Container max="md" p="4">
+		<Container max="lg" p="4">
 			<Separator orientation="horizontal" />
 
 			<Flex ai="center" jc="center" style="height: 1.75rem">

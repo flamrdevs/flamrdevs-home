@@ -65,8 +65,8 @@ const Root = recipe({
 		},
 		size: {
 			md: {
-				width: "1.75rem",
-				height: "1.75rem",
+				width: "2rem",
+				height: "2rem",
 				padding: 1,
 			},
 		},
