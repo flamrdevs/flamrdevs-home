@@ -24,9 +24,12 @@ const meta = (command: string) => {
 	const HOST = {
 		STATIC_DEV: "http://localhost:4000",
 		STATIC_PROD: "https://flamrdevs.pages.dev",
+		WEB_DEV: "http://localhost:5000",
+		WEB_PROD: "https://flamrdevs.netlify.app",
 	};
 
 	const STATIC = (...paths: string[]) => [PROD ? HOST.STATIC_PROD : HOST.STATIC_DEV, ...paths].join("/");
+	const WEB = (...paths: string[]) => [PROD ? HOST.WEB_PROD : HOST.WEB_DEV, ...paths].join("/");
 
 	return {
 		name: "meta",
@@ -34,6 +37,8 @@ const meta = (command: string) => {
 			return html
 				.replace(/{{TITLE}}/g, "flamrdevs")
 				.replace(/{{DESCRIPTION}}/g, "flamrdevs")
+				.replace(/{{URL}}/g, WEB())
+				.replace(/{{IMAGE}}/g, STATIC("~", "d1200x628.png"))
 				.replace(/{{FAVICON}}/g, STATIC("favicon.ico"))
 				.replace(/{{STYLESHEET_NORMALIZE}}/g, STATIC("stylesheets", "normalize.css"))
 				.replace(/{{STYLESHEET_FONTS}}/g, STATIC("stylesheets", "fonts.css"));
