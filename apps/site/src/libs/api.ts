@@ -1,9 +1,14 @@
 import * as HOST from "@flamrdevs/utils/host";
 
+type Tag = "npm" | "preact" | "react" | "solid" | "svelte" | "vue";
+
 interface IProject {
 	name: string;
 	description: string;
 	slug: string;
+	site?: string;
+	repo?: string;
+	tags?: Tag[];
 }
 
 const projects = {
