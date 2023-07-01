@@ -13,28 +13,23 @@ const meta = () => {
 		},
 		transformIndexHtml: (html) => {
 			const HOST = {
-				STATIC_DEV: "http://localhost:4000",
-				STATIC_PROD: "https://flamrdevs.pages.dev",
-				WEB_DEV: "http://localhost:5000",
-				WEB_PROD: "https://flamrdevs.netlify.app",
+				STATIC: (...paths: string[]) => [PROD ? "https://flamrdevs.pages.dev" : "http://localhost:4000", ...paths].join("/"),
+				WEB: (...paths: string[]) => [PROD ? "https://flamrdevs.netlify.app" : "http://localhost:5000", ...paths].join("/"),
 			};
-
-			const STATIC = (...paths: string[]) => [PROD ? HOST.STATIC_PROD : HOST.STATIC_DEV, ...paths].join("/");
-			const WEB = (...paths: string[]) => [PROD ? HOST.WEB_PROD : HOST.WEB_DEV, ...paths].join("/");
 
 			return html
 				.replace(/{{TITLE}}/g, "flamrdevs")
 				.replace(/{{DESCRIPTION}}/g, "flamrdevs")
-				.replace(/{{URL}}/g, WEB())
-				.replace(/{{IMAGE}}/g, STATIC("~", "d1200x628.png"))
-				.replace(/{{FAVICON}}/g, STATIC("favicon.ico"))
-				.replace(/{{STYLESHEET_NORMALIZE}}/g, STATIC("stylesheets", "normalize.css"))
-				.replace(/{{STYLESHEET_FONTS}}/g, STATIC("stylesheets", "fonts.css"));
+				.replace(/{{URL}}/g, HOST.WEB())
+				.replace(/{{IMAGE}}/g, HOST.STATIC("~", "d1200x628.png"))
+				.replace(/{{FAVICON}}/g, HOST.STATIC("favicon.ico"))
+				.replace(/{{STYLESHEET_NORMALIZE}}/g, HOST.STATIC("stylesheets", "normalize.css"))
+				.replace(/{{STYLESHEET_FONTS}}/g, HOST.STATIC("stylesheets", "fonts.css"));
 		},
 	} satisfies PluginOption;
 };
 
-const stats = () => {
+const stats = (options: { exts: string[] }) => {
 	type Directory = {
 		type: "directory";
 		name: string;
@@ -52,7 +47,7 @@ const stats = () => {
 
 	const dist = (...paths: string[]) => path.resolve("dist", ...paths);
 
-	const exts = "html,css,js".split(",").map((s) => `.${s}`);
+	const exts = options.exts.map((s) => `.${s}`);
 
 	const recursive = async (pathlike: string) => {
 		const children: Child[] = [];

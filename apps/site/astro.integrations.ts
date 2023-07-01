@@ -3,7 +3,7 @@ import path from "path";
 
 import type { AstroIntegration } from "astro";
 
-const stats = () => {
+const stats = (options: { exts: string[] }) => {
 	type Directory = {
 		type: "directory";
 		name: string;
@@ -21,7 +21,7 @@ const stats = () => {
 
 	const dist = (...paths: string[]) => path.resolve("dist", ...paths);
 
-	const exts = "html,css,js".split(",").map((s) => `.${s}`);
+	const exts = options.exts.map((s) => `.${s}`);
 
 	const recursive = async (pathlike: string) => {
 		const children: Child[] = [];

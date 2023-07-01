@@ -11,7 +11,17 @@ import { stats } from "./astro.integrations";
 
 export default {
 	site: "https://flamrdevs.vercel.app",
-	integrations: [mdx(), solid(), sitemap(), compress({ logger: 1 }), stats()],
+	integrations: [
+		mdx(),
+		solid(),
+		sitemap(),
+		compress({
+			logger: 1,
+		}),
+		stats({
+			exts: ["html", "css", "js"],
+		}),
+	],
 	server: { host: true, port: 3000 },
 	vite: {
 		plugins: [ve({ emitCssInSsr: true })],
