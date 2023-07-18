@@ -32,3 +32,40 @@
     </picture>
   </a>
 </p>
+
+## Tech Stack
+
+<p align="left">
+  <picture title="astro">
+    <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button?theme=dark&icon=astro">
+    <img alt="astro" src="https://flamrdevs.cyclic.app/core/icon-button?theme=light&icon=astro" hspace="1">
+  </picture>
+  <picture title="solid">
+    <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button?theme=dark&icon=solid">
+    <img alt="solid" src="https://flamrdevs.cyclic.app/core/icon-button?theme=light&icon=solid" hspace="1">
+  </picture>
+  <picture title="node.js">
+    <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button?theme=dark&icon=node.js">
+    <img alt="node.js" src="https://flamrdevs.cyclic.app/core/icon-button?theme=light&icon=node.js" hspace="1">
+  </picture>
+  <picture title="turborepo">
+    <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button?theme=dark&icon=turborepo">
+    <img alt="turborepo" src="https://flamrdevs.cyclic.app/core/icon-button?theme=light&icon=turborepo" hspace="1">
+  </picture>
+  <picture title="typescript">
+    <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button?theme=dark&icon=typescript">
+    <img alt="typescript" src="https://flamrdevs.cyclic.app/core/icon-button?theme=light&icon=typescript" hspace="1">
+  </picture>
+  <picture title="vercel">
+    <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button?theme=dark&icon=vercel">
+    <img alt="vercel" src="https://flamrdevs.cyclic.app/core/icon-button?theme=light&icon=vercel" hspace="1">
+  </picture>
+  <picture title="netlify">
+    <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button?theme=dark&icon=netlify">
+    <img alt="netlify" src="https://flamrdevs.cyclic.app/core/icon-button?theme=light&icon=netlify" hspace="1">
+  </picture>
+</p>
+
+## LICENSE
+
+[MIT License](./LICENSE)
