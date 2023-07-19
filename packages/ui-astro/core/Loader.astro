@@ -1,0 +1,21 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+import * as LoaderCSS from "@flamrdevs/ui/core/Loader.recipe.css";
+
+import { splitProps, getRootClassesx } from "./core";
+
+type Props = HTMLAttributes<"svg"> & LoaderCSS.Variants;
+
+const [classes, props] = getRootClassesx(Astro.props);
+
+const [recipe, attrs] = splitProps(props, ["color", "size"]);
+
+const className = classes(LoaderCSS.Root(recipe));
+---
+
+<svg {...attrs} class={className} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+	<g class={LoaderCSS.G}>
+		<circle class={LoaderCSS.Circle} cx="12" cy="12" r="9.5" fill="none" stroke-width="2"></circle>
+	</g>
+</svg>

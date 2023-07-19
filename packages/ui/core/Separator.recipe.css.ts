@@ -12,16 +12,18 @@ const Root = recipe({
 		borderWidth: 0,
 		marginBlock: "auto",
 		marginInline: "auto",
-		backgroundColor: ColorsContract.neutral[5],
+		borderRadius: "100%",
 
 		selectors: {
 			[`&[data-orientation="horizontal"]`]: {
 				width: "100%",
 				height: 1,
+				backgroundImage: `linear-gradient(90deg, ${ColorsContract.neutral[3]}, ${ColorsContract.neutral[6]}, ${ColorsContract.neutral[3]})`,
 			},
 			[`&[data-orientation="vertical"]`]: {
 				width: 1,
 				height: "100%",
+				backgroundImage: `linear-gradient(0deg, ${ColorsContract.neutral[3]}, ${ColorsContract.neutral[6]}, ${ColorsContract.neutral[3]})`,
 			},
 		},
 	},

@@ -1,11 +1,19 @@
-import { MoonIcon } from "lucide-solid";
+import { Show } from "solid-js";
 
-import { Box, Button, Container, Flex, IconButton, Separator, Text } from "~/components/core";
+import { MoonIcon, SunIcon } from "lucide-solid";
+
+import { useStore } from "@flamrdevs/x-solid/libs/store";
+
+import { Box, Button, Container, Flex, IconButton, Loader, Separator, Text } from "~/components/core";
 import { ButtonLink } from "~/components/router";
+
+import { ThemeStore, toggleTheme } from "~/stores/theme";
 
 import * as UICSS from "~/styles/pages/ui.css";
 
 const UICorePage = () => {
+	const theme = useStore(ThemeStore);
+
 	return (
 		<>
 			<Container max="lg" p="4">
@@ -13,6 +21,12 @@ const UICorePage = () => {
 					<ButtonLink href="/">home</ButtonLink>
 					<Separator orientation="vertical" />
 					<ButtonLink href="/ui">ui</ButtonLink>
+					<Separator orientation="vertical" />
+					<IconButton onClick={toggleTheme}>
+						<Show when={theme() === "dark"} fallback={<MoonIcon />}>
+							<SunIcon />
+						</Show>
+					</IconButton>
 				</Flex>
 			</Container>
 
@@ -296,6 +310,43 @@ const UICorePage = () => {
 								</Box>
 								<Box>
 									<Text family="mono">mono</Text>
+								</Box>
+							</Flex>
+						</Box>
+					</Box>
+				</Box>
+
+				<Separator orientation="horizontal" />
+
+				<Box>
+					<Text family="mono" size="lg" weight={600}>
+						Loader
+					</Text>
+
+					<Box p="2">
+						<Box>
+							<Text family="mono" size="md" weight={400}>
+								Default
+							</Text>
+
+							<Flex gap="2">
+								<Box>
+									<Loader />
+								</Box>
+							</Flex>
+						</Box>
+
+						<Box>
+							<Text family="mono" size="md" weight={400}>
+								Color
+							</Text>
+
+							<Flex gap="2">
+								<Box>
+									<Loader color="neutral" />
+								</Box>
+								<Box>
+									<Loader color="primary" />
 								</Box>
 							</Flex>
 						</Box>
