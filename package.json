@@ -12,8 +12,8 @@
 		"@vanilla-extract/recipes": "^0.4.0",
 		"@vanilla-extract/sprinkles": "^1.6.1",
 		"@vanilla-extract/vite-plugin": "^3.8.2",
-		"astro": "^2.8.3",
-		"turbo": "^1.10.8",
+		"astro": "^2.8.5",
+		"turbo": "^1.10.9",
 		"typescript": "^5.1.6",
 		"vite": "^4.4.4"
 	}
