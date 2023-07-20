@@ -13,7 +13,7 @@ interface IProject {
 
 const projects = {
 	find: async () => {
-		return await fetch(HOST.API("projects")).then((res) => res.json() as Promise<IProject[]>);
+		return await fetch(HOST.API("content/projects")).then((res) => res.json() as Promise<IProject[]>);
 	},
 };
 
