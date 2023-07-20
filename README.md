@@ -32,7 +32,7 @@
   <a title="website" href="https://flamrdevs.vercel.app">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/button?t=dark&v=website">
-      <img alt="github" src="https://flamrdevs.cyclic.app/core/button?t=light&v=website" hspace="1">
+      <img alt="website" src="https://flamrdevs.cyclic.app/core/button?t=light&v=website" hspace="1">
     </picture>
   </a>
 </p>
@@ -40,7 +40,7 @@
 <h2 id="table-of-contents">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/icon/lucide?t=dark&i=code">
-    <img alt="github" src="https://flamrdevs.cyclic.app/icon/lucide?t=light&i=code" hspace="1">
+    <img alt="lucide code" src="https://flamrdevs.cyclic.app/icon/lucide?t=light&i=code" hspace="1">
   </picture>
   <span>
     Table of Contents
@@ -54,7 +54,7 @@
 <h2 id="tech-stacks">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/icon/lucide?t=dark&i=layers">
-    <img alt="github" src="https://flamrdevs.cyclic.app/icon/lucide?t=light&i=layers" hspace="1">
+    <img alt="lucide layers" src="https://flamrdevs.cyclic.app/icon/lucide?t=light&i=layers" hspace="1">
   </picture>
   <span>
     Tech Stacks
@@ -95,7 +95,7 @@
 <h2 id="license">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/icon/lucide?t=dark&i=scale">
-    <img alt="github" src="https://flamrdevs.cyclic.app/icon/lucide?t=light&i=scale" hspace="1">
+    <img alt="lucide scale" src="https://flamrdevs.cyclic.app/icon/lucide?t=light&i=scale" hspace="1">
   </picture>
   <span>
     License
