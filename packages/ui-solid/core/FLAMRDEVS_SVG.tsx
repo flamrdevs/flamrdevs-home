@@ -1,21 +1,21 @@
 import { mergeProps, splitProps } from "solid-js";
 import type { JSX } from "solid-js";
 
-import * as CSS from "@flamrdevs/ui/core/FLAMRDEVSSVG.css";
+import * as CSS from "@flamrdevs/ui/core/FLAMRDEVS_SVG.css";
 
 import clsx from "@flamrdevs/x/modules/clsx";
 
 import { splitter } from "./core";
 
-type FLAMRDEVSSVGProps = JSX.IntrinsicElements["svg"] & {
+type FLAMRDEVS_SVGProps = JSX.IntrinsicElements["svg"] & {
 	size?: number;
 };
 
-const defaultProps: FLAMRDEVSSVGProps = {
+const defaultProps: FLAMRDEVS_SVGProps = {
 	size: 500,
 };
 
-const FLAMRDEVSSVG = (props: FLAMRDEVSSVGProps) => {
+const FLAMRDEVS_SVG = (props: FLAMRDEVS_SVGProps) => {
 	props = mergeProps(defaultProps, props);
 	const [classes, local, rest] = splitProps(props, splitter.classes, ["size"]);
 
@@ -41,5 +41,5 @@ const FLAMRDEVSSVG = (props: FLAMRDEVSSVGProps) => {
 	);
 };
 
-export type { FLAMRDEVSSVGProps };
-export default FLAMRDEVSSVG;
+export type { FLAMRDEVS_SVGProps };
+export default FLAMRDEVS_SVG;

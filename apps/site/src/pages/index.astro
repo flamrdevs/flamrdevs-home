@@ -1,64 +1,62 @@
 ---
 import { GithubIcon, InstagramIcon, MoonIcon, SunIcon, TwitterIcon } from "lucide-solid";
 
-import * as LINK from "@flamrdevs/const/link";
+import { LINK } from "@flamrdevs/const/exports";
 
-import FLAMRDEVSSVG from "@flamrdevs/ui-astro/core/FLAMRDEVSSVG.astro";
-
-import { HTMLX, Center, Container, IconButton, IconButtonLink, Separator } from "~/components/core";
+import { HTMLX, Center, Container, FLAMRDEVS_SVG, IconButton, IconButtonLink, Separator } from "~/components/core";
 
 import { flamrdevssvg } from "~/styles/pages/index.css";
 ---
 
 <HTMLX>
-  <Container max="lg" p="2">
-    <Separator orientation="horizontal" />
-  </Container>
+	<Container max="lg" p="2">
+		<Separator orientation="horizontal" />
+	</Container>
 
-  <Center>
-    <FLAMRDEVSSVG class={flamrdevssvg} />
-  </Center>
+	<Center>
+		<FLAMRDEVS_SVG class={flamrdevssvg} />
+	</Center>
 
-  <Container max="lg" p="2">
-    <Separator orientation="horizontal" />
-  </Container>
+	<Container max="lg" p="2">
+		<Separator orientation="horizontal" />
+	</Container>
 
-  <Container max="lg" p="2">
-    <Center gap="2">
-      <IconButtonLink href={LINK.GITHUB}>
-        <GithubIcon client:idle />
-      </IconButtonLink>
+	<Container max="lg" p="2">
+		<Center gap="2">
+			<IconButtonLink href={LINK.GITHUB} target="_blank">
+				<GithubIcon client:idle />
+			</IconButtonLink>
 
-      <IconButtonLink href={LINK.INSTAGRAM}>
-        <InstagramIcon client:idle />
-      </IconButtonLink>
+			<IconButtonLink href={LINK.INSTAGRAM} target="_blank">
+				<InstagramIcon client:idle />
+			</IconButtonLink>
 
-      <IconButtonLink href={LINK.TWITTER}>
-        <TwitterIcon client:idle />
-      </IconButtonLink>
-    </Center>
-  </Container>
+			<IconButtonLink href={LINK.TWITTER} target="_blank">
+				<TwitterIcon client:idle />
+			</IconButtonLink>
+		</Center>
+	</Container>
 
-  <Container max="lg" p="2">
-    <Center gap="2">
-      <IconButton id="light-theme-icon-button">
-        <SunIcon client:idle />
-      </IconButton>
+	<Container max="lg" p="2">
+		<Center gap="2">
+			<IconButton id="light-theme-icon-button">
+				<SunIcon client:idle />
+			</IconButton>
 
-      <IconButton id="dark-theme-icon-button">
-        <MoonIcon client:idle />
-      </IconButton>
-    </Center>
-  </Container>
+			<IconButton id="dark-theme-icon-button">
+				<MoonIcon client:idle />
+			</IconButton>
+		</Center>
+	</Container>
 </HTMLX>
 
 <script>
-  import { changeTheme } from "~/stores/theme";
+	import { changeTheme } from "~/stores/theme";
 
-  document.getElementById("light-theme-icon-button")!.addEventListener("click", () => {
-    changeTheme("light");
-  });
-  document.getElementById("dark-theme-icon-button")!.addEventListener("click", () => {
-    changeTheme("dark");
-  });
+	document.getElementById("light-theme-icon-button")!.addEventListener("click", () => {
+		changeTheme("light");
+	});
+	document.getElementById("dark-theme-icon-button")!.addEventListener("click", () => {
+		changeTheme("dark");
+	});
 </script>

@@ -1,10 +1,10 @@
 {
-  "name": "@flamrdevs/utils",
-  "private": true,
-  "dependencies": {
-    "@flamrdevs/const": "workspace:*"
-  },
-  "devDependencies": {
-    "@flamrdevs/tsc": "workspace:*"
-  }
+	"name": "@flamrdevs/utils",
+	"private": true,
+	"dependencies": {
+		"@flamrdevs/const": "workspace:*"
+	},
+	"devDependencies": {
+		"@flamrdevs/tsc": "workspace:*"
+	}
 }

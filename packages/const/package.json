@@ -1,8 +1,8 @@
 {
-  "name": "@flamrdevs/const",
-  "private": true,
-  "dependencies": {},
-  "devDependencies": {
-    "@flamrdevs/tsc": "workspace:*"
-  }
+	"name": "@flamrdevs/const",
+	"private": true,
+	"dependencies": {},
+	"devDependencies": {
+		"@flamrdevs/tsc": "workspace:*"
+	}
 }

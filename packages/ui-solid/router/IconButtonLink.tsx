@@ -6,9 +6,7 @@ import type { IconButtonProps } from "../core/IconButton";
 
 type IconButtonLinkProps = LinkProps & Omit<IconButtonProps, "as" | "asChild">;
 
-const IconButtonLink = (props: IconButtonLinkProps) => {
-	return <IconButton<LinkProps> {...props} as={Link} />;
-};
+const IconButtonLink = (props: IconButtonLinkProps) => <IconButton<LinkProps> {...props} as={Link} />;
 
 export type { IconButtonLinkProps };
 export default IconButtonLink;

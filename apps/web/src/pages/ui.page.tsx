@@ -1,11 +1,13 @@
 import { Show } from "solid-js";
 
-import { MoonIcon, SunIcon } from "lucide-solid";
+import { GithubIcon, MoonIcon, SunIcon } from "lucide-solid";
+
+import { LINK } from "@flamrdevs/const/exports";
 
 import { useStore } from "@flamrdevs/x-solid/libs/store";
 
 import { Box, Button, Container, Flex, IconButton, Loader, Separator, Text } from "~/components/core";
-import { ButtonLink } from "~/components/router";
+import { ButtonLink, IconButtonLink } from "~/components/router";
 
 import { ThemeStore, toggleTheme } from "~/stores/theme";
 
@@ -214,6 +216,20 @@ const UICorePage = () => {
 								</Box>
 							</Flex>
 						</Box>
+
+						<Box>
+							<Text family="mono" size="md" weight={400}>
+								Link
+							</Text>
+
+							<Flex gap="2">
+								<Box>
+									<ButtonLink href={LINK.GITHUB} target="_blank">
+										github
+									</ButtonLink>
+								</Box>
+							</Flex>
+						</Box>
 					</Box>
 				</Box>
 
@@ -273,6 +289,20 @@ const UICorePage = () => {
 									<IconButton disabled>
 										<MoonIcon />
 									</IconButton>
+								</Box>
+							</Flex>
+						</Box>
+
+						<Box>
+							<Text family="mono" size="md" weight={400}>
+								Link
+							</Text>
+
+							<Flex gap="2">
+								<Box>
+									<IconButtonLink href={LINK.GITHUB} target="_blank">
+										<GithubIcon />
+									</IconButtonLink>
 								</Box>
 							</Flex>
 						</Box>

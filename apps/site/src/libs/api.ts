@@ -1,4 +1,4 @@
-import * as HOST from "@flamrdevs/utils/host";
+import { HOST } from "@flamrdevs/utils/exports";
 
 type Tag = "npm" | "preact" | "react" | "solid" | "svelte" | "vue";
 

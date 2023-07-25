@@ -1,9 +1,7 @@
 import { style } from "@vanilla-extract/css";
 
-const Root = style({
-	display: "flex",
-	justifyContent: "center",
-	alignItems: "center",
-});
+import { Display, Align, Justify } from "./Sprinkles.css";
+
+const Root = style([Display({ d: "flex" }), Align({ ai: "center" }), Justify({ jc: "center" })]);
 
 export { Root };

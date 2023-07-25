@@ -1,7 +1,9 @@
 ---
-import { MoonIcon, SunIcon } from "lucide-solid";
+import { GithubIcon, MoonIcon, SunIcon } from "lucide-solid";
 
-import { HTMLX, Box, Button, ButtonLink, Container, Flex, IconButton, Loader, Separator, Text } from "~/components/core";
+import { LINK } from "@flamrdevs/const/exports";
+
+import { HTMLX, Box, Button, ButtonLink, Container, Flex, IconButton, IconButtonLink, Loader, Separator, Text } from "~/components/core";
 
 import * as UICSS from "~/styles/pages/ui.css";
 ---
@@ -185,6 +187,16 @@ import * as UICSS from "~/styles/pages/ui.css";
 						</Box>
 					</Flex>
 				</Box>
+
+				<Box>
+					<Text family="mono" size="md" weight={400}>Link</Text>
+
+					<Flex gap="2">
+						<Box>
+							<ButtonLink href={LINK.GITHUB} target="_blank">github</ButtonLink>
+						</Box>
+					</Flex>
+				</Box>
 			</Box>
 		</Box>
 
@@ -236,6 +248,18 @@ import * as UICSS from "~/styles/pages/ui.css";
 							<IconButton disabled>
 								<MoonIcon client:idle />
 							</IconButton>
+						</Box>
+					</Flex>
+				</Box>
+
+				<Box>
+					<Text family="mono" size="md" weight={400}>Link</Text>
+
+					<Flex gap="2">
+						<Box>
+							<IconButtonLink href={LINK.GITHUB} target="_blank">
+								<GithubIcon client:idle />
+							</IconButtonLink>
 						</Box>
 					</Flex>
 				</Box>

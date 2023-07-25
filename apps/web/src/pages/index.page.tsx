@@ -2,13 +2,11 @@ import { Show } from "solid-js";
 
 import { GithubIcon, InstagramIcon, MoonIcon, SunIcon, TwitterIcon } from "lucide-solid";
 
-import * as LINK from "@flamrdevs/const/link";
-
-import FLAMRDEVSSVG from "@flamrdevs/ui-solid/core/FLAMRDEVSSVG";
+import { LINK } from "@flamrdevs/const/exports";
 
 import { useStore } from "@flamrdevs/x-solid/libs/store";
 
-import { Center, Container, IconButton, Separator } from "~/components/core";
+import { Center, Container, FLAMRDEVS_SVG, IconButton, Separator } from "~/components/core";
 import { IconButtonLink } from "~/components/router";
 
 import { ThemeStore, toggleTheme } from "~/stores/theme";
@@ -25,7 +23,7 @@ const IndexPage = () => {
 			</Container>
 
 			<Center>
-				<FLAMRDEVSSVG class={flamrdevssvg} />
+				<FLAMRDEVS_SVG class={flamrdevssvg} />
 			</Center>
 
 			<Container max="lg" p="2">
@@ -34,15 +32,15 @@ const IndexPage = () => {
 
 			<Container max="lg" p="2">
 				<Center gap="2">
-					<IconButtonLink href={LINK.GITHUB}>
+					<IconButtonLink href={LINK.GITHUB} target="_blank">
 						<GithubIcon />
 					</IconButtonLink>
 
-					<IconButtonLink href={LINK.INSTAGRAM}>
+					<IconButtonLink href={LINK.INSTAGRAM} target="_blank">
 						<InstagramIcon />
 					</IconButtonLink>
 
-					<IconButtonLink href={LINK.TWITTER}>
+					<IconButtonLink href={LINK.TWITTER} target="_blank">
 						<TwitterIcon />
 					</IconButtonLink>
 				</Center>

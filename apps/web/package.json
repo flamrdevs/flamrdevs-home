@@ -14,12 +14,12 @@
 		"@flamrdevs/utils": "workspace:*",
 		"@flamrdevs/x": "workspace:*",
 		"@flamrdevs/x-solid": "workspace:*",
-		"lucide-solid": "^0.262.0",
+		"lucide-solid": "^0.263.0",
 		"solid-js": "^1.7.8"
 	},
 	"devDependencies": {
 		"@flamrdevs/tsc": "workspace:*",
-		"vite": "^4.4.4",
+		"vite": "^4.4.7",
 		"vite-plugin-solid": "^2.7.0"
 	}
 }

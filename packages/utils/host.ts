@@ -1,4 +1,4 @@
-import * as HOST from "@flamrdevs/const/host";
+import { HOST } from "@flamrdevs/const/exports";
 
 export const SITE = (...paths: string[]) => [import.meta.env.PROD ? HOST.SITE_PROD : HOST.SITE_DEV, ...paths].join("/");
 

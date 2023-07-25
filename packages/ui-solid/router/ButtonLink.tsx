@@ -6,9 +6,7 @@ import type { ButtonProps } from "../core/Button";
 
 type ButtonLinkProps = LinkProps & Omit<ButtonProps, "as" | "asChild">;
 
-const ButtonLink = (props: ButtonLinkProps) => {
-	return <Button<LinkProps> {...props} as={Link} />;
-};
+const ButtonLink = (props: ButtonLinkProps) => <Button<LinkProps> {...props} as={Link} />;
 
 export type { ButtonLinkProps };
 export default ButtonLink;

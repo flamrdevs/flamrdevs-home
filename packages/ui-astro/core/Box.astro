@@ -1,20 +1,19 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 
-import * as BoxCSS from "@flamrdevs/ui/core/Box.recipe.css";
 import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
 
 import { splitProps, getRootClassesx } from "./core";
 
-type Props = HTMLAttributes<"div"> & BoxCSS.Variants & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
+type Props = HTMLAttributes<"div"> & Sprinkles.DisplayShorthandsVariants & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
 
 const [classes, props] = getRootClassesx(Astro.props);
 
-const [recipe, margin, padding, attrs] = splitProps(props, ["inline"], Sprinkles.splitter.margin, Sprinkles.splitter.padding);
+const [display, margin, padding, attrs] = splitProps(props, Sprinkles.splitter.display, Sprinkles.splitter.margin, Sprinkles.splitter.padding);
 
-const className = classes(BoxCSS.Root(recipe), Sprinkles.Margin(margin), Sprinkles.Padding(padding));
+const className = classes(Sprinkles.Display(display), Sprinkles.Margin(margin), Sprinkles.Padding(padding));
 ---
 
 <div {...attrs} class={className}>
-  <slot />
+	<slot />
 </div>

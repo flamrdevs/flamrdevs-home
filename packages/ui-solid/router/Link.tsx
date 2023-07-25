@@ -6,9 +6,7 @@ import type { LinkProps as CoreLinkProps } from "../core/Link";
 
 type LinkProps = RouterLinkProps & Omit<CoreLinkProps, "as" | "asChild">;
 
-const Link = (props: LinkProps) => {
-	return <CoreLink<RouterLinkProps> {...props} as={RouterLink} />;
-};
+const Link = (props: LinkProps) => <CoreLink<RouterLinkProps> {...props} as={RouterLink} />;
 
 export type { LinkProps };
 export default Link;

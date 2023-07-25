@@ -9,7 +9,7 @@ const SCREEN = {
 };
 
 const CONDITIONS = {
-	base: {},
+	__: {},
 	xs: { "@media": `screen and (min-width: ${SCREEN.xs})` },
 	sm: { "@media": `screen and (min-width: ${SCREEN.sm})` },
 	md: { "@media": `screen and (min-width: ${SCREEN.md})` },
@@ -17,10 +17,10 @@ const CONDITIONS = {
 	xl: { "@media": `screen and (min-width: ${SCREEN.xl})` },
 } as const;
 
-const DEFAULTCONDITION = "base" satisfies keyof typeof CONDITIONS;
+const DEFAULTCONDITION = "__" satisfies keyof typeof CONDITIONS;
 
 const SPACE = {
-	none: 0,
+	"0": 0,
 	"1": "0.25rem",
 	"2": "0.5rem",
 	"3": "0.75rem",
@@ -36,6 +36,36 @@ const SPACE = {
 	"14": "3.5rem",
 	"16": "4rem",
 };
+
+type DisplayVariants = Parameters<typeof Display>[0];
+type DisplayShorthandsVariants = Omit<DisplayVariants, "display">;
+const DisplayProperties = defineProperties({
+	conditions: CONDITIONS,
+	defaultCondition: DEFAULTCONDITION,
+	properties: {
+		display: {
+			none: {
+				display: "none",
+			},
+			block: {
+				display: "block",
+			},
+			iblock: {
+				display: "inline-block",
+			},
+			flex: {
+				display: "flex",
+			},
+			iflex: {
+				display: "inline-flex",
+			},
+		},
+	},
+	shorthands: {
+		d: ["display"],
+	},
+});
+const Display = createSprinkles(DisplayProperties);
 
 type AlignVariants = Parameters<typeof Align>[0];
 type AlignShorthandsVariants = Omit<AlignVariants, "alignItems">;
@@ -160,8 +190,15 @@ const PaddingProperties = defineProperties({
 });
 const Padding = createSprinkles(PaddingProperties);
 
-export * as splitter from "./Sprinkles.splitter";
+export const splitter = {
+	display: ["d"] as const,
+	align: ["ai"] as const,
+	justify: ["jc"] as const,
+	gap: ["gap", "gapx", "gapy"] as const,
+	margin: ["m", "mx", "my", "mt", "mr", "mb", "ml"] as const,
+	padding: ["p", "px", "py", "pt", "pr", "pb", "pl"] as const,
+};
 
-export type { AlignShorthandsVariants, JustifyShorthandsVariants, GapShorthandsVariants, MarginShorthandsVariants, PaddingShorthandsVariants };
+export type { DisplayShorthandsVariants, AlignShorthandsVariants, JustifyShorthandsVariants, GapShorthandsVariants, MarginShorthandsVariants, PaddingShorthandsVariants };
 export { SCREEN };
-export { Align, Justify, Gap, Margin, Padding };
+export { Display, Align, Justify, Gap, Margin, Padding };

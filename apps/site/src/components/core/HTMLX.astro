@@ -3,13 +3,13 @@ import "@flamrdevs/ui/core/styles/globals.css";
 
 import ThemeScript from "@flamrdevs/ui-astro/core/ThemeScript.astro";
 
-import * as HOST from "@flamrdevs/utils/host";
+import { HOST } from "@flamrdevs/utils/exports";
 
 type Props = {
-  title?: string;
-  description?: string;
-  url?: string;
-  image?: string;
+	title?: string;
+	description?: string;
+	url?: string;
+	image?: string;
 };
 
 const TITLE_DEFAULT = "flamrdevs";
@@ -21,40 +21,40 @@ const { title = TITLE_DEFAULT, description = DESCRIPTION_DEFAULT, url = URL_DEFA
 ---
 
 <html data-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{title}</title>
-    <meta name="description" content={description} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={url} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={url} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
 
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={url} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={image} />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={url} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={image} />
 
-    <link rel="icon" type="image/x-icon" href={HOST.STATIC("favicon.ico")} />
+		<link rel="icon" type="image/x-icon" href={HOST.STATIC("favicon.ico")} />
 
-    <link rel="stylesheet" href={HOST.STATIC("stylesheets", "normalize.css")} />
-    <link rel="stylesheet" href={HOST.STATIC("stylesheets", "fonts.css")} />
+		<link rel="stylesheet" href={HOST.STATIC("stylesheets", "normalize.css")} />
+		<link rel="stylesheet" href={HOST.STATIC("stylesheets", "fonts.css")} />
 
-    <link rel="sitemap" href="/sitemap-index.xml" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 
-    <ThemeScript />
-  </head>
-  <body>
-    <slot />
-    <script>
-      import { initTheme } from "~/stores/theme";
+		<ThemeScript />
+	</head>
+	<body>
+		<slot />
+		<script>
+			import { initTheme } from "~/stores/theme";
 
-      initTheme();
-    </script>
-  </body>
+			initTheme();
+		</script>
+	</body>
 </html>
