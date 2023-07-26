@@ -1,5 +1,5 @@
 ---
-import { GithubIcon, InstagramIcon, MoonIcon, SunIcon, TwitterIcon } from "lucide-solid";
+import { GithubIcon, MoonIcon, SunIcon } from "lucide-solid";
 
 import { LINK } from "@flamrdevs/const/exports";
 
@@ -25,14 +25,6 @@ import { flamrdevssvg } from "~/styles/pages/index.css";
 		<Center gap="2">
 			<IconButtonLink href={LINK.GITHUB} target="_blank">
 				<GithubIcon client:idle />
-			</IconButtonLink>
-
-			<IconButtonLink href={LINK.INSTAGRAM} target="_blank">
-				<InstagramIcon client:idle />
-			</IconButtonLink>
-
-			<IconButtonLink href={LINK.TWITTER} target="_blank">
-				<TwitterIcon client:idle />
 			</IconButtonLink>
 		</Center>
 	</Container>

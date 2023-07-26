@@ -10,18 +10,6 @@
       <img alt="github" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=github" hspace="1">
     </picture>
   </a>
-  <a title="instagram" href="https://instagram.com/flamrdevs">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/simple?t=dark&i=instagram">
-      <img alt="instagram" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=instagram" hspace="1">
-    </picture>
-  </a>
-  <a title="twitter" href="https://twitter.com/flamrdevs">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/simple?t=dark&i=twitter">
-      <img alt="twitter" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=twitter" hspace="1">
-    </picture>
-  </a>
   <picture title="mode">
     <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/lucide?t=dark&i=moon">
     <img alt="mode" src="https://flamrdevs.cyclic.app/core/icon-button/lucide?t=light&i=sun" hspace="1">

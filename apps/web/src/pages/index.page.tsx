@@ -1,6 +1,6 @@
 import { Show } from "solid-js";
 
-import { GithubIcon, InstagramIcon, MoonIcon, SunIcon, TwitterIcon } from "lucide-solid";
+import { GithubIcon, MoonIcon, SunIcon } from "lucide-solid";
 
 import { LINK } from "@flamrdevs/const/exports";
 
@@ -34,14 +34,6 @@ const IndexPage = () => {
 				<Center gap="2">
 					<IconButtonLink href={LINK.GITHUB} target="_blank">
 						<GithubIcon />
-					</IconButtonLink>
-
-					<IconButtonLink href={LINK.INSTAGRAM} target="_blank">
-						<InstagramIcon />
-					</IconButtonLink>
-
-					<IconButtonLink href={LINK.TWITTER} target="_blank">
-						<TwitterIcon />
 					</IconButtonLink>
 				</Center>
 			</Container>
