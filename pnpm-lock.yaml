@@ -5,8 +5,8 @@ importers:
   .:
     devDependencies:
       '@types/node':
-        specifier: ^20.4.4
-        version: 20.4.4
+        specifier: ^20.4.5
+        version: 20.4.5
       '@vanilla-extract/css':
         specifier: ^1.12.0
         version: 1.12.0
@@ -18,19 +18,19 @@ importers:
         version: 1.6.1(@vanilla-extract/css@1.12.0)
       '@vanilla-extract/vite-plugin':
         specifier: ^3.8.2
-        version: 3.8.2(@types/node@20.4.4)(vite@4.4.7)
+        version: 3.8.2(@types/node@20.4.5)(vite@4.4.7)
       astro:
-        specifier: ^2.9.2
-        version: 2.9.2(@types/node@20.4.4)
+        specifier: ^2.9.3
+        version: 2.9.3(@types/node@20.4.5)
       turbo:
-        specifier: ^1.10.11
-        version: 1.10.11
+        specifier: ^1.10.12
+        version: 1.10.12
       typescript:
         specifier: ^5.1.6
         version: 5.1.6
       vite:
         specifier: ^4.4.7
-        version: 4.4.7(@types/node@20.4.4)
+        version: 4.4.7(@types/node@20.4.5)
 
   apps/site:
     dependencies:
@@ -59,8 +59,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/x-solid
       astro:
-        specifier: ^2.9.2
-        version: 2.9.2(@types/node@20.4.4)
+        specifier: ^2.9.3
+        version: 2.9.3(@types/node@20.4.5)
       lucide-solid:
         specifier: ^0.263.0
         version: 0.263.0(solid-js@1.7.8)
@@ -70,7 +70,7 @@ importers:
     devDependencies:
       '@astrojs/mdx':
         specifier: ^0.19.7
-        version: 0.19.7(astro@2.9.2)
+        version: 0.19.7(astro@2.9.3)
       '@astrojs/sitemap':
         specifier: ^2.0.1
         version: 2.0.1
@@ -116,7 +116,7 @@ importers:
         version: link:../../packages/tsc
       vite:
         specifier: ^4.4.7
-        version: 4.4.7(@types/node@20.4.4)
+        version: 4.4.7(@types/node@20.4.5)
       vite-plugin-solid:
         specifier: ^2.7.0
         version: 2.7.0(solid-js@1.7.8)(vite@4.4.7)
@@ -160,8 +160,8 @@ importers:
         specifier: workspace:*
         version: link:../x-astro
       astro:
-        specifier: ^2.9.2
-        version: 2.9.2(@types/node@20.4.4)
+        specifier: ^2.9.3
+        version: 2.9.3(@types/node@20.4.5)
     devDependencies:
       '@flamrdevs/tsc':
         specifier: workspace:*
@@ -224,8 +224,8 @@ importers:
         specifier: workspace:*
         version: link:../x
       astro:
-        specifier: ^2.9.2
-        version: 2.9.2(@types/node@20.4.4)
+        specifier: ^2.9.3
+        version: 2.9.3(@types/node@20.4.5)
     devDependencies:
       '@flamrdevs/tsc':
         specifier: workspace:*
@@ -283,13 +283,13 @@ packages:
       vscode-languageserver-types: 3.17.3
       vscode-uri: 3.0.7
 
-  /@astrojs/markdown-remark@2.2.1(astro@2.9.2):
+  /@astrojs/markdown-remark@2.2.1(astro@2.9.3):
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.9.2(@types/node@20.4.4)
+      astro: 2.9.3(@types/node@20.4.5)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -305,11 +305,11 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/mdx@0.19.7(astro@2.9.2):
+  /@astrojs/mdx@0.19.7(astro@2.9.3):
     resolution: {integrity: sha512-mfEbBD7oi8yBHhcJucEjnrquREkJ3os+jioURP8BR2B8tOV2rV2j8trvmLUgfS+P/+HevGObxCTjcRYxn6T7eg==}
     engines: {node: '>=16.12.0'}
     dependencies:
-      '@astrojs/markdown-remark': 2.2.1(astro@2.9.2)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.9.3)
       '@astrojs/prism': 2.1.2
       '@mdx-js/mdx': 2.3.0
       acorn: 8.8.2
@@ -1696,7 +1696,7 @@ packages:
   /@types/babel__template@7.4.1:
     resolution: {integrity: sha512-azBFKemX6kMg5Io+/rdGT0dkGreboUVR0Cdm3fz9QJWpaQGJRQXl7C+6hOTCZcMll7KFyEQpgbYI2lHdsS4U7g==}
     dependencies:
-      '@babel/parser': 7.22.5
+      '@babel/parser': 7.22.7
       '@babel/types': 7.22.5
 
   /@types/babel__traverse@7.20.1:
@@ -1770,8 +1770,8 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: true
 
-  /@types/node@20.4.4:
-    resolution: {integrity: sha512-CukZhumInROvLq3+b5gLev+vgpsIqC2D0deQr/yS1WnxvmYLlJXZpaQrQiseMY+6xusl79E04UjWoqyr+t1/Ew==}
+  /@types/node@20.4.5:
+    resolution: {integrity: sha512-rt40Nk13II9JwQBdeYqmbn2Q6IVTA5uPhvSO+JVqdXw/6/4glI6oR9ezty/A9Hg5u7JH4OmYmuQ+XvjKm0Datg==}
 
   /@types/parse5@6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
@@ -1818,7 +1818,7 @@ packages:
       outdent: 0.8.0
     dev: true
 
-  /@vanilla-extract/integration@6.2.1(@types/node@20.4.4):
+  /@vanilla-extract/integration@6.2.1(@types/node@20.4.5):
     resolution: {integrity: sha512-+xYJz07G7TFAMZGrOqArOsURG+xcYvqctujEkANjw2McCBvGEK505RxQqOuNiA9Mi9hgGdNp2JedSa94f3eoLg==}
     dependencies:
       '@babel/core': 7.22.5
@@ -1832,8 +1832,8 @@ packages:
       lodash: 4.17.21
       mlly: 1.3.0
       outdent: 0.8.0
-      vite: 4.4.7(@types/node@20.4.4)
-      vite-node: 0.28.5(@types/node@20.4.4)
+      vite: 4.4.7(@types/node@20.4.5)
+      vite-node: 0.28.5(@types/node@20.4.5)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -1865,16 +1865,16 @@ packages:
       '@vanilla-extract/css': 1.12.0
     dev: true
 
-  /@vanilla-extract/vite-plugin@3.8.2(@types/node@20.4.4)(vite@4.4.7):
+  /@vanilla-extract/vite-plugin@3.8.2(@types/node@20.4.5)(vite@4.4.7):
     resolution: {integrity: sha512-i0vpuBUoh10Obl0hJr0dWQa6M3Udu/irm4tnsg1lUze8DXTbv3ctHmVu/wrRZHKw1EzzW/v+nLoJJRvisApspQ==}
     peerDependencies:
       vite: ^2.2.3 || ^3.0.0 || ^4.0.3
     dependencies:
-      '@vanilla-extract/integration': 6.2.1(@types/node@20.4.4)
+      '@vanilla-extract/integration': 6.2.1(@types/node@20.4.5)
       outdent: 0.8.0
       postcss: 8.4.24
       postcss-load-config: 3.1.4(postcss@8.4.24)
-      vite: 4.4.7(@types/node@20.4.4)
+      vite: 4.4.7(@types/node@20.4.5)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -2000,8 +2000,8 @@ packages:
       terser: 5.18.2
     dev: true
 
-  /astro@2.9.2(@types/node@20.4.4):
-    resolution: {integrity: sha512-ejdGM9SbK58AvJS8lbkre/d5CoW8JftqaRxc9rGqzpiZQ8iU8gfdFmi3Hzkcvd2HrGvYYsJku88pM6tkBPniJQ==}
+  /astro@2.9.3(@types/node@20.4.5):
+    resolution: {integrity: sha512-EcFYnJytMgDhBf1MxWIG1GNwfDL2yRvVt+4aguYbcFDNz8EjLKgpLYbbTzR2VlIQu1vpxImZZ0bmPy8Hd+tAfw==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -2013,7 +2013,7 @@ packages:
       '@astrojs/compiler': 1.6.2
       '@astrojs/internal-helpers': 0.1.1
       '@astrojs/language-server': 1.0.8
-      '@astrojs/markdown-remark': 2.2.1(astro@2.9.2)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.9.3)
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.9
@@ -2063,7 +2063,7 @@ packages:
       typescript: 5.1.6
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.4.7(@types/node@20.4.4)
+      vite: 4.4.7(@types/node@20.4.5)
       vitefu: 0.2.4(vite@4.4.7)
       which-pm: 2.0.0
       yargs-parser: 21.1.1
@@ -2498,7 +2498,7 @@ packages:
     dependencies:
       bundle-name: 3.0.0
       default-browser-id: 3.0.0
-      execa: 7.1.1
+      execa: 7.2.0
       titleize: 3.0.0
 
   /defaults@1.0.4:
@@ -2785,8 +2785,8 @@ packages:
       signal-exit: 3.0.7
       strip-final-newline: 3.0.0
 
-  /execa@7.1.1:
-    resolution: {integrity: sha512-wH0eMf/UXckdUYnO21+HDztteVv05rq2GXksxT4fCGeHkBhw1DROXh40wcjMcRqDOWE7iPJ4n3M7e2+YFP+76Q==}
+  /execa@7.2.0:
+    resolution: {integrity: sha512-UduyVP7TLB5IcAQl+OzLyLcS/l32W/GLg+AhHJ+ow40FOk2U3SAllPwR44v4vmdFwIWqpdwxxpQbF1n5ta9seA==}
     engines: {node: ^14.18.0 || ^16.14.0 || >=18.0.0}
     dependencies:
       cross-spawn: 7.0.3
@@ -4809,65 +4809,65 @@ packages:
       safe-buffer: 5.2.1
     dev: true
 
-  /turbo-darwin-64@1.10.11:
-    resolution: {integrity: sha512-pHNz6D5XUVB+bgZMKXIOegvH9GzPXucwgiHFatQcRoscAW1te1Zvn3fAWYo/mJ550AqPWQLmALZZel3z3lllLA==}
+  /turbo-darwin-64@1.10.12:
+    resolution: {integrity: sha512-vmDfGVPl5/aFenAbOj3eOx3ePNcWVUyZwYr7taRl0ZBbmv2TzjRiFotO4vrKCiTVnbqjQqAFQWY2ugbqCI1kOQ==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-darwin-arm64@1.10.11:
-    resolution: {integrity: sha512-j3yGAvkBu0BqR+5nb9LiRs8UZsUQDOqpdP4S9OW3+W5jorJIxUxLawwk3XqoYVGhmPh84LWWOOrMgFQ/Y/3WSg==}
+  /turbo-darwin-arm64@1.10.12:
+    resolution: {integrity: sha512-3JliEESLNX2s7g54SOBqqkqJ7UhcOGkS0ywMr5SNuvF6kWVTbuUq7uBU/sVbGq8RwvK1ONlhPvJne5MUqBCTCQ==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-64@1.10.11:
-    resolution: {integrity: sha512-FZ+/VT3Yt188VvPuvqIwIyvosYALzu7e8ewxpl8yiYDwQbLwxMOEt2UKACsL+D7wzNtIMPRDxNmnhNvTbx9Afw==}
+  /turbo-linux-64@1.10.12:
+    resolution: {integrity: sha512-siYhgeX0DidIfHSgCR95b8xPee9enKSOjCzx7EjTLmPqPaCiVebRYvbOIYdQWRqiaKh9yfhUtFmtMOMScUf1gg==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-arm64@1.10.11:
-    resolution: {integrity: sha512-IfxO8S1FiikunmUnlul1sd5piPlunU1QlnNNGFfhKJkMidkJ0rXsSbh2epn/pXO8RRPBnFRxYkp6gJz/FTUUTg==}
+  /turbo-linux-arm64@1.10.12:
+    resolution: {integrity: sha512-K/ZhvD9l4SslclaMkTiIrnfcACgos79YcAo4kwc8bnMQaKuUeRpM15sxLpZp3xDjDg8EY93vsKyjaOhdFG2UbA==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-64@1.10.11:
-    resolution: {integrity: sha512-5qwTEk27duxYIsDycgZdpti1b41Xu2D3W+WRlg++sylwqhAgcPhfcppXMGd70h/SScgIh7IeLjzgTK7+YPE77g==}
+  /turbo-windows-64@1.10.12:
+    resolution: {integrity: sha512-7FSgSwvktWDNOqV65l9AbZwcoueAILeE4L7JvjauNASAjjbuzXGCEq5uN8AQU3U5BOFj4TdXrVmO2dX+lLu8Zg==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-arm64@1.10.11:
-    resolution: {integrity: sha512-FGvWCWvii4PZqy+4VBoanKaMkqeRD146iHL67YpY5sp8z5H/Gkywtu8xxBbkgP14lBr6fAsyRarHBuR+c52cDg==}
+  /turbo-windows-arm64@1.10.12:
+    resolution: {integrity: sha512-gCNXF52dwom1HLY9ry/cneBPOKTBHhzpqhMylcyvJP0vp9zeMQQkt6yjYv+6QdnmELC92CtKNp2FsNZo+z0pyw==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo@1.10.11:
-    resolution: {integrity: sha512-6GzYbsG5Ro6dK62dJuBjA53RdpMr1PWVwN6ZZRSMgYgkvFmNDMwxzJUKuCSi+jfDSt6avwT7koNlwRPfgTFuOw==}
+  /turbo@1.10.12:
+    resolution: {integrity: sha512-WM3+jTfQWnB9W208pmP4oeehZcC6JQNlydb/ZHMRrhmQa+htGhWLCzd6Q9rLe0MwZLPpSPFV2/bN5egCLyoKjQ==}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      turbo-darwin-64: 1.10.11
-      turbo-darwin-arm64: 1.10.11
-      turbo-linux-64: 1.10.11
-      turbo-linux-arm64: 1.10.11
-      turbo-windows-64: 1.10.11
-      turbo-windows-arm64: 1.10.11
+      turbo-darwin-64: 1.10.12
+      turbo-darwin-arm64: 1.10.12
+      turbo-linux-64: 1.10.12
+      turbo-linux-arm64: 1.10.12
+      turbo-windows-64: 1.10.12
+      turbo-windows-arm64: 1.10.12
     dev: true
 
   /type-fest@0.13.1:
@@ -5013,7 +5013,7 @@ packages:
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
 
-  /vite-node@0.28.5(@types/node@20.4.4):
+  /vite-node@0.28.5(@types/node@20.4.5):
     resolution: {integrity: sha512-LmXb9saMGlrMZbXTvOveJKwMTBTNUH66c8rJnQ0ZPNX+myPEol64+szRzXtV5ORb0Hb/91yq+/D3oERoyAt6LA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -5025,7 +5025,7 @@ packages:
       picocolors: 1.0.0
       source-map: 0.6.1
       source-map-support: 0.5.21
-      vite: 4.4.7(@types/node@20.4.4)
+      vite: 4.4.7(@types/node@20.4.5)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -5050,13 +5050,13 @@ packages:
       merge-anything: 5.1.7
       solid-js: 1.7.8
       solid-refresh: 0.5.3(solid-js@1.7.8)
-      vite: 4.4.7(@types/node@20.4.4)
+      vite: 4.4.7(@types/node@20.4.5)
       vitefu: 0.2.4(vite@4.4.7)
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite@4.4.7(@types/node@20.4.4):
+  /vite@4.4.7(@types/node@20.4.5):
     resolution: {integrity: sha512-6pYf9QJ1mHylfVh39HpuSfMPojPSKVxZvnclX1K1FyZ1PXDOcLBibdq5t1qxJSnL63ca8Wf4zts6mD8u8oc9Fw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -5084,7 +5084,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.4.4
+      '@types/node': 20.4.5
       esbuild: 0.18.16
       postcss: 8.4.27
       rollup: 3.26.3
@@ -5099,7 +5099,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.4.7(@types/node@20.4.4)
+      vite: 4.4.7(@types/node@20.4.5)
 
   /vscode-css-languageservice@6.2.6:
     resolution: {integrity: sha512-SA2WkeOecIpUiEbZnjOsP/fI5CRITZEiQGSHXKiDQDwLApfKcnLhZwMtOBbIifSzESVcQa7b/shX/nbnF4NoCg==}

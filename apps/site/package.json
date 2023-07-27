@@ -16,7 +16,7 @@
 		"@flamrdevs/x": "workspace:*",
 		"@flamrdevs/x-astro": "workspace:*",
 		"@flamrdevs/x-solid": "workspace:*",
-		"astro": "^2.9.2",
+		"astro": "^2.9.3",
 		"lucide-solid": "^0.263.0",
 		"solid-js": "^1.7.8"
 	},
