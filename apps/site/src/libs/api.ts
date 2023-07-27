@@ -1,6 +1,23 @@
 import { HOST } from "@flamrdevs/utils/exports";
 
-type Tag = "npm" | "preact" | "react" | "solid" | "svelte" | "vue";
+type Tag =
+	| "astro"
+	| "cloudflare-pages"
+	| "deno"
+	| "fastify"
+	| "hono"
+	| "netlify"
+	| "node"
+	| "npm"
+	| "preact"
+	| "react"
+	| "solid"
+	| "svelte"
+	| "tailwindcss"
+	| "turborepo"
+	| "vanilla-extract"
+	| "vercel"
+	| "vue";
 
 interface IProject {
 	name: string;
