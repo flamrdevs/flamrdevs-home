@@ -19,7 +19,7 @@
 	},
 	"devDependencies": {
 		"@flamrdevs/tsc": "workspace:*",
-		"vite": "^4.4.7",
+		"vite": "^4.4.8",
 		"vite-plugin-solid": "^2.7.0"
 	}
 }
