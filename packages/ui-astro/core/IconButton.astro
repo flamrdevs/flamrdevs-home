@@ -2,15 +2,16 @@
 import type { HTMLAttributes } from "astro/types";
 
 import * as IconButtonCSS from "@flamrdevs/ui/core/IconButton.recipe.css";
+import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { splitProps, getRootClassesx, getButtonAttrs } from "./core";
+import { getRootClassesx, getButtonAttrs } from "./core";
 import type { ButtonOptions } from "./core";
 
 type Props = HTMLAttributes<"button"> & ButtonOptions & IconButtonCSS.Variants & IconButtonCSS.InnerVariants & IconButtonCSS.ChildVariants;
 
 const [classes, props] = getRootClassesx(Astro.props);
 
-const [options, recipe, attrs] = splitProps(props, ["disabled"], ["color", "size"]);
+const [options, recipe, attrs] = propsplit(props, ["disabled"], ["color", "size"]);
 
 const className = classes(IconButtonCSS.Root({ color: recipe.color, size: recipe.size }));
 const innerClassName = IconButtonCSS.Inner({ color: recipe.color });
@@ -18,9 +19,9 @@ const childClassName = IconButtonCSS.Child({ size: recipe.size });
 ---
 
 <button type="button" {...attrs} class={className} {...getButtonAttrs(options)}>
-  <div class={innerClassName}>
-    <div class={childClassName}>
-      <slot />
-    </div>
-  </div>
+	<div class={innerClassName}>
+		<div class={childClassName}>
+			<slot />
+		</div>
+	</div>
 </button>

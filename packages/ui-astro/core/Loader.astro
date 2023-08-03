@@ -2,14 +2,15 @@
 import type { HTMLAttributes } from "astro/types";
 
 import * as LoaderCSS from "@flamrdevs/ui/core/Loader.recipe.css";
+import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { splitProps, getRootClassesx } from "./core";
+import { getRootClassesx } from "./core";
 
 type Props = HTMLAttributes<"svg"> & LoaderCSS.Variants;
 
 const [classes, props] = getRootClassesx(Astro.props);
 
-const [recipe, attrs] = splitProps(props, ["color", "size"]);
+const [recipe, attrs] = propsplit(props, ["color", "size"]);
 
 const className = classes(LoaderCSS.Root(recipe));
 ---

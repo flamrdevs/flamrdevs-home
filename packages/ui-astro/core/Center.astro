@@ -3,18 +3,19 @@ import type { HTMLAttributes } from "astro/types";
 
 import * as CenterCSS from "@flamrdevs/ui/core/Center.style.css";
 import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
+import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { splitProps, getRootClassesx } from "./core";
+import { getRootClassesx } from "./core";
 
 type Props = HTMLAttributes<"div"> & Sprinkles.GapShorthandsVariants & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
 
 const [classes, props] = getRootClassesx(Astro.props);
 
-const [gap, margin, padding, attrs] = splitProps(props, Sprinkles.splitter.gap, Sprinkles.splitter.margin, Sprinkles.splitter.padding);
+const [gap, margin, padding, attrs] = propsplit(props, Sprinkles.splitter.gap, Sprinkles.splitter.margin, Sprinkles.splitter.padding);
 
 const className = classes(CenterCSS.Root, Sprinkles.Gap(gap), Sprinkles.Margin(margin), Sprinkles.Padding(padding));
 ---
 
 <div {...attrs} class={className}>
-  <slot />
+	<slot />
 </div>

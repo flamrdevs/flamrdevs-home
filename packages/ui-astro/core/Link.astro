@@ -2,19 +2,20 @@
 import type { HTMLAttributes } from "astro/types";
 
 import * as LinkCSS from "@flamrdevs/ui/core/Link.style.css";
+import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { splitProps, getRootClassesx, getLinkAttrs } from "./core";
+import { getRootClassesx, getLinkAttrs } from "./core";
 import type { LinkOptions } from "./core";
 
 type Props = Omit<HTMLAttributes<"a">, "href"> & { href: string } & LinkOptions;
 
 const [classes, props] = getRootClassesx(Astro.props);
 
-const [options, attrs] = splitProps(props, ["disabled"]);
+const [options, attrs] = propsplit(props, ["disabled"]);
 
 const className = classes(LinkCSS.Root);
 ---
 
 <a {...attrs} class={className} {...getLinkAttrs(options)}>
-  <slot />
+	<slot />
 </a>

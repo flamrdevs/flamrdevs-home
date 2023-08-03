@@ -2,14 +2,15 @@
 import type { HTMLAttributes } from "astro/types";
 
 import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
+import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { splitProps, getRootClassesx } from "./core";
+import { getRootClassesx } from "./core";
 
 type Props = HTMLAttributes<"div"> & Sprinkles.DisplayShorthandsVariants & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
 
 const [classes, props] = getRootClassesx(Astro.props);
 
-const [display, margin, padding, attrs] = splitProps(props, Sprinkles.splitter.display, Sprinkles.splitter.margin, Sprinkles.splitter.padding);
+const [display, margin, padding, attrs] = propsplit(props, Sprinkles.splitter.display, Sprinkles.splitter.margin, Sprinkles.splitter.padding);
 
 const className = classes(Sprinkles.Display(display), Sprinkles.Margin(margin), Sprinkles.Padding(padding));
 ---

@@ -210,6 +210,9 @@ importers:
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
+      propsplit:
+        specifier: ^1.0.0
+        version: 1.0.0
     devDependencies:
       '@flamrdevs/tsc':
         specifier: workspace:*
@@ -4268,6 +4271,10 @@ packages:
 
   /property-information@6.2.0:
     resolution: {integrity: sha512-kma4U7AFCTwpqq5twzC1YVIDXSqg6qQK6JN0smOw8fgRy1OkMi0CYSzFmsy6dnqSenamAtj0CyXMUJ1Mf6oROg==}
+
+  /propsplit@1.0.0:
+    resolution: {integrity: sha512-yG4sNQMGnxDYuPbAINCj6fB3qTwf6V72xKMVoftUQBVnw6vkQjhG5uTpPfmodiV4hTQmwtHt+sFINLqGVHiMYg==}
+    dev: false
 
   /pump@3.0.0:
     resolution: {integrity: sha512-LwZy+p3SFs1Pytd/jYct4wpv49HiYCqd9Rlc5ZVdk0V+8Yzv6jR5Blk3TRmPL1ft69TxP0IMZGJ+WPFU2BFhww==}
