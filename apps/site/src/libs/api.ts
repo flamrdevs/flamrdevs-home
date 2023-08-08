@@ -1,6 +1,7 @@
 import { HOST } from "@flamrdevs/utils/exports";
 
 type Tag =
+	| "api"
 	| "astro"
 	| "cloudflare-pages"
 	| "deno"
@@ -13,6 +14,7 @@ type Tag =
 	| "react"
 	| "solid"
 	| "svelte"
+	| "svg"
 	| "tailwindcss"
 	| "turborepo"
 	| "vanilla-extract"
