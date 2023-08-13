@@ -10,6 +10,18 @@
       <img alt="github" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=github" hspace="1">
     </picture>
   </a>
+  <a title="gitlab" href="https://gitlab.com/flamrdevs">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/simple?t=dark&i=gitlab">
+      <img alt="gitlab" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=gitlab" hspace="1">
+    </picture>
+  </a>
+  <a title="x" href="https://x.com/flamrdevs">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/simple?t=dark&i=x">
+      <img alt="x" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=x" hspace="1">
+    </picture>
+  </a>
   <picture title="mode">
     <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/lucide?t=dark&i=moon">
     <img alt="mode" src="https://flamrdevs.cyclic.app/core/icon-button/lucide?t=light&i=sun" hspace="1">
