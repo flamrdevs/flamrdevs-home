@@ -6,8 +6,8 @@
 		"@flamrdevs/ui": "workspace:*",
 		"@flamrdevs/x": "workspace:*",
 		"@flamrdevs/x-solid": "workspace:*",
-		"@kobalte/core": "^0.9.8",
-		"solid-js": "^1.7.9"
+		"@kobalte/core": "^0.10.0",
+		"solid-js": "^1.7.11"
 	},
 	"devDependencies": {
 		"@flamrdevs/tsc": "workspace:*"
