@@ -1,6 +1,6 @@
 import { style } from "@vanilla-extract/css";
 
-import { SCREEN } from "@flamrdevs/ui/core/Sprinkles.css";
+import { SCREEN } from "@flamrdevs/ui/core/sprinkles.css";
 
 const flamrdevssvg = style({
 	width: "10rem",

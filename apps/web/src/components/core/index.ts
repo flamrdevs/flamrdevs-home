@@ -2,7 +2,6 @@ export { default as Box } from "@flamrdevs/ui-solid/core/Box";
 export { default as Button } from "@flamrdevs/ui-solid/core/Button";
 export { default as Center } from "@flamrdevs/ui-solid/core/Center";
 export { default as Container } from "@flamrdevs/ui-solid/core/Container";
-export { default as FLAMRDEVS_SVG } from "@flamrdevs/ui-solid/core/FLAMRDEVS_SVG";
 export { default as Flex } from "@flamrdevs/ui-solid/core/Flex";
 export { default as IconButton } from "@flamrdevs/ui-solid/core/IconButton";
 export { default as Link } from "@flamrdevs/ui-solid/core/Link";

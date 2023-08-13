@@ -6,7 +6,7 @@ import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
 
 import clsx from "@flamrdevs/x/modules/clsx";
 
-import { splitter } from "./core";
+import { ClassesKeys } from "./../classes";
 
 type FlexProps = JSX.IntrinsicElements["div"] &
 	FlexCSS.Variants &
@@ -19,13 +19,13 @@ type FlexProps = JSX.IntrinsicElements["div"] &
 const Flex = (props: FlexProps) => {
 	const [classes, flex, align, justify, gap, margin, padding, rest] = splitProps(
 		props,
-		splitter.classes,
-		["inline"],
-		Sprinkles.splitter.align,
-		Sprinkles.splitter.justify,
-		Sprinkles.splitter.gap,
-		Sprinkles.splitter.margin,
-		Sprinkles.splitter.padding
+		ClassesKeys,
+		FlexCSS.RootKeys,
+		Sprinkles.AlignKeys,
+		Sprinkles.JustifyKeys,
+		Sprinkles.GapKeys,
+		Sprinkles.MarginKeys,
+		Sprinkles.PaddingKeys
 	);
 
 	const className = () =>

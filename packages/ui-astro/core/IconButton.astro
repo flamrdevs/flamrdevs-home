@@ -4,14 +4,16 @@ import type { HTMLAttributes } from "astro/types";
 import * as IconButtonCSS from "@flamrdevs/ui/core/IconButton.recipe.css";
 import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { getRootClassesx, getButtonAttrs } from "./core";
-import type { ButtonOptions } from "./core";
+import { getButtonAttrs } from "./attributes/button";
+import type { ButtonOptions } from "./attributes/button";
+
+import { getRootClassesx } from "./../classes";
 
 type Props = HTMLAttributes<"button"> & ButtonOptions & IconButtonCSS.Variants & IconButtonCSS.InnerVariants & IconButtonCSS.ChildVariants;
 
 const [classes, props] = getRootClassesx(Astro.props);
 
-const [options, recipe, attrs] = propsplit(props, ["disabled"], ["color", "size"]);
+const [options, recipe, attrs] = propsplit(props, ["disabled"], IconButtonCSS.RootKeys);
 
 const className = classes(IconButtonCSS.Root({ color: recipe.color, size: recipe.size }));
 const innerClassName = IconButtonCSS.Inner({ color: recipe.color });

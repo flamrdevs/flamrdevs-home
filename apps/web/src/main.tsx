@@ -1,4 +1,4 @@
-import "@flamrdevs/ui/core/styles/globals.css";
+import "@flamrdevs/ui/styles/globals.css";
 
 import { root } from "@flamrdevs/x-solid/libs/web";
 

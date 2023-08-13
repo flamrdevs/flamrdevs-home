@@ -1,6 +1,6 @@
 import { style } from "@vanilla-extract/css";
 
-import { ColorsContract } from "@flamrdevs/ui/core/styles/contract.css";
+import { ColorsContract } from "@flamrdevs/ui/styles/contract.css";
 
 const box = style({
 	width: "3rem",

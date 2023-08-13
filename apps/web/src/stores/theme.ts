@@ -1,5 +1,5 @@
-import { THEME, THEME_KEY, THEME_DEFAULT, setDocumentThemeAttribute } from "@flamrdevs/ui/core/styles/utils";
-import type { Theme } from "@flamrdevs/ui/core/styles/types";
+import { THEME, THEME_KEY, THEME_DEFAULT, setDocumentThemeAttribute } from "@flamrdevs/ui/styles/utils";
+import type { Theme } from "@flamrdevs/ui/styles/types";
 import * as BroadcastChannel from "@flamrdevs/x/libs/broadcast-channel";
 import * as StorageStore from "@flamrdevs/x/libs/storage-store";
 

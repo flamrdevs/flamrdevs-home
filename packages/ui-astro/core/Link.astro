@@ -4,8 +4,10 @@ import type { HTMLAttributes } from "astro/types";
 import * as LinkCSS from "@flamrdevs/ui/core/Link.style.css";
 import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { getRootClassesx, getLinkAttrs } from "./core";
-import type { LinkOptions } from "./core";
+import { getLinkAttrs } from "./attributes/link";
+import type { LinkOptions } from "./attributes/link";
+
+import { getRootClassesx } from "./../classes";
 
 type Props = Omit<HTMLAttributes<"a">, "href"> & { href: string } & LinkOptions;
 

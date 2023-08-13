@@ -5,7 +5,7 @@ import * as FlexCSS from "@flamrdevs/ui/core/Flex.recipe.css";
 import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
 import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { getRootClassesx } from "./core";
+import { getRootClassesx } from "./../classes";
 
 type Props = HTMLAttributes<"div"> &
 	FlexCSS.Variants &
@@ -19,12 +19,12 @@ const [classes, props] = getRootClassesx(Astro.props);
 
 const [flex, align, justify, gap, margin, padding, attrs] = propsplit(
 	props,
-	["inline"],
-	Sprinkles.splitter.align,
-	Sprinkles.splitter.justify,
-	Sprinkles.splitter.gap,
-	Sprinkles.splitter.margin,
-	Sprinkles.splitter.padding
+	FlexCSS.RootKeys,
+	Sprinkles.AlignKeys,
+	Sprinkles.JustifyKeys,
+	Sprinkles.GapKeys,
+	Sprinkles.MarginKeys,
+	Sprinkles.PaddingKeys
 );
 
 const className = classes(FlexCSS.Root(flex), Sprinkles.Align(align), Sprinkles.Justify(justify), Sprinkles.Gap(gap), Sprinkles.Margin(margin), Sprinkles.Padding(padding));

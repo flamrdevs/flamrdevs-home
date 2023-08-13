@@ -7,13 +7,13 @@ import * as LinkCSS from "@flamrdevs/ui/core/Link.style.css";
 
 import clsx from "@flamrdevs/x/modules/clsx";
 
-import { splitter } from "./core";
-import type { ClassesProps } from "./core";
+import { ClassesKeys } from "./../classes";
+import type { ClassesProps } from "./../classes";
 
 type LinkProps = KobalteLink.LinkRootOptions;
 
 const Link = <P extends ParentProps<ClassesProps> = JSX.IntrinsicElements["a"]>(props: P & LinkProps) => {
-	const [classes, rest] = splitProps(props as ParentProps<ClassesProps> & LinkProps, splitter.classes);
+	const [classes, rest] = splitProps(props as ParentProps<ClassesProps> & LinkProps, ClassesKeys);
 
 	const className = () => clsx(LinkCSS.Root, classes.class, classes.classList);
 

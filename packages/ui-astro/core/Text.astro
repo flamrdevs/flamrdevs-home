@@ -4,13 +4,13 @@ import type { HTMLAttributes } from "astro/types";
 import * as TextCSS from "@flamrdevs/ui/core/Text.recipe.css";
 import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { getRootClassesx } from "./core";
+import { getRootClassesx } from "./../classes";
 
 type Props = HTMLAttributes<"div"> & TextCSS.Variants;
 
 const [classes, props] = getRootClassesx(Astro.props);
 
-const [recipe, attrs] = propsplit(props, ["inline", "family", "size", "weight", "align"]);
+const [recipe, attrs] = propsplit(props, TextCSS.RootKeys);
 
 const className = classes(TextCSS.Root(recipe));
 ---

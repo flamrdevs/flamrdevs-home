@@ -1,21 +1,21 @@
 ---
-import { HTMLX, ButtonLink, Center, Container, Flex, Separator, Text } from "~/components/core";
+import { ButtonLink, Center, Container, Flex, HTMLX, Separator, Text } from "~/components/core";
 ---
 
 <HTMLX title="404" description="page not found">
-  <Container max="lg" p="4">
-    <Separator orientation="horizontal" />
+	<Container max="lg" p="4">
+		<Separator orientation="horizontal" />
 
-    <Flex ai="center" jc="center" style="height: 1.75rem">
-      <Text family="mono" size="xl" weight={700} align="center">404</Text>
-      <Separator orientation="vertical" />
-      <Text family="mono" size="xl" weight={700} align="center">not found</Text>
-    </Flex>
+		<Flex ai="center" jc="center" style="height: 1.75rem">
+			<Text family="mono" size="xl" weight={700} align="center">404</Text>
+			<Separator orientation="vertical" />
+			<Text family="mono" size="xl" weight={700} align="center">not found</Text>
+		</Flex>
 
-    <Separator orientation="horizontal" />
+		<Separator orientation="horizontal" />
 
-    <Center gap="2">
-      <ButtonLink href="/">home</ButtonLink>
-    </Center>
-  </Container>
+		<Center gap="2">
+			<ButtonLink href="/">home</ButtonLink>
+		</Center>
+	</Container>
 </HTMLX>

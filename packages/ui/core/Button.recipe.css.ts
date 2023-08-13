@@ -1,8 +1,8 @@
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import * as FONTS from "./styles/fonts";
-import { ColorsContract } from "./styles/contract.css";
+import * as FONTS from "./../styles/fonts";
+import { ColorsContract } from "./../styles/contract.css";
 
 import { buttonDisabledStyles, colorNeutralDisabledStyles, colorPrimaryDisabledStyles } from "./core.css";
 
@@ -77,6 +77,8 @@ const Root = recipe({
 	},
 });
 
+const RootKeys = ["color", "size"] as const satisfies readonly (keyof Variants)[];
+
 type InnerVariants = Exclude<RecipeVariants<typeof Inner>, undefined>;
 
 const Inner = recipe({
@@ -120,6 +122,8 @@ const Inner = recipe({
 	},
 });
 
+const InnerKeys = ["color"] as const satisfies readonly (keyof InnerVariants)[];
+
 type ChildVariants = Exclude<RecipeVariants<typeof Child>, undefined>;
 
 const Child = recipe({
@@ -155,5 +159,8 @@ const Child = recipe({
 	},
 });
 
+const ChildKeys = ["font", "size"] as const satisfies readonly (keyof ChildVariants)[];
+
 export type { Variants, InnerVariants, ChildVariants };
 export { Root, Inner, Child };
+export { RootKeys, InnerKeys, ChildKeys };

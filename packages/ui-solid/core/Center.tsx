@@ -6,12 +6,12 @@ import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
 
 import clsx from "@flamrdevs/x/modules/clsx";
 
-import { splitter } from "./core";
+import { ClassesKeys } from "./../classes";
 
 type CenterProps = JSX.IntrinsicElements["div"] & Sprinkles.GapShorthandsVariants & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
 
 const Center = (props: CenterProps) => {
-	const [classes, gap, margin, padding, rest] = splitProps(props, splitter.classes, Sprinkles.splitter.gap, Sprinkles.splitter.margin, Sprinkles.splitter.padding);
+	const [classes, gap, margin, padding, rest] = splitProps(props, ClassesKeys, Sprinkles.GapKeys, Sprinkles.MarginKeys, Sprinkles.PaddingKeys);
 
 	const className = () => clsx(CenterCSS.Root, Sprinkles.Gap(gap), Sprinkles.Margin(margin), Sprinkles.Padding(padding), classes.class, classes.classList);
 

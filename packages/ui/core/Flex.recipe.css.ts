@@ -1,7 +1,7 @@
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import { Display } from "./Sprinkles.css";
+import { Display } from "./sprinkles.css";
 
 type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
 
@@ -17,5 +17,8 @@ const Root = recipe({
 	},
 });
 
+const RootKeys = ["inline"] as const satisfies readonly (keyof Variants)[];
+
 export type { Variants };
 export { Root };
+export { RootKeys };

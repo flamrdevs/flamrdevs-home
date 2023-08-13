@@ -2,7 +2,7 @@ import { style } from "@vanilla-extract/css";
 
 import { componentStateStyles } from "@kobalte/vanilla-extract";
 
-import { ColorsContract } from "./styles/contract.css";
+import { ColorsContract } from "./../styles/contract.css";
 
 const Root = style([
 	{

@@ -7,12 +7,12 @@ import * as SeparatorCSS from "@flamrdevs/ui/core/Separator.recipe.css";
 
 import clsx from "@flamrdevs/x/modules/clsx";
 
-import { splitter } from "./core";
+import { ClassesKeys } from "./../classes";
 
 type SeparatorProps = Omit<JSX.IntrinsicElements["hr"], "orientation"> & KobalteSeparator.SeparatorRootOptions & SeparatorCSS.Variants;
 
 const Separator = (props: SeparatorProps) => {
-	const [classes, recipe, rest] = splitProps(props, splitter.classes, ["margin"]);
+	const [classes, recipe, rest] = splitProps(props, ClassesKeys, ["margin"]);
 
 	const className = () => clsx(SeparatorCSS.Root(recipe), classes.class, classes.classList);
 

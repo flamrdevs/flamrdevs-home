@@ -1,7 +1,7 @@
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import * as FONTS from "./styles/fonts";
+import * as FONTS from "./../styles/fonts";
 
 type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
 
@@ -115,5 +115,8 @@ const Root = recipe({
 	},
 });
 
+const RootKeys = ["inline", "family", "size", "weight", "align"] as const satisfies readonly (keyof Variants)[];
+
 export type { Variants };
 export { Root };
+export { RootKeys };

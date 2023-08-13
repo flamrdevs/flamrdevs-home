@@ -5,13 +5,13 @@ import * as CenterCSS from "@flamrdevs/ui/core/Center.style.css";
 import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
 import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { getRootClassesx } from "./core";
+import { getRootClassesx } from "./../classes";
 
 type Props = HTMLAttributes<"div"> & Sprinkles.GapShorthandsVariants & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
 
 const [classes, props] = getRootClassesx(Astro.props);
 
-const [gap, margin, padding, attrs] = propsplit(props, Sprinkles.splitter.gap, Sprinkles.splitter.margin, Sprinkles.splitter.padding);
+const [gap, margin, padding, attrs] = propsplit(props, Sprinkles.GapKeys, Sprinkles.MarginKeys, Sprinkles.PaddingKeys);
 
 const className = classes(CenterCSS.Root, Sprinkles.Gap(gap), Sprinkles.Margin(margin), Sprinkles.Padding(padding));
 ---

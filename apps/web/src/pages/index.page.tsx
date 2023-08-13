@@ -6,7 +6,8 @@ import { LINK } from "@flamrdevs/const/exports";
 
 import { useStore } from "@flamrdevs/x-solid/libs/store";
 
-import { Center, Container, FLAMRDEVS_SVG, IconButton, Separator } from "~/components/core";
+import { Center, Container, IconButton, Separator } from "~/components/core";
+import { AnimatedSVGLogo } from "~/components/flamrdevs";
 import { IconButtonLink } from "~/components/router";
 
 import { ThemeStore, toggleTheme } from "~/stores/theme";
@@ -23,7 +24,7 @@ const IndexPage = () => {
 			</Container>
 
 			<Center>
-				<FLAMRDEVS_SVG class={flamrdevssvg} />
+				<AnimatedSVGLogo class={flamrdevssvg} />
 			</Center>
 
 			<Container max="lg" p="2">

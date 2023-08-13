@@ -5,12 +5,12 @@ import * as LoaderCSS from "@flamrdevs/ui/core/Loader.recipe.css";
 
 import clsx from "@flamrdevs/x/modules/clsx";
 
-import { splitter } from "./core";
+import { ClassesKeys } from "./../classes";
 
 type LoaderProps = JSX.IntrinsicElements["svg"] & LoaderCSS.Variants;
 
 const Loader = (props: LoaderProps) => {
-	const [classes, recipe, rest] = splitProps(props, splitter.classes, ["color", "size"]);
+	const [classes, recipe, rest] = splitProps(props, ClassesKeys, ["color", "size"]);
 
 	const className = () => clsx(LoaderCSS.Root(recipe), classes.class, classes.classList);
 

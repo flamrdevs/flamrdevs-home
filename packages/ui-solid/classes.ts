@@ -5,6 +5,7 @@ type ClassesProps = {
 	};
 };
 
-export * as splitter from "./core.splitter";
+const ClassesKeys = ["class", "classList"] as const satisfies Readonly<(keyof ClassesProps)[]>;
 
 export type { ClassesProps };
+export { ClassesKeys };

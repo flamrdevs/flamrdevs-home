@@ -1,5 +1,5 @@
 ---
-import { HTMLX, Box, Container, Text } from "~/components/core";
+import { Box, Container, HTMLX, Text } from "~/components/core";
 
 import * as api from "~/libs/api";
 
@@ -7,14 +7,14 @@ const projects = await api.projects.find();
 ---
 
 <HTMLX title="projects" description="projects">
-  <Container max="lg" p="4">
-    {
-      projects.map((item) => (
-        <Box p="1">
-          <Text>{item.name}</Text>
-          <Text>{item.description}</Text>
-        </Box>
-      ))
-    }
-  </Container>
+	<Container max="lg" p="4">
+		{
+			projects.map((item) => (
+				<Box p="1">
+					<Text>{item.name}</Text>
+					<Text>{item.description}</Text>
+				</Box>
+			))
+		}
+	</Container>
 </HTMLX>

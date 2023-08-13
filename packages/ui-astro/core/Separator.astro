@@ -4,14 +4,16 @@ import type { HTMLAttributes } from "astro/types";
 import * as SeparatorCSS from "@flamrdevs/ui/core/Separator.recipe.css";
 import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { getRootClassesx, getSeparatorAttrs } from "./core";
-import type { SeparatorOptions } from "./core";
+import { getSeparatorAttrs } from "./attributes/separator";
+import type { SeparatorOptions } from "./attributes/separator";
+
+import { getRootClassesx } from "./../classes";
 
 type Props = Omit<HTMLAttributes<"hr">, "orientation"> & SeparatorOptions & SeparatorCSS.Variants;
 
 const [classes, props] = getRootClassesx(Astro.props);
 
-const [options, recipe, attrs] = propsplit(props, ["orientation"], ["margin"]);
+const [options, recipe, attrs] = propsplit(props, ["orientation"], SeparatorCSS.RootKeys);
 
 const className = classes(SeparatorCSS.Root(recipe));
 ---

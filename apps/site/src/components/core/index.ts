@@ -3,7 +3,6 @@ export { default as Button } from "@flamrdevs/ui-astro/core/Button.astro";
 export { default as ButtonLink } from "@flamrdevs/ui-astro/core/ButtonLink.astro";
 export { default as Center } from "@flamrdevs/ui-astro/core/Center.astro";
 export { default as Container } from "@flamrdevs/ui-astro/core/Container.astro";
-export { default as FLAMRDEVS_SVG } from "@flamrdevs/ui-astro/core/FLAMRDEVS_SVG.astro";
 export { default as Flex } from "@flamrdevs/ui-astro/core/Flex.astro";
 export { default as IconButton } from "@flamrdevs/ui-astro/core/IconButton.astro";
 export { default as IconButtonLink } from "@flamrdevs/ui-astro/core/IconButtonLink.astro";

@@ -190,15 +190,14 @@ const PaddingProperties = defineProperties({
 });
 const Padding = createSprinkles(PaddingProperties);
 
-export const splitter = {
-	display: ["d"] as const,
-	align: ["ai"] as const,
-	justify: ["jc"] as const,
-	gap: ["gap", "gapx", "gapy"] as const,
-	margin: ["m", "mx", "my", "mt", "mr", "mb", "ml"] as const,
-	padding: ["p", "px", "py", "pt", "pr", "pb", "pl"] as const,
-};
+const DisplayKeys = ["d"] as const satisfies readonly (keyof DisplayShorthandsVariants)[];
+const AlignKeys = ["ai"] as const satisfies readonly (keyof AlignShorthandsVariants)[];
+const JustifyKeys = ["jc"] as const satisfies readonly (keyof JustifyShorthandsVariants)[];
+const GapKeys = ["gap", "gapx", "gapy"] as const satisfies readonly (keyof GapShorthandsVariants)[];
+const MarginKeys = ["m", "mx", "my", "mt", "mr", "mb", "ml"] as const satisfies readonly (keyof MarginShorthandsVariants)[];
+const PaddingKeys = ["p", "px", "py", "pt", "pr", "pb", "pl"] as const satisfies readonly (keyof PaddingShorthandsVariants)[];
 
 export type { DisplayShorthandsVariants, AlignShorthandsVariants, JustifyShorthandsVariants, GapShorthandsVariants, MarginShorthandsVariants, PaddingShorthandsVariants };
 export { SCREEN };
 export { Display, Align, Justify, Gap, Margin, Padding };
+export { DisplayKeys, AlignKeys, JustifyKeys, GapKeys, MarginKeys, PaddingKeys };

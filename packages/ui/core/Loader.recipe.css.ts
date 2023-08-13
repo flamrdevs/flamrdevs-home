@@ -2,7 +2,7 @@ import { keyframes, style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import { ColorsContract } from "./styles/contract.css";
+import { ColorsContract } from "./../styles/contract.css";
 
 type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
 
@@ -37,6 +37,8 @@ const Root = recipe({
 	},
 });
 
+const RootKeys = ["color", "size"] as const satisfies readonly (keyof Variants)[];
+
 const LoaderSpinO = keyframes({
 	"100%": {
 		transform: "rotate(360deg)",
@@ -70,3 +72,4 @@ const Circle = style({
 
 export type { Variants };
 export { Root, G, Circle };
+export { RootKeys };

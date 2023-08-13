@@ -5,13 +5,13 @@ import * as ContainerCSS from "@flamrdevs/ui/core/Container.recipe.css";
 import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
 import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { getRootClassesx } from "./core";
+import { getRootClassesx } from "./../classes";
 
 type Props = HTMLAttributes<"div"> & ContainerCSS.Variants & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
 
 const [classes, props] = getRootClassesx(Astro.props);
 
-const [recipe, margin, padding, attrs] = propsplit(props, ["center", "max"], Sprinkles.splitter.margin, Sprinkles.splitter.padding);
+const [recipe, margin, padding, attrs] = propsplit(props, ContainerCSS.RootKeys, Sprinkles.MarginKeys, Sprinkles.PaddingKeys);
 
 const className = classes(ContainerCSS.Root(recipe), Sprinkles.Margin(margin), Sprinkles.Padding(padding));
 ---

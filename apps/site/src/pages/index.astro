@@ -3,7 +3,8 @@ import { GithubIcon, MoonIcon, SunIcon } from "lucide-solid";
 
 import { LINK } from "@flamrdevs/const/exports";
 
-import { HTMLX, Center, Container, FLAMRDEVS_SVG, IconButton, IconButtonLink, Separator } from "~/components/core";
+import { Center, Container, HTMLX, IconButton, IconButtonLink, Separator } from "~/components/core";
+import { AnimatedSVGLogo } from "~/components/flamrdevs";
 
 import { flamrdevssvg } from "~/styles/pages/index.css";
 ---
@@ -14,7 +15,7 @@ import { flamrdevssvg } from "~/styles/pages/index.css";
 	</Container>
 
 	<Center>
-		<FLAMRDEVS_SVG class={flamrdevssvg} />
+		<AnimatedSVGLogo class={flamrdevssvg} />
 	</Center>
 
 	<Container max="lg" p="2">

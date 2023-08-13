@@ -1,6 +1,6 @@
 import { componentStateStyles } from "@kobalte/vanilla-extract";
 
-import { ColorsContract } from "./styles/contract.css";
+import { ColorsContract } from "./../styles/contract.css";
 
 const buttonDisabledStyles = componentStateStyles({
 	disabled: {
