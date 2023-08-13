@@ -1,7 +1,7 @@
 import { splitProps } from "solid-js";
 import type { JSX } from "solid-js";
 
-import * as Sprinkles from "@flamrdevs/ui/core/Sprinkles.css";
+import * as Sprinkles from "@flamrdevs/ui/core/.sprinkles.css";
 
 import clsx from "@flamrdevs/x/modules/clsx";
 

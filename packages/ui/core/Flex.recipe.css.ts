@@ -1,7 +1,7 @@
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import { Display } from "./sprinkles.css";
+import { Display } from "./.sprinkles.css";
 
 type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
 
