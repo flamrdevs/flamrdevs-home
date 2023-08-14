@@ -6,7 +6,7 @@ import { LINK } from "@flamrdevs/const/exports";
 
 import { useStore } from "@flamrdevs/x-solid/libs/store";
 
-import { Box, Button, Container, Flex, IconButton, Link, Loader, Separator, Text } from "~/components/core";
+import { Badge, Box, Button, Container, Flex, IconButton, Link, Loader, Separator, Text } from "~/components/core";
 import { ButtonLink, IconButtonLink } from "~/components/router";
 
 import { ThemeStore, toggleTheme } from "~/stores/theme";
@@ -162,6 +162,43 @@ const UICorePage = () => {
 								<Box class={UICSS.color.danger[10]} />
 								<Box class={UICSS.color.danger[11]} />
 								<Box class={UICSS.color.danger[12]} />
+							</Flex>
+						</Box>
+					</Box>
+				</Box>
+
+				<Separator orientation="horizontal" />
+
+				<Box>
+					<Text family="mono" size="lg" weight={600}>
+						Badge
+					</Text>
+
+					<Box p="2">
+						<Box p="1">
+							<Text family="mono" size="md" weight={400}>
+								Default
+							</Text>
+
+							<Flex gap="2">
+								<Box>
+									<Badge>default</Badge>
+								</Box>
+							</Flex>
+						</Box>
+
+						<Box p="1">
+							<Text family="mono" size="md" weight={400}>
+								Color
+							</Text>
+
+							<Flex gap="2">
+								<Box>
+									<Badge color="neutral">neutral</Badge>
+								</Box>
+								<Box>
+									<Badge color="primary">primary</Badge>
+								</Box>
 							</Flex>
 						</Box>
 					</Box>

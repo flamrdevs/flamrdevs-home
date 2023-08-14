@@ -1,3 +1,4 @@
+export { default as Badge } from "@flamrdevs/ui-astro/core/Badge.astro";
 export { default as Box } from "@flamrdevs/ui-astro/core/Box.astro";
 export { default as Button } from "@flamrdevs/ui-astro/core/Button.astro";
 export { default as ButtonLink } from "@flamrdevs/ui-astro/core/ButtonLink.astro";

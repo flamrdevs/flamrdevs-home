@@ -1,0 +1,26 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+import * as BadgeCSS from "@flamrdevs/ui/core/Badge.recipe.css";
+import propsplit from "@flamrdevs/x/modules/propsplit";
+
+import { getRootClassesx } from "./../classes";
+
+type Props = HTMLAttributes<"span"> & BadgeCSS.Variants & BadgeCSS.InnerVariants & BadgeCSS.ChildVariants;
+
+const [classes, props] = getRootClassesx(Astro.props);
+
+const [recipe, attrs] = propsplit(props, [...BadgeCSS.RootKeys, ...BadgeCSS.ChildKeys]);
+
+const className = classes(BadgeCSS.Root({ color: recipe.color, size: recipe.size }));
+const innerClassName = BadgeCSS.Inner({ color: recipe.color });
+const childClassName = BadgeCSS.Child({ font: recipe.font, size: recipe.size });
+---
+
+<span {...attrs} class={className}>
+	<div class={innerClassName}>
+		<div class={childClassName}>
+			<slot />
+		</div>
+	</div>
+</span>
