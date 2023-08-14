@@ -12,41 +12,33 @@ import { IconButtonLink } from "~/components/router";
 
 import { ThemeStore, toggleTheme } from "~/stores/theme";
 
-import { flamrdevssvg } from "~/styles/pages/index.css";
+import { flamrdevssvg, separatorvertical } from "~/styles/pages/index.css";
 
 const IndexPage = () => {
 	const theme = useStore(ThemeStore);
 
 	return (
 		<>
-			<Container max="lg" p="2">
-				<Separator orientation="horizontal" />
-			</Container>
-
 			<Center>
 				<AnimatedSVGLogo class={flamrdevssvg} />
 			</Center>
 
-			<Container max="lg" p="2">
+			<Container max="sm">
 				<Separator orientation="horizontal" />
-			</Container>
-
-			<Container max="lg" p="2">
-				<Center gap="2">
+				<Center gap="2" p="2">
 					<IconButtonLink href={LINK.GITHUB} target="_blank">
 						<GithubIcon />
 					</IconButtonLink>
-				</Center>
-			</Container>
 
-			<Container max="lg" p="2">
-				<Center gap="2">
+					<Separator orientation="vertical" class={separatorvertical} />
+
 					<IconButton onClick={toggleTheme}>
 						<Show when={theme() === "dark"} fallback={<MoonIcon />}>
 							<SunIcon />
 						</Show>
 					</IconButton>
 				</Center>
+				<Separator orientation="horizontal" />
 			</Container>
 		</>
 	);

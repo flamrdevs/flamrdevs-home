@@ -6,32 +6,23 @@ import { LINK } from "@flamrdevs/const/exports";
 import { Center, Container, HTMLX, IconButton, IconButtonLink, Separator } from "~/components/core";
 import { AnimatedSVGLogo } from "~/components/flamrdevs";
 
-import { flamrdevssvg } from "~/styles/pages/index.css";
+import { flamrdevssvg, separatorvertical } from "~/styles/pages/index.css";
 ---
 
 <HTMLX>
-	<Container max="lg" p="2">
-		<Separator orientation="horizontal" />
-	</Container>
-
 	<Center>
 		<AnimatedSVGLogo class={flamrdevssvg} />
 	</Center>
 
-	<Container max="lg" p="2">
+	<Container max="sm">
 		<Separator orientation="horizontal" />
-	</Container>
-
-	<Container max="lg" p="2">
-		<Center gap="2">
+		<Center gap="2" p="2">
 			<IconButtonLink href={LINK.GITHUB} target="_blank">
 				<GithubIcon client:idle />
 			</IconButtonLink>
-		</Center>
-	</Container>
 
-	<Container max="lg" p="2">
-		<Center gap="2">
+			<Separator orientation="vertical" class={separatorvertical} />
+
 			<IconButton id="light-theme-icon-button">
 				<SunIcon client:idle />
 			</IconButton>
@@ -40,6 +31,7 @@ import { flamrdevssvg } from "~/styles/pages/index.css";
 				<MoonIcon client:idle />
 			</IconButton>
 		</Center>
+		<Separator orientation="horizontal" />
 	</Container>
 </HTMLX>
 

@@ -8,26 +8,30 @@ const flamrdevssvg = style({
 
 	"@media": {
 		[`(min-width: ${SCREEN.xs})`]: {
-			width: "15rem",
-			height: "15rem",
+			width: "17rem",
+			height: "17rem",
 		},
 		[`(min-width: ${SCREEN.sm})`]: {
-			width: "20rem",
-			height: "20rem",
+			width: "24rem",
+			height: "24rem",
 		},
 		[`(min-width: ${SCREEN.md})`]: {
-			width: "25rem",
-			height: "25rem",
+			width: "31rem",
+			height: "31rem",
 		},
 		[`(min-width: ${SCREEN.lg})`]: {
-			width: "30rem",
-			height: "30rem",
+			width: "38rem",
+			height: "38rem",
 		},
 		[`(min-width: ${SCREEN.xl})`]: {
-			width: "35rem",
-			height: "35rem",
+			width: "45rem",
+			height: "45rem",
 		},
 	},
 });
 
-export { flamrdevssvg };
+const separatorvertical = style({
+	height: "1.5rem !important",
+});
+
+export { flamrdevssvg, separatorvertical };
