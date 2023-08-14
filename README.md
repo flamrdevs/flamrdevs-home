@@ -22,10 +22,12 @@
       <img alt="x" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=x" hspace="1">
     </picture>
   </a>
-  <picture title="mode">
-    <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/lucide?t=dark&i=moon">
-    <img alt="mode" src="https://flamrdevs.cyclic.app/core/icon-button/lucide?t=light&i=sun" hspace="1">
-  </picture>
+  <a title="mode" href="https://github.com/settings/appearance">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/lucide?t=dark&i=moon">
+      <img alt="mode" src="https://flamrdevs.cyclic.app/core/icon-button/lucide?t=light&i=sun" hspace="1">
+    </picture>
+  </a>
 </p>
 
 <p align="center">
