@@ -21,4 +21,29 @@ export default defineConfig({
 	preview: { host: true, port: 5000 },
 	resolve: { alias: { "~": path.resolve(__dirname, "src") } },
 	esbuild: { legalComments: "none" },
+	build: {
+		rollupOptions: {
+			output: {
+				manualChunks: (() => {
+					const include = path.join(process.cwd(), "src/pages").replace(/\\/g, "/");
+					const slicer = include.length + 1;
+
+					return (id) => {
+						if (id.includes(include)) {
+							const name = id.slice(slicer);
+
+							const create = (folder: string, suffix: string) => ({ is: name.endsWith(suffix), name: `${folder}/${name.slice(0, -suffix.length)}` });
+							let created: ReturnType<typeof create>;
+
+							created = create("pages", ".page.tsx");
+							if (created.is) return created.name;
+
+							created = create("layouts", ".layout.tsx");
+							if (created.is) return created.name;
+						}
+					};
+				})(),
+			},
+		},
+	},
 });
