@@ -3,22 +3,22 @@ import { GithubIcon, MoonIcon, SunIcon } from "lucide-solid";
 
 import { LINK } from "@flamrdevs/const/exports";
 
-import { Box, Button, ButtonLink, Container, Flex, HTMLX, IconButton, IconButtonLink, Loader, Separator, Text } from "~/components/core";
+import { Box, Button, ButtonLink, Container, Flex, HTMLX, IconButton, IconButtonLink, Link, Loader, Separator, Text } from "~/components/core";
 
 import * as UICSS from "~/styles/pages/ui.css";
 ---
 
 <HTMLX title="UI Core" description="core user interface">
 	<Container max="lg" p="4">
-		<Flex ai="center" style="height: 1.75rem">
+		<Flex ai="center">
 			<ButtonLink href="/">home</ButtonLink>
-			<Separator orientation="vertical" />
+			<Separator orientation="vertical" style="height: 1.5rem" />
 			<ButtonLink href="/ui">ui</ButtonLink>
-			<Separator orientation="vertical" />
+			<Separator orientation="vertical" style="height: 1.5rem" />
 			<IconButton id="light-theme-icon-button">
 				<SunIcon client:idle />
 			</IconButton>
-			<Separator orientation="vertical" />
+			<Separator orientation="vertical" style="height: 1.5rem" />
 			<IconButton id="dark-theme-icon-button">
 				<MoonIcon client:idle />
 			</IconButton>
@@ -30,7 +30,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 			<Text family="mono" size="lg" weight={600}>Color</Text>
 
 			<Box p="2">
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Neutral</Text>
 
 					<Flex gap="2">
@@ -49,7 +49,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					</Flex>
 				</Box>
 
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Primary</Text>
 
 					<Flex gap="2">
@@ -68,7 +68,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					</Flex>
 				</Box>
 
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Success</Text>
 
 					<Flex gap="2">
@@ -87,7 +87,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					</Flex>
 				</Box>
 
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Info</Text>
 
 					<Flex gap="2">
@@ -106,7 +106,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					</Flex>
 				</Box>
 
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Warning</Text>
 
 					<Flex gap="2">
@@ -125,7 +125,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					</Flex>
 				</Box>
 
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Danger</Text>
 
 					<Flex gap="2">
@@ -152,7 +152,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 			<Text family="mono" size="lg" weight={600}>Button</Text>
 
 			<Box p="2">
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Default</Text>
 
 					<Flex gap="2">
@@ -162,7 +162,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					</Flex>
 				</Box>
 
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Color</Text>
 
 					<Flex gap="2">
@@ -175,7 +175,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					</Flex>
 				</Box>
 
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>State</Text>
 
 					<Flex gap="2">
@@ -188,7 +188,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					</Flex>
 				</Box>
 
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Link</Text>
 
 					<Flex gap="2">
@@ -206,7 +206,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 			<Text family="mono" size="lg" weight={600}>Icon Button</Text>
 
 			<Box p="2">
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Default</Text>
 
 					<Flex gap="2">
@@ -218,7 +218,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					</Flex>
 				</Box>
 
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Color</Text>
 
 					<Flex gap="2">
@@ -235,7 +235,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					</Flex>
 				</Box>
 
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>State</Text>
 
 					<Flex gap="2">
@@ -252,7 +252,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					</Flex>
 				</Box>
 
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Link</Text>
 
 					<Flex gap="2">
@@ -269,10 +269,28 @@ import * as UICSS from "~/styles/pages/ui.css";
 		<Separator orientation="horizontal" />
 
 		<Box>
+			<Text family="mono" size="lg" weight={600}>Link</Text>
+
+			<Box p="2">
+				<Box p="1">
+					<Text family="mono" size="md" weight={400}>Default</Text>
+
+					<Flex gap="2">
+						<Box>
+							<Link href="#">default</Link>
+						</Box>
+					</Flex>
+				</Box>
+			</Box>
+		</Box>
+
+		<Separator orientation="horizontal" />
+
+		<Box>
 			<Text family="mono" size="lg" weight={600}>Text</Text>
 
 			<Box p="2">
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Default</Text>
 
 					<Flex gap="2">
@@ -282,7 +300,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					</Flex>
 				</Box>
 
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Family</Text>
 
 					<Flex gap="2">
@@ -303,7 +321,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 			<Text family="mono" size="lg" weight={600}>Loader</Text>
 
 			<Box p="2">
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Default</Text>
 
 					<Flex gap="2">
@@ -313,7 +331,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					</Flex>
 				</Box>
 
-				<Box>
+				<Box p="1">
 					<Text family="mono" size="md" weight={400}>Color</Text>
 
 					<Flex gap="2">

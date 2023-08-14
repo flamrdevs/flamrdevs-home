@@ -6,17 +6,19 @@ import { ColorsContract } from "./../styles/contract.css";
 
 const Root = style([
 	{
-		color: "hsl(211 96% 42%)",
+		color: ColorsContract.info[9],
 		fontWeight: 600,
 		outline: "1px solid transparent",
 		outlineOffset: 1,
+		padding: 1,
+		borderRadius: "0.25rem",
 
 		":hover": {
 			textDecoration: "underline",
 		},
 
 		":focus-visible": {
-			outlineColor: ColorsContract.neutral[11],
+			outlineColor: ColorsContract.info[10],
 		},
 	},
 	componentStateStyles({

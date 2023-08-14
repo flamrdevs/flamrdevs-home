@@ -6,7 +6,7 @@ import { LINK } from "@flamrdevs/const/exports";
 
 import { useStore } from "@flamrdevs/x-solid/libs/store";
 
-import { Box, Button, Container, Flex, IconButton, Loader, Separator, Text } from "~/components/core";
+import { Box, Button, Container, Flex, IconButton, Link, Loader, Separator, Text } from "~/components/core";
 import { ButtonLink, IconButtonLink } from "~/components/router";
 
 import { ThemeStore, toggleTheme } from "~/stores/theme";
@@ -19,11 +19,11 @@ const UICorePage = () => {
 	return (
 		<>
 			<Container max="lg" p="4">
-				<Flex ai="center" style="height: 1.75rem">
+				<Flex ai="center">
 					<ButtonLink href="/">home</ButtonLink>
-					<Separator orientation="vertical" />
+					<Separator orientation="vertical" style="height: 1.5rem" />
 					<ButtonLink href="/ui">ui</ButtonLink>
-					<Separator orientation="vertical" />
+					<Separator orientation="vertical" style="height: 1.5rem" />
 					<IconButton onClick={toggleTheme}>
 						<Show when={theme() === "dark"} fallback={<MoonIcon />}>
 							<SunIcon />
@@ -39,7 +39,7 @@ const UICorePage = () => {
 					</Text>
 
 					<Box p="2">
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Neutral
 							</Text>
@@ -60,7 +60,7 @@ const UICorePage = () => {
 							</Flex>
 						</Box>
 
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Primary
 							</Text>
@@ -81,7 +81,7 @@ const UICorePage = () => {
 							</Flex>
 						</Box>
 
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Success
 							</Text>
@@ -102,7 +102,7 @@ const UICorePage = () => {
 							</Flex>
 						</Box>
 
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Info
 							</Text>
@@ -123,7 +123,7 @@ const UICorePage = () => {
 							</Flex>
 						</Box>
 
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Warning
 							</Text>
@@ -144,7 +144,7 @@ const UICorePage = () => {
 							</Flex>
 						</Box>
 
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Danger
 							</Text>
@@ -175,7 +175,7 @@ const UICorePage = () => {
 					</Text>
 
 					<Box p="2">
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Default
 							</Text>
@@ -187,7 +187,7 @@ const UICorePage = () => {
 							</Flex>
 						</Box>
 
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Color
 							</Text>
@@ -202,7 +202,7 @@ const UICorePage = () => {
 							</Flex>
 						</Box>
 
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								State
 							</Text>
@@ -217,7 +217,7 @@ const UICorePage = () => {
 							</Flex>
 						</Box>
 
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Link
 							</Text>
@@ -241,7 +241,7 @@ const UICorePage = () => {
 					</Text>
 
 					<Box p="2">
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Default
 							</Text>
@@ -255,7 +255,7 @@ const UICorePage = () => {
 							</Flex>
 						</Box>
 
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Color
 							</Text>
@@ -274,7 +274,7 @@ const UICorePage = () => {
 							</Flex>
 						</Box>
 
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								State
 							</Text>
@@ -293,7 +293,7 @@ const UICorePage = () => {
 							</Flex>
 						</Box>
 
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Link
 							</Text>
@@ -313,11 +313,33 @@ const UICorePage = () => {
 
 				<Box>
 					<Text family="mono" size="lg" weight={600}>
+						Link
+					</Text>
+
+					<Box p="2">
+						<Box p="1">
+							<Text family="mono" size="md" weight={400}>
+								Default
+							</Text>
+
+							<Flex gap="2">
+								<Box>
+									<Link href="#">default</Link>
+								</Box>
+							</Flex>
+						</Box>
+					</Box>
+				</Box>
+
+				<Separator orientation="horizontal" />
+
+				<Box>
+					<Text family="mono" size="lg" weight={600}>
 						Text
 					</Text>
 
 					<Box p="2">
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Default
 							</Text>
@@ -329,7 +351,7 @@ const UICorePage = () => {
 							</Flex>
 						</Box>
 
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Family
 							</Text>
@@ -354,7 +376,7 @@ const UICorePage = () => {
 					</Text>
 
 					<Box p="2">
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Default
 							</Text>
@@ -366,7 +388,7 @@ const UICorePage = () => {
 							</Flex>
 						</Box>
 
-						<Box>
+						<Box p="1">
 							<Text family="mono" size="md" weight={400}>
 								Color
 							</Text>
