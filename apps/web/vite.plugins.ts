@@ -21,7 +21,7 @@ const meta = () => {
 				.replace(/{{TITLE}}/g, "flamrdevs")
 				.replace(/{{DESCRIPTION}}/g, "flamrdevs")
 				.replace(/{{URL}}/g, HOST.WEB())
-				.replace(/{{IMAGE}}/g, HOST.STATIC("~", "d1200x628.png"))
+				.replace(/{{IMAGE}}/g, HOST.STATIC("~", "1200x628-dark.png"))
 				.replace(/{{FAVICON}}/g, HOST.STATIC("favicon.ico"))
 				.replace(/{{STYLESHEET_NORMALIZE}}/g, HOST.STATIC("stylesheets", "normalize.css"))
 				.replace(/{{STYLESHEET_FONTS}}/g, HOST.STATIC("stylesheets", "fonts.css"));
