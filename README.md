@@ -105,3 +105,12 @@
 </h2>
 
 [MIT License](./LICENSE)
+
+<hr />
+
+<p align="center">
+  <picture title="flamrdevs">
+    <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/badge/flamrdevs?t=dark&v=flamrdevs">
+    <img alt="flamrdevs" src="https://flamrdevs.cyclic.app/core/badge/flamrdevs?t=light&v=flamrdevs" hspace="1">
+  </picture>
+</p>
