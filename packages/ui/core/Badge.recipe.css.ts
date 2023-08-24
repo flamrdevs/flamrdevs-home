@@ -16,7 +16,6 @@ const Root = recipe({
 			overflow: "hidden",
 			borderStyle: "none",
 			borderRadius: "0.4rem",
-			cursor: "pointer",
 			userSelect: "none",
 		},
 		buttonDisabledStyles,
