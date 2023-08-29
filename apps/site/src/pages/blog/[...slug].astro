@@ -3,6 +3,8 @@ import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
+import { HOST } from "@flamrdevs/utils/exports";
+
 import { Box, Container, HTMLX } from "~/components/core";
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -20,9 +22,11 @@ type Props = {
 
 const { data, render } = Astro.props.entry;
 const { Content } = await render();
+
+const image = HOST.IMAGE(`og/blog?${new URLSearchParams({ title: data.title, subtitle: data.description })}`);
 ---
 
-<HTMLX title={data.title} description={data.description}>
+<HTMLX title={data.title} description={data.description} image={image}>
 	<Container max="lg" p="4">
 		<Box p="1">
 			<Content />
