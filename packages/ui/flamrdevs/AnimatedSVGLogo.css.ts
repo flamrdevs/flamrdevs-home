@@ -2,54 +2,50 @@ import { keyframes, style } from "@vanilla-extract/css";
 
 import { ColorsContract } from "./../styles/contract.css";
 
-const Right = keyframes({
+const ToRight = keyframes({
 	"0%": {
-		strokeDashoffset: -2400,
+		strokeDashoffset: -270,
 	},
 	"100%": {
-		strokeDashoffset: 2400,
+		strokeDashoffset: 270,
 	},
 });
 
-const Left = keyframes({
+const ToLeft = keyframes({
 	"0%": {
-		strokeDashoffset: 2400,
+		strokeDashoffset: 270,
 	},
 	"100%": {
-		strokeDashoffset: -2400,
+		strokeDashoffset: -270,
 	},
 });
 
 const Root = style({
-	opacity: 0.2,
+	opacity: 0.17,
 });
 
 const Filled = style({
+	strokeDasharray: 270,
+	strokeDashoffset: 270,
 	fill: ColorsContract.neutral[12],
-	stroke: ColorsContract.neutral[1],
-	strokeWidth: 6,
-	strokeDasharray: 2400,
-	strokeDashoffset: 2400,
-	animation: `${Right} 8000ms infinite cubic-bezier(.5,0,.5,1)`,
-	transition: "fill 200ms, stroke 200ms",
 });
 
-const Outlined = style({
+const StrokeLeft = style({
+	strokeDasharray: 270,
+	strokeDashoffset: 270,
+	stroke: ColorsContract.neutral[1],
+	strokeWidth: 1.5,
+	animation: `${ToLeft} 8000ms infinite ease-in-out`,
+	transition: "stroke 100ms",
+});
+
+const StrokeRight = style({
+	strokeDasharray: 270,
+	strokeDashoffset: 270,
 	stroke: ColorsContract.neutral[12],
-	strokeWidth: 3,
-	strokeDasharray: 2400,
-	strokeDashoffset: 2400,
-	animation: `${Right} 4000ms infinite cubic-bezier(.5,0,.5,1)`,
-	transition: "stroke 200ms",
+	strokeWidth: 1.5,
+	animation: `${ToRight} 4000ms infinite ease-in-out`,
+	transition: "stroke 100ms",
 });
 
-const OutlinedBase = style({
-	stroke: ColorsContract.neutral[1],
-	strokeWidth: 3,
-	strokeDasharray: 2400,
-	strokeDashoffset: 2400,
-	animation: `${Left} 2000ms infinite cubic-bezier(.5,0,.5,1)`,
-	transition: "stroke 200ms",
-});
-
-export { Root, Filled, Outlined, OutlinedBase };
+export { Root, Filled, StrokeLeft, StrokeRight };

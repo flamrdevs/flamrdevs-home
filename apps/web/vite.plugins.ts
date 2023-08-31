@@ -21,10 +21,11 @@ const meta = () => {
 				.replace(/{{TITLE}}/g, "flamrdevs")
 				.replace(/{{DESCRIPTION}}/g, "flamrdevs")
 				.replace(/{{URL}}/g, HOST.WEB())
-				.replace(/{{IMAGE}}/g, HOST.STATIC("~", "1200x628-dark.png"))
-				.replace(/{{FAVICON}}/g, HOST.STATIC("favicon.ico"))
-				.replace(/{{STYLESHEET_NORMALIZE}}/g, HOST.STATIC("stylesheets", "normalize.css"))
-				.replace(/{{STYLESHEET_FONTS}}/g, HOST.STATIC("stylesheets", "fonts.css"));
+				.replace(/{{IMAGE}}/g, HOST.STATIC("og", "cover-ghost-1200x628-dark.png"))
+				.replace(/{{FAVICON-DARK}}/g, HOST.STATIC("favicon-dark.ico"))
+				.replace(/{{FAVICON-LIGHT}}/g, HOST.STATIC("favicon-light.ico"))
+				.replace(/{{STYLESHEET\/NORMALIZE}}/g, HOST.STATIC("css", "normalize.css"))
+				.replace(/{{STYLESHEET\/FONTS}}/g, HOST.STATIC("css", "fonts.css"));
 		},
 	} satisfies PluginOption;
 };

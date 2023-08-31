@@ -15,7 +15,7 @@ type Props = {
 const TITLE_DEFAULT = "flamrdevs";
 const DESCRIPTION_DEFAULT = "flamrdevs";
 const URL_DEFAULT = HOST.SITE();
-const IMAGE_DEFAULT = HOST.STATIC("~", "1200x628-dark.png");
+const IMAGE_DEFAULT = HOST.STATIC("og", "cover-ghost-1200x628-dark.png");
 
 const { title = TITLE_DEFAULT, description = DESCRIPTION_DEFAULT, url = URL_DEFAULT, image = IMAGE_DEFAULT } = Astro.props;
 ---
@@ -40,10 +40,11 @@ const { title = TITLE_DEFAULT, description = DESCRIPTION_DEFAULT, url = URL_DEFA
 		<meta property="twitter:description" content={description} />
 		<meta property="twitter:image" content={image} />
 
-		<link rel="icon" type="image/x-icon" href={HOST.STATIC("favicon.ico")} />
+		<link rel="icon" type="image/x-icon" href={HOST.STATIC("favicon-dark.ico")} media="(prefers-color-scheme: dark)" />
+		<link rel="icon" type="image/x-icon" href={HOST.STATIC("favicon-light.ico")} media="(prefers-color-scheme: light)" />
 
-		<link rel="stylesheet" href={HOST.STATIC("stylesheets", "normalize.css")} />
-		<link rel="stylesheet" href={HOST.STATIC("stylesheets", "fonts.css")} />
+		<link rel="stylesheet" href={HOST.STATIC("css", "normalize.css")} />
+		<link rel="stylesheet" href={HOST.STATIC("css", "fonts.css")} />
 
 		<link rel="sitemap" href="/sitemap-index.xml" />
 
