@@ -114,3 +114,5 @@
     <img alt="flamrdevs" src="https://flamrdevs.cyclic.app/core/badge/flamrdevs?t=light&v=flamrdevs" hspace="1">
   </picture>
 </p>
+
+<img width="100%" src="https://hiiiits.deno.dev/hit/flamrdevs/flamrdevs-home" alt="hiiiits" title="hiiiits" />
