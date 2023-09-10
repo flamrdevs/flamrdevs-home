@@ -20,10 +20,10 @@ type Props = {
 	entry: CollectionEntry<"blog">;
 };
 
-const { data, render } = Astro.props.entry;
+const { slug, data, render } = Astro.props.entry;
 const { Content } = await render();
 
-const image = HOST.IMAGE(`og/blog?${new URLSearchParams({ title: data.title, subtitle: data.description })}`);
+const image = HOST.SITE(`og/blog/${slug}.png`);
 ---
 
 <HTMLX title={data.title} description={data.description} image={image}>
