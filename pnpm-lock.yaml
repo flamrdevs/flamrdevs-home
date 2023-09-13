@@ -20,8 +20,8 @@ importers:
         specifier: ^3.9.0
         version: 3.9.0(@types/node@20.6.0)(vite@4.4.9)
       astro:
-        specifier: ^3.0.12
-        version: 3.0.12(@types/node@20.6.0)
+        specifier: ^3.0.13
+        version: 3.0.13(@types/node@20.6.0)
       turbo:
         specifier: ^1.10.13
         version: 1.10.13
@@ -59,8 +59,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/x-solid
       astro:
-        specifier: ^3.0.12
-        version: 3.0.12(@types/node@20.6.0)
+        specifier: ^3.0.13
+        version: 3.0.13(@types/node@20.6.0)
       lucide-solid:
         specifier: ^0.276.0
         version: 0.276.0(solid-js@1.7.11)
@@ -70,7 +70,7 @@ importers:
     devDependencies:
       '@astrojs/mdx':
         specifier: ^1.0.3
-        version: 1.0.3(astro@3.0.12)
+        version: 1.0.3(astro@3.0.13)
       '@astrojs/sitemap':
         specifier: ^3.0.0
         version: 3.0.0
@@ -160,8 +160,8 @@ importers:
         specifier: workspace:*
         version: link:../x-astro
       astro:
-        specifier: ^3.0.12
-        version: 3.0.12(@types/node@20.6.0)
+        specifier: ^3.0.13
+        version: 3.0.13(@types/node@20.6.0)
     devDependencies:
       '@flamrdevs/tsc':
         specifier: workspace:*
@@ -227,8 +227,8 @@ importers:
         specifier: workspace:*
         version: link:../x
       astro:
-        specifier: ^3.0.12
-        version: 3.0.12(@types/node@20.6.0)
+        specifier: ^3.0.13
+        version: 3.0.13(@types/node@20.6.0)
     devDependencies:
       '@flamrdevs/tsc':
         specifier: workspace:*
@@ -268,13 +268,13 @@ packages:
   /@astrojs/internal-helpers@0.2.0:
     resolution: {integrity: sha512-NQ4ppp1CM0HNkKbJNM4saVSfmUYzGlRalF6wx7F6T/MYHYSWGuojY89/oFTy4t8VlOGUCUijlsVNNeziWaUo5g==}
 
-  /@astrojs/markdown-remark@3.1.0(astro@3.0.12):
+  /@astrojs/markdown-remark@3.1.0(astro@3.0.13):
     resolution: {integrity: sha512-5UwamK0iFxN0n1Nw44vUk8AkQr4psKS63hM3D1/4bhhjs4ZFRyrYmg5NjScaMEXZcrd2KgGPsd+PEwNs4mlBOw==}
     peerDependencies:
       astro: ^3.0.11
     dependencies:
       '@astrojs/prism': 3.0.0
-      astro: 3.0.12(@types/node@20.6.0)
+      astro: 3.0.13(@types/node@20.6.0)
       github-slugger: 2.0.0
       import-meta-resolve: 3.0.0
       rehype-raw: 6.1.1
@@ -290,16 +290,16 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/mdx@1.0.3(astro@3.0.12):
+  /@astrojs/mdx@1.0.3(astro@3.0.13):
     resolution: {integrity: sha512-T+WnbBltX4COO3SZYPHLoRC8XrXSajgiKmXNtFWP5cCjIiofv86gkdSwsjqfLMCaLyGUEmd+vspoaCU0joSrOg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       astro: ^3.0.11
     dependencies:
-      '@astrojs/markdown-remark': 3.1.0(astro@3.0.12)
+      '@astrojs/markdown-remark': 3.1.0(astro@3.0.13)
       '@mdx-js/mdx': 2.3.0
       acorn: 8.10.0
-      astro: 3.0.12(@types/node@20.6.0)
+      astro: 3.0.13(@types/node@20.6.0)
       es-module-lexer: 1.3.0
       estree-util-visit: 1.2.1
       github-slugger: 2.0.0
@@ -2181,14 +2181,14 @@ packages:
       terser: 5.19.3
     dev: true
 
-  /astro@3.0.12(@types/node@20.6.0):
-    resolution: {integrity: sha512-nDLI9OGEjYIX90a1Md1orqyurPxqXTWTy7Sm3ZsWl5dpzSjcUXo3VB/GTvNjAMS9sE40BOxhay7/hnnQuI8p7A==}
+  /astro@3.0.13(@types/node@20.6.0):
+    resolution: {integrity: sha512-oZcDcoLsWG7SeltkJ33T/L5tcrsDDe5FLW9FxG1Z1NIwqOE321URLJVuse1WADGwBpMIVkWNibqv4wK2rxEnjw==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
       '@astrojs/compiler': 2.1.0
       '@astrojs/internal-helpers': 0.2.0
-      '@astrojs/markdown-remark': 3.1.0(astro@3.0.12)
+      '@astrojs/markdown-remark': 3.1.0(astro@3.0.13)
       '@astrojs/telemetry': 3.0.1
       '@babel/core': 7.22.17
       '@babel/generator': 7.22.15
@@ -2207,7 +2207,7 @@ packages:
       debug: 4.3.4
       devalue: 4.3.2
       diff: 5.1.0
-      es-module-lexer: 1.3.0
+      es-module-lexer: 1.3.1
       esbuild: 0.19.2
       estree-walker: 3.0.3
       execa: 8.0.1
@@ -2712,6 +2712,10 @@ packages:
 
   /es-module-lexer@1.3.0:
     resolution: {integrity: sha512-vZK7T0N2CBmBOixhmjdqx2gWVbFZ4DXZ/NyRMZVlJXPa7CyFS+/a4QQsDGDQy9ZfEzxFuNEsMLeQJnKP2p5/JA==}
+    dev: true
+
+  /es-module-lexer@1.3.1:
+    resolution: {integrity: sha512-JUFAyicQV9mXc3YRxPnDlrfBKpqt6hUYzz9/boprUJHs4e4KVr3XwOF70doO6gwXUor6EWZJAyWAfKki84t20Q==}
 
   /esbuild@0.17.6:
     resolution: {integrity: sha512-TKFRp9TxrJDdRWfSsSERKEovm6v30iHnrjlcGhLBOtReE28Yp1VSBRfO3GTaOFMoxsNerx4TjrhzSuma9ha83Q==}
@@ -4167,6 +4171,15 @@ packages:
       nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: true
+
+  /postcss@8.4.29:
+    resolution: {integrity: sha512-cbI+jaqIeu/VGqXEarWkRCCffhjgXc0qjBtXpqJhTBohMUjUQnbBr0xqX3vEKudc4iviTewcJo5ajcec5+wdJw==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.6
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
 
   /prebuild-install@7.1.1:
     resolution: {integrity: sha512-jAXscXWMcCK8GgCoHOfIr0ODh5ai8mj63L2nWrjuAgXE6tDyYGnx4/8o/rCgU+B4JSyZBKbeZqzhtwtC3ovxjw==}
@@ -4385,8 +4398,8 @@ packages:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
 
-  /rollup@3.28.1:
-    resolution: {integrity: sha512-R9OMQmIHJm9znrU3m3cpE8uhN0fGdXiawME7aZIpQqvpS/85+Vt1Hq1/yVIcYfOmaQiHjvXkQAoJukvLpau6Yw==}
+  /rollup@3.29.1:
+    resolution: {integrity: sha512-c+ebvQz0VIH4KhhCpDsI+Bik0eT8ZFEVZEYw0cGMVqIP8zc+gnwl7iXCamTw7vzv2MeuZFZfdx5JJIq+ehzDlg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -5027,8 +5040,8 @@ packages:
     dependencies:
       '@types/node': 20.6.0
       esbuild: 0.18.20
-      postcss: 8.4.28
-      rollup: 3.28.1
+      postcss: 8.4.29
+      rollup: 3.29.1
     optionalDependencies:
       fsevents: 2.3.3
 
