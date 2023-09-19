@@ -4,7 +4,7 @@
   "dependencies": {
     "@flamrdevs/const": "workspace:*",
     "clsx": "^2.0.0",
-    "propsplit": "^1.0.0"
+    "propsplit": "^1.0.1"
   },
   "devDependencies": {
     "@flamrdevs/tsc": "workspace:*"

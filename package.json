@@ -7,13 +7,13 @@
 		"preview": "turbo preview"
 	},
 	"devDependencies": {
-		"@types/node": "^20.6.0",
+		"@types/node": "^20.6.2",
 		"@vanilla-extract/css": "^1.13.0",
 		"@vanilla-extract/recipes": "^0.5.0",
 		"@vanilla-extract/sprinkles": "^1.6.1",
 		"@vanilla-extract/vite-plugin": "^3.9.0",
-		"astro": "^3.0.13",
-		"turbo": "^1.10.13",
+		"astro": "^3.1.0",
+		"turbo": "^1.10.14",
 		"typescript": "^5.2.2",
 		"vite": "^4.4.9"
 	}
