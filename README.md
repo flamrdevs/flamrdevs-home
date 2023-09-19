@@ -3,7 +3,7 @@
   <img alt="flamrdevs" src="https://flamrdevs.pages.dev/svgs/animated-cover-light.svg">
 </picture>
 
-<p align="center">
+<div align="center">
   <a title="github" href="https://github.com/flamrdevs">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/simple?t=dark&i=github">
@@ -22,22 +22,34 @@
       <img alt="x" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=x" hspace="1">
     </picture>
   </a>
+  <a title="mastodon" href="https://mastodon.social/@flamrdevs">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/simple?t=dark&i=mastodon">
+      <img alt="mastodon" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=mastodon" hspace="1">
+    </picture>
+  </a>
+  <a title="bento" href="https://bento.me/flamrdevs">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/simple?t=dark&i=bento">
+      <img alt="bento" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=bento" hspace="1">
+    </picture>
+  </a>
   <a title="mode" href="https://github.com/settings/appearance">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/lucide?t=dark&i=moon">
       <img alt="mode" src="https://flamrdevs.cyclic.app/core/icon-button/lucide?t=light&i=sun" hspace="1">
     </picture>
   </a>
-</p>
+</div>
 
-<p align="center">
+<div align="center">
   <a title="website" href="https://flamrdevs.vercel.app">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/button?t=dark&v=website">
       <img alt="website" src="https://flamrdevs.cyclic.app/core/button?t=light&v=website" hspace="1">
     </picture>
   </a>
-</p>
+</div>
 
 <h2 id="table-of-contents">
   <picture>
@@ -106,13 +118,11 @@
 
 [MIT License](./LICENSE)
 
-<hr />
+<img width="100%" src="https://hiiiits.deno.dev/hit/flamrdevs/flamrdevs-home" alt="hiiiits" title="hiiiits" vspace="20" />
 
-<p align="center">
+<div align="center">
   <picture title="flamrdevs">
     <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/badge/flamrdevs?t=dark&v=flamrdevs">
     <img alt="flamrdevs" src="https://flamrdevs.cyclic.app/core/badge/flamrdevs?t=light&v=flamrdevs" hspace="1">
   </picture>
-</p>
-
-<img width="100%" src="https://hiiiits.deno.dev/hit/flamrdevs/flamrdevs-home" alt="hiiiits" title="hiiiits" />
+</div>
