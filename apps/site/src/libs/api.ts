@@ -6,6 +6,7 @@ type Tag =
 	| "cloudflare-pages"
 	| "deno"
 	| "fastify"
+	| "github"
 	| "hono"
 	| "netlify"
 	| "node"
