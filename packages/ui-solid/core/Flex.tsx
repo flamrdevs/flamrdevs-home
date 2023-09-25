@@ -1,46 +1,25 @@
 import { splitProps } from "solid-js";
 import type { JSX } from "solid-js";
 
-import * as FlexCSS from "@flamrdevs/ui/core/Flex.recipe.css";
+import * as Recipes from "@flamrdevs/ui/core/.recipes.css";
 import * as Sprinkles from "@flamrdevs/ui/core/.sprinkles.css";
 
-import clsx from "@flamrdevs/x/modules/clsx";
+import Box from "./Box";
 
-import { ClassesKeys } from "./../classes";
-
-type FlexProps = JSX.IntrinsicElements["div"] &
-	FlexCSS.Variants &
-	Sprinkles.AlignShorthandsVariants &
-	Sprinkles.JustifyShorthandsVariants &
-	Sprinkles.GapShorthandsVariants &
+type FlexProps = JSX.IntrinsicElements["div"] & {
+	inline?: boolean;
+} & Recipes.TypographyVariants &
+	Sprinkles.LayoutShorthandsVariants &
+	Sprinkles.PositionShorthandsVariants &
 	Sprinkles.MarginShorthandsVariants &
 	Sprinkles.PaddingShorthandsVariants;
 
+const LocalKeys = ["inline", "disp"] as const;
+
 const Flex = (props: FlexProps) => {
-	const [classes, flex, align, justify, gap, margin, padding, rest] = splitProps(
-		props,
-		ClassesKeys,
-		FlexCSS.RootKeys,
-		Sprinkles.AlignKeys,
-		Sprinkles.JustifyKeys,
-		Sprinkles.GapKeys,
-		Sprinkles.MarginKeys,
-		Sprinkles.PaddingKeys
-	);
+	const [local, rest] = splitProps(props, LocalKeys);
 
-	const className = () =>
-		clsx(
-			FlexCSS.Root(flex),
-			Sprinkles.Align(align),
-			Sprinkles.Justify(justify),
-			Sprinkles.Gap(gap),
-			Sprinkles.Margin(margin),
-			Sprinkles.Padding(padding),
-			classes.class,
-			classes.classList
-		);
-
-	return <div {...rest} class={className()} />;
+	return <Box disp={local.disp ?? (local.inline ? "iflex" : "flex")} {...rest} />;
 };
 
 export type { FlexProps };

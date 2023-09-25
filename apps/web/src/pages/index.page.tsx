@@ -6,7 +6,7 @@ import { LINK } from "@flamrdevs/const/exports";
 
 import { useStore } from "@flamrdevs/x-solid/libs/store";
 
-import { Center, Container, IconButton, Separator } from "~/components/core";
+import { Center, Container, IconButton, Separator, Text } from "~/components/core";
 import { AnimatedSVGLogo } from "~/components/flamrdevs";
 import { IconButtonLink } from "~/components/router";
 
@@ -26,17 +26,21 @@ const IndexPage = () => {
 			<Container max="sm">
 				<Separator orientation="horizontal" />
 				<Center gap="2" p="2">
-					<IconButtonLink href={LINK.GITHUB} target="_blank">
-						<GithubIcon />
-					</IconButtonLink>
+					<Text family="mono">flamrdevs</Text>
 
-					<Separator orientation="vertical" class={separatorvertical} />
+					<div style="flex-grow: 1;"></div>
 
 					<IconButton onClick={toggleTheme}>
 						<Show when={theme() === "dark"} fallback={<MoonIcon />}>
 							<SunIcon />
 						</Show>
 					</IconButton>
+
+					<Separator orientation="vertical" class={separatorvertical} />
+
+					<IconButtonLink href={LINK.GITHUB} target="_blank">
+						<GithubIcon />
+					</IconButtonLink>
 				</Center>
 				<Separator orientation="horizontal" />
 			</Container>

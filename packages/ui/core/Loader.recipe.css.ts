@@ -37,7 +37,7 @@ const Root = recipe({
 	},
 });
 
-const RootKeys = ["color", "size"] as const satisfies readonly (keyof Variants)[];
+const RootKeys = Root.variants();
 
 const LoaderSpinO = keyframes({
 	"100%": {

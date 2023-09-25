@@ -5,10 +5,10 @@ type ClassesProps = {
 	class?: string | null;
 };
 
-const getRootClassesx = <P extends ClassesProps>(props: P) => {
-	const { class: className, ...rest } = props;
-	return [(...classes: ClassValue[]) => clsx(classes, className), rest] as const;
-};
+const ClassesKeys = ["class"] as const satisfies Readonly<(keyof ClassesProps)[]>;
+
+const classex = <T extends ClassesProps>(classValue: ClassValue, classes: T) => clsx(classValue, classes[ClassesKeys[0]]);
 
 export type { ClassesProps };
-export { getRootClassesx };
+export { ClassesKeys };
+export { classex };

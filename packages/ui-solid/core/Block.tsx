@@ -6,7 +6,7 @@ import * as Sprinkles from "@flamrdevs/ui/core/.sprinkles.css";
 
 import Box from "./Box";
 
-type CenterProps = JSX.IntrinsicElements["div"] & {
+type BlockProps = JSX.IntrinsicElements["div"] & {
 	inline?: boolean;
 } & Recipes.TypographyVariants &
 	Sprinkles.LayoutShorthandsVariants &
@@ -14,13 +14,13 @@ type CenterProps = JSX.IntrinsicElements["div"] & {
 	Sprinkles.MarginShorthandsVariants &
 	Sprinkles.PaddingShorthandsVariants;
 
-const LocalKeys = ["inline", "disp", "ai", "jc"] as const;
+const LocalKeys = ["inline", "disp"] as const;
 
-const Center = (props: CenterProps) => {
+const Block = (props: BlockProps) => {
 	const [local, rest] = splitProps(props, LocalKeys);
 
-	return <Box disp={local.disp ?? (local.inline ? "iflex" : "flex")} ai={local.ai ?? "-:-"} jc={local.jc ?? "-:-"} {...rest} />;
+	return <Box disp={local.disp ?? (local.inline ? "iblock" : "block")} {...rest} />;
 };
 
-export type { CenterProps };
-export default Center;
+export type { BlockProps };
+export default Block;

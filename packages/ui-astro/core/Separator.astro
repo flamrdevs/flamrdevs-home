@@ -7,15 +7,13 @@ import propsplit from "@flamrdevs/x/modules/propsplit";
 import { getSeparatorAttrs } from "./attributes/separator";
 import type { SeparatorOptions } from "./attributes/separator";
 
-import { getRootClassesx } from "./../classes";
+import { ClassesKeys, classex } from "./../classes";
 
 type Props = Omit<HTMLAttributes<"hr">, "orientation"> & SeparatorOptions & SeparatorCSS.Variants;
 
-const [classes, props] = getRootClassesx(Astro.props);
+const [classes, options, recipe, attrs] = propsplit(Astro.props, ClassesKeys, ["orientation"], SeparatorCSS.RootKeys);
 
-const [options, recipe, attrs] = propsplit(props, ["orientation"], SeparatorCSS.RootKeys);
-
-const className = classes(SeparatorCSS.Root(recipe));
+const className = classex(SeparatorCSS.Root(recipe), classes);
 ---
 
 <hr {...attrs} class={className} {...getSeparatorAttrs(options)} />

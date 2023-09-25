@@ -1,35 +1,22 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 
-import * as FlexCSS from "@flamrdevs/ui/core/Flex.recipe.css";
+import * as Recipes from "@flamrdevs/ui/core/.recipes.css";
 import * as Sprinkles from "@flamrdevs/ui/core/.sprinkles.css";
-import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { getRootClassesx } from "./../classes";
+import Box from "./Box.astro";
 
-type Props = HTMLAttributes<"div"> &
-	FlexCSS.Variants &
-	Sprinkles.AlignShorthandsVariants &
-	Sprinkles.JustifyShorthandsVariants &
-	Sprinkles.GapShorthandsVariants &
+type Props = HTMLAttributes<"div"> & {
+	inline?: boolean;
+} & Recipes.TypographyVariants &
+	Sprinkles.LayoutShorthandsVariants &
+	Sprinkles.PositionShorthandsVariants &
 	Sprinkles.MarginShorthandsVariants &
 	Sprinkles.PaddingShorthandsVariants;
 
-const [classes, props] = getRootClassesx(Astro.props);
-
-const [flex, align, justify, gap, margin, padding, attrs] = propsplit(
-	props,
-	FlexCSS.RootKeys,
-	Sprinkles.AlignKeys,
-	Sprinkles.JustifyKeys,
-	Sprinkles.GapKeys,
-	Sprinkles.MarginKeys,
-	Sprinkles.PaddingKeys
-);
-
-const className = classes(FlexCSS.Root(flex), Sprinkles.Align(align), Sprinkles.Justify(justify), Sprinkles.Gap(gap), Sprinkles.Margin(margin), Sprinkles.Padding(padding));
+const { inline, disp = inline ? "iflex" : "flex", ...attrs } = Astro.props;
 ---
 
-<div {...attrs} class={className}>
+<Box disp={disp} {...attrs as any}>
 	<slot />
-</div>
+</Box>

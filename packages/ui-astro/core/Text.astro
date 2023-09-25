@@ -1,18 +1,39 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 
-import * as TextCSS from "@flamrdevs/ui/core/Text.recipe.css";
+import * as Recipes from "@flamrdevs/ui/core/.recipes.css";
+import * as Sprinkles from "@flamrdevs/ui/core/.sprinkles.css";
 import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { getRootClassesx } from "./../classes";
+import { ClassesKeys, classex } from "./../classes";
 
-type Props = HTMLAttributes<"div"> & TextCSS.Variants;
+type Props = Omit<HTMLAttributes<"div">, "style"> & {
+	family?: Recipes.TypographyVariants["ff"];
+	size?: Recipes.TypographyVariants["fz"];
+	style?: Recipes.TypographyVariants["fs"];
+	weight?: Recipes.TypographyVariants["fw"];
+	align?: Recipes.TypographyVariants["ta"];
+} & Sprinkles.MarginShorthandsVariants &
+	Sprinkles.PaddingShorthandsVariants;
 
-const [classes, props] = getRootClassesx(Astro.props);
+const { family = "sans", size = "3", style = "n", weight = "4", align = ":--", ...props } = Astro.props;
 
-const [recipe, attrs] = propsplit(props, TextCSS.RootKeys);
+const [classes, margin, padding, attrs] = propsplit(props, ClassesKeys, Sprinkles.MarginKeys, Sprinkles.PaddingKeys);
 
-const className = classes(TextCSS.Root(recipe));
+const className = classex(
+	[
+		Recipes.Typography({
+			ff: family,
+			fz: size,
+			fs: style,
+			fw: weight,
+			ta: align,
+		}),
+		Sprinkles.Margin(margin),
+		Sprinkles.Padding(padding),
+	],
+	classes
+);
 ---
 
 <div {...attrs} class={className}>

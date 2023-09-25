@@ -14,7 +14,7 @@ const Root = style([
 		borderRadius: "0.25rem",
 
 		":hover": {
-			textDecoration: "underline",
+			textDecorationLine: "underline",
 		},
 
 		":focus-visible": {
@@ -24,11 +24,8 @@ const Root = style([
 	componentStateStyles({
 		disabled: {
 			opacity: 0.7,
+			textDecorationLine: "none",
 			cursor: "not-allowed",
-
-			":hover": {
-				textDecoration: "none",
-			},
 		},
 	}),
 ]);

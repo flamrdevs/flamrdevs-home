@@ -7,15 +7,13 @@ import propsplit from "@flamrdevs/x/modules/propsplit";
 import { getButtonAttrs } from "./attributes/button";
 import type { ButtonOptions } from "./attributes/button";
 
-import { getRootClassesx } from "./../classes";
+import { ClassesKeys, classex } from "./../classes";
 
 type Props = HTMLAttributes<"button"> & ButtonOptions & ButtonCSS.Variants & ButtonCSS.InnerVariants & ButtonCSS.ChildVariants;
 
-const [classes, props] = getRootClassesx(Astro.props);
+const [classes, options, recipe, attrs] = propsplit(Astro.props, ClassesKeys, ["disabled"], [...ButtonCSS.RootKeys, ...ButtonCSS.ChildKeys]);
 
-const [options, recipe, attrs] = propsplit(props, ["disabled"], [...ButtonCSS.RootKeys, ...ButtonCSS.ChildKeys]);
-
-const className = classes(ButtonCSS.Root({ color: recipe.color, size: recipe.size }));
+const className = classex(ButtonCSS.Root({ color: recipe.color, size: recipe.size }), classes);
 const innerClassName = ButtonCSS.Inner({ color: recipe.color });
 const childClassName = ButtonCSS.Child({ font: recipe.font, size: recipe.size });
 ---

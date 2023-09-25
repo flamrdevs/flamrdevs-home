@@ -3,16 +3,14 @@ import type { JSX } from "solid-js";
 
 import * as LoaderCSS from "@flamrdevs/ui/core/Loader.recipe.css";
 
-import clsx from "@flamrdevs/x/modules/clsx";
-
-import { ClassesKeys } from "./../classes";
+import { ClassesKeys, classex } from "./../classes";
 
 type LoaderProps = JSX.IntrinsicElements["svg"] & LoaderCSS.Variants;
 
 const Loader = (props: LoaderProps) => {
 	const [classes, recipe, rest] = splitProps(props, ClassesKeys, ["color", "size"]);
 
-	const className = () => clsx(LoaderCSS.Root(recipe), classes.class, classes.classList);
+	const className = () => classex(LoaderCSS.Root(recipe), classes);
 
 	return (
 		<svg {...rest} class={className()} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

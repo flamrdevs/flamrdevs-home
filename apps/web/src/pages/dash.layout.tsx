@@ -7,7 +7,7 @@ const DashLayout = () => {
 	return (
 		<Box>
 			<Box p="2">
-				<Text family="mono" size="lg" weight={500} align="center">
+				<Text family="mono" size="4" weight="5" align="-:-">
 					DashLayout
 				</Text>
 			</Box>

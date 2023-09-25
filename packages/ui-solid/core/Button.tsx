@@ -5,9 +5,7 @@ import { Button as KobalteButton } from "@kobalte/core";
 
 import * as ButtonCSS from "@flamrdevs/ui/core/Button.recipe.css";
 
-import clsx from "@flamrdevs/x/modules/clsx";
-
-import { ClassesKeys } from "./../classes";
+import { ClassesKeys, classex } from "./../classes";
 import type { ClassesProps } from "./../classes";
 import { ChildrenKeys } from "./../children";
 
@@ -16,9 +14,9 @@ type ButtonProps = KobalteButton.ButtonRootOptions & ButtonCSS.Variants & Button
 const Button = <P extends ParentProps<ClassesProps> = JSX.IntrinsicElements["button"]>(props: P & ButtonProps) => {
 	const [classes, child, recipe, rest] = splitProps(props as ParentProps<ClassesProps> & ButtonProps, ClassesKeys, ChildrenKeys, [...ButtonCSS.RootKeys, ...ButtonCSS.ChildKeys]);
 
-	const className = () => clsx(ButtonCSS.Root({ color: recipe.color, size: recipe.size }), classes.class, classes.classList);
-	const innerClassName = () => clsx(ButtonCSS.Inner({ color: recipe.color }));
-	const childClassName = () => clsx(ButtonCSS.Child({ font: recipe.font, size: recipe.size }));
+	const className = () => classex(ButtonCSS.Root({ color: recipe.color, size: recipe.size }), classes);
+	const innerClassName = () => ButtonCSS.Inner({ color: recipe.color });
+	const childClassName = () => ButtonCSS.Child({ font: recipe.font, size: recipe.size });
 
 	return (
 		<KobalteButton.Root {...rest} class={className()}>

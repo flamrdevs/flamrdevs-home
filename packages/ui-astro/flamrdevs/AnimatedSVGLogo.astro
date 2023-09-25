@@ -2,8 +2,9 @@
 import type { HTMLAttributes } from "astro/types";
 
 import * as CSS from "@flamrdevs/ui/flamrdevs/AnimatedSVGLogo.css";
+import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { getRootClassesx } from "./../classes";
+import { ClassesKeys, classex } from "./../classes";
 
 type Props = HTMLAttributes<"svg"> & {
 	size?: number;
@@ -11,9 +12,9 @@ type Props = HTMLAttributes<"svg"> & {
 
 const SIZE_DEFAULT = 500;
 
-const [classes, { size = SIZE_DEFAULT, ...attrs }] = getRootClassesx(Astro.props);
+const [classes, { size = SIZE_DEFAULT, ...attrs }] = propsplit(Astro.props, ClassesKeys);
 
-const className = classes(CSS.Root);
+const className = classex(CSS.Root, classes);
 ---
 
 <svg {...attrs} class={className} width={size} height={size} viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -3,9 +3,7 @@ import type { JSX } from "solid-js";
 
 import * as CSS from "@flamrdevs/ui/flamrdevs/AnimatedSVGLogo.css";
 
-import clsx from "@flamrdevs/x/modules/clsx";
-
-import { ClassesKeys } from "./../classes";
+import { ClassesKeys, classex } from "./../classes";
 
 type FLAMRDEVS_SVGProps = JSX.IntrinsicElements["svg"] & {
 	size?: number;
@@ -19,7 +17,7 @@ const FLAMRDEVS_SVG = (props: FLAMRDEVS_SVGProps) => {
 	props = mergeProps(defaultProps, props);
 	const [classes, local, rest] = splitProps(props, ClassesKeys, ["size"]);
 
-	const className = () => clsx(CSS.Root, classes.class, classes.classList);
+	const className = () => classex(CSS.Root, classes);
 
 	return (
 		<svg {...rest} class={className()} width={local.size} height={local.size} viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">

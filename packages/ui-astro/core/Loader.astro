@@ -4,15 +4,13 @@ import type { HTMLAttributes } from "astro/types";
 import * as LoaderCSS from "@flamrdevs/ui/core/Loader.recipe.css";
 import propsplit from "@flamrdevs/x/modules/propsplit";
 
-import { getRootClassesx } from "./../classes";
+import { ClassesKeys, classex } from "./../classes";
 
 type Props = HTMLAttributes<"svg"> & LoaderCSS.Variants;
 
-const [classes, props] = getRootClassesx(Astro.props);
+const [classes, recipe, attrs] = propsplit(Astro.props, ClassesKeys, LoaderCSS.RootKeys);
 
-const [recipe, attrs] = propsplit(props, LoaderCSS.RootKeys);
-
-const className = classes(LoaderCSS.Root(recipe));
+const className = classex(LoaderCSS.Root(recipe), classes);
 ---
 
 <svg {...attrs} class={className} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

@@ -1,18 +1,31 @@
 import { splitProps } from "solid-js";
 import type { JSX } from "solid-js";
 
+import * as Recipes from "@flamrdevs/ui/core/.recipes.css";
 import * as Sprinkles from "@flamrdevs/ui/core/.sprinkles.css";
 
-import clsx from "@flamrdevs/x/modules/clsx";
+import { ClassesKeys, classex } from "./../classes";
 
-import { ClassesKeys } from "./../classes";
-
-type BoxProps = JSX.IntrinsicElements["div"] & Sprinkles.DisplayShorthandsVariants & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
+type BoxProps = JSX.IntrinsicElements["div"] &
+	Recipes.TypographyVariants &
+	Sprinkles.LayoutShorthandsVariants &
+	Sprinkles.PositionShorthandsVariants &
+	Sprinkles.MarginShorthandsVariants &
+	Sprinkles.PaddingShorthandsVariants;
 
 const Box = (props: BoxProps) => {
-	const [classes, display, margin, padding, rest] = splitProps(props, ClassesKeys, Sprinkles.DisplayKeys, Sprinkles.MarginKeys, Sprinkles.PaddingKeys);
+	const [classes, typography, layout, position, margin, padding, rest] = splitProps(
+		props,
+		ClassesKeys,
+		Recipes.TypographyKeys,
+		Sprinkles.LayoutKeys,
+		Sprinkles.PositionKeys,
+		Sprinkles.MarginKeys,
+		Sprinkles.PaddingKeys
+	);
 
-	const className = () => clsx(Sprinkles.Display(display), Sprinkles.Margin(margin), Sprinkles.Padding(padding), classes.class, classes.classList);
+	const className = () =>
+		classex([Recipes.Typography(typography), Sprinkles.Layout(layout), Sprinkles.Position(position), Sprinkles.Margin(margin), Sprinkles.Padding(padding)], classes);
 
 	return <div {...rest} class={className()} />;
 };

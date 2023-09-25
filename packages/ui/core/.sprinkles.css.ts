@@ -37,112 +37,78 @@ const SPACE = {
 	"16": "4rem",
 };
 
-type DisplayVariants = Parameters<typeof Display>[0];
-type DisplayShorthandsVariants = Omit<DisplayVariants, "display">;
-const DisplayProperties = defineProperties({
+type LayoutVariants = Parameters<typeof Layout>[0];
+type LayoutShorthandsVariants = Omit<LayoutVariants, "display" | "alignItems" | "justifyContent">;
+const LayoutProperties = defineProperties({
 	conditions: CONDITIONS,
 	defaultCondition: DEFAULTCONDITION,
 	properties: {
 		display: {
-			none: {
-				display: "none",
-			},
-			block: {
-				display: "block",
-			},
-			iblock: {
-				display: "inline-block",
-			},
-			flex: {
-				display: "flex",
-			},
-			iflex: {
-				display: "inline-flex",
-			},
+			none: "none",
+			block: "block",
+			iblock: "inline-block",
+			flex: "flex",
+			iflex: "inline-flex",
+			grid: "grid",
+			igrid: "inline-grid",
 		},
-	},
-	shorthands: {
-		d: ["display"],
-	},
-});
-const Display = createSprinkles(DisplayProperties);
-
-type AlignVariants = Parameters<typeof Align>[0];
-type AlignShorthandsVariants = Omit<AlignVariants, "alignItems">;
-const AlignProperties = defineProperties({
-	conditions: CONDITIONS,
-	defaultCondition: DEFAULTCONDITION,
-	properties: {
 		alignItems: {
-			start: {
-				alignItems: "flex-start",
-			},
-			center: {
-				alignItems: "center",
-			},
-			end: {
-				alignItems: "flex-end",
-			},
-			strect: {
-				alignItems: "strect",
-			},
+			":--": "flex-start",
+			"-:-": "center",
+			"--:": "flex-end",
+			":::": "stretch",
 		},
-	},
-	shorthands: {
-		ai: ["alignItems"],
-	},
-});
-const Align = createSprinkles(AlignProperties);
-
-type JustifyVariants = Parameters<typeof Justify>[0];
-type JustifyShorthandsVariants = Omit<JustifyVariants, "justifyContent">;
-const JustifyProperties = defineProperties({
-	conditions: CONDITIONS,
-	defaultCondition: DEFAULTCONDITION,
-	properties: {
 		justifyContent: {
-			start: {
-				justifyContent: "flex-start",
-			},
-			center: {
-				justifyContent: "center",
-			},
-			end: {
-				justifyContent: "flex-end",
-			},
-			around: {
-				justifyContent: "space-around",
-			},
-			between: {
-				justifyContent: "space-between",
-			},
-			evenly: {
-				justifyContent: "space-evenly",
-			},
+			":--": "flex-start",
+			"-:-": "center",
+			"--:": "flex-end",
+			":::": "stretch",
+			around: "space-around",
+			between: "space-between",
+			evenly: "space-evenly",
 		},
+		gap: SPACE,
 	},
 	shorthands: {
+		disp: ["display"],
+		ai: ["alignItems"],
 		jc: ["justifyContent"],
 	},
 });
-const Justify = createSprinkles(JustifyProperties);
+const Layout = createSprinkles(LayoutProperties);
 
-type GapVariants = Parameters<typeof Gap>[0];
-type GapShorthandsVariants = Omit<GapVariants, "columnGap" | "rowGap">;
-const GapProperties = defineProperties({
+type PositionVariants = Parameters<typeof Position>[0];
+type PositionShorthandsVariants = Omit<PositionVariants, "position" | "zIndex">;
+const PositionProperties = defineProperties({
 	conditions: CONDITIONS,
 	defaultCondition: DEFAULTCONDITION,
 	properties: {
-		gap: SPACE,
-		columnGap: SPACE,
-		rowGap: SPACE,
+		position: {
+			rel: "relative",
+			abs: "absolute",
+			fix: "fixed",
+			stc: "static",
+			sty: "sticky",
+		},
+		zIndex: {
+			"0": 0,
+			"1": 10,
+			"2": 20,
+			"3": 30,
+			"4": 40,
+			"5": 50,
+		},
+		top: SPACE,
+		right: SPACE,
+		bottom: SPACE,
+		left: SPACE,
 	},
 	shorthands: {
-		gapx: ["columnGap"],
-		gapy: ["rowGap"],
+		posi: ["position"],
+		zi: ["zIndex"],
 	},
 });
-const Gap = createSprinkles(GapProperties);
+const Position = createSprinkles(PositionProperties);
 
 type MarginVariants = Parameters<typeof Margin>[0];
 type MarginShorthandsVariants = Omit<MarginVariants, "marginTop" | "marginRight" | "marginBottom" | "marginLeft">;
@@ -190,14 +156,12 @@ const PaddingProperties = defineProperties({
 });
 const Padding = createSprinkles(PaddingProperties);
 
-const DisplayKeys = ["d"] as const satisfies readonly (keyof DisplayShorthandsVariants)[];
-const AlignKeys = ["ai"] as const satisfies readonly (keyof AlignShorthandsVariants)[];
-const JustifyKeys = ["jc"] as const satisfies readonly (keyof JustifyShorthandsVariants)[];
-const GapKeys = ["gap", "gapx", "gapy"] as const satisfies readonly (keyof GapShorthandsVariants)[];
+const LayoutKeys = ["disp", "ai", "jc", "gap"] as const satisfies readonly (keyof LayoutShorthandsVariants)[];
+const PositionKeys = ["posi", "zi", "top", "right", "bottom", "left"] as const satisfies readonly (keyof PositionShorthandsVariants)[];
 const MarginKeys = ["m", "mx", "my", "mt", "mr", "mb", "ml"] as const satisfies readonly (keyof MarginShorthandsVariants)[];
 const PaddingKeys = ["p", "px", "py", "pt", "pr", "pb", "pl"] as const satisfies readonly (keyof PaddingShorthandsVariants)[];
 
-export type { DisplayShorthandsVariants, AlignShorthandsVariants, JustifyShorthandsVariants, GapShorthandsVariants, MarginShorthandsVariants, PaddingShorthandsVariants };
+export type { LayoutShorthandsVariants, PositionShorthandsVariants, MarginShorthandsVariants, PaddingShorthandsVariants };
 export { SCREEN };
-export { Display, Align, Justify, Gap, Margin, Padding };
-export { DisplayKeys, AlignKeys, JustifyKeys, GapKeys, MarginKeys, PaddingKeys };
+export { Layout, Position, Margin, Padding };
+export { LayoutKeys, PositionKeys, MarginKeys, PaddingKeys };

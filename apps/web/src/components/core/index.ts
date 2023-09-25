@@ -1,4 +1,5 @@
 export { default as Badge } from "@flamrdevs/ui-solid/core/Badge";
+export { default as Block } from "@flamrdevs/ui-solid/core/Block";
 export { default as Box } from "@flamrdevs/ui-solid/core/Box";
 export { default as Button } from "@flamrdevs/ui-solid/core/Button";
 export { default as Center } from "@flamrdevs/ui-solid/core/Center";

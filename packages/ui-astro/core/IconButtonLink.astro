@@ -7,15 +7,13 @@ import propsplit from "@flamrdevs/x/modules/propsplit";
 import { getButtonAttrs } from "./attributes/button";
 import type { ButtonOptions } from "./attributes/button";
 
-import { getRootClassesx } from "./../classes";
+import { ClassesKeys, classex } from "./../classes";
 
 type Props = Omit<HTMLAttributes<"a">, "href"> & { href: string } & ButtonOptions & IconButtonCSS.Variants & IconButtonCSS.InnerVariants & IconButtonCSS.ChildVariants;
 
-const [classes, props] = getRootClassesx(Astro.props);
+const [classes, options, recipe, attrs] = propsplit(Astro.props, ClassesKeys, ["disabled"], IconButtonCSS.RootKeys);
 
-const [options, recipe, attrs] = propsplit(props, ["disabled"], IconButtonCSS.RootKeys);
-
-const className = classes(IconButtonCSS.Root({ color: recipe.color, size: recipe.size }));
+const className = classex(IconButtonCSS.Root({ color: recipe.color, size: recipe.size }), classes);
 const innerClassName = IconButtonCSS.Inner({ color: recipe.color });
 const childClassName = IconButtonCSS.Child({ size: recipe.size });
 ---

@@ -1,8 +1,9 @@
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import * as FONTS from "./../styles/fonts";
 import { ColorsContract } from "./../styles/contract.css";
+
+import { Typography } from "./.recipes.css";
 
 import { buttonDisabledStyles, colorNeutralDisabledStyles, colorPrimaryDisabledStyles } from "./core.css";
 
@@ -27,11 +28,11 @@ const Root = recipe({
 		color: {
 			neutral: [
 				{
-					backgroundImage: `linear-gradient(130deg, ${ColorsContract.neutral[11]}, ${ColorsContract.neutral[8]}, ${ColorsContract.neutral[6]})`,
+					backgroundImage: `linear-gradient(125deg, ${ColorsContract.neutral[11]}, ${ColorsContract.neutral[8]}, ${ColorsContract.neutral[6]})`,
 					color: ColorsContract.neutral[11],
 
 					":hover": {
-						backgroundImage: `linear-gradient(130deg, ${ColorsContract.neutral[12]}, ${ColorsContract.neutral[8]}, ${ColorsContract.neutral[7]})`,
+						backgroundImage: `linear-gradient(125deg, ${ColorsContract.neutral[12]}, ${ColorsContract.neutral[8]}, ${ColorsContract.neutral[7]})`,
 					},
 
 					":focus-visible": {
@@ -39,18 +40,18 @@ const Root = recipe({
 					},
 
 					":active": {
-						backgroundImage: `linear-gradient(130deg, ${ColorsContract.neutral[12]}, ${ColorsContract.neutral[9]}, ${ColorsContract.neutral[8]})`,
+						backgroundImage: `linear-gradient(125deg, ${ColorsContract.neutral[12]}, ${ColorsContract.neutral[9]}, ${ColorsContract.neutral[8]})`,
 					},
 				},
 				colorNeutralDisabledStyles,
 			],
 			primary: [
 				{
-					backgroundImage: `linear-gradient(130deg, ${ColorsContract.primary[11]}, ${ColorsContract.primary[8]}, ${ColorsContract.primary[6]})`,
+					backgroundImage: `linear-gradient(125deg, ${ColorsContract.primary[11]}, ${ColorsContract.primary[8]}, ${ColorsContract.primary[6]})`,
 					color: ColorsContract.primary[11],
 
 					":hover": {
-						backgroundImage: `linear-gradient(130deg, ${ColorsContract.primary[12]}, ${ColorsContract.primary[8]}, ${ColorsContract.primary[7]})`,
+						backgroundImage: `linear-gradient(125deg, ${ColorsContract.primary[12]}, ${ColorsContract.primary[8]}, ${ColorsContract.primary[7]})`,
 					},
 
 					":focus-visible": {
@@ -58,7 +59,7 @@ const Root = recipe({
 					},
 
 					":active": {
-						backgroundImage: `linear-gradient(130deg, ${ColorsContract.primary[12]}, ${ColorsContract.primary[9]}, ${ColorsContract.primary[8]})`,
+						backgroundImage: `linear-gradient(125deg, ${ColorsContract.primary[12]}, ${ColorsContract.primary[9]}, ${ColorsContract.primary[8]})`,
 					},
 				},
 				colorPrimaryDisabledStyles,
@@ -77,7 +78,7 @@ const Root = recipe({
 	},
 });
 
-const RootKeys = ["color", "size"] as const satisfies readonly (keyof Variants)[];
+const RootKeys = Root.variants();
 
 type InnerVariants = Exclude<RecipeVariants<typeof Inner>, undefined>;
 
@@ -93,26 +94,26 @@ const Inner = recipe({
 	variants: {
 		color: {
 			neutral: {
-				backgroundImage: `linear-gradient(130deg, ${ColorsContract.neutral[3]}, ${ColorsContract.neutral[1]})`,
+				backgroundImage: `linear-gradient(125deg, ${ColorsContract.neutral[3]}, ${ColorsContract.neutral[1]})`,
 
 				":hover": {
-					backgroundImage: `linear-gradient(130deg, ${ColorsContract.neutral[4]}, ${ColorsContract.neutral[1]})`,
+					backgroundImage: `linear-gradient(125deg, ${ColorsContract.neutral[4]}, ${ColorsContract.neutral[1]})`,
 				},
 
 				":active": {
-					backgroundImage: `linear-gradient(130deg, ${ColorsContract.neutral[5]}, ${ColorsContract.neutral[2]})`,
+					backgroundImage: `linear-gradient(125deg, ${ColorsContract.neutral[5]}, ${ColorsContract.neutral[2]})`,
 				},
 			},
 
 			primary: {
-				backgroundImage: `linear-gradient(130deg, ${ColorsContract.primary[3]}, ${ColorsContract.primary[1]})`,
+				backgroundImage: `linear-gradient(125deg, ${ColorsContract.primary[3]}, ${ColorsContract.primary[1]})`,
 
 				":hover": {
-					backgroundImage: `linear-gradient(130deg, ${ColorsContract.primary[4]}, ${ColorsContract.primary[1]})`,
+					backgroundImage: `linear-gradient(125deg, ${ColorsContract.primary[4]}, ${ColorsContract.primary[1]})`,
 				},
 
 				":active": {
-					backgroundImage: `linear-gradient(130deg, ${ColorsContract.primary[5]}, ${ColorsContract.primary[2]})`,
+					backgroundImage: `linear-gradient(125deg, ${ColorsContract.primary[5]}, ${ColorsContract.primary[2]})`,
 				},
 			},
 		},
@@ -122,7 +123,7 @@ const Inner = recipe({
 	},
 });
 
-const InnerKeys = ["color"] as const satisfies readonly (keyof InnerVariants)[];
+const InnerKeys = Inner.variants();
 
 type ChildVariants = Exclude<RecipeVariants<typeof Child>, undefined>;
 
@@ -140,12 +141,8 @@ const Child = recipe({
 	},
 	variants: {
 		font: {
-			sans: {
-				fontFamily: FONTS.SANS,
-			},
-			mono: {
-				fontFamily: FONTS.MONO,
-			},
+			sans: Typography({ ff: "sans" }),
+			mono: Typography({ ff: "mono" }),
 		},
 		size: {
 			md: {
@@ -159,7 +156,7 @@ const Child = recipe({
 	},
 });
 
-const ChildKeys = ["font", "size"] as const satisfies readonly (keyof ChildVariants)[];
+const ChildKeys = Child.variants();
 
 export type { Variants, InnerVariants, ChildVariants };
 export { Root, Inner, Child };

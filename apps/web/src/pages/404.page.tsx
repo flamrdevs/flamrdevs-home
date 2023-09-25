@@ -6,12 +6,12 @@ const NotFoundPage = () => {
 		<Container max="lg" p="4">
 			<Separator orientation="horizontal" />
 
-			<Flex ai="center" jc="center" style="height: 1.75rem">
-				<Text family="mono" size="xl" weight={700} align="center">
+			<Flex ai="-:-" jc="-:-" style="height: 1.75rem">
+				<Text family="mono" size="5" weight="7" align="-:-">
 					404
 				</Text>
 				<Separator orientation="vertical" />
-				<Text family="mono" size="xl" weight={700} align="center">
+				<Text family="mono" size="5" weight="7" align="-:-">
 					not found
 				</Text>
 			</Flex>

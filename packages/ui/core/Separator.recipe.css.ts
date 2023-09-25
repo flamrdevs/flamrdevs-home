@@ -86,7 +86,7 @@ const Root = recipe({
 	},
 });
 
-const RootKeys = ["margin"] as const satisfies readonly (keyof Variants)[];
+const RootKeys = Root.variants();
 
 export type { Variants };
 export { Root };

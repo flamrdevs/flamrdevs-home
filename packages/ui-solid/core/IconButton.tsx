@@ -5,9 +5,7 @@ import { Button as KobalteButton } from "@kobalte/core";
 
 import * as IconButtonCSS from "@flamrdevs/ui/core/IconButton.recipe.css";
 
-import clsx from "@flamrdevs/x/modules/clsx";
-
-import { ClassesKeys } from "./../classes";
+import { ClassesKeys, classex } from "./../classes";
 import type { ClassesProps } from "./../classes";
 import { ChildrenKeys } from "./../children";
 
@@ -16,9 +14,9 @@ type IconButtonProps = KobalteButton.ButtonRootOptions & IconButtonCSS.Variants 
 const IconButton = <P extends ParentProps<ClassesProps> = JSX.IntrinsicElements["button"]>(props: P & IconButtonProps) => {
 	const [classes, child, recipe, rest] = splitProps(props as ParentProps<ClassesProps> & IconButtonProps, ClassesKeys, ChildrenKeys, ["color", "size"]);
 
-	const className = () => clsx(IconButtonCSS.Root({ color: recipe.color, size: recipe.size }), classes.class, classes.classList);
-	const innerClassName = () => clsx(IconButtonCSS.Inner({ color: recipe.color }));
-	const childClassName = () => clsx(IconButtonCSS.Child({ size: recipe.size }));
+	const className = () => classex(IconButtonCSS.Root({ color: recipe.color, size: recipe.size }), classes);
+	const innerClassName = () => IconButtonCSS.Inner({ color: recipe.color });
+	const childClassName = () => IconButtonCSS.Child({ size: recipe.size });
 
 	return (
 		<KobalteButton.Root {...rest} class={className()}>

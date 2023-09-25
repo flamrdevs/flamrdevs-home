@@ -19,7 +19,7 @@ const UICorePage = () => {
 	return (
 		<>
 			<Container max="lg" p="4">
-				<Flex ai="center">
+				<Flex ai="-:-">
 					<ButtonLink href="/">home</ButtonLink>
 					<Separator orientation="vertical" style="height: 1.5rem" />
 					<ButtonLink href="/ui">ui</ButtonLink>
@@ -34,15 +34,13 @@ const UICorePage = () => {
 
 			<Container max="lg" p="4">
 				<Box>
-					<Text family="mono" size="lg" weight={600}>
+					<Text family="mono" size="4" weight="6">
 						Color
 					</Text>
 
 					<Box p="2">
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Neutral
-							</Text>
+							<Text family="mono">Neutral</Text>
 
 							<Flex gap="2">
 								<Box class={UICSS.color.neutral[1]} />
@@ -61,9 +59,7 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Primary
-							</Text>
+							<Text family="mono">Primary</Text>
 
 							<Flex gap="2">
 								<Box class={UICSS.color.primary[1]} />
@@ -82,9 +78,7 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Success
-							</Text>
+							<Text family="mono">Success</Text>
 
 							<Flex gap="2">
 								<Box class={UICSS.color.success[1]} />
@@ -103,9 +97,7 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Info
-							</Text>
+							<Text family="mono">Info</Text>
 
 							<Flex gap="2">
 								<Box class={UICSS.color.info[1]} />
@@ -124,9 +116,7 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Warning
-							</Text>
+							<Text family="mono">Warning</Text>
 
 							<Flex gap="2">
 								<Box class={UICSS.color.warning[1]} />
@@ -145,9 +135,7 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Danger
-							</Text>
+							<Text family="mono">Danger</Text>
 
 							<Flex gap="2">
 								<Box class={UICSS.color.danger[1]} />
@@ -170,17 +158,15 @@ const UICorePage = () => {
 				<Separator orientation="horizontal" />
 
 				<Box>
-					<Text family="mono" size="lg" weight={600}>
+					<Text family="mono" size="4" weight="6">
 						Badge
 					</Text>
 
 					<Box p="2">
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Default
-							</Text>
+							<Text family="mono">Default</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<Badge>default</Badge>
 								</Box>
@@ -188,11 +174,9 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Color
-							</Text>
+							<Text family="mono">Color</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<Badge color="neutral">neutral</Badge>
 								</Box>
@@ -207,17 +191,15 @@ const UICorePage = () => {
 				<Separator orientation="horizontal" />
 
 				<Box>
-					<Text family="mono" size="lg" weight={600}>
+					<Text family="mono" size="4" weight="6">
 						Button
 					</Text>
 
 					<Box p="2">
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Default
-							</Text>
+							<Text family="mono">Default</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<Button>default</Button>
 								</Box>
@@ -225,11 +207,9 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Color
-							</Text>
+							<Text family="mono">Color</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<Button color="neutral">neutral</Button>
 								</Box>
@@ -240,11 +220,9 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								State
-							</Text>
+							<Text family="mono">State</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<Button>enabled</Button>
 								</Box>
@@ -255,11 +233,9 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Link
-							</Text>
+							<Text family="mono">Link</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<ButtonLink href={LINK.GITHUB} target="_blank">
 										github
@@ -273,17 +249,15 @@ const UICorePage = () => {
 				<Separator orientation="horizontal" />
 
 				<Box>
-					<Text family="mono" size="lg" weight={600}>
+					<Text family="mono" size="4" weight="6">
 						Icon Button
 					</Text>
 
 					<Box p="2">
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Default
-							</Text>
+							<Text family="mono">Default</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<IconButton>
 										<MoonIcon />
@@ -293,11 +267,9 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Color
-							</Text>
+							<Text family="mono">Color</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<IconButton color="neutral">
 										<MoonIcon />
@@ -312,11 +284,9 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								State
-							</Text>
+							<Text family="mono">State</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<IconButton>
 										<MoonIcon />
@@ -331,11 +301,9 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Link
-							</Text>
+							<Text family="mono">Link</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<IconButtonLink href={LINK.GITHUB} target="_blank">
 										<GithubIcon />
@@ -349,19 +317,22 @@ const UICorePage = () => {
 				<Separator orientation="horizontal" />
 
 				<Box>
-					<Text family="mono" size="lg" weight={600}>
+					<Text family="mono" size="4" weight="6">
 						Link
 					</Text>
 
 					<Box p="2">
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Default
-							</Text>
+							<Text family="mono">Default</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<Link href="#">default</Link>
+								</Box>
+								<Box>
+									<Link href="#" disabled>
+										disabled
+									</Link>
 								</Box>
 							</Flex>
 						</Box>
@@ -371,17 +342,15 @@ const UICorePage = () => {
 				<Separator orientation="horizontal" />
 
 				<Box>
-					<Text family="mono" size="lg" weight={600}>
+					<Text family="mono" size="4" weight="6">
 						Text
 					</Text>
 
 					<Box p="2">
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Default
-							</Text>
+							<Text family="mono">Default</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<Text>default</Text>
 								</Box>
@@ -389,11 +358,9 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Family
-							</Text>
+							<Text family="mono">Family</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<Text family="sans">sans</Text>
 								</Box>
@@ -408,17 +375,15 @@ const UICorePage = () => {
 				<Separator orientation="horizontal" />
 
 				<Box>
-					<Text family="mono" size="lg" weight={600}>
+					<Text family="mono" size="4" weight="6">
 						Loader
 					</Text>
 
 					<Box p="2">
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Default
-							</Text>
+							<Text family="mono">Default</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<Loader />
 								</Box>
@@ -426,11 +391,9 @@ const UICorePage = () => {
 						</Box>
 
 						<Box p="1">
-							<Text family="mono" size="md" weight={400}>
-								Color
-							</Text>
+							<Text family="mono">Color</Text>
 
-							<Flex gap="2">
+							<Flex gap="2" p="1">
 								<Box>
 									<Loader color="neutral" />
 								</Box>

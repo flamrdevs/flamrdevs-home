@@ -3,19 +3,11 @@ import type { RecipeVariants } from "@vanilla-extract/recipes";
 
 import * as FONTS from "./../styles/fonts";
 
-type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
+type TypographyVariants = Exclude<RecipeVariants<typeof Typography>, undefined>;
 
-const Root = recipe({
+const Typography = recipe({
 	variants: {
-		inline: {
-			true: {
-				display: "inline-block",
-			},
-			false: {
-				display: "block",
-			},
-		},
-		family: {
+		ff: {
 			sans: {
 				fontFamily: FONTS.SANS,
 			},
@@ -23,100 +15,107 @@ const Root = recipe({
 				fontFamily: FONTS.MONO,
 			},
 		},
-		size: {
-			xs: {
+		fz: {
+			"1": {
 				fontSize: "0.75rem",
 				lineHeight: "1rem",
 			},
-			sm: {
+			"2": {
 				fontSize: "0.875rem",
 				lineHeight: "1.25rem",
 			},
-			md: {
+			"3": {
 				fontSize: "1rem",
 				lineHeight: "1.5rem",
 			},
-			lg: {
+			"4": {
 				fontSize: "1.125rem",
 				lineHeight: "1.75rem",
 			},
-			xl: {
+			"5": {
 				fontSize: "1.25rem",
 				lineHeight: "1.75rem",
 			},
-			x2l: {
+			"6": {
 				fontSize: "1.5rem",
 				lineHeight: "2rem",
 			},
-			x3l: {
+			"7": {
 				fontSize: "1.75rem",
 				lineHeight: "2.25rem",
 			},
-			x4l: {
+			"8": {
 				fontSize: "2.25rem",
 				lineHeight: "2.5rem",
 			},
-			x5l: {
+			"9": {
 				fontSize: "3rem",
 				lineHeight: "1",
 			},
-			x6l: {
+			"10": {
 				fontSize: "3.75rem",
 				lineHeight: "1",
 			},
-			x7l: {
+			"11": {
 				fontSize: "4.5rem",
 				lineHeight: "1",
 			},
-			x8l: {
+			"12": {
 				fontSize: "6rem",
 				lineHeight: "1",
 			},
-			x9l: {
+			"13": {
 				fontSize: "8rem",
 				lineHeight: "1",
 			},
 		},
-		weight: {
-			300: {
-				fontWeight: 300,
+		fs: {
+			n: {
+				fontStyle: "normal",
 			},
-			400: {
-				fontWeight: 400,
-			},
-			500: {
-				fontWeight: 500,
-			},
-			600: {
-				fontWeight: 600,
-			},
-			700: {
-				fontWeight: 700,
+			i: {
+				fontStyle: "italic",
 			},
 		},
-		align: {
-			left: {
+		fw: {
+			"2": {
+				fontWeight: 200,
+			},
+			"3": {
+				fontWeight: 300,
+			},
+			"4": {
+				fontWeight: 400,
+			},
+			"5": {
+				fontWeight: 500,
+			},
+			"6": {
+				fontWeight: 600,
+			},
+			"7": {
+				fontWeight: 700,
+			},
+			"8": {
+				fontWeight: 800,
+			},
+		},
+		ta: {
+			":--": {
 				textAlign: "left",
 			},
-			center: {
+			"-:-": {
 				textAlign: "center",
 			},
-			right: {
+			"--:": {
 				textAlign: "right",
 			},
 		},
 	},
-	defaultVariants: {
-		inline: false,
-		family: "sans",
-		size: "md",
-		weight: 400,
-		align: "left",
-	},
 });
 
-const RootKeys = ["inline", "family", "size", "weight", "align"] as const satisfies readonly (keyof Variants)[];
+const TypographyKeys = Typography.variants();
 
-export type { Variants };
-export { Root };
-export { RootKeys };
+export type { TypographyVariants };
+export { Typography };
+export { TypographyKeys };
