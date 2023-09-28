@@ -6,6 +6,10 @@ import { initTheme } from "~/stores/theme";
 
 import App from "~/App";
 
+import * as dotenv from "~/dotenv";
+
+console.log(dotenv.NAME);
+
 initTheme();
 
 root(() => <App />);
