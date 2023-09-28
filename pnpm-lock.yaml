@@ -34,6 +34,9 @@ importers:
 
   apps/site:
     dependencies:
+      '@aptabase/web':
+        specifier: ^0.2.0
+        version: 0.2.0
       '@flamrdevs/const':
         specifier: workspace:*
         version: link:../../packages/const
@@ -261,6 +264,10 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.18
+
+  /@aptabase/web@0.2.0:
+    resolution: {integrity: sha512-Ju9JeP3zfFv7TbYzZ/Nj1BfEknzZ8a3AtpKq78HI2nNqOalBIqyaDlluPt3mwhzij7hvZbZHW1ZpO0a8sKR7Yg==}
+    dev: false
 
   /@astrojs/compiler@2.1.0:
     resolution: {integrity: sha512-Mp+qrNhly+27bL/Zq8lGeUY+YrdoU0eDfIlAeGIPrzt0PnI/jGpvPUdCaugv4zbCrDkOUScFfcbeEiYumrdJnw==}

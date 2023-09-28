@@ -8,6 +8,7 @@
 		"preview": "astro preview"
 	},
 	"dependencies": {
+		"@aptabase/web": "^0.2.0",
 		"@flamrdevs/const": "workspace:*",
 		"@flamrdevs/ui": "workspace:*",
 		"@flamrdevs/ui-astro": "workspace:*",
