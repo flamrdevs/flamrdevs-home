@@ -14,7 +14,7 @@ export default defineConfig({
 		solid(),
 		meta(),
 		stats({
-			exts: ["html", "css", "js"],
+			exts: ["html", "css", "js", "json", "png", "svg", "ico", "ttf"],
 		}),
 	],
 	server: { host: true, port: 5000 },
