@@ -55,16 +55,11 @@ const { title = TITLE_DEFAULT, description = DESCRIPTION_DEFAULT, url = URL_DEFA
 		<script>
 			import { initTheme } from "~/stores/theme";
 
-			initTheme();
-		</script>
-		<script>
-			import { init } from "@aptabase/web";
-
 			import * as dotenv from "~/dotenv";
 
 			console.log(dotenv.NAME);
 
-			init(`${dotenv.APTABASE_APP_KEY}`);
+			initTheme();
 		</script>
 	</body>
 </html>

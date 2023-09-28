@@ -31,7 +31,7 @@ import { flamrdevssvg, separatorvertical } from "~/styles/pages/index.css";
 
 			<Separator orientation="vertical" class={separatorvertical} />
 
-			<IconButtonLink href={LINK.GITHUB} target="_blank">
+			<IconButtonLink id="github-icon-button" href={LINK.GITHUB} target="_blank">
 				<GithubIcon />
 			</IconButtonLink>
 		</Center>
@@ -40,12 +40,18 @@ import { flamrdevssvg, separatorvertical } from "~/styles/pages/index.css";
 </HTMLX>
 
 <script>
+	import { trackEvent } from "~/libs/aptabase";
 	import { changeTheme } from "~/stores/theme";
 
 	document.getElementById("light-theme-icon-button")!.addEventListener("click", () => {
 		changeTheme("light");
+		trackEvent("light-theme-click");
 	});
 	document.getElementById("dark-theme-icon-button")!.addEventListener("click", () => {
 		changeTheme("dark");
+		trackEvent("dark-theme-click");
+	});
+	document.getElementById("github-icon-button")!.addEventListener("click", () => {
+		trackEvent("github-link-click");
 	});
 </script>
