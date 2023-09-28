@@ -32,7 +32,7 @@ export default defineConfig({
 						if (id.includes(include)) {
 							const name = id.slice(slicer);
 
-							const create = (folder: string, suffix: string) => ({ is: name.endsWith(suffix), name: `${folder}/${name.slice(0, -suffix.length)}` });
+							const create = (folder: string, suffix: string) => ({ is: name.endsWith(suffix), name: `${folder}/${name.slice(0, -suffix.length)}`.replace(/\./g, "/") });
 							let created: ReturnType<typeof create>;
 
 							created = create("pages", ".page.tsx");
