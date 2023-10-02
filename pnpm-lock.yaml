@@ -5,8 +5,8 @@ importers:
   .:
     devDependencies:
       '@types/node':
-        specifier: ^20.7.1
-        version: 20.7.1
+        specifier: ^20.8.0
+        version: 20.8.0
       '@vanilla-extract/css':
         specifier: ^1.13.0
         version: 1.13.0
@@ -18,10 +18,10 @@ importers:
         version: 1.6.1(@vanilla-extract/css@1.13.0)
       '@vanilla-extract/vite-plugin':
         specifier: ^3.9.0
-        version: 3.9.0(@types/node@20.7.1)(vite@4.4.9)
+        version: 3.9.0(@types/node@20.8.0)(vite@4.4.9)
       astro:
         specifier: ^3.2.0
-        version: 3.2.0(@types/node@20.7.1)
+        version: 3.2.0(@types/node@20.8.0)
       turbo:
         specifier: ^1.10.14
         version: 1.10.14
@@ -30,7 +30,7 @@ importers:
         version: 5.2.2
       vite:
         specifier: ^4.4.9
-        version: 4.4.9(@types/node@20.7.1)
+        version: 4.4.9(@types/node@20.8.0)
 
   apps/site:
     dependencies:
@@ -63,7 +63,7 @@ importers:
         version: link:../../packages/x-solid
       astro:
         specifier: ^3.2.0
-        version: 3.2.0(@types/node@20.7.1)
+        version: 3.2.0(@types/node@20.8.0)
       lucide-solid:
         specifier: ^0.279.0
         version: 0.279.0(solid-js@1.7.12)
@@ -119,7 +119,7 @@ importers:
         version: link:../../packages/tsc
       vite:
         specifier: ^4.4.9
-        version: 4.4.9(@types/node@20.7.1)
+        version: 4.4.9(@types/node@20.8.0)
       vite-plugin-solid:
         specifier: ^2.7.0
         version: 2.7.0(solid-js@1.7.12)(vite@4.4.9)
@@ -164,7 +164,7 @@ importers:
         version: link:../x-astro
       astro:
         specifier: ^3.2.0
-        version: 3.2.0(@types/node@20.7.1)
+        version: 3.2.0(@types/node@20.8.0)
     devDependencies:
       '@flamrdevs/tsc':
         specifier: workspace:*
@@ -231,7 +231,7 @@ importers:
         version: link:../x
       astro:
         specifier: ^3.2.0
-        version: 3.2.0(@types/node@20.7.1)
+        version: 3.2.0(@types/node@20.8.0)
     devDependencies:
       '@flamrdevs/tsc':
         specifier: workspace:*
@@ -281,7 +281,7 @@ packages:
       astro: ^3.1.0
     dependencies:
       '@astrojs/prism': 3.0.0
-      astro: 3.2.0(@types/node@20.7.1)
+      astro: 3.2.0(@types/node@20.8.0)
       github-slugger: 2.0.0
       import-meta-resolve: 3.0.0
       mdast-util-definitions: 6.0.0
@@ -307,7 +307,7 @@ packages:
       '@astrojs/markdown-remark': 3.2.0(astro@3.2.0)
       '@mdx-js/mdx': 2.3.0
       acorn: 8.10.0
-      astro: 3.2.0(@types/node@20.7.1)
+      astro: 3.2.0(@types/node@20.8.0)
       es-module-lexer: 1.3.1
       estree-util-visit: 1.2.1
       github-slugger: 2.0.0
@@ -2044,8 +2044,8 @@ packages:
     resolution: {integrity: sha512-dP7f3LdZIysZnmvP3ANJYTSwg+wLLl8p7RqniVlV7j+oXSXAbt9h0WIBFmJy5inWZoX9wZN6eXx+YXd9Rh3RBA==}
     dev: true
 
-  /@types/node@20.7.1:
-    resolution: {integrity: sha512-LT+OIXpp2kj4E2S/p91BMe+VgGX2+lfO+XTpfXhh+bCk2LkQtHZSub8ewFBMGP5ClysPjTDFa4sMI8Q3n4T0wg==}
+  /@types/node@20.8.0:
+    resolution: {integrity: sha512-LzcWltT83s1bthcvjBmiBvGJiiUe84NWRHkw+ZV6Fr41z2FbIzvc815dk2nQ3RAKMuN2fkenM/z3Xv2QzEpYxQ==}
 
   /@types/parse5@6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
@@ -2089,7 +2089,7 @@ packages:
       outdent: 0.8.0
     dev: true
 
-  /@vanilla-extract/integration@6.2.2(@types/node@20.7.1):
+  /@vanilla-extract/integration@6.2.2(@types/node@20.8.0):
     resolution: {integrity: sha512-gV3qPFjFap1+IrPeuFy+tEZOq7l7ifJf1ik/kluDWhPr1ffsFG9puq1/jjJ4rod1BIC79Q5ZWPNvBInHyxfCew==}
     dependencies:
       '@babel/core': 7.22.11
@@ -2103,8 +2103,8 @@ packages:
       lodash: 4.17.21
       mlly: 1.4.0
       outdent: 0.8.0
-      vite: 4.4.9(@types/node@20.7.1)
-      vite-node: 0.28.5(@types/node@20.7.1)
+      vite: 4.4.9(@types/node@20.8.0)
+      vite-node: 0.28.5(@types/node@20.8.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -2136,16 +2136,16 @@ packages:
       '@vanilla-extract/css': 1.13.0
     dev: true
 
-  /@vanilla-extract/vite-plugin@3.9.0(@types/node@20.7.1)(vite@4.4.9):
+  /@vanilla-extract/vite-plugin@3.9.0(@types/node@20.8.0)(vite@4.4.9):
     resolution: {integrity: sha512-Q2HYAyEJ93Uy7GHQPPiP8SXwPMHGpd4d0YnrIQqB0YZccYbGJR/WFIln9Dmbzx2pdngQUoOfhwEg6kJF8sQrog==}
     peerDependencies:
       vite: ^2.2.3 || ^3.0.0 || ^4.0.3
     dependencies:
-      '@vanilla-extract/integration': 6.2.2(@types/node@20.7.1)
+      '@vanilla-extract/integration': 6.2.2(@types/node@20.8.0)
       outdent: 0.8.0
       postcss: 8.4.28
       postcss-load-config: 3.1.4(postcss@8.4.28)
-      vite: 4.4.9(@types/node@20.7.1)
+      vite: 4.4.9(@types/node@20.8.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -2248,7 +2248,7 @@ packages:
       terser: 5.19.3
     dev: true
 
-  /astro@3.2.0(@types/node@20.7.1):
+  /astro@3.2.0(@types/node@20.8.0):
     resolution: {integrity: sha512-sDQnSFV46ZzNkVU6co5f8wilZFmGiWsqnIVoMhd5/XPU76iZdA40WqFyBOhGaji7hGuqbcjN8MGobMg53lsoUg==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -2304,7 +2304,7 @@ packages:
       undici: 5.25.2
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.4.9(@types/node@20.7.1)
+      vite: 4.4.9(@types/node@20.8.0)
       vitefu: 0.2.4(vite@4.4.9)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
@@ -2971,7 +2971,7 @@ packages:
     resolution: {integrity: sha512-EzV94NYKoO09GLXGjXj9JIlXijVck4ONSr5wiCWDvhsvj5jxSrzTmRU/9C1DyB6uToszLs8aifA6NQ7lEQdvFw==}
     engines: {node: '>= 0.8'}
     dependencies:
-      '@types/node': 20.7.1
+      '@types/node': 20.8.0
       require-like: 0.1.2
     dev: true
 
@@ -5181,7 +5181,7 @@ packages:
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
 
-  /vite-node@0.28.5(@types/node@20.7.1):
+  /vite-node@0.28.5(@types/node@20.8.0):
     resolution: {integrity: sha512-LmXb9saMGlrMZbXTvOveJKwMTBTNUH66c8rJnQ0ZPNX+myPEol64+szRzXtV5ORb0Hb/91yq+/D3oERoyAt6LA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -5193,7 +5193,7 @@ packages:
       picocolors: 1.0.0
       source-map: 0.6.1
       source-map-support: 0.5.21
-      vite: 4.4.9(@types/node@20.7.1)
+      vite: 4.4.9(@types/node@20.8.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -5218,13 +5218,13 @@ packages:
       merge-anything: 5.1.7
       solid-js: 1.7.12
       solid-refresh: 0.5.3(solid-js@1.7.12)
-      vite: 4.4.9(@types/node@20.7.1)
+      vite: 4.4.9(@types/node@20.8.0)
       vitefu: 0.2.4(vite@4.4.9)
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite@4.4.9(@types/node@20.7.1):
+  /vite@4.4.9(@types/node@20.8.0):
     resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -5252,7 +5252,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.7.1
+      '@types/node': 20.8.0
       esbuild: 0.18.20
       postcss: 8.4.30
       rollup: 3.29.3
@@ -5267,7 +5267,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.4.9(@types/node@20.7.1)
+      vite: 4.4.9(@types/node@20.8.0)
 
   /vscode-oniguruma@1.7.0:
     resolution: {integrity: sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==}
