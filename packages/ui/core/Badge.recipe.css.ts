@@ -1,7 +1,8 @@
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import { ColorsContract } from "./../styles/contract.css";
+import * as styles from "./../styles/styles.css";
+import * as vars from "./../styles/variables.css";
 
 import { Typography } from "./.recipes.css";
 
@@ -18,33 +19,19 @@ const Root = recipe({
 			borderStyle: "none",
 			borderRadius: "0.4rem",
 			userSelect: "none",
+			backgroundImage: `linear-gradient(125deg, ${vars.v_color_9}, ${vars.v_color_6})`,
+			color: vars.v_color_11,
+
+			":hover": {
+				backgroundImage: `linear-gradient(125deg, ${vars.v_color_10}, ${vars.v_color_6})`,
+			},
 		},
 		buttonDisabledStyles,
 	],
 	variants: {
 		color: {
-			neutral: [
-				{
-					backgroundImage: `linear-gradient(125deg, ${ColorsContract.neutral[9]}, ${ColorsContract.neutral[6]})`,
-					color: ColorsContract.neutral[11],
-
-					":hover": {
-						backgroundImage: `linear-gradient(125deg, ${ColorsContract.neutral[10]}, ${ColorsContract.neutral[6]})`,
-					},
-				},
-				colorNeutralDisabledStyles,
-			],
-			primary: [
-				{
-					backgroundImage: `linear-gradient(125deg, ${ColorsContract.primary[9]}, ${ColorsContract.primary[6]})`,
-					color: ColorsContract.primary[11],
-
-					":hover": {
-						backgroundImage: `linear-gradient(125deg, ${ColorsContract.primary[10]}, ${ColorsContract.primary[6]})`,
-					},
-				},
-				colorPrimaryDisabledStyles,
-			],
+			neutral: [styles.varsNeutral, colorNeutralDisabledStyles],
+			primary: [styles.varsPrimary, colorPrimaryDisabledStyles],
 		},
 		size: {
 			md: {
@@ -71,24 +58,16 @@ const Inner = recipe({
 		width: "100%",
 		height: "100%",
 		borderRadius: "0.35rem",
+		backgroundImage: `linear-gradient(125deg, ${vars.v_color_5}, ${vars.v_color_2})`,
+
+		":hover": {
+			backgroundImage: `linear-gradient(125deg, ${vars.v_color_6}, ${vars.v_color_3})`,
+		},
 	},
 	variants: {
 		color: {
-			neutral: {
-				backgroundImage: `linear-gradient(125deg, ${ColorsContract.neutral[5]}, ${ColorsContract.neutral[2]})`,
-
-				":hover": {
-					backgroundImage: `linear-gradient(125deg, ${ColorsContract.neutral[6]}, ${ColorsContract.neutral[3]})`,
-				},
-			},
-
-			primary: {
-				backgroundImage: `linear-gradient(125deg, ${ColorsContract.primary[5]}, ${ColorsContract.primary[2]})`,
-
-				":hover": {
-					backgroundImage: `linear-gradient(125deg, ${ColorsContract.primary[6]}, ${ColorsContract.primary[3]})`,
-				},
-			},
+			neutral: [styles.varsNeutral],
+			primary: [styles.varsPrimary],
 		},
 	},
 	defaultVariants: {

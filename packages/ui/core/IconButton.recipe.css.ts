@@ -1,7 +1,8 @@
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import { ColorsContract } from "./../styles/contract.css";
+import * as styles from "./../styles/styles.css";
+import * as vars from "./../styles/variables.css";
 
 import { buttonDisabledStyles, colorNeutralDisabledStyles, colorPrimaryDisabledStyles } from "./core.css";
 
@@ -19,49 +20,27 @@ const Root = recipe({
 			userSelect: "none",
 			outline: "1px solid transparent",
 			outlineOffset: 1,
+			backgroundImage: `linear-gradient(140deg, ${vars.v_color_11}, ${vars.v_color_8}, ${vars.v_color_6})`,
+			color: vars.v_color_11,
+
+			":hover": {
+				backgroundImage: `linear-gradient(140deg, ${vars.v_color_12}, ${vars.v_color_8}, ${vars.v_color_7})`,
+			},
+
+			":focus-visible": {
+				outlineColor: vars.v_color_11,
+			},
+
+			":active": {
+				backgroundImage: `linear-gradient(140deg, ${vars.v_color_12}, ${vars.v_color_9}, ${vars.v_color_8})`,
+			},
 		},
 		buttonDisabledStyles,
 	],
 	variants: {
 		color: {
-			neutral: [
-				{
-					backgroundImage: `linear-gradient(140deg, ${ColorsContract.neutral[11]}, ${ColorsContract.neutral[8]}, ${ColorsContract.neutral[6]})`,
-					color: ColorsContract.neutral[11],
-
-					":hover": {
-						backgroundImage: `linear-gradient(140deg, ${ColorsContract.neutral[12]}, ${ColorsContract.neutral[8]}, ${ColorsContract.neutral[7]})`,
-					},
-
-					":focus-visible": {
-						outlineColor: ColorsContract.neutral[11],
-					},
-
-					":active": {
-						backgroundImage: `linear-gradient(140deg, ${ColorsContract.neutral[12]}, ${ColorsContract.neutral[9]}, ${ColorsContract.neutral[8]})`,
-					},
-				},
-				colorNeutralDisabledStyles,
-			],
-			primary: [
-				{
-					backgroundImage: `linear-gradient(140deg, ${ColorsContract.primary[11]}, ${ColorsContract.primary[8]}, ${ColorsContract.primary[6]})`,
-					color: ColorsContract.primary[11],
-
-					":hover": {
-						backgroundImage: `linear-gradient(140deg, ${ColorsContract.primary[12]}, ${ColorsContract.primary[8]}, ${ColorsContract.primary[7]})`,
-					},
-
-					":focus-visible": {
-						outlineColor: ColorsContract.primary[11],
-					},
-
-					":active": {
-						backgroundImage: `linear-gradient(140deg, ${ColorsContract.primary[12]}, ${ColorsContract.primary[9]}, ${ColorsContract.primary[8]})`,
-					},
-				},
-				colorPrimaryDisabledStyles,
-			],
+			neutral: [styles.varsNeutral, colorNeutralDisabledStyles],
+			primary: [styles.varsPrimary, colorPrimaryDisabledStyles],
 		},
 		size: {
 			md: {
@@ -89,31 +68,20 @@ const Inner = recipe({
 		width: "100%",
 		height: "100%",
 		borderRadius: "0.35rem",
+		backgroundImage: `linear-gradient(140deg, ${vars.v_color_3}, ${vars.v_color_1})`,
+
+		":hover": {
+			backgroundImage: `linear-gradient(140deg, ${vars.v_color_4}, ${vars.v_color_1})`,
+		},
+
+		":active": {
+			backgroundImage: `linear-gradient(140deg, ${vars.v_color_5}, ${vars.v_color_2})`,
+		},
 	},
 	variants: {
 		color: {
-			neutral: {
-				backgroundImage: `linear-gradient(140deg, ${ColorsContract.neutral[3]}, ${ColorsContract.neutral[1]})`,
-
-				":hover": {
-					backgroundImage: `linear-gradient(140deg, ${ColorsContract.neutral[4]}, ${ColorsContract.neutral[1]})`,
-				},
-
-				":active": {
-					backgroundImage: `linear-gradient(140deg, ${ColorsContract.neutral[5]}, ${ColorsContract.neutral[2]})`,
-				},
-			},
-			primary: {
-				backgroundImage: `linear-gradient(140deg, ${ColorsContract.primary[3]}, ${ColorsContract.primary[1]})`,
-
-				":hover": {
-					backgroundImage: `linear-gradient(140deg, ${ColorsContract.primary[4]}, ${ColorsContract.primary[1]})`,
-				},
-
-				":active": {
-					backgroundImage: `linear-gradient(140deg, ${ColorsContract.primary[5]}, ${ColorsContract.primary[2]})`,
-				},
-			},
+			neutral: [styles.varsNeutral],
+			primary: [styles.varsPrimary],
 		},
 	},
 	defaultVariants: {
