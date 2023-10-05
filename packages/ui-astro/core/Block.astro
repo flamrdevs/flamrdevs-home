@@ -1,22 +1,14 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-
-import * as Recipes from "@flamrdevs/ui/core/.recipes.css";
-import * as Sprinkles from "@flamrdevs/ui/core/.sprinkles.css";
+import type * as Polymorphic from "./../polymorphic";
 
 import Box from "./Box.astro";
+import type { BoxPolymorphicProps } from "./Box.types";
 
-type Props = HTMLAttributes<"div"> & {
-	inline?: boolean;
-} & Recipes.TypographyVariants &
-	Sprinkles.LayoutShorthandsVariants &
-	Sprinkles.PositionShorthandsVariants &
-	Sprinkles.MarginShorthandsVariants &
-	Sprinkles.PaddingShorthandsVariants;
+type Props<As extends Polymorphic.As = "div"> = BoxPolymorphicProps<As> & { inline?: boolean };
 
 const { inline, disp = inline ? "iblock" : "block", ...attrs } = Astro.props;
 ---
 
-<Box disp={disp} {...attrs as any}>
+<Box {...{ disp }} {...attrs as any}>
 	<slot />
 </Box>

@@ -1,19 +1,20 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-
 import * as ContainerCSS from "@flamrdevs/ui/core/Container.recipe.css";
 import * as Sprinkles from "@flamrdevs/ui/core/.sprinkles.css";
 import propsplit from "@flamrdevs/x/modules/propsplit";
 
 import { ClassesKeys, classex } from "./../classes";
+import type * as Polymorphic from "./../polymorphic";
 
-type Props = HTMLAttributes<"div"> & ContainerCSS.Variants & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants;
+type Props<As extends Polymorphic.As = "div"> = Polymorphic.Props<As, ContainerCSS.Variants & Sprinkles.MarginShorthandsVariants & Sprinkles.PaddingShorthandsVariants>;
 
-const [classes, recipe, margin, padding, attrs] = propsplit(Astro.props, ClassesKeys, ContainerCSS.RootKeys, Sprinkles.MarginKeys, Sprinkles.PaddingKeys);
+const { as: As = "div", ...props } = Astro.props;
+
+const [classes, recipe, margin, padding, attrs] = propsplit(props, ClassesKeys, ContainerCSS.RootKeys, Sprinkles.MarginKeys, Sprinkles.PaddingKeys);
 
 const className = classex([ContainerCSS.Root(recipe), Sprinkles.Margin(margin), Sprinkles.Padding(padding)], classes);
 ---
 
-<div {...attrs} class={className}>
+<As {...attrs as any} class={className}>
 	<slot />
-</div>
+</As>

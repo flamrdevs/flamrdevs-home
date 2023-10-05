@@ -1,18 +1,21 @@
 import { splitProps } from "solid-js";
-import type { JSX, ParentProps } from "solid-js";
+import type { ComponentProps, ValidComponent } from "solid-js";
 
 import { Button as KobalteButton } from "@kobalte/core";
 
 import * as ButtonCSS from "@flamrdevs/ui/core/Button.recipe.css";
 
 import { ClassesKeys, classex } from "./../classes";
-import type { ClassesProps } from "./../classes";
 import { ChildrenKeys } from "./../children";
+import * as Polymorphic from "./../polymorphic";
 
-type ButtonProps = KobalteButton.ButtonRootOptions & ButtonCSS.Variants & ButtonCSS.InnerVariants & ButtonCSS.ChildVariants;
+type ButtonProps = Polymorphic.Props<Polymorphic.PropsWithoutAsChild<KobalteButton.ButtonRootOptions & ButtonCSS.Variants & ButtonCSS.InnerVariants & ButtonCSS.ChildVariants>>;
 
-const Button = <P extends ParentProps<ClassesProps> = JSX.IntrinsicElements["button"]>(props: P & ButtonProps) => {
-	const [classes, child, recipe, rest] = splitProps(props as ParentProps<ClassesProps> & ButtonProps, ClassesKeys, ChildrenKeys, [...ButtonCSS.RootKeys, ...ButtonCSS.ChildKeys]);
+const Button = <C extends ValidComponent = typeof KobalteButton.Root>(props: ComponentProps<C> & ButtonProps) => {
+	const [classes, child, recipe, rest] = splitProps(props as ComponentProps<typeof KobalteButton.Root> & ButtonProps, ClassesKeys, ChildrenKeys, [
+		...ButtonCSS.RootKeys,
+		...ButtonCSS.ChildKeys,
+	]);
 
 	const className = () => classex(ButtonCSS.Root({ color: recipe.color, size: recipe.size }), classes);
 	const innerClassName = () => ButtonCSS.Inner({ color: recipe.color });

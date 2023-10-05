@@ -1,13 +1,19 @@
+import type { HTMLTag } from "astro/types";
+
 type ButtonOptions = {
 	disabled?: boolean;
 };
-type ButtonAttrs = ButtonOptions & {
-	"data-disabled"?: boolean;
-};
-const getButtonAttrs = (options: ButtonOptions) => {
+type ButtonAttrs = {
+	[K in "role" | "type"]?: "button";
+} & ButtonOptions & {
+		"data-disabled"?: "";
+	};
+const getButtonAttrs = (tag: HTMLTag, options: ButtonOptions) => {
 	const result: ButtonAttrs = { ...options };
 
-	if (options.disabled) result["data-disabled"] = true;
+	if (options.disabled) result["data-disabled"] = "";
+
+	result[tag === "button" || tag === "input" ? "type" : "role"] = "button";
 
 	return result;
 };

@@ -3,7 +3,7 @@ import { GithubIcon, MoonIcon, SunIcon } from "lucide-solid";
 
 import { LINK } from "@flamrdevs/const/exports";
 
-import { Badge, Box, Button, ButtonLink, Container, Flex, HTMLX, IconButton, IconButtonLink, Link, Loader, Separator, Text } from "~/components/core";
+import { Badge, Box, Button, Container, Flex, HTMLX, IconButton, Link, Loader, Separator, Text } from "~/components/core";
 
 import * as UICSS from "~/styles/pages/ui.css";
 ---
@@ -11,9 +11,9 @@ import * as UICSS from "~/styles/pages/ui.css";
 <HTMLX title="UI Core" description="core user interface">
 	<Container max="lg" p="4">
 		<Flex ai="-:-">
-			<ButtonLink href="/">home</ButtonLink>
+			<Button as="a" href="/">home</Button>
 			<Separator orientation="vertical" style="height: 1.5rem" />
-			<ButtonLink href="/ui">ui</ButtonLink>
+			<Button as="a" href="/ui">ui</Button>
 			<Separator orientation="vertical" style="height: 1.5rem" />
 			<IconButton id="light-theme-icon-button">
 				<SunIcon />
@@ -224,7 +224,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 
 					<Flex gap="2" p="1">
 						<Box>
-							<ButtonLink href={LINK.GITHUB} target="_blank">github</ButtonLink>
+							<Button as="a" href={LINK.GITHUB} target="_blank">github</Button>
 						</Box>
 					</Flex>
 				</Box>
@@ -288,9 +288,9 @@ import * as UICSS from "~/styles/pages/ui.css";
 
 					<Flex gap="2" p="1">
 						<Box>
-							<IconButtonLink href={LINK.GITHUB} target="_blank">
+							<IconButton as="a" href={LINK.GITHUB} target="_blank">
 								<GithubIcon />
-							</IconButtonLink>
+							</IconButton>
 						</Box>
 					</Flex>
 				</Box>

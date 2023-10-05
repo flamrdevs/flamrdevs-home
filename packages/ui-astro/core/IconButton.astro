@@ -1,27 +1,28 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-
 import * as IconButtonCSS from "@flamrdevs/ui/core/IconButton.recipe.css";
 import propsplit from "@flamrdevs/x/modules/propsplit";
+
+import { ClassesKeys, classex } from "./../classes";
+import type * as Polymorphic from "./../polymorphic";
 
 import { getButtonAttrs } from "./attributes/button";
 import type { ButtonOptions } from "./attributes/button";
 
-import { ClassesKeys, classex } from "./../classes";
+type Props<As extends Polymorphic.As = "button"> = Polymorphic.Props<As, ButtonOptions & IconButtonCSS.Variants & IconButtonCSS.InnerVariants & IconButtonCSS.ChildVariants>;
 
-type Props = HTMLAttributes<"button"> & ButtonOptions & IconButtonCSS.Variants & IconButtonCSS.InnerVariants & IconButtonCSS.ChildVariants;
+const { as: As = "button", ...props } = Astro.props;
 
-const [classes, options, recipe, attrs] = propsplit(Astro.props, ClassesKeys, ["disabled"], IconButtonCSS.RootKeys);
+const [classes, options, recipe, attrs] = propsplit(props, ClassesKeys, ["disabled"], IconButtonCSS.RootKeys);
 
 const className = classex(IconButtonCSS.Root({ color: recipe.color, size: recipe.size }), classes);
 const innerClassName = IconButtonCSS.Inner({ color: recipe.color });
 const childClassName = IconButtonCSS.Child({ size: recipe.size });
 ---
 
-<button type="button" {...attrs} class={className} {...getButtonAttrs(options)}>
+<As class={className} {...getButtonAttrs(As, options)} {...attrs as any}>
 	<div class={innerClassName}>
 		<div class={childClassName}>
 			<slot />
 		</div>
 	</div>
-</button>
+</As>

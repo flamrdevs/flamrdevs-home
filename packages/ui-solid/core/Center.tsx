@@ -1,23 +1,17 @@
 import { splitProps } from "solid-js";
-import type { JSX } from "solid-js";
-
-import * as Recipes from "@flamrdevs/ui/core/.recipes.css";
-import * as Sprinkles from "@flamrdevs/ui/core/.sprinkles.css";
+import type { ValidComponent } from "solid-js";
 
 import Box from "./Box";
+import type { BoxProps } from "./Box";
 
-type CenterProps = JSX.IntrinsicElements["div"] & {
+type CenterProps<C extends ValidComponent> = BoxProps<C> & {
 	inline?: boolean;
-} & Recipes.TypographyVariants &
-	Sprinkles.LayoutShorthandsVariants &
-	Sprinkles.PositionShorthandsVariants &
-	Sprinkles.MarginShorthandsVariants &
-	Sprinkles.PaddingShorthandsVariants;
+};
 
 const LocalKeys = ["inline", "disp", "ai", "jc"] as const;
 
-const Center = (props: CenterProps) => {
-	const [local, rest] = splitProps(props, LocalKeys);
+const Center = <C extends ValidComponent = "div">(props: CenterProps<C>) => {
+	const [local, rest] = splitProps(props as CenterProps<"div">, LocalKeys);
 
 	return <Box disp={local.disp ?? (local.inline ? "iflex" : "flex")} ai={local.ai ?? "-:-"} jc={local.jc ?? "-:-"} {...rest} />;
 };

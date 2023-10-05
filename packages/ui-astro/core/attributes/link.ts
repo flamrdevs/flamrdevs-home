@@ -2,12 +2,12 @@ type LinkOptions = {
 	disabled?: boolean;
 };
 type LinkAttrs = LinkOptions & {
-	"data-disabled"?: boolean;
+	"data-disabled"?: "";
 };
 const getLinkAttrs = (options: LinkOptions) => {
 	const result: LinkAttrs = { ...options };
 
-	if (options.disabled) result["data-disabled"] = true;
+	if (options.disabled) result["data-disabled"] = "";
 
 	return result;
 };

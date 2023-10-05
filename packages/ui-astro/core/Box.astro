@@ -1,21 +1,19 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-
 import * as Recipes from "@flamrdevs/ui/core/.recipes.css";
 import * as Sprinkles from "@flamrdevs/ui/core/.sprinkles.css";
 import propsplit from "@flamrdevs/x/modules/propsplit";
 
 import { ClassesKeys, classex } from "./../classes";
+import type * as Polymorphic from "./../polymorphic";
 
-type Props = HTMLAttributes<"div"> &
-	Recipes.TypographyVariants &
-	Sprinkles.LayoutShorthandsVariants &
-	Sprinkles.PositionShorthandsVariants &
-	Sprinkles.MarginShorthandsVariants &
-	Sprinkles.PaddingShorthandsVariants;
+import type { BoxPolymorphicProps } from "./Box.types";
+
+type Props<As extends Polymorphic.As = "div"> = BoxPolymorphicProps<As>;
+
+const { as: As = "div", ...props } = Astro.props;
 
 const [classes, typography, layout, position, margin, padding, attrs] = propsplit(
-	Astro.props,
+	props,
 	ClassesKeys,
 	Recipes.TypographyKeys,
 	Sprinkles.LayoutKeys,
@@ -30,6 +28,6 @@ const className = classex(
 );
 ---
 
-<div {...attrs} class={className}>
+<As {...attrs as any} class={className}>
 	<slot />
-</div>
+</As>
