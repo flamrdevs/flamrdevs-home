@@ -1,6 +1,7 @@
 import path from "path";
 
 import { defineConfig } from "vite";
+import type { Plugin } from "vite";
 
 import { vanillaExtractPlugin as ve } from "@vanilla-extract/vite-plugin";
 
@@ -21,7 +22,7 @@ export default defineConfig(({ command }) => {
 						"import.meta.env.PROD": `${PROD}`,
 					},
 				},
-			}),
+			}) as Plugin,
 			solid(),
 			meta(),
 			stats({
