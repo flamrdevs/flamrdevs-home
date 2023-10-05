@@ -2,52 +2,102 @@ import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
 import * as styles from "./../styles/styles.css";
+import * as tokens from "./../styles/tokens";
 import * as vars from "./../styles/variables.css";
 
-import { buttonDisabledStyles, colorNeutralDisabledStyles, colorPrimaryDisabledStyles } from "./core.css";
+import * as Recipes from "./.recipes.css";
 
 type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
 
 const Root = recipe({
-	base: [
-		{
-			display: "inline-block",
-			position: "relative",
-			overflow: "hidden",
-			borderStyle: "none",
-			borderRadius: "0.4rem",
-			cursor: "pointer",
-			userSelect: "none",
-			outline: "1px solid transparent",
-			outlineOffset: 1,
-			backgroundImage: `linear-gradient(140deg, ${vars.v_color_11}, ${vars.v_color_8}, ${vars.v_color_6})`,
-			color: vars.v_color_11,
+	base: {
+		display: "inline-flex",
+		position: "relative",
+		alignItems: "center",
+		justifyContent: "center",
+		borderStyle: "none",
+		outline: "1px solid transparent",
+		outlineOffset: 3,
+		userSelect: "none",
+		cursor: "pointer",
+		...tokens.rounded_7,
+		backgroundImage: `linear-gradient(140deg, ${vars.v_color_3}, ${vars.v_color_1})`,
+		color: vars.v_color_11,
 
-			":hover": {
+		":hover": {
+			backgroundImage: `linear-gradient(140deg, ${vars.v_color_4}, ${vars.v_color_1})`,
+		},
+
+		":focus-visible": {
+			outlineColor: vars.v_color_11,
+		},
+
+		":active": {
+			backgroundImage: `linear-gradient(140deg, ${vars.v_color_5}, ${vars.v_color_2})`,
+		},
+
+		"::before": {
+			content: "",
+			display: "block",
+			position: "absolute",
+			zIndex: -10,
+			inset: -1,
+			...tokens.rounded_8,
+			backgroundImage: `linear-gradient(140deg, ${vars.v_color_11}, ${vars.v_color_8}, ${vars.v_color_6})`,
+		},
+
+		"::after": {
+			content: "",
+			display: "block",
+			position: "absolute",
+			zIndex: 10,
+			inset: 0,
+			...tokens.rounded_7,
+			overflow: "hidden",
+			opacity: 0.1,
+			backgroundImage: `linear-gradient(to bottom, #2222221a, #1111111a), ${vars.filter_noise_svg}`,
+		},
+
+		selectors: {
+			"&:hover::before": {
 				backgroundImage: `linear-gradient(140deg, ${vars.v_color_12}, ${vars.v_color_8}, ${vars.v_color_7})`,
 			},
 
-			":focus-visible": {
-				outlineColor: vars.v_color_11,
-			},
-
-			":active": {
+			"&:active::before": {
 				backgroundImage: `linear-gradient(140deg, ${vars.v_color_12}, ${vars.v_color_9}, ${vars.v_color_8})`,
 			},
+
+			"&[data-disabled]": {
+				pointerEvents: "none",
+				backgroundImage: `linear-gradient(140deg, ${vars.v_color_2}, ${vars.v_color_1})`,
+				color: vars.v_color_8,
+			},
+
+			"&[data-disabled]::before": {
+				backgroundImage: `linear-gradient(140deg, ${vars.v_color_5}, ${vars.v_color_4}, ${vars.v_color_3})`,
+			},
 		},
-		buttonDisabledStyles,
-	],
+	},
+
 	variants: {
 		color: {
-			neutral: [styles.varsNeutral, colorNeutralDisabledStyles],
-			primary: [styles.varsPrimary, colorPrimaryDisabledStyles],
+			neutral: styles.varsNeutral,
+			primary: styles.varsPrimary,
+			success: styles.varsSuccess,
+			info: styles.varsInfo,
+			warning: styles.varsWarning,
+			danger: styles.varsDanger,
 		},
 		size: {
-			md: {
-				width: "2rem",
-				height: "2rem",
-				padding: 1,
-			},
+			md: [
+				{
+					width: "2rem",
+					height: "2rem",
+					padding: "0.125rem",
+					fontWeight: 500,
+				},
+				Recipes.Typography({ fz: "3" }),
+			],
 		},
 	},
 	defaultVariants: {
@@ -58,64 +108,6 @@ const Root = recipe({
 
 const RootKeys = Root.variants();
 
-type InnerVariants = Exclude<RecipeVariants<typeof Inner>, undefined>;
-
-const Inner = recipe({
-	base: {
-		display: "block",
-		position: "relative",
-		overflow: "hidden",
-		width: "100%",
-		height: "100%",
-		borderRadius: "0.35rem",
-		backgroundImage: `linear-gradient(140deg, ${vars.v_color_3}, ${vars.v_color_1})`,
-
-		":hover": {
-			backgroundImage: `linear-gradient(140deg, ${vars.v_color_4}, ${vars.v_color_1})`,
-		},
-
-		":active": {
-			backgroundImage: `linear-gradient(140deg, ${vars.v_color_5}, ${vars.v_color_2})`,
-		},
-	},
-	variants: {
-		color: {
-			neutral: [styles.varsNeutral],
-			primary: [styles.varsPrimary],
-		},
-	},
-	defaultVariants: {
-		color: "neutral",
-	},
-});
-
-const InnerKeys = Inner.variants();
-
-type ChildVariants = Exclude<RecipeVariants<typeof Child>, undefined>;
-
-const Child = recipe({
-	base: {
-		display: "inline-flex",
-		position: "relative",
-		justifyContent: "center",
-		alignItems: "center",
-		width: "100%",
-		height: "100%",
-	},
-	variants: {
-		size: {
-			md: {
-				padding: "0.125rem",
-			},
-		},
-	},
-	defaultVariants: {
-		size: "md",
-	},
-});
-
-const ChildKeys = Child.variants();
-
-export type { Variants, InnerVariants, ChildVariants };
-export { Root, Inner, Child };
-export { RootKeys, InnerKeys, ChildKeys };
+export type { Variants };
+export { Root };
+export { RootKeys };

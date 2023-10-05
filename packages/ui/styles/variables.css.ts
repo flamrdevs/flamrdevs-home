@@ -14,3 +14,5 @@ export const v_color_11 = createVar("--v-color-11");
 export const v_color_12 = createVar("--v-color-12");
 
 export const lg_deg = createVar("--lg-deg");
+
+export const filter_noise_svg = createVar("--filter-noise-svg");

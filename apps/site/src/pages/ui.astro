@@ -172,6 +172,18 @@ import * as UICSS from "~/styles/pages/ui.css";
 						<Box>
 							<Badge color="primary">primary</Badge>
 						</Box>
+						<Box>
+							<Badge color="success">success</Badge>
+						</Box>
+						<Box>
+							<Badge color="info">info</Badge>
+						</Box>
+						<Box>
+							<Badge color="warning">warning</Badge>
+						</Box>
+						<Box>
+							<Badge color="danger">danger</Badge>
+						</Box>
 					</Flex>
 				</Box>
 			</Box>
@@ -203,6 +215,18 @@ import * as UICSS from "~/styles/pages/ui.css";
 						<Box>
 							<Button color="primary">primary</Button>
 						</Box>
+						<Box>
+							<Button color="success">success</Button>
+						</Box>
+						<Box>
+							<Button color="info">info</Button>
+						</Box>
+						<Box>
+							<Button color="warning">warning</Button>
+						</Box>
+						<Box>
+							<Button color="danger">danger</Button>
+						</Box>
 					</Flex>
 				</Box>
 
@@ -225,6 +249,9 @@ import * as UICSS from "~/styles/pages/ui.css";
 					<Flex gap="2" p="1">
 						<Box>
 							<Button as="a" href={LINK.GITHUB} target="_blank">github</Button>
+						</Box>
+						<Box>
+							<Button as="a" href={LINK.GITHUB} target="_blank" disabled>github</Button>
 						</Box>
 					</Flex>
 				</Box>
@@ -263,6 +290,26 @@ import * as UICSS from "~/styles/pages/ui.css";
 								<MoonIcon />
 							</IconButton>
 						</Box>
+						<Box>
+							<IconButton color="success">
+								<MoonIcon />
+							</IconButton>
+						</Box>
+						<Box>
+							<IconButton color="info">
+								<MoonIcon />
+							</IconButton>
+						</Box>
+						<Box>
+							<IconButton color="warning">
+								<MoonIcon />
+							</IconButton>
+						</Box>
+						<Box>
+							<IconButton color="danger">
+								<MoonIcon />
+							</IconButton>
+						</Box>
 					</Flex>
 				</Box>
 
@@ -289,6 +336,11 @@ import * as UICSS from "~/styles/pages/ui.css";
 					<Flex gap="2" p="1">
 						<Box>
 							<IconButton as="a" href={LINK.GITHUB} target="_blank">
+								<GithubIcon />
+							</IconButton>
+						</Box>
+						<Box>
+							<IconButton as="a" href={LINK.GITHUB} target="_blank" disabled>
 								<GithubIcon />
 							</IconButton>
 						</Box>

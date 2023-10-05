@@ -6,19 +6,13 @@ import propsplit from "@flamrdevs/x/modules/propsplit";
 
 import { ClassesKeys, classex } from "./../classes";
 
-type Props = HTMLAttributes<"span"> & BadgeCSS.Variants & BadgeCSS.InnerVariants & BadgeCSS.ChildVariants;
+type Props = HTMLAttributes<"span"> & BadgeCSS.Variants;
 
-const [classes, recipe, attrs] = propsplit(Astro.props, ClassesKeys, [...BadgeCSS.RootKeys, ...BadgeCSS.ChildKeys]);
+const [classes, recipe, attrs] = propsplit(Astro.props, ClassesKeys, BadgeCSS.RootKeys);
 
-const className = classex(BadgeCSS.Root({ color: recipe.color, size: recipe.size }), classes);
-const innerClassName = BadgeCSS.Inner({ color: recipe.color });
-const childClassName = BadgeCSS.Child({ font: recipe.font, size: recipe.size });
+const className = classex(BadgeCSS.Root(recipe), classes);
 ---
 
 <span {...attrs} class={className}>
-	<div class={innerClassName}>
-		<div class={childClassName}>
-			<slot />
-		</div>
-	</div>
+	<slot />
 </span>

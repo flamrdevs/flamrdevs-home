@@ -137,6 +137,9 @@ importers:
       '@flamrdevs/const':
         specifier: workspace:*
         version: link:../const
+      '@flamrdevs/utils':
+        specifier: workspace:*
+        version: link:../utils
       '@flamrdevs/x':
         specifier: workspace:*
         version: link:../x

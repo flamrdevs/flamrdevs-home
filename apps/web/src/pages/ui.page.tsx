@@ -183,6 +183,18 @@ const UICorePage = () => {
 								<Box>
 									<Badge color="primary">primary</Badge>
 								</Box>
+								<Box>
+									<Badge color="success">success</Badge>
+								</Box>
+								<Box>
+									<Badge color="info">info</Badge>
+								</Box>
+								<Box>
+									<Badge color="warning">warning</Badge>
+								</Box>
+								<Box>
+									<Badge color="danger">danger</Badge>
+								</Box>
 							</Flex>
 						</Box>
 					</Box>
@@ -216,6 +228,18 @@ const UICorePage = () => {
 								<Box>
 									<Button color="primary">primary</Button>
 								</Box>
+								<Box>
+									<Button color="success">success</Button>
+								</Box>
+								<Box>
+									<Button color="info">info</Button>
+								</Box>
+								<Box>
+									<Button color="warning">warning</Button>
+								</Box>
+								<Box>
+									<Button color="danger">danger</Button>
+								</Box>
 							</Flex>
 						</Box>
 
@@ -238,6 +262,11 @@ const UICorePage = () => {
 							<Flex gap="2" p="1">
 								<Box>
 									<ButtonLink href={LINK.GITHUB} target="_blank">
+										github
+									</ButtonLink>
+								</Box>
+								<Box>
+									<ButtonLink href={LINK.GITHUB} target="_blank" disabled>
 										github
 									</ButtonLink>
 								</Box>
@@ -280,6 +309,26 @@ const UICorePage = () => {
 										<MoonIcon />
 									</IconButton>
 								</Box>
+								<Box>
+									<IconButton color="success">
+										<MoonIcon />
+									</IconButton>
+								</Box>
+								<Box>
+									<IconButton color="info">
+										<MoonIcon />
+									</IconButton>
+								</Box>
+								<Box>
+									<IconButton color="warning">
+										<MoonIcon />
+									</IconButton>
+								</Box>
+								<Box>
+									<IconButton color="danger">
+										<MoonIcon />
+									</IconButton>
+								</Box>
 							</Flex>
 						</Box>
 
@@ -306,6 +355,11 @@ const UICorePage = () => {
 							<Flex gap="2" p="1">
 								<Box>
 									<IconButtonLink href={LINK.GITHUB} target="_blank">
+										<GithubIcon />
+									</IconButtonLink>
+								</Box>
+								<Box>
+									<IconButtonLink href={LINK.GITHUB} target="_blank" disabled>
 										<GithubIcon />
 									</IconButtonLink>
 								</Box>

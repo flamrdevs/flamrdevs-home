@@ -8,42 +8,54 @@ import solid from "vite-plugin-solid";
 
 import { meta, stats } from "./vite.plugins";
 
-export default defineConfig({
-	plugins: [
-		ve(),
-		solid(),
-		meta(),
-		stats({
-			exts: ["html", "css", "js", "json", "png", "svg", "ico", "ttf"],
-		}),
-	],
-	server: { host: true, port: 5000 },
-	preview: { host: true, port: 5000 },
-	resolve: { alias: { "~": path.resolve(__dirname, "src") } },
-	esbuild: { legalComments: "none" },
-	build: {
-		rollupOptions: {
-			output: {
-				manualChunks: (() => {
-					const include = path.join(process.cwd(), "src/pages").replace(/\\/g, "/");
-					const slicer = include.length + 1;
+export default defineConfig(({ command }) => {
+	const PROD = command === "build";
+	const DEV = !PROD;
 
-					return (id) => {
-						if (id.includes(include)) {
-							const name = id.slice(slicer);
+	return {
+		plugins: [
+			ve({
+				esbuildOptions: {
+					define: {
+						"import.meta.env.DEV": `${DEV}`,
+						"import.meta.env.PROD": `${PROD}`,
+					},
+				},
+			}),
+			solid(),
+			meta(),
+			stats({
+				exts: ["html", "css", "js", "json", "png", "svg", "ico", "ttf"],
+			}),
+		],
+		server: { host: true, port: 5000 },
+		preview: { host: true, port: 5000 },
+		resolve: { alias: { "~": path.resolve(__dirname, "src") } },
+		esbuild: { legalComments: "none" },
+		build: {
+			rollupOptions: {
+				output: {
+					manualChunks: (() => {
+						const include = path.join(process.cwd(), "src/pages").replace(/\\/g, "/");
+						const slicer = include.length + 1;
 
-							const create = (folder: string, suffix: string) => ({ is: name.endsWith(suffix), name: `${folder}/${name.slice(0, -suffix.length)}`.replace(/\./g, "/") });
-							let created: ReturnType<typeof create>;
+						return (id) => {
+							if (id.includes(include)) {
+								const name = id.slice(slicer);
 
-							created = create("pages", ".page.tsx");
-							if (created.is) return created.name;
+								const create = (folder: string, suffix: string) => ({ is: name.endsWith(suffix), name: `${folder}/${name.slice(0, -suffix.length)}`.replace(/\./g, "/") });
+								let created: ReturnType<typeof create>;
 
-							created = create("layouts", ".layout.tsx");
-							if (created.is) return created.name;
-						}
-					};
-				})(),
+								created = create("pages", ".page.tsx");
+								if (created.is) return created.name;
+
+								created = create("layouts", ".layout.tsx");
+								if (created.is) return created.name;
+							}
+						};
+					})(),
+				},
 			},
 		},
-	},
+	};
 });

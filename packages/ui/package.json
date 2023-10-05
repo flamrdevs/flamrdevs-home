@@ -1,12 +1,13 @@
 {
-  "name": "@flamrdevs/ui",
-  "private": true,
-  "dependencies": {
-    "@flamrdevs/const": "workspace:*",
-    "@flamrdevs/x": "workspace:*"
-  },
-  "devDependencies": {
-    "@flamrdevs/tsc": "workspace:*",
-    "@kobalte/vanilla-extract": "^0.5.0"
-  }
+	"name": "@flamrdevs/ui",
+	"private": true,
+	"dependencies": {
+		"@flamrdevs/const": "workspace:*",
+		"@flamrdevs/utils": "workspace:*",
+		"@flamrdevs/x": "workspace:*"
+	},
+	"devDependencies": {
+		"@flamrdevs/tsc": "workspace:*",
+		"@kobalte/vanilla-extract": "^0.5.0"
+	}
 }

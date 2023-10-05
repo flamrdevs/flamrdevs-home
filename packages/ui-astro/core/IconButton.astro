@@ -8,21 +8,15 @@ import type * as Polymorphic from "./../polymorphic";
 import { getButtonAttrs } from "./attributes/button";
 import type { ButtonOptions } from "./attributes/button";
 
-type Props<As extends Polymorphic.As = "button"> = Polymorphic.Props<As, ButtonOptions & IconButtonCSS.Variants & IconButtonCSS.InnerVariants & IconButtonCSS.ChildVariants>;
+type Props<As extends Polymorphic.As = "button"> = Polymorphic.Props<As, ButtonOptions & IconButtonCSS.Variants>;
 
 const { as: As = "button", ...props } = Astro.props;
 
 const [classes, options, recipe, attrs] = propsplit(props, ClassesKeys, ["disabled"], IconButtonCSS.RootKeys);
 
-const className = classex(IconButtonCSS.Root({ color: recipe.color, size: recipe.size }), classes);
-const innerClassName = IconButtonCSS.Inner({ color: recipe.color });
-const childClassName = IconButtonCSS.Child({ size: recipe.size });
+const className = classex(IconButtonCSS.Root(recipe), classes);
 ---
 
-<As class={className} {...getButtonAttrs(As, options)} {...attrs as any}>
-	<div class={innerClassName}>
-		<div class={childClassName}>
-			<slot />
-		</div>
-	</div>
+<As class={className} {...getButtonAttrs(options, As)} {...attrs as any}>
+	<slot />
 </As>

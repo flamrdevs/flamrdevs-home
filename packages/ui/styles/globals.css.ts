@@ -1,9 +1,18 @@
 import { globalStyle } from "@vanilla-extract/css";
 
+import { HOST } from "@flamrdevs/utils/exports";
+
 import { SANS } from "./fonts";
 
 import { ColorsContract } from "./contract.css";
 import * as COLORS from "./colors";
+import * as vars from "./variables.css";
+
+globalStyle(":root", {
+	vars: {
+		[vars.filter_noise_svg]: `url(${HOST.STATIC("svgs/filter-noise.svg")})`,
+	},
+});
 
 globalStyle("html", {
 	WebkitTapHighlightColor: "transparent",

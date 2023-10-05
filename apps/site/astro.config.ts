@@ -21,10 +21,32 @@ export default {
 		stats({
 			exts: ["html", "css", "js", "json", "png", "svg", "ico", "ttf"],
 		}),
+		{
+			name: "vanilla-extract",
+			hooks: {
+				"astro:config:setup": ({ command, updateConfig }) => {
+					const PROD = command === "build";
+					const DEV = !PROD;
+
+					updateConfig({
+						vite: {
+							plugins: [
+								ve({
+									emitCssInSsr: true,
+									esbuildOptions: {
+										define: {
+											"import.meta.env.DEV": `${DEV}`,
+											"import.meta.env.PROD": `${PROD}`,
+										},
+									},
+								}),
+							],
+							esbuild: { legalComments: "none" },
+						},
+					});
+				},
+			},
+		},
 	],
 	server: { host: true, port: 3000 },
-	vite: {
-		plugins: [ve({ emitCssInSsr: true })],
-		esbuild: { legalComments: "none" },
-	},
 } as AstroUserConfig;
