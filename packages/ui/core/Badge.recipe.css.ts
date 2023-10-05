@@ -18,7 +18,7 @@ const Root = recipe({
 		borderStyle: "none",
 		userSelect: "none",
 		...tokens.rounded_6,
-		backgroundImage: `linear-gradient(125deg, ${vars.v_color_5}, ${vars.v_color_2})`,
+		backgroundImage: `linear-gradient(125deg, ${vars.v_color_3}, ${vars.v_color_2})`,
 		color: vars.v_color_11,
 
 		"::before": {
