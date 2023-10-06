@@ -1,26 +1,36 @@
 import { Outlet } from "@flamrdevs/x-solid/modules/router";
 
-import { Box, Center, Text } from "~/components/core";
+import { Box, Flex, Separator, Text } from "~/components/core";
 import { ButtonLink } from "~/components/router";
+
+import * as DASHCSS from "~/styles/pages/dash.css";
 
 const DashLayout = () => {
 	return (
-		<Box>
-			<Box p="2">
-				<Text family="mono" size="4" weight="5" align="-:-">
-					DashLayout
-				</Text>
-			</Box>
+		<>
+			<Flex posi="abs" gap="4" class={DASHCSS.container}>
+				<Flex<"main"> as="nav" p="4" gap="4" class={DASHCSS.nav}>
+					<Text family="mono" size="4" weight="5">
+						Dashboard
+					</Text>
 
-			<Center gap="2">
-				<ButtonLink href="/dash">Index</ButtonLink>
-				<ButtonLink href="/dash/settings">Settings</ButtonLink>
-			</Center>
+					<Separator />
 
-			<Box p="2">
-				<Outlet />
-			</Box>
-		</Box>
+					<Flex gap="4" style={{ "flex-grow": 1, "flex-direction": "column" }}>
+						<ButtonLink href="/dash" style={{ "justify-content": "flex-start" }}>
+							Index
+						</ButtonLink>
+						<ButtonLink href="/dash/settings" style={{ "justify-content": "flex-start" }}>
+							Settings
+						</ButtonLink>
+					</Flex>
+				</Flex>
+
+				<Box<"main"> as="main" p="4" class={DASHCSS.main}>
+					<Outlet />
+				</Box>
+			</Flex>
+		</>
 	);
 };
 

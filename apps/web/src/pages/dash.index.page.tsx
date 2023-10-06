@@ -3,9 +3,7 @@ import { Box, Text } from "~/components/core";
 const DashIndexPage = () => {
 	return (
 		<Box>
-			<Text family="mono" align="-:-">
-				DashIndexPage
-			</Text>
+			<Text family="mono">DashIndexPage</Text>
 		</Box>
 	);
 };
