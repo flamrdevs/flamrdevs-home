@@ -2,7 +2,7 @@
 (() => {
   let theme;
   try {
-    theme = storage.getItem("flamrdevs:theme");
+    theme = localStorage.getItem("flamrdevs:theme");
     if (theme) theme = JSON.parse(theme);
   } catch (error) {
   } finally {

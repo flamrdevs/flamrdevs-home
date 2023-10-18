@@ -17,14 +17,14 @@
 		"@flamrdevs/x": "workspace:*",
 		"@flamrdevs/x-astro": "workspace:*",
 		"@flamrdevs/x-solid": "workspace:*",
-		"astro": "^3.2.2",
-		"lucide-solid": "^0.284.0",
-		"solid-js": "^1.7.12"
+		"astro": "^3.3.1",
+		"lucide-solid": "^0.288.0",
+		"solid-js": "^1.8.1"
 	},
 	"devDependencies": {
-		"@astrojs/mdx": "^1.1.0",
-		"@astrojs/sitemap": "^3.0.0",
-		"@astrojs/solid-js": "^3.0.1",
+		"@astrojs/mdx": "^1.1.2",
+		"@astrojs/sitemap": "^3.0.1",
+		"@astrojs/solid-js": "^3.0.2",
 		"@flamrdevs/tsc": "workspace:*",
 		"astro-compress": "^2.0.15"
 	}

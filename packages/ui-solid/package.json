@@ -7,7 +7,7 @@
 		"@flamrdevs/x": "workspace:*",
 		"@flamrdevs/x-solid": "workspace:*",
 		"@kobalte/core": "^0.11.0",
-		"solid-js": "^1.7.12"
+		"solid-js": "^1.8.1"
 	},
 	"devDependencies": {
 		"@flamrdevs/tsc": "workspace:*"
