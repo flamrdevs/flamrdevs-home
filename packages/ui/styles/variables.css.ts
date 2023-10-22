@@ -15,4 +15,8 @@ export const v_color_12 = createVar("--v-color-12");
 
 export const lg_deg = createVar("--lg-deg");
 
+export const xpg = createVar("--xpg");
+export const xbg = createVar("--xbg");
+
 export const filter_noise_svg = createVar("--filter-noise-svg");
+export const default_filter_noise_background = createVar("--default-filter-noise-background");

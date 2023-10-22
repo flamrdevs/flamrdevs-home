@@ -11,25 +11,19 @@ type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
 
 const Root = recipe({
 	base: {
+		vars: {
+			[vars.xpg]: `${vars.v_color_3}, ${vars.v_color_2}`,
+			[vars.xbg]: `${vars.v_color_9}, ${vars.v_color_6}`,
+		},
 		display: "inline-flex",
 		position: "relative",
 		alignItems: "center",
 		justifyContent: "center",
-		borderStyle: "none",
 		userSelect: "none",
-		...tokens.rounded_6,
-		backgroundImage: `linear-gradient(125deg, ${vars.v_color_3}, ${vars.v_color_2})`,
+		border: "1px solid transparent",
+		...tokens.rounded_7,
+		background: `padding-box linear-gradient(125deg, ${vars.xpg}), border-box linear-gradient(125deg, ${vars.xbg})`,
 		color: vars.v_color_11,
-
-		"::before": {
-			content: "",
-			display: "block",
-			position: "absolute",
-			zIndex: -10,
-			inset: -1,
-			...tokens.rounded_7,
-			backgroundImage: `linear-gradient(125deg, ${vars.v_color_9}, ${vars.v_color_6})`,
-		},
 
 		"::after": {
 			content: "",
@@ -37,10 +31,10 @@ const Root = recipe({
 			position: "absolute",
 			zIndex: 10,
 			inset: 0,
-			...tokens.rounded_6,
+			...tokens.rounded_7,
 			overflow: "hidden",
 			opacity: 0.1,
-			backgroundImage: `linear-gradient(to bottom, #2222221a, #1111111a), ${vars.filter_noise_svg}`,
+			background: vars.default_filter_noise_background,
 		},
 	},
 	variants: {

@@ -11,21 +11,28 @@ type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
 
 const Root = recipe({
 	base: {
+		vars: {
+			[vars.xpg]: `${vars.v_color_3}, ${vars.v_color_2}`,
+			[vars.xbg]: `${vars.v_color_9}, ${vars.v_color_7}, ${vars.v_color_6}`,
+		},
 		display: "inline-flex",
 		position: "relative",
 		alignItems: "center",
 		justifyContent: "center",
-		borderStyle: "none",
-		outline: "1px solid transparent",
-		outlineOffset: 2,
 		userSelect: "none",
 		cursor: "pointer",
-		...tokens.rounded_7,
-		backgroundImage: `linear-gradient(125deg, ${vars.v_color_3}, ${vars.v_color_2})`,
+		border: "1px solid transparent",
+		outline: "1px solid transparent",
+		outlineOffset: 2,
+		...tokens.rounded_8,
+		background: `padding-box linear-gradient(125deg, ${vars.xpg}), border-box linear-gradient(125deg, ${vars.xbg})`,
 		color: vars.v_color_11,
 
 		":hover": {
-			backgroundImage: `linear-gradient(125deg, ${vars.v_color_4}, ${vars.v_color_2})`,
+			vars: {
+				[vars.xpg]: `${vars.v_color_4}, ${vars.v_color_2}`,
+				[vars.xbg]: `${vars.v_color_10}, ${vars.v_color_8}, ${vars.v_color_7}`,
+			},
 		},
 
 		":focus-visible": {
@@ -33,17 +40,10 @@ const Root = recipe({
 		},
 
 		":active": {
-			backgroundImage: `linear-gradient(125deg, ${vars.v_color_5}, ${vars.v_color_3})`,
-		},
-
-		"::before": {
-			content: "",
-			display: "block",
-			position: "absolute",
-			zIndex: -10,
-			inset: -1,
-			...tokens.rounded_8,
-			backgroundImage: `linear-gradient(125deg, ${vars.v_color_9}, ${vars.v_color_7}, ${vars.v_color_6})`,
+			vars: {
+				[vars.xpg]: `${vars.v_color_5}, ${vars.v_color_3}`,
+				[vars.xbg]: `${vars.v_color_11}, ${vars.v_color_9}, ${vars.v_color_8}`,
+			},
 		},
 
 		"::after": {
@@ -52,29 +52,20 @@ const Root = recipe({
 			position: "absolute",
 			zIndex: 10,
 			inset: 0,
-			...tokens.rounded_7,
+			...tokens.rounded_8,
 			overflow: "hidden",
 			opacity: 0.1,
-			backgroundImage: `linear-gradient(to bottom, #2222221a, #1111111a), ${vars.filter_noise_svg}`,
+			background: vars.default_filter_noise_background,
 		},
 
 		selectors: {
-			"&:hover::before": {
-				backgroundImage: `linear-gradient(125deg, ${vars.v_color_10}, ${vars.v_color_8}, ${vars.v_color_7})`,
-			},
-
-			"&:active::before": {
-				backgroundImage: `linear-gradient(125deg, ${vars.v_color_11}, ${vars.v_color_9}, ${vars.v_color_8})`,
-			},
-
 			"&[data-disabled]": {
-				pointerEvents: "none",
-				backgroundImage: `linear-gradient(125deg, ${vars.v_color_2}, ${vars.v_color_1})`,
+				vars: {
+					[vars.xpg]: `${vars.v_color_2}, ${vars.v_color_1}`,
+					[vars.xbg]: `${vars.v_color_5}, ${vars.v_color_4}, ${vars.v_color_3}`,
+				},
 				color: vars.v_color_8,
-			},
-
-			"&[data-disabled]::before": {
-				backgroundImage: `linear-gradient(125deg, ${vars.v_color_5}, ${vars.v_color_4}, ${vars.v_color_3})`,
+				pointerEvents: "none",
 			},
 		},
 	},

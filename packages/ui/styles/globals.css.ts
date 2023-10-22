@@ -11,6 +11,7 @@ import * as vars from "./variables.css";
 globalStyle(":root", {
 	vars: {
 		[vars.filter_noise_svg]: `url(${HOST.STATIC("svgs/filter-noise.svg")})`,
+		[vars.default_filter_noise_background]: `linear-gradient(to bottom, #2222221a, #1111111a), ${vars.filter_noise_svg}`,
 	},
 });
 
