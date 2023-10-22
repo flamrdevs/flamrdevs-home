@@ -8,7 +8,7 @@
 		"preview": "astro preview"
 	},
 	"dependencies": {
-		"@aptabase/web": "^0.2.0",
+		"@aptabase/web": "^0.3.0",
 		"@flamrdevs/const": "workspace:*",
 		"@flamrdevs/ui": "workspace:*",
 		"@flamrdevs/ui-astro": "workspace:*",
@@ -17,15 +17,15 @@
 		"@flamrdevs/x": "workspace:*",
 		"@flamrdevs/x-astro": "workspace:*",
 		"@flamrdevs/x-solid": "workspace:*",
-		"astro": "^3.3.1",
+		"astro": "^3.3.2",
 		"lucide-solid": "^0.288.0",
-		"solid-js": "^1.8.1"
+		"solid-js": "^1.8.3"
 	},
 	"devDependencies": {
 		"@astrojs/mdx": "^1.1.2",
-		"@astrojs/sitemap": "^3.0.1",
+		"@astrojs/sitemap": "^3.0.2",
 		"@astrojs/solid-js": "^3.0.2",
 		"@flamrdevs/tsc": "workspace:*",
-		"astro-compress": "^2.0.15"
+		"astro-compress": "^2.1.3"
 	}
 }
