@@ -8,7 +8,7 @@
 		"@flamrdevs/const": "workspace:*",
 		"@flamrdevs/utils": "workspace:*",
 		"@flamrdevs/x": "workspace:*",
-		"lucide": "^0.289.0"
+		"lucide": "^0.290.0"
 	},
 	"devDependencies": {
 		"@flamrdevs/tsc": "workspace:*",

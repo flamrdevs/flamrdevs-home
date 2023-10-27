@@ -141,8 +141,8 @@ importers:
         specifier: workspace:*
         version: link:../x
       lucide:
-        specifier: ^0.289.0
-        version: 0.289.0
+        specifier: ^0.290.0
+        version: 0.290.0
     devDependencies:
       '@flamrdevs/tsc':
         specifier: workspace:*
@@ -779,8 +779,8 @@ packages:
       '@babel/plugin-transform-typescript': 7.22.15(@babel/core@7.23.2)
     dev: true
 
-  /@babel/runtime@7.22.11:
-    resolution: {integrity: sha512-ee7jVNlWN09+KftVOu9n7S8gQzD/Z6hN/I8VBRXW4P1+Xe7kJGXMwu8vds4aGIMHZnNbdpSWCfZZtinytpcAvA==}
+  /@babel/runtime@7.23.2:
+    resolution: {integrity: sha512-mM8eg4yl5D6i3lu2QKPuPH4FArvJ8KhTofbE7jwMUv9KX5mBvwPAqnV3MlyBNqdp9RyRKP6Yck8TrfYrPvX3bg==}
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.0
@@ -3432,8 +3432,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /lucide@0.289.0:
-    resolution: {integrity: sha512-MZutbusaMF8Vy2HSfQ5a2B7jjMbXBtneogE/Vea1qZbz/RW1pB2OPQNzbut4vEI8Yn3Xfi7XpOX4vqFvmZmCMQ==}
+  /lucide@0.290.0:
+    resolution: {integrity: sha512-EuNcjoKnYyntMESVcyB5+Ukeziclga0NHESrP9jZWMdm1pHwGpseVrc69Tbn7eZ/Etyjnnq55OR/phxPrISWlg==}
     dev: false
 
   /lunr@2.3.9:
@@ -3663,7 +3663,7 @@ packages:
   /media-query-parser@2.0.2:
     resolution: {integrity: sha512-1N4qp+jE0pL5Xv4uEcwVUhIkwdUO3S/9gML90nqKA7v7FcOS5vUtatfzok9S9U1EJU8dHWlcv95WLnKmmxZI9w==}
     dependencies:
-      '@babel/runtime': 7.22.11
+      '@babel/runtime': 7.23.2
     dev: true
 
   /merge-anything@5.1.7:
