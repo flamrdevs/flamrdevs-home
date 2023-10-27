@@ -5,7 +5,7 @@
 		"@flamrdevs/const": "workspace:*",
 		"@flamrdevs/x": "workspace:*",
 		"@solidjs/router": "^0.8.3",
-		"solid-js": "^1.8.3"
+		"solid-js": "^1.8.4"
 	},
 	"devDependencies": {
 		"@flamrdevs/tsc": "workspace:*"

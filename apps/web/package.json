@@ -14,8 +14,8 @@
 		"@flamrdevs/utils": "workspace:*",
 		"@flamrdevs/x": "workspace:*",
 		"@flamrdevs/x-solid": "workspace:*",
-		"lucide-solid": "^0.288.0",
-		"solid-js": "^1.8.3"
+		"lucide-solid": "^0.289.0",
+		"solid-js": "^1.8.4"
 	},
 	"devDependencies": {
 		"@flamrdevs/tsc": "workspace:*",
