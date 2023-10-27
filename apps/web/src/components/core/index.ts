@@ -10,3 +10,5 @@ export { default as Link } from "@flamrdevs/ui-solid/core/Link";
 export { default as Loader } from "@flamrdevs/ui-solid/core/Loader";
 export { default as Separator } from "@flamrdevs/ui-solid/core/Separator";
 export { default as Text } from "@flamrdevs/ui-solid/core/Text";
+
+export { Icon } from "@flamrdevs/ui-solid/icons";

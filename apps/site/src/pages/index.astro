@@ -1,9 +1,7 @@
 ---
-import { GithubIcon, MoonIcon, SunIcon } from "lucide-solid";
-
 import { LINK } from "@flamrdevs/const/exports";
 
-import { Center, Container, HTMLX, IconButton, Separator, Text } from "~/components/core";
+import { Center, Container, HTMLX, Icon, IconButton, Separator, Text } from "~/components/core";
 import { AnimatedSVGLogo } from "~/components/flamrdevs";
 
 import { flamrdevssvg, separatorvertical } from "~/styles/pages/index.css";
@@ -22,17 +20,17 @@ import { flamrdevssvg, separatorvertical } from "~/styles/pages/index.css";
 			<div style="flex-grow: 1;"></div>
 
 			<IconButton id="light-theme-icon-button">
-				<SunIcon />
+				<Icon i="Sun" />
 			</IconButton>
 
 			<IconButton id="dark-theme-icon-button">
-				<MoonIcon />
+				<Icon i="Moon" />
 			</IconButton>
 
 			<Separator orientation="vertical" class={separatorvertical} />
 
 			<IconButton as="a" id="github-icon-button" href={LINK.GITHUB} target="_blank">
-				<GithubIcon />
+				<Icon i="Github" />
 			</IconButton>
 		</Center>
 		<Separator orientation="horizontal" />

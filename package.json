@@ -4,7 +4,8 @@
 	"scripts": {
 		"dev": "turbo dev",
 		"build": "turbo build",
-		"preview": "turbo preview"
+		"preview": "turbo preview",
+		"setup-icons": "pnpm --filter @flamrdevs/ui run setup-icons"
 	},
 	"devDependencies": {
 		"@types/node": "^20.8.9",
@@ -13,6 +14,7 @@
 		"@vanilla-extract/sprinkles": "^1.6.1",
 		"@vanilla-extract/vite-plugin": "^3.9.0",
 		"astro": "^3.4.0",
+		"tsx": "^3.14.0",
 		"turbo": "^1.10.16",
 		"typescript": "^5.2.2",
 		"vite": "^4.5.0"

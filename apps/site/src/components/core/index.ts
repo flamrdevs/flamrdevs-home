@@ -11,4 +11,6 @@ export { default as Loader } from "@flamrdevs/ui-astro/core/Loader.astro";
 export { default as Separator } from "@flamrdevs/ui-astro/core/Separator.astro";
 export { default as Text } from "@flamrdevs/ui-astro/core/Text.astro";
 
+export { Icon } from "@flamrdevs/ui-solid/icons";
+
 export { default as HTMLX } from "./HTMLX.astro";

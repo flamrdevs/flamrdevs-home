@@ -17,6 +17,7 @@ export default {
 		sitemap(),
 		compress({
 			Logger: 0,
+			Exclude: ["icons.svg"],
 		}),
 		stats({
 			exts: ["html", "css", "js", "json", "png", "svg", "ico", "ttf"],

@@ -1,12 +1,10 @@
 import { Show } from "solid-js";
 
-import { GithubIcon, MoonIcon, SunIcon } from "lucide-solid";
-
 import { LINK } from "@flamrdevs/const/exports";
 
 import { useStore } from "@flamrdevs/x-solid/libs/store";
 
-import { Badge, Box, Button, Container, Flex, IconButton, Link, Loader, Separator, Text } from "~/components/core";
+import { Badge, Box, Button, Container, Flex, Icon, IconButton, Link, Loader, Separator, Text } from "~/components/core";
 import { ButtonLink, IconButtonLink } from "~/components/router";
 
 import { ThemeStore, toggleTheme } from "~/stores/theme";
@@ -25,8 +23,8 @@ const UICorePage = () => {
 					<ButtonLink href="/ui">ui</ButtonLink>
 					<Separator orientation="vertical" style="height: 1.5rem" />
 					<IconButton onClick={toggleTheme}>
-						<Show when={theme() === "dark"} fallback={<MoonIcon />}>
-							<SunIcon />
+						<Show when={theme() === "dark"} fallback={<Icon i="Moon" />}>
+							<Icon i="Sun" />
 						</Show>
 					</IconButton>
 				</Flex>
@@ -289,7 +287,7 @@ const UICorePage = () => {
 							<Flex gap="2" p="1">
 								<Box>
 									<IconButton>
-										<MoonIcon />
+										<Icon i="Moon" />
 									</IconButton>
 								</Box>
 							</Flex>
@@ -301,32 +299,32 @@ const UICorePage = () => {
 							<Flex gap="2" p="1">
 								<Box>
 									<IconButton color="neutral">
-										<MoonIcon />
+										<Icon i="Moon" />
 									</IconButton>
 								</Box>
 								<Box>
 									<IconButton color="primary">
-										<MoonIcon />
+										<Icon i="Moon" />
 									</IconButton>
 								</Box>
 								<Box>
 									<IconButton color="success">
-										<MoonIcon />
+										<Icon i="Moon" />
 									</IconButton>
 								</Box>
 								<Box>
 									<IconButton color="info">
-										<MoonIcon />
+										<Icon i="Moon" />
 									</IconButton>
 								</Box>
 								<Box>
 									<IconButton color="warning">
-										<MoonIcon />
+										<Icon i="Moon" />
 									</IconButton>
 								</Box>
 								<Box>
 									<IconButton color="danger">
-										<MoonIcon />
+										<Icon i="Moon" />
 									</IconButton>
 								</Box>
 							</Flex>
@@ -338,12 +336,12 @@ const UICorePage = () => {
 							<Flex gap="2" p="1">
 								<Box>
 									<IconButton>
-										<MoonIcon />
+										<Icon i="Moon" />
 									</IconButton>
 								</Box>
 								<Box>
 									<IconButton disabled>
-										<MoonIcon />
+										<Icon i="Moon" />
 									</IconButton>
 								</Box>
 							</Flex>
@@ -355,12 +353,12 @@ const UICorePage = () => {
 							<Flex gap="2" p="1">
 								<Box>
 									<IconButtonLink href={LINK.GITHUB} target="_blank">
-										<GithubIcon />
+										<Icon i="Github" />
 									</IconButtonLink>
 								</Box>
 								<Box>
 									<IconButtonLink href={LINK.GITHUB} target="_blank" disabled>
-										<GithubIcon />
+										<Icon i="Github" />
 									</IconButtonLink>
 								</Box>
 							</Flex>

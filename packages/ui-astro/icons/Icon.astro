@@ -1,0 +1,13 @@
+---
+import { HTMLAttributes } from "astro/types";
+
+import { DEFAULT_ICON, DEFAULT_SIZE, DEFAULT_CLASS, href, type IconProps } from "@flamrdevs/ui/icons/shared";
+
+type Props = Omit<HTMLAttributes<"svg">, keyof IconProps> & IconProps;
+
+const { i = DEFAULT_ICON, class: className = DEFAULT_CLASS, size = DEFAULT_SIZE, width = size, height = size, ...attrs } = Astro.props;
+---
+
+<svg viewBox="0 0 24 24" stroke="currentColor" {...{ width, height }} {...attrs} class={`lucide ${className}`}>
+	<use href={`${href}${i}`}></use>
+</svg>

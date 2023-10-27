@@ -1,9 +1,7 @@
 ---
-import { GithubIcon, MoonIcon, SunIcon } from "lucide-solid";
-
 import { LINK } from "@flamrdevs/const/exports";
 
-import { Badge, Box, Button, Container, Flex, HTMLX, IconButton, Link, Loader, Separator, Text } from "~/components/core";
+import { Badge, Box, Button, Container, Flex, HTMLX, Icon, IconButton, Link, Loader, Separator, Text } from "~/components/core";
 
 import * as UICSS from "~/styles/pages/ui.css";
 ---
@@ -16,11 +14,11 @@ import * as UICSS from "~/styles/pages/ui.css";
 			<Button as="a" href="/ui">ui</Button>
 			<Separator orientation="vertical" style="height: 1.5rem" />
 			<IconButton id="light-theme-icon-button">
-				<SunIcon />
+				<Icon i="Sun" />
 			</IconButton>
 			<Separator orientation="vertical" style="height: 1.5rem" />
 			<IconButton id="dark-theme-icon-button">
-				<MoonIcon />
+				<Icon i="Moon" />
 			</IconButton>
 		</Flex>
 	</Container>
@@ -270,7 +268,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 					<Flex gap="2" p="1">
 						<Box>
 							<IconButton>
-								<MoonIcon />
+								<Icon i="Moon" />
 							</IconButton>
 						</Box>
 					</Flex>
@@ -282,32 +280,32 @@ import * as UICSS from "~/styles/pages/ui.css";
 					<Flex gap="2" p="1">
 						<Box>
 							<IconButton color="neutral">
-								<MoonIcon />
+								<Icon i="Moon" />
 							</IconButton>
 						</Box>
 						<Box>
 							<IconButton color="primary">
-								<MoonIcon />
+								<Icon i="Moon" />
 							</IconButton>
 						</Box>
 						<Box>
 							<IconButton color="success">
-								<MoonIcon />
+								<Icon i="Moon" />
 							</IconButton>
 						</Box>
 						<Box>
 							<IconButton color="info">
-								<MoonIcon />
+								<Icon i="Moon" />
 							</IconButton>
 						</Box>
 						<Box>
 							<IconButton color="warning">
-								<MoonIcon />
+								<Icon i="Moon" />
 							</IconButton>
 						</Box>
 						<Box>
 							<IconButton color="danger">
-								<MoonIcon />
+								<Icon i="Moon" />
 							</IconButton>
 						</Box>
 					</Flex>
@@ -319,12 +317,12 @@ import * as UICSS from "~/styles/pages/ui.css";
 					<Flex gap="2" p="1">
 						<Box>
 							<IconButton>
-								<MoonIcon />
+								<Icon i="Moon" />
 							</IconButton>
 						</Box>
 						<Box>
 							<IconButton disabled>
-								<MoonIcon />
+								<Icon i="Moon" />
 							</IconButton>
 						</Box>
 					</Flex>
@@ -336,12 +334,12 @@ import * as UICSS from "~/styles/pages/ui.css";
 					<Flex gap="2" p="1">
 						<Box>
 							<IconButton as="a" href={LINK.GITHUB} target="_blank">
-								<GithubIcon />
+								<Icon i="Github" />
 							</IconButton>
 						</Box>
 						<Box>
 							<IconButton as="a" href={LINK.GITHUB} target="_blank" disabled>
-								<GithubIcon />
+								<Icon i="Github" />
 							</IconButton>
 						</Box>
 					</Flex>

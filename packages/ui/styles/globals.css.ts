@@ -56,7 +56,8 @@ globalStyle("a", {
 });
 
 globalStyle(".lucide", {
+	fill: "none",
 	strokeWidth: 1.5,
-	width: "1.25rem",
-	height: "1.25rem",
+	strokeLinecap: "round",
+	strokeLinejoin: "round",
 });
