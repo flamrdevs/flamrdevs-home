@@ -1,9 +1,9 @@
 import { createEffect, createSignal, onCleanup } from "solid-js";
 import type { Accessor } from "solid-js";
 
-import type { Store } from "@flamrdevs/x/libs/store";
+import type { IXStore } from "@flamrdevs/x/modules/ix";
 
-const useStore = <T extends any>(store: Store<T>) => {
+const useStore = <T extends any>(store: IXStore<T>) => {
 	const [value, setValue] = createSignal<T>(store.get());
 
 	createEffect(() => {

@@ -4,6 +4,11 @@
   "dependencies": {
     "@flamrdevs/const": "workspace:*",
     "clsx": "^2.0.0",
+    "ixbroadcastr": "^1.0.5",
+    "ixevent": "^1.0.5",
+    "ixstorage": "^1.0.5",
+    "ixstoragest": "^1.0.5",
+    "ixstore": "^1.0.5",
     "propsplit": "^1.0.1"
   },
   "devDependencies": {

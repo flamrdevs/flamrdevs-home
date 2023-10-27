@@ -216,6 +216,21 @@ importers:
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
+      ixbroadcastr:
+        specifier: ^1.0.5
+        version: 1.0.5
+      ixevent:
+        specifier: ^1.0.5
+        version: 1.0.5
+      ixstorage:
+        specifier: ^1.0.5
+        version: 1.0.5
+      ixstoragest:
+        specifier: ^1.0.5
+        version: 1.0.5
+      ixstore:
+        specifier: ^1.0.5
+        version: 1.0.5
       propsplit:
         specifier: ^1.0.1
         version: 1.0.1
@@ -3273,6 +3288,35 @@ packages:
 
   /isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
+
+  /ixbroadcastr@1.0.5:
+    resolution: {integrity: sha512-YZ3Wk2hl1Y39FbHMWZ2gn3SfYVKQfH9VvEv0NWwv3y4KlkQsARhLGPUXYPYcH9jSQ5eU9fsl4VWmR/rVeAQaqQ==}
+    dev: false
+
+  /ixclone@1.0.5:
+    resolution: {integrity: sha512-s/x6/lx1zlSnrbN8LtZrhuT7B9CFRwTi+AeUNU2BYTjsyir8US2j1t6X0K3XZ8BNW5RbkvOlv2nsEEbkLbef8Q==}
+    dev: false
+
+  /ixevent@1.0.5:
+    resolution: {integrity: sha512-9kJDFtX4lwGDJTWB4//17+oRcSMl0rjJjLHjqpNRbV7zTRPCiiswGzC/GXaAIFgDiYpTDhPBeLTUxOQxyrAx0A==}
+    dev: false
+
+  /ixstorage@1.0.5:
+    resolution: {integrity: sha512-wOJc/mrsrPchrjl7U5e/BhAXmldEjDGqePhx7HAhUeG1YoCXQhZORvnnv4gVzlK7d7NISezq9tJG7lxH5JwGTw==}
+    dev: false
+
+  /ixstoragest@1.0.5:
+    resolution: {integrity: sha512-yX8/kQzy2QmBqYw9iMeHRRgiJAsK4S9JDA3dCadrCDIqn6qOjSs96HDoeg/DblMJkci0ce2dLj4XLUrbuzTP7A==}
+    dependencies:
+      ixstorage: 1.0.5
+      ixstore: 1.0.5
+    dev: false
+
+  /ixstore@1.0.5:
+    resolution: {integrity: sha512-/jq6BmwQ8HyxunkihvgeJYtNCcyWi+fwhFONxFqEblUkXfUitk2iXCWKKugmCwjRI/EmNaqSH2ikLPK1lBBMgw==}
+    dependencies:
+      ixclone: 1.0.5
+    dev: false
 
   /javascript-stringify@2.1.0:
     resolution: {integrity: sha512-JVAfqNPTvNq3sB/VHQJAFxN/sPgKnsKrCwyRt15zwNCdrMMJDdcEOdubuy+DuJYYdm0ox1J4uzEuYKkN+9yhVg==}

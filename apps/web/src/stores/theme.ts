@@ -1,11 +1,10 @@
 import { THEME, THEME_KEY, THEME_DEFAULT, setDocumentThemeAttribute } from "@flamrdevs/ui/styles/utils";
 import type { Theme } from "@flamrdevs/ui/styles/types";
-import * as BroadcastChannel from "@flamrdevs/x/libs/broadcast-channel";
-import * as StorageStore from "@flamrdevs/x/libs/storage-store";
+import { ixstoragest, ixbroadcastr } from "@flamrdevs/x/modules/ix";
 
-const ThemeBroadcastChannel = BroadcastChannel.create<Theme>(THEME_KEY);
+const ThemeBroadcastChannel = ixbroadcastr<Theme>(THEME_KEY);
 
-const ThemeStore = StorageStore.create<Theme>(THEME_KEY, THEME_DEFAULT);
+const ThemeStore = ixstoragest<Theme>(THEME_KEY, THEME_DEFAULT);
 
 const changeTheme = (value: Theme) => {
 	ThemeStore.set(ThemeBroadcastChannel.send(value));
