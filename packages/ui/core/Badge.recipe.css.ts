@@ -1,7 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import * as styles from "./../styles/styles.css.ts";
 import * as tokens from "./../styles/tokens.ts";
 import * as vars from "./../styles/variables.css.ts";
 
@@ -12,8 +11,8 @@ type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
 const Root = recipe({
 	base: {
 		vars: {
-			[vars.xpg]: `${vars.v_color_3}, ${vars.v_color_2}`,
-			[vars.xbg]: `${vars.v_color_9}, ${vars.v_color_6}`,
+			[vars.xpg]: `${vars.v_a_3}, ${vars.v_a_2}`,
+			[vars.xbg]: `${vars.v_a_9}, ${vars.v_a_6}`,
 		},
 		display: "inline-flex",
 		position: "relative",
@@ -23,7 +22,7 @@ const Root = recipe({
 		border: "1px solid transparent",
 		...tokens.rounded_7,
 		background: `padding-box linear-gradient(125deg, ${vars.xpg}), border-box linear-gradient(125deg, ${vars.xbg})`,
-		color: vars.v_color_11,
+		color: vars.v_a_11,
 
 		"::after": {
 			content: "",
@@ -38,14 +37,6 @@ const Root = recipe({
 		},
 	},
 	variants: {
-		color: {
-			neutral: styles.varsNeutral,
-			primary: styles.varsPrimary,
-			success: styles.varsSuccess,
-			info: styles.varsInfo,
-			warning: styles.varsWarning,
-			danger: styles.varsDanger,
-		},
 		size: {
 			md: [
 				{
@@ -58,7 +49,6 @@ const Root = recipe({
 		},
 	},
 	defaultVariants: {
-		color: "neutral",
 		size: "md",
 	},
 });

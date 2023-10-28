@@ -2,6 +2,43 @@ import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
 import * as FONTS from "./../styles/fonts/index.ts";
+import * as styles from "./../styles/styles.css.ts";
+
+const DEFAULT_COLORS_VARIANTS = {
+	color: "neutral",
+} as const;
+
+type Color2Variants = Exclude<RecipeVariants<typeof Color2>, undefined>;
+
+const Color2 = recipe({
+	variants: {
+		color: {
+			neutral: styles.varsNeutral,
+			primary: styles.varsPrimary,
+		},
+	},
+	defaultVariants: DEFAULT_COLORS_VARIANTS,
+});
+
+const Color2Keys = Color2.variants();
+
+type Color6Variants = Exclude<RecipeVariants<typeof Color6>, undefined>;
+
+const Color6 = recipe({
+	variants: {
+		color: {
+			neutral: styles.varsNeutral,
+			primary: styles.varsPrimary,
+			success: styles.varsSuccess,
+			info: styles.varsInfo,
+			warning: styles.varsWarning,
+			danger: styles.varsDanger,
+		},
+	},
+	defaultVariants: DEFAULT_COLORS_VARIANTS,
+});
+
+const Color6Keys = Color6.variants();
 
 type TypographyVariants = Exclude<RecipeVariants<typeof Typography>, undefined>;
 
@@ -116,6 +153,6 @@ const Typography = recipe({
 
 const TypographyKeys = Typography.variants();
 
-export type { TypographyVariants };
-export { Typography };
-export { TypographyKeys };
+export type { Color2Variants, Color6Variants, TypographyVariants };
+export { Color2, Color6, Typography };
+export { Color2Keys, Color6Keys, TypographyKeys };

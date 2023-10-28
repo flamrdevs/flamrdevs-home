@@ -1,7 +1,6 @@
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import * as styles from "./../styles/styles.css.ts";
 import * as tokens from "./../styles/tokens.ts";
 import * as vars from "./../styles/variables.css.ts";
 
@@ -12,8 +11,8 @@ type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
 const Root = recipe({
 	base: {
 		vars: {
-			[vars.xpg]: `${vars.v_color_3}, ${vars.v_color_2}`,
-			[vars.xbg]: `${vars.v_color_9}, ${vars.v_color_7}, ${vars.v_color_6}`,
+			[vars.xpg]: `${vars.v_a_3}, ${vars.v_a_2}`,
+			[vars.xbg]: `${vars.v_a_9}, ${vars.v_a_7}, ${vars.v_a_6}`,
 		},
 		display: "inline-flex",
 		position: "relative",
@@ -26,23 +25,23 @@ const Root = recipe({
 		outlineOffset: 2,
 		...tokens.rounded_8,
 		background: `padding-box linear-gradient(125deg, ${vars.xpg}), border-box linear-gradient(125deg, ${vars.xbg})`,
-		color: vars.v_color_11,
+		color: vars.v_a_11,
 
 		":hover": {
 			vars: {
-				[vars.xpg]: `${vars.v_color_4}, ${vars.v_color_2}`,
-				[vars.xbg]: `${vars.v_color_10}, ${vars.v_color_8}, ${vars.v_color_7}`,
+				[vars.xpg]: `${vars.v_a_4}, ${vars.v_a_2}`,
+				[vars.xbg]: `${vars.v_a_10}, ${vars.v_a_8}, ${vars.v_a_7}`,
 			},
 		},
 
 		":focus-visible": {
-			outlineColor: vars.v_color_11,
+			outlineColor: vars.v_a_11,
 		},
 
 		":active": {
 			vars: {
-				[vars.xpg]: `${vars.v_color_5}, ${vars.v_color_3}`,
-				[vars.xbg]: `${vars.v_color_11}, ${vars.v_color_9}, ${vars.v_color_8}`,
+				[vars.xpg]: `${vars.v_a_5}, ${vars.v_a_3}`,
+				[vars.xbg]: `${vars.v_a_11}, ${vars.v_a_9}, ${vars.v_a_8}`,
 			},
 		},
 
@@ -61,23 +60,15 @@ const Root = recipe({
 		selectors: {
 			"&[data-disabled]": {
 				vars: {
-					[vars.xpg]: `${vars.v_color_2}, ${vars.v_color_1}`,
-					[vars.xbg]: `${vars.v_color_5}, ${vars.v_color_4}, ${vars.v_color_3}`,
+					[vars.xpg]: `${vars.v_a_2}, ${vars.v_a_1}`,
+					[vars.xbg]: `${vars.v_a_5}, ${vars.v_a_4}, ${vars.v_a_3}`,
 				},
-				color: vars.v_color_8,
+				color: vars.v_a_8,
 				pointerEvents: "none",
 			},
 		},
 	},
 	variants: {
-		color: {
-			neutral: styles.varsNeutral,
-			primary: styles.varsPrimary,
-			success: styles.varsSuccess,
-			info: styles.varsInfo,
-			warning: styles.varsWarning,
-			danger: styles.varsDanger,
-		},
 		size: {
 			md: [
 				{
@@ -90,7 +81,6 @@ const Root = recipe({
 		},
 	},
 	defaultVariants: {
-		color: "neutral",
 		size: "md",
 	},
 });

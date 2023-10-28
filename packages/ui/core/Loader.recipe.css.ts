@@ -2,20 +2,15 @@ import { keyframes, style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import { ColorsContract } from "./../styles/contract.css.ts";
+import * as vars from "./../styles/variables.css.ts";
 
 type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
 
 const Root = recipe({
+	base: {
+		stroke: vars.v_a_9,
+	},
 	variants: {
-		color: {
-			neutral: {
-				stroke: ColorsContract.neutral[9],
-			},
-			primary: {
-				stroke: ColorsContract.primary[9],
-			},
-		},
 		size: {
 			sm: {
 				width: "2rem",
@@ -32,7 +27,6 @@ const Root = recipe({
 		},
 	},
 	defaultVariants: {
-		color: "primary",
 		size: "md",
 	},
 });

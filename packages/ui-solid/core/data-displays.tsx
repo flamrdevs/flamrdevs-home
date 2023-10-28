@@ -2,16 +2,17 @@ import { mergeProps, splitProps } from "solid-js";
 import type { JSX } from "solid-js";
 
 import * as BadgeRecipe from "@flamrdevs/ui/core/Badge.recipe.css.ts";
+import * as Recipes from "@flamrdevs/ui/core/.recipes.css.ts";
 
 import * as Icons from "@flamrdevs/ui/icons/shared.ts";
 
 import * as Classes from "../classes.ts";
 
-type BadgeProps = Classes.WithProps<JSX.IntrinsicElements["span"] & BadgeRecipe.Variants>;
+type BadgeProps = Classes.WithProps<JSX.IntrinsicElements["span"] & BadgeRecipe.Variants & Recipes.Color6Variants>;
 
 const Badge = (props: BadgeProps) => {
-	const [classes, recipe, rest] = splitProps(props, Classes.Keys, BadgeRecipe.RootKeys);
-	return <span {...rest} class={Classes.x(BadgeRecipe.Root(recipe), classes)} />;
+	const [classes, recipe, color, rest] = splitProps(props, Classes.Keys, BadgeRecipe.RootKeys, Recipes.Color6Keys);
+	return <span {...rest} class={Classes.x([BadgeRecipe.Root(recipe), Recipes.Color6(color)], classes)} />;
 };
 
 type IconProps = Omit<JSX.SvgSVGAttributes<SVGSVGElement>, keyof Icons.ComponentProps> & Icons.ComponentProps;
