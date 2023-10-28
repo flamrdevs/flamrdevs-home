@@ -28,6 +28,8 @@ const IndexPage = () => {
 
 					<div style="flex-grow: 1;"></div>
 
+					<Separator orientation="vertical" class={separatorvertical} />
+
 					<IconButton onClick={toggleTheme}>
 						<Show when={theme() === "dark"} fallback={<Icon i="Moon" />}>
 							<Icon i="Sun" />
