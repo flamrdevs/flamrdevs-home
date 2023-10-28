@@ -1,12 +1,12 @@
 import { globalStyle } from "@vanilla-extract/css";
 
-import { HOST } from "@flamrdevs/utils/exports";
+import { HOST } from "@flamrdevs/utils/exports.ts";
 
-import { SANS } from "./fonts";
+import { SANS } from "./fonts/index.ts";
 
-import { ColorsContract } from "./contract.css";
-import * as COLORS from "./colors";
-import * as vars from "./variables.css";
+import { ColorsContract } from "./contract.css.ts";
+import * as COLORS from "./colors/index.ts";
+import * as vars from "./variables.css.ts";
 
 globalStyle(":root", {
 	vars: {

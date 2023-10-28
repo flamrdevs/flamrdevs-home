@@ -1,4 +1,6 @@
 {
+	"javascript.preferences.importModuleSpecifierEnding": "js",
+	"typescript.preferences.importModuleSpecifierEnding": "js",
 	"files.associations": {
 		"*.mdx": "markdown"
 	},

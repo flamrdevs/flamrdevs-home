@@ -1,7 +1,7 @@
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import * as FONTS from "./../styles/fonts";
+import * as FONTS from "./../styles/fonts/index.ts";
 
 type TypographyVariants = Exclude<RecipeVariants<typeof Typography>, undefined>;
 

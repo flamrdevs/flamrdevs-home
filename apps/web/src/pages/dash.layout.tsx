@@ -1,7 +1,7 @@
-import { Outlet } from "@flamrdevs/x-solid/modules/router";
+import { Outlet } from "@flamrdevs/x-solid/modules/router.ts";
 
-import { Box, Flex, Separator, Text } from "~/components/core";
-import { ButtonLink } from "~/components/router";
+import { Box, Flex, Separator, Text } from "~/components/core.ts";
+import { ButtonLink } from "~/components/router.ts";
 
 import * as DASHCSS from "~/styles/pages/dash.css";
 

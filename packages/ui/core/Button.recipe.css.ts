@@ -1,11 +1,11 @@
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import * as styles from "./../styles/styles.css";
-import * as tokens from "./../styles/tokens";
-import * as vars from "./../styles/variables.css";
+import * as styles from "./../styles/styles.css.ts";
+import * as tokens from "./../styles/tokens.ts";
+import * as vars from "./../styles/variables.css.ts";
 
-import * as Recipes from "./.recipes.css";
+import * as Recipes from "./.recipes.css.ts";
 
 type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
 

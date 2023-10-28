@@ -50,4 +50,9 @@ export default {
 		},
 	],
 	server: { host: true, port: 3000 },
+	vite: {
+		ssr: {
+			noExternal: ["@kobalte/core"],
+		},
+	},
 } as AstroUserConfig;

@@ -1,4 +1,4 @@
-import { Box, Text } from "~/components/core";
+import { Box, Text } from "~/components/core.ts";
 
 const DashIndexPage = () => {
 	return (

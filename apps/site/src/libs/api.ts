@@ -1,4 +1,4 @@
-import { HOST } from "@flamrdevs/utils/exports";
+import { HOST } from "@flamrdevs/utils/exports.ts";
 
 type Tag =
 	| "api"

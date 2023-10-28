@@ -1,6 +1,6 @@
-import { THEME, THEME_KEY, THEME_DEFAULT, setDocumentThemeAttribute } from "@flamrdevs/ui/styles/utils";
-import type { Theme } from "@flamrdevs/ui/styles/types";
-import { ixstoragest, ixbroadcastr } from "@flamrdevs/x/modules/ix";
+import { THEME, THEME_KEY, THEME_DEFAULT, setDocumentThemeAttribute } from "@flamrdevs/ui/styles/utils.ts";
+import type { Theme } from "@flamrdevs/ui/styles/types.ts";
+import { ixstoragest, ixbroadcastr } from "@flamrdevs/x/modules/ix.ts";
 
 const ThemeBroadcastChannel = ixbroadcastr<Theme>(THEME_KEY);
 

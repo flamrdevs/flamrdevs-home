@@ -3,9 +3,10 @@ import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
-import { HOST } from "@flamrdevs/utils/exports";
+import { HOST } from "@flamrdevs/utils/exports.ts";
 
-import { Box, Container, HTMLX } from "~/components/core";
+import { HTMLX } from "~/components/index.ts";
+import { Box, Container } from "~/components/core.ts";
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const collection = await getCollection("blog");

@@ -1,7 +1,7 @@
 import { Suspense } from "solid-js";
 
-import Router from "~/Router";
-import Routes from "~/Routes";
+import Router from "~/Router.tsx";
+import Routes from "~/Routes.tsx";
 
 const App = () => {
 	return (

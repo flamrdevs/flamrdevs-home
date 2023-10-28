@@ -1,8 +1,9 @@
 ---
-import { LINK } from "@flamrdevs/const/exports";
+import { LINK } from "@flamrdevs/const/exports.ts";
 
-import { Center, Container, HTMLX, Icon, IconButton, Separator, Text } from "~/components/core";
-import { AnimatedSVGLogo } from "~/components/flamrdevs";
+import { HTMLX } from "~/components/index.ts";
+import { Center, Container, Icon, IconButton, Separator, Text } from "~/components/core.ts";
+import { AnimatedSVGLogo } from "~/components/flamrdevs.ts";
 
 import { flamrdevssvg, separatorvertical } from "~/styles/pages/index.css";
 ---
@@ -38,8 +39,8 @@ import { flamrdevssvg, separatorvertical } from "~/styles/pages/index.css";
 </HTMLX>
 
 <script>
-	import { trackEvent } from "~/libs/aptabase";
-	import { changeTheme } from "~/stores/theme";
+	import { trackEvent } from "~/libs/aptabase.ts";
+	import { changeTheme } from "~/stores/theme.ts";
 
 	document.getElementById("light-theme-icon-button")!.addEventListener("click", () => {
 		changeTheme("light");

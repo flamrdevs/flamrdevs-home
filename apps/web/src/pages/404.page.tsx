@@ -1,5 +1,5 @@
-import { Center, Container, Flex, Separator, Text } from "~/components/core";
-import { ButtonLink } from "~/components/router";
+import { Center, Container, Flex, Separator, Text } from "~/components/core.ts";
+import { ButtonLink } from "~/components/router.ts";
 
 const NotFoundPage = () => {
 	return (

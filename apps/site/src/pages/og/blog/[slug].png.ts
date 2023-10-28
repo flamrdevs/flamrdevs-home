@@ -1,7 +1,7 @@
 import type { APIRoute, GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 
-import { og } from "~/libs/api";
+import { og } from "~/libs/api.ts";
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const collection = await getCollection("blog");

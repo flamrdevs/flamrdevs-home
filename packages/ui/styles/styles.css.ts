@@ -1,7 +1,7 @@
 import { style } from "@vanilla-extract/css";
 
-import { ColorsContract } from "./contract.css";
-import * as vars from "./variables.css";
+import { ColorsContract } from "./contract.css.ts";
+import * as vars from "./variables.css.ts";
 
 export const varsNeutral = style({
 	vars: {

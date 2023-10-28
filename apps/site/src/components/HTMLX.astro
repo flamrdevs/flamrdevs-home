@@ -3,7 +3,7 @@ import "@flamrdevs/ui/styles/globals.css";
 
 import ThemeScript from "@flamrdevs/ui-astro/core/ThemeScript.astro";
 
-import { HOST } from "@flamrdevs/utils/exports";
+import { HOST } from "@flamrdevs/utils/exports.ts";
 
 type Props = {
 	title?: string;
@@ -55,9 +55,9 @@ const { title = TITLE_DEFAULT, description = DESCRIPTION_DEFAULT, url = URL_DEFA
 	<body>
 		<slot />
 		<script>
-			import { initTheme } from "~/stores/theme";
+			import { initTheme } from "~/stores/theme.ts";
 
-			import * as dotenv from "~/dotenv";
+			import * as dotenv from "~/dotenv.ts";
 
 			console.log(dotenv.NAME);
 

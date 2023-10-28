@@ -1,6 +1,6 @@
 import { keyframes, style } from "@vanilla-extract/css";
 
-import { ColorsContract } from "./../styles/contract.css";
+import { ColorsContract } from "./../styles/contract.css.ts";
 
 const ToRight = keyframes({
 	"0%": {

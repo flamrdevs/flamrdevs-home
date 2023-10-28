@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import libs from "./libs";
+import libs from "./libs.ts";
 
 const create = () => {
 	const symbols: string[] = [];

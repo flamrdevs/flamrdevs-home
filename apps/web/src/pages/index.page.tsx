@@ -1,14 +1,14 @@
 import { Show } from "solid-js";
 
-import { LINK } from "@flamrdevs/const/exports";
+import { LINK } from "@flamrdevs/const/exports.ts";
 
-import { useStore } from "@flamrdevs/x-solid/libs/store";
+import { useStore } from "@flamrdevs/x-solid/libs/store.ts";
 
-import { Center, Container, Icon, IconButton, Separator, Text } from "~/components/core";
-import { AnimatedSVGLogo } from "~/components/flamrdevs";
-import { IconButtonLink } from "~/components/router";
+import { Center, Container, Icon, IconButton, Separator, Text } from "~/components/core.ts";
+import { AnimatedSVGLogo } from "~/components/flamrdevs.ts";
+import { IconButtonLink } from "~/components/router.ts";
 
-import { ThemeStore, toggleTheme } from "~/stores/theme";
+import { ThemeStore, toggleTheme } from "~/stores/theme.ts";
 
 import { flamrdevssvg, separatorvertical } from "~/styles/pages/index.css";
 

@@ -1,6 +1,6 @@
 import { createGlobalTheme, createGlobalThemeContract } from "@vanilla-extract/css";
 
-import * as COLORS from "./colors";
+import * as COLORS from "./colors/index.ts";
 
 const ColorsContract = createGlobalThemeContract({
 	neutral: {

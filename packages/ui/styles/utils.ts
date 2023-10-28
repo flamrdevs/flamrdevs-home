@@ -1,4 +1,4 @@
-import type { Theme } from "./types";
+import type { Theme } from "./types.ts";
 
 const THEME = ["dark", "light"] as const satisfies readonly Theme[];
 const THEME_KEY = "flamrdevs:theme";

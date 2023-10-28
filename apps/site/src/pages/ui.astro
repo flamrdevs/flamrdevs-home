@@ -1,7 +1,8 @@
 ---
-import { LINK } from "@flamrdevs/const/exports";
+import { LINK } from "@flamrdevs/const/exports.ts";
 
-import { Badge, Box, Button, Container, Flex, HTMLX, Icon, IconButton, Link, Loader, Separator, Text } from "~/components/core";
+import { HTMLX } from "~/components/index.ts";
+import { Badge, Box, Button, Container, Flex, Icon, IconButton, Link, Loader, Separator, Text } from "~/components/core.ts";
 
 import * as UICSS from "~/styles/pages/ui.css";
 ---
@@ -433,7 +434,7 @@ import * as UICSS from "~/styles/pages/ui.css";
 </HTMLX>
 
 <script>
-	import { changeTheme } from "~/stores/theme";
+	import { changeTheme } from "~/stores/theme.ts";
 
 	document.getElementById("light-theme-icon-button")!.addEventListener("click", () => {
 		changeTheme("light");

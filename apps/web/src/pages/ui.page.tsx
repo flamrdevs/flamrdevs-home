@@ -1,13 +1,13 @@
 import { Show } from "solid-js";
 
-import { LINK } from "@flamrdevs/const/exports";
+import { LINK } from "@flamrdevs/const/exports.ts";
 
-import { useStore } from "@flamrdevs/x-solid/libs/store";
+import { useStore } from "@flamrdevs/x-solid/libs/store.ts";
 
-import { Badge, Box, Button, Container, Flex, Icon, IconButton, Link, Loader, Separator, Text } from "~/components/core";
-import { ButtonLink, IconButtonLink } from "~/components/router";
+import { Badge, Box, Button, Container, Flex, Icon, IconButton, Link, Loader, Separator, Text } from "~/components/core.ts";
+import { ButtonLink, IconButtonLink } from "~/components/router.ts";
 
-import { ThemeStore, toggleTheme } from "~/stores/theme";
+import { ThemeStore, toggleTheme } from "~/stores/theme.ts";
 
 import * as UICSS from "~/styles/pages/ui.css";
 

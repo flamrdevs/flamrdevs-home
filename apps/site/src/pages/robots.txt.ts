@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 
-import { HOST } from "@flamrdevs/utils/exports";
+import { HOST } from "@flamrdevs/utils/exports.ts";
 
 export const GET: APIRoute = () => {
 	return new Response(

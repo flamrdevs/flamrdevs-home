@@ -2,7 +2,7 @@ import { keyframes, style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
 
-import { ColorsContract } from "./../styles/contract.css";
+import { ColorsContract } from "./../styles/contract.css.ts";
 
 type Variants = Exclude<RecipeVariants<typeof Root>, undefined>;
 

@@ -1,1 +1,1 @@
-export { integration, default } from "@flamrdevs/x-solid/libs/router/PathRouter";
+export { integration, default } from "@flamrdevs/x-solid/libs/router/PathRouter.tsx";

@@ -1,6 +1,6 @@
 import { lazy } from "solid-js";
 
-import { Route, Routes } from "@flamrdevs/x-solid/modules/router";
+import { Route, Routes } from "@flamrdevs/x-solid/modules/router.ts";
 
 const IndexPage = lazy(() => import("~/pages/index.page"));
 const DashLayout = lazy(() => import("~/pages/dash.layout"));

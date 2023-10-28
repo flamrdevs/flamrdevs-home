@@ -1,9 +1,10 @@
 ---
 import type { GetStaticPaths } from "astro";
 
-import { Box, Container, HTMLX, Text } from "~/components/core";
+import { HTMLX } from "~/components/index.ts";
+import { Box, Container, Text } from "~/components/core.ts";
 
-import * as api from "~/libs/api";
+import * as api from "~/libs/api.ts";
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const projects = await api.projects.find();

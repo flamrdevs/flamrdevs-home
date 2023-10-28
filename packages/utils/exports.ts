@@ -1,1 +1,1 @@
-export * as HOST from "./host";
+export * as HOST from "./host.ts";

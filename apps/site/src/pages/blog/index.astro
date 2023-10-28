@@ -1,7 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 
-import { Box, Container, HTMLX, Text } from "~/components/core";
+import { HTMLX } from "~/components/index.ts";
+import { Box, Container, Text } from "~/components/core.ts";
 
 const collection = await getCollection("blog");
 ---

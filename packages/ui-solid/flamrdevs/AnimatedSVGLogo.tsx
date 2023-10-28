@@ -1,26 +1,24 @@
 import { mergeProps, splitProps } from "solid-js";
 import type { JSX } from "solid-js";
 
-import * as CSS from "@flamrdevs/ui/flamrdevs/AnimatedSVGLogo.css";
+import * as CSS from "@flamrdevs/ui/flamrdevs/AnimatedSVGLogo.css.ts";
 
-import { ClassesKeys, classex } from "./../classes";
+import * as Classes from "../classes.ts";
 
-type FLAMRDEVS_SVGProps = JSX.IntrinsicElements["svg"] & {
+type AnimatedSVGLogoProps = JSX.IntrinsicElements["svg"] & {
 	size?: number;
 };
 
-const defaultProps: FLAMRDEVS_SVGProps = {
+const defaultProps: AnimatedSVGLogoProps = {
 	size: 500,
 };
 
-const FLAMRDEVS_SVG = (props: FLAMRDEVS_SVGProps) => {
+const AnimatedSVGLogo = (props: AnimatedSVGLogoProps) => {
 	props = mergeProps(defaultProps, props);
-	const [classes, local, rest] = splitProps(props, ClassesKeys, ["size"]);
-
-	const className = () => classex(CSS.Root, classes);
+	const [classes, local, rest] = splitProps(props, Classes.Keys, ["size"]);
 
 	return (
-		<svg {...rest} class={className()} width={local.size} height={local.size} viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg {...rest} class={Classes.x(CSS.Root, classes)} width={local.size} height={local.size} viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path class={CSS.Filled} d="M188.809 432.401L71.7813 402.929L692.158 47.1566L614.238 216.952L188.809 432.401Z"></path>
 			<path
 				class={CSS.Filled}
@@ -39,5 +37,5 @@ const FLAMRDEVS_SVG = (props: FLAMRDEVS_SVGProps) => {
 	);
 };
 
-export type { FLAMRDEVS_SVGProps };
-export default FLAMRDEVS_SVG;
+export type { AnimatedSVGLogoProps };
+export default AnimatedSVGLogo;

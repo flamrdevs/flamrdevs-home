@@ -1,6 +1,6 @@
 import { style } from "@vanilla-extract/css";
 
-import { ColorsContract } from "./../styles/contract.css";
+import { ColorsContract } from "./../styles/contract.css.ts";
 
 const Root = style({
 	color: ColorsContract.info[9],
