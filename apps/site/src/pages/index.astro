@@ -5,7 +5,7 @@ import { HTMLX } from "~/components/index.ts";
 import { Center, Container, Icon, IconButton, Separator, Text } from "~/components/core.ts";
 import { AnimatedSVGLogo } from "~/components/flamrdevs.ts";
 
-import { flamrdevssvg, separatorvertical } from "~/styles/pages/index.css";
+import { flamrdevssvg } from "~/styles/pages/index.css";
 ---
 
 <HTMLX>
@@ -20,7 +20,7 @@ import { flamrdevssvg, separatorvertical } from "~/styles/pages/index.css";
 
 			<div style="flex-grow: 1;"></div>
 
-			<Separator orientation="vertical" class={separatorvertical} />
+			<Separator orientation="vertical" style="height: 1.5rem" />
 
 			<IconButton id="light-theme-icon-button">
 				<Icon i="Sun" />
@@ -30,7 +30,7 @@ import { flamrdevssvg, separatorvertical } from "~/styles/pages/index.css";
 				<Icon i="Moon" />
 			</IconButton>
 
-			<Separator orientation="vertical" class={separatorvertical} />
+			<Separator orientation="vertical" style="height: 1.5rem" />
 
 			<IconButton as="a" id="github-icon-button" href={LINK.GITHUB} target="_blank">
 				<Icon i="Github" />

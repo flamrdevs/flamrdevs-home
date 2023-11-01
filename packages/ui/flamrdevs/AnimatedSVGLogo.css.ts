@@ -1,6 +1,6 @@
 import { keyframes, style } from "@vanilla-extract/css";
 
-import { ColorsContract } from "./../styles/contract.css.ts";
+import * as contract from "./../styles/contract.css.ts";
 
 const ToRight = keyframes({
 	"0%": {
@@ -27,13 +27,13 @@ const Root = style({
 const Filled = style({
 	strokeDasharray: 270,
 	strokeDashoffset: 270,
-	fill: ColorsContract.neutral[12],
+	fill: contract.colors.cn[12],
 });
 
 const StrokeLeft = style({
 	strokeDasharray: 270,
 	strokeDashoffset: 270,
-	stroke: ColorsContract.neutral[1],
+	stroke: contract.colors.cn[1],
 	strokeWidth: 1.5,
 	animation: `${ToLeft} 8000ms infinite ease-in-out`,
 	transition: "stroke 100ms",
@@ -42,7 +42,7 @@ const StrokeLeft = style({
 const StrokeRight = style({
 	strokeDasharray: 270,
 	strokeDashoffset: 270,
-	stroke: ColorsContract.neutral[12],
+	stroke: contract.colors.cn[12],
 	strokeWidth: 1.5,
 	animation: `${ToRight} 4000ms infinite ease-in-out`,
 	transition: "stroke 100ms",

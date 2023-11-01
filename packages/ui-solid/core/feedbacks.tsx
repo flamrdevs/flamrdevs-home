@@ -1,23 +1,24 @@
 import { splitProps } from "solid-js";
 import type { JSX } from "solid-js";
 
-import * as LoaderRecipe from "@flamrdevs/ui/core/Loader.recipe.css.ts";
-import * as Recipes from "@flamrdevs/ui/core/.recipes.css.ts";
+import * as LoaderKlass from "@flamrdevs/ui/core/Loader.klass.ts";
+import * as klass from "@flamrdevs/ui/core/_klass.ts";
 
 import * as Classes from "../classes.ts";
 
-type LoaderProps = Classes.WithProps<JSX.IntrinsicElements["svg"] & LoaderRecipe.Variants & Recipes.Color2Variants>;
+type LoaderProps = Classes.WithProps<JSX.IntrinsicElements["svg"] & LoaderKlass.Variants & klass.Color6Variants>;
 
 const Loader = (props: LoaderProps) => {
-	const [classes, recipe, color, rest] = splitProps(props, Classes.Keys, LoaderRecipe.RootKeys, Recipes.Color2Keys);
+	const [classes, root, color, rest] = splitProps(props, Classes.Keys, LoaderKlass.Root.vk, klass.Color6.vk);
 
 	return (
-		<svg {...rest} class={Classes.x([LoaderRecipe.Root(recipe), Recipes.Color2(color)], classes)} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-			<g class={LoaderRecipe.G}>
-				<circle class={LoaderRecipe.Circle} cx="12" cy="12" r="9.5" fill="none" stroke-width="2" />
+		<svg {...rest} class={Classes.x([LoaderKlass.Root(root), klass.Color6(color)], classes)} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			<g class={LoaderKlass.GStyle}>
+				<circle class={LoaderKlass.CircleStyle} cx="12" cy="12" r="9.5" fill="none" stroke-width="2" />
 			</g>
 		</svg>
 	);
 };
 
+export type { LoaderProps };
 export { Loader };

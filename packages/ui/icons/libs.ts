@@ -1,6 +1,7 @@
-import { Github, Moon, Sun } from "lucide";
+import { Check, Github, Moon, Sun } from "lucide";
 
 const libs = {
+	Check,
 	Github,
 	Moon,
 	Sun,

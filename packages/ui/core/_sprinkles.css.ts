@@ -20,7 +20,7 @@ const CONDITIONS = {
 const DEFAULTCONDITION = "__" satisfies keyof typeof CONDITIONS;
 
 const SPACE = {
-	"0": 0,
+	"0": "0",
 	"1": "0.25rem",
 	"2": "0.5rem",
 	"3": "0.75rem",
@@ -29,12 +29,6 @@ const SPACE = {
 	"6": "1.5rem",
 	"7": "1.75rem",
 	"8": "2rem",
-	"9": "2.25rem",
-	"10": "2.5rem",
-	"11": "2.75rem",
-	"12": "3rem",
-	"14": "3.5rem",
-	"16": "4rem",
 };
 
 type LayoutVariants = Parameters<typeof Layout>[0];
@@ -87,10 +81,10 @@ const PositionProperties = defineProperties({
 			rel: "relative",
 			abs: "absolute",
 			fix: "fixed",
-			stc: "static",
 			sty: "sticky",
 		},
 		zIndex: {
+			"-1": -10,
 			"0": 0,
 			"1": 10,
 			"2": 20,

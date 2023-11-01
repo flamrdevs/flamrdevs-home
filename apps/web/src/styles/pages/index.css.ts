@@ -1,6 +1,6 @@
 import { style } from "@vanilla-extract/css";
 
-import { SCREEN } from "@flamrdevs/ui/core/.sprinkles.css.ts";
+import { SCREEN } from "@flamrdevs/ui/core/_sprinkles.css.ts";
 
 const flamrdevssvg = style({
 	width: "10rem",
@@ -30,8 +30,4 @@ const flamrdevssvg = style({
 	},
 });
 
-const separatorvertical = style({
-	height: "1.5rem !important",
-});
-
-export { flamrdevssvg, separatorvertical };
+export { flamrdevssvg };

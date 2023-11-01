@@ -1,30 +1,35 @@
 import { style } from "@vanilla-extract/css";
 
-import { ColorsContract } from "./../styles/contract.css.ts";
+import * as contract from "./../styles/contract.css.ts";
+import * as tokens from "./../styles/tokens.ts";
 
-const Root = style({
-	color: ColorsContract.info[9],
-	fontWeight: 600,
-	outline: "1px solid transparent",
-	outlineOffset: 1,
-	padding: 1,
-	borderRadius: "0.25rem",
+import * as SharedStyle from "./_shared.style.css.ts";
 
-	":hover": {
-		textDecorationLine: "underline",
-	},
+const Root = style([
+	{
+		...tokens.p_px,
+		...tokens.text_ci_9,
+		...tokens.font_w6,
+		...tokens.outline_offset_1,
+		...tokens.rounded_4,
 
-	":focus-visible": {
-		outlineColor: ColorsContract.info[10],
-	},
+		":hover": {
+			textDecorationLine: "underline",
+		},
 
-	selectors: {
-		"&[data-disabled]": {
-			opacity: 0.7,
-			textDecorationLine: "none",
-			cursor: "not-allowed",
+		":focus-visible": {
+			outlineColor: contract.colors.ci[10],
+		},
+
+		selectors: {
+			"&[data-disabled]": {
+				textDecorationLine: "none",
+				...tokens.cursor_not_allowed,
+				...tokens.text_ci_8,
+			},
 		},
 	},
-});
+	SharedStyle.Outline1pxSolidTransparent,
+]);
 
 export { Root };

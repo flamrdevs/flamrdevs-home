@@ -10,7 +10,7 @@ import { IconButtonLink } from "~/components/router.ts";
 
 import { ThemeStore, toggleTheme } from "~/stores/theme.ts";
 
-import { flamrdevssvg, separatorvertical } from "~/styles/pages/index.css";
+import { flamrdevssvg } from "~/styles/pages/index.css";
 
 const IndexPage = () => {
 	const theme = useStore(ThemeStore);
@@ -28,7 +28,7 @@ const IndexPage = () => {
 
 					<div style="flex-grow: 1;"></div>
 
-					<Separator orientation="vertical" class={separatorvertical} />
+					<Separator orientation="vertical" style="height: 1.5rem" />
 
 					<IconButton onClick={toggleTheme}>
 						<Show when={theme() === "dark"} fallback={<Icon i="Moon" />}>
@@ -36,7 +36,7 @@ const IndexPage = () => {
 						</Show>
 					</IconButton>
 
-					<Separator orientation="vertical" class={separatorvertical} />
+					<Separator orientation="vertical" style="height: 1.5rem" />
 
 					<IconButtonLink href={LINK.GITHUB} target="_blank">
 						<Icon i="Github" />

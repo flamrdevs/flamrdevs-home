@@ -1,0 +1,111 @@
+import { style } from "@vanilla-extract/css";
+
+import * as tokens from "@flamrdevs/ui/styles/tokens.ts";
+
+export const SectionBlockRoot = style({
+	...tokens.h_60,
+	...tokens.border_1,
+	...tokens.border_solid,
+	...tokens.border_cn_6,
+	...tokens.rounded_16,
+});
+
+export const SectionBlockLeft = style({
+	...tokens.flex_grow,
+	...tokens.w_auto,
+	...tokens.overflow_hidden,
+});
+
+export const SectionBlockRight = style({
+	...tokens.flex_shrink_0,
+	...tokens.w_60,
+	...tokens.h_full,
+	...tokens.overflow_auto,
+});
+
+export const colors = [
+	[
+		style(tokens.bg_cn_1),
+		style(tokens.bg_cn_2),
+		style(tokens.bg_cn_3),
+		style(tokens.bg_cn_4),
+		style(tokens.bg_cn_5),
+		style(tokens.bg_cn_6),
+		style(tokens.bg_cn_7),
+		style(tokens.bg_cn_8),
+		style(tokens.bg_cn_9),
+		style(tokens.bg_cn_10),
+		style(tokens.bg_cn_11),
+		style(tokens.bg_cn_12),
+	],
+	[
+		style(tokens.bg_cp_1),
+		style(tokens.bg_cp_2),
+		style(tokens.bg_cp_3),
+		style(tokens.bg_cp_4),
+		style(tokens.bg_cp_5),
+		style(tokens.bg_cp_6),
+		style(tokens.bg_cp_7),
+		style(tokens.bg_cp_8),
+		style(tokens.bg_cp_9),
+		style(tokens.bg_cp_10),
+		style(tokens.bg_cp_11),
+		style(tokens.bg_cp_12),
+	],
+	[
+		style(tokens.bg_cs_1),
+		style(tokens.bg_cs_2),
+		style(tokens.bg_cs_3),
+		style(tokens.bg_cs_4),
+		style(tokens.bg_cs_5),
+		style(tokens.bg_cs_6),
+		style(tokens.bg_cs_7),
+		style(tokens.bg_cs_8),
+		style(tokens.bg_cs_9),
+		style(tokens.bg_cs_10),
+		style(tokens.bg_cs_11),
+		style(tokens.bg_cs_12),
+	],
+	[
+		style(tokens.bg_ci_1),
+		style(tokens.bg_ci_2),
+		style(tokens.bg_ci_3),
+		style(tokens.bg_ci_4),
+		style(tokens.bg_ci_5),
+		style(tokens.bg_ci_6),
+		style(tokens.bg_ci_7),
+		style(tokens.bg_ci_8),
+		style(tokens.bg_ci_9),
+		style(tokens.bg_ci_10),
+		style(tokens.bg_ci_11),
+		style(tokens.bg_ci_12),
+	],
+	[
+		style(tokens.bg_cw_1),
+		style(tokens.bg_cw_2),
+		style(tokens.bg_cw_3),
+		style(tokens.bg_cw_4),
+		style(tokens.bg_cw_5),
+		style(tokens.bg_cw_6),
+		style(tokens.bg_cw_7),
+		style(tokens.bg_cw_8),
+		style(tokens.bg_cw_9),
+		style(tokens.bg_cw_10),
+		style(tokens.bg_cw_11),
+		style(tokens.bg_cw_12),
+	],
+	[
+		style(tokens.bg_cd_1),
+		style(tokens.bg_cd_2),
+		style(tokens.bg_cd_3),
+		style(tokens.bg_cd_4),
+		style(tokens.bg_cd_5),
+		style(tokens.bg_cd_6),
+		style(tokens.bg_cd_7),
+		style(tokens.bg_cd_8),
+		style(tokens.bg_cd_9),
+		style(tokens.bg_cd_10),
+		style(tokens.bg_cd_11),
+		style(tokens.bg_cd_12),
+	],
+];

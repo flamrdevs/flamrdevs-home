@@ -17,7 +17,6 @@ export const xpg = createVar("--xpg");
 export const xbg = createVar("--xbg");
 
 export const filter_noise_svg = createVar("--filter-noise-svg");
-export const default_filter_noise_background = createVar("--default-filter-noise-background");
 
 export const l_lg_deg = createVar("--l-lg-deg");
 export const l_mb = createVar("--l-mb");
