@@ -10,6 +10,9 @@
 		},
 		"preview": {
 			"cache": false
+		},
+		"test": {
+			"cache": true
 		}
 	}
 }
