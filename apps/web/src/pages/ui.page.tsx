@@ -6,7 +6,7 @@ import { Box, Container, Flex, Icon, IconButton, Separator } from "~/components/
 
 import { ThemeStore, toggleTheme } from "~/stores/theme.ts";
 
-import Section from "./_ui/Section.tsx";
+import Sections from "./_ui/Sections.tsx";
 
 const ToggleThemeIconButton = () => {
 	const theme = useStore(ThemeStore);
@@ -32,7 +32,7 @@ const UICorePage = () => {
 			</Container>
 
 			<Container max="lg" p="4">
-				<Section />
+				<Sections />
 			</Container>
 		</>
 	);
