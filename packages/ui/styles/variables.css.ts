@@ -1,17 +1,17 @@
 import { createVar } from "@vanilla-extract/css";
 
-export const v_a_1 = createVar("--v-a-1");
-export const v_a_2 = createVar("--v-a-2");
-export const v_a_3 = createVar("--v-a-3");
-export const v_a_4 = createVar("--v-a-4");
-export const v_a_5 = createVar("--v-a-5");
-export const v_a_6 = createVar("--v-a-6");
-export const v_a_7 = createVar("--v-a-7");
-export const v_a_8 = createVar("--v-a-8");
-export const v_a_9 = createVar("--v-a-9");
-export const v_a_10 = createVar("--v-a-10");
-export const v_a_11 = createVar("--v-a-11");
-export const v_a_12 = createVar("--v-a-12");
+export const va_1 = createVar("--va-1");
+export const va_2 = createVar("--va-2");
+export const va_3 = createVar("--va-3");
+export const va_4 = createVar("--va-4");
+export const va_5 = createVar("--va-5");
+export const va_6 = createVar("--va-6");
+export const va_7 = createVar("--va-7");
+export const va_8 = createVar("--va-8");
+export const va_9 = createVar("--va-9");
+export const va_10 = createVar("--va-10");
+export const va_11 = createVar("--va-11");
+export const va_12 = createVar("--va-12");
 
 export const xpg = createVar("--xpg");
 export const xbg = createVar("--xbg");

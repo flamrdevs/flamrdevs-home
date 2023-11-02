@@ -9,8 +9,8 @@ import * as SharedStyle from "./_shared.style.css.ts";
 export const Root_base = style([
 	{
 		vars: {
-			[vars.xpg]: `${vars.v_a_3}, ${vars.v_a_2}`,
-			[vars.xbg]: `${vars.v_a_9}, ${vars.v_a_6}`,
+			[vars.xpg]: `${vars.va_3}, ${vars.va_2}`,
+			[vars.xbg]: `${vars.va_9}, ${vars.va_6}`,
 		},
 		...tokens.inline_flex,
 		...tokens.relative,

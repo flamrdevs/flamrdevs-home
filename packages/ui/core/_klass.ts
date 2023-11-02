@@ -5,42 +5,54 @@ import * as styles from "./../styles/styles.css.ts";
 
 import * as _styles from "./_klass.styles.css.ts";
 
+const __variants = "variants";
+const __defaultVariants = "defaultVariants";
+
+const __color = "color";
+
+const __neutral = "neutral";
+const __primary = "primary";
+const __success = "success";
+const __info = "info";
+const __warning = "warning";
+const __danger = "danger";
+
 const DEFAULT_COLORS_VARIANTS = {
-	color: "neutral",
+	[__color]: __neutral,
 } as const;
 
 type Color2Variants = VariantsOf<typeof Color2>;
 
 const Color2 = klass({
-	variants: {
-		color: {
-			neutral: styles.varsNeutral,
-			primary: styles.varsPrimary,
+	[__variants]: {
+		[__color]: {
+			[__neutral]: styles.varsNeutral,
+			[__primary]: styles.varsPrimary,
 		},
 	},
-	defaultVariants: DEFAULT_COLORS_VARIANTS,
+	[__defaultVariants]: DEFAULT_COLORS_VARIANTS,
 });
 
 type Color6Variants = VariantsOf<typeof Color6>;
 
 const Color6 = klass({
-	variants: {
-		color: {
-			neutral: styles.varsNeutral,
-			primary: styles.varsPrimary,
-			success: styles.varsSuccess,
-			info: styles.varsInfo,
-			warning: styles.varsWarning,
-			danger: styles.varsDanger,
+	[__variants]: {
+		[__color]: {
+			[__neutral]: styles.varsNeutral,
+			[__primary]: styles.varsPrimary,
+			[__success]: styles.varsSuccess,
+			[__info]: styles.varsInfo,
+			[__warning]: styles.varsWarning,
+			[__danger]: styles.varsDanger,
 		},
 	},
-	defaultVariants: DEFAULT_COLORS_VARIANTS,
+	[__defaultVariants]: DEFAULT_COLORS_VARIANTS,
 });
 
 type TypographyVariants = VariantsOf<typeof Typography>;
 
 const Typography = klass({
-	variants: {
+	[__variants]: {
 		ff: {
 			sans: _styles.Typography_variants_ff_font_sans,
 			mono: _styles.Typography_variants_ff_font_mono,

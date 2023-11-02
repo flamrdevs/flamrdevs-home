@@ -35,8 +35,8 @@ const Control = style([
 		selectors: {
 			"&[data-checked]": {
 				vars: {
-					[vars.xpg]: `${vars.v_a_9}, ${vars.v_a_8}`,
-					[vars.xbg]: `${vars.v_a_11}, ${vars.v_a_10}, ${vars.v_a_9}`,
+					[vars.xpg]: `${vars.va_9}, ${vars.va_8}`,
+					[vars.xbg]: `${vars.va_11}, ${vars.va_10}, ${vars.va_9}`,
 				},
 			},
 
@@ -58,7 +58,7 @@ globalStyle(`${Input}:focus-visible + ${Control}`, {
 });
 
 globalStyle(`${Input}:focus-visible + ${Control}[data-checked]`, {
-	outlineColor: vars.v_a_11,
+	outlineColor: vars.va_11,
 });
 
 const Thumb = style({

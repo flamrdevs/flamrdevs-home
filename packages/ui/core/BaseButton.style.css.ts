@@ -10,8 +10,8 @@ import * as SharedStyle from "./_shared.style.css.ts";
 const Root = style([
 	{
 		vars: {
-			[vars.xpg]: `${vars.v_a_3}, ${vars.v_a_2}`,
-			[vars.xbg]: `${vars.v_a_9}, ${vars.v_a_7}, ${vars.v_a_6}`,
+			[vars.xpg]: `${vars.va_3}, ${vars.va_2}`,
+			[vars.xbg]: `${vars.va_9}, ${vars.va_7}, ${vars.va_6}`,
 		},
 		...tokens.inline_flex,
 		...tokens.relative,
@@ -26,19 +26,19 @@ const Root = style([
 
 		":hover": {
 			vars: {
-				[vars.xpg]: `${vars.v_a_4}, ${vars.v_a_2}`,
-				[vars.xbg]: `${vars.v_a_10}, ${vars.v_a_8}, ${vars.v_a_7}`,
+				[vars.xpg]: `${vars.va_4}, ${vars.va_2}`,
+				[vars.xbg]: `${vars.va_10}, ${vars.va_8}, ${vars.va_7}`,
 			},
 		},
 
 		":focus-visible": {
-			outlineColor: vars.v_a_11,
+			outlineColor: vars.va_11,
 		},
 
 		":active": {
 			vars: {
-				[vars.xpg]: `${vars.v_a_5}, ${vars.v_a_3}`,
-				[vars.xbg]: `${vars.v_a_11}, ${vars.v_a_9}, ${vars.v_a_8}`,
+				[vars.xpg]: `${vars.va_5}, ${vars.va_3}`,
+				[vars.xbg]: `${vars.va_11}, ${vars.va_9}, ${vars.va_8}`,
 			},
 		},
 

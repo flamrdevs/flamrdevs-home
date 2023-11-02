@@ -3,7 +3,7 @@ import { keyframes, style } from "@vanilla-extract/css";
 import * as tokens from "./../styles/tokens.ts";
 import * as vars from "./../styles/variables.css.ts";
 
-export const Root_base = style({ stroke: vars.v_a_9 });
+export const Root_base = style({ stroke: vars.va_9 });
 
 export const Root_variants_size_sm = style({ ...tokens.w_8, ...tokens.h_8 });
 export const Root_variants_size_md = style({ ...tokens.w_10, ...tokens.h_10 });
