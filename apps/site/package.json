@@ -17,7 +17,7 @@
 		"@flamrdevs/x": "workspace:*",
 		"@flamrdevs/x-astro": "workspace:*",
 		"@flamrdevs/x-solid": "workspace:*",
-		"astro": "^3.4.2",
+		"astro": "^3.4.3",
 		"solid-js": "^1.8.4"
 	},
 	"devDependencies": {
@@ -25,6 +25,6 @@
 		"@astrojs/sitemap": "^3.0.3",
 		"@astrojs/solid-js": "^3.0.2",
 		"@flamrdevs/tsc": "workspace:*",
-		"astro-compress": "^2.2.2"
+		"astro-compress": "^2.2.3"
 	}
 }
