@@ -4,11 +4,10 @@ import type { GetStaticPaths } from "astro";
 import { HTMLX } from "~/components/index.ts";
 import { Box, Container, Text } from "~/components/core.ts";
 
-import * as api from "~/libs/api.ts";
+import projects from "~/libs/data/projects.ts";
+import type { IProject } from "~/libs/data/projects.ts";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const projects = await api.projects.find();
-
 	return projects.map((project) => ({
 		params: { slug: project.slug },
 		props: { project },
@@ -16,7 +15,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 type Props = {
-	project: api.IProject;
+	project: IProject;
 };
 
 const { name, description } = Astro.props.project;

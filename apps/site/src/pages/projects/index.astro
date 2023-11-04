@@ -2,9 +2,7 @@
 import { HTMLX } from "~/components/index.ts";
 import { Box, Container, Text } from "~/components/core.ts";
 
-import * as api from "~/libs/api.ts";
-
-const projects = await api.projects.find();
+import projects from "~/libs/data/projects.ts";
 ---
 
 <HTMLX title="projects" description="projects">

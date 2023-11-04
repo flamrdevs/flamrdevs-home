@@ -1,7 +1,7 @@
 import type { APIRoute, GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 
-import { og } from "~/libs/api.ts";
+import * as image from "~/libs/api/image.ts";
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const collection = await getCollection("blog");
@@ -13,7 +13,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const GET: APIRoute<{ title: string; subtitle: string }> = async ({ props }) => {
-	return new Response(await og.blog(props), {
+	return new Response(await image.og.blog(props), {
 		headers: {
 			"Content-Type": "image/png",
 		},
