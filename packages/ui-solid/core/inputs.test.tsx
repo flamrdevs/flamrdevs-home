@@ -1,21 +1,21 @@
 import { describe, expect, it } from "vitest";
 
-import { render } from "@solidjs/testing-library";
+import {} from "@solidjs/testing-library";
+
+import { renderRootElement } from "../test.utils.tsx";
 
 import { Checkbox, Switch } from "./inputs.tsx";
 
 describe("Checkbox", () => {
 	it("Basic", () => {
-		const { getByTestId } = render(() => <Checkbox data-testid="root" />);
-		const element = getByTestId("root");
+		const [element] = renderRootElement((props) => <Checkbox {...props} />);
 		expect(element.tagName).toEqual("DIV");
 	});
 });
 
 describe("Switch", () => {
 	it("Basic", () => {
-		const { getByTestId } = render(() => <Switch data-testid="root" />);
-		const element = getByTestId("root");
+		const [element] = renderRootElement((props) => <Switch {...props} />);
 		expect(element.tagName).toEqual("DIV");
 	});
 });

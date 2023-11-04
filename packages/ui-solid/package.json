@@ -25,6 +25,7 @@
 	"devDependencies": {
 		"@flamrdevs/tsc": "workspace:*",
 		"@solidjs/testing-library": "^0.8.4",
+		"@testing-library/jest-dom": "^6.1.4",
 		"jsdom": "^22.1.0",
 		"vite-plugin-solid": "^2.7.2",
 		"vitest": "^0.34.6"

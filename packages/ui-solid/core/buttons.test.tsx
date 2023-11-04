@@ -1,33 +1,45 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
-import { render } from "@solidjs/testing-library";
+import { fireEvent } from "@solidjs/testing-library";
+
+import { A, renderRootElement } from "../test.utils.tsx";
 
 import { Button, IconButton } from "./buttons.tsx";
 
 describe("Button", () => {
 	it("Basic", () => {
-		const { getByTestId } = render(() => <Button data-testid="root" />);
-		const element = getByTestId("root");
+		const [element] = renderRootElement((props) => <Button {...props} />);
 		expect(element.tagName).toEqual("BUTTON");
 	});
 
 	it("Polymorphic", () => {
-		const { getByTestId } = render(() => <Button as="a" data-testid="root" />);
-		const element = getByTestId("root");
+		const [element] = renderRootElement((props) => <Button as={A} {...props} />);
 		expect(element.tagName).toEqual("A");
+	});
+
+	it("Clicky", () => {
+		const handleClick = vi.fn();
+		const [element] = renderRootElement((props) => <Button {...props} onClick={handleClick} />);
+		fireEvent.click(element);
+		expect(handleClick).toHaveBeenCalledTimes(1);
 	});
 });
 
 describe("IconButton", () => {
 	it("Basic", () => {
-		const { getByTestId } = render(() => <IconButton data-testid="root" />);
-		const element = getByTestId("root");
+		const [element] = renderRootElement((props) => <IconButton {...props} />);
 		expect(element.tagName).toEqual("BUTTON");
 	});
 
 	it("Polymorphic", () => {
-		const { getByTestId } = render(() => <IconButton as="a" data-testid="root" />);
-		const element = getByTestId("root");
+		const [element] = renderRootElement((props) => <IconButton as={A} {...props} />);
 		expect(element.tagName).toEqual("A");
+	});
+
+	it("Clicky", () => {
+		const handleClick = vi.fn();
+		const [element] = renderRootElement((props) => <IconButton {...props} onClick={handleClick} />);
+		fireEvent.click(element);
+		expect(handleClick).toHaveBeenCalledTimes(1);
 	});
 });

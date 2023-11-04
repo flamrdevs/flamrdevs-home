@@ -4,11 +4,11 @@ import {} from "@solidjs/testing-library";
 
 import { renderRootElement } from "../test.utils.tsx";
 
-import { Loader } from "./feedbacks.tsx";
+import AnimatedSVGLogo from "./AnimatedSVGLogo.tsx";
 
-describe("Loader", () => {
+describe("AnimatedSVGLogo", () => {
 	it("Basic", () => {
-		const [element] = renderRootElement((props) => <Loader {...props} />);
+		const [element] = renderRootElement((props) => <AnimatedSVGLogo {...props} />);
 		expect(element.tagName).toEqual("svg");
 	});
 });

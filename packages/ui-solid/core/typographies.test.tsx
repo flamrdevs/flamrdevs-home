@@ -1,19 +1,19 @@
 import { describe, expect, it } from "vitest";
 
-import { render } from "@solidjs/testing-library";
+import {} from "@solidjs/testing-library";
+
+import { Span, renderRootElement } from "../test.utils.tsx";
 
 import { Text } from "./typographies.tsx";
 
 describe("Text", () => {
 	it("Basic", () => {
-		const { getByTestId } = render(() => <Text data-testid="root" />);
-		const element = getByTestId("root");
+		const [element] = renderRootElement((props) => <Text {...props} />);
 		expect(element.tagName).toEqual("DIV");
 	});
 
 	it("Polymorphic", () => {
-		const { getByTestId } = render(() => <Text as="span" data-testid="root" />);
-		const element = getByTestId("root");
+		const [element] = renderRootElement((props) => <Text as={Span} {...props} />);
 		expect(element.tagName).toEqual("SPAN");
 	});
 });
