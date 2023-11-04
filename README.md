@@ -4,6 +4,12 @@
 </picture>
 
 <div align="center">
+  <a title="home" href="https://flamrdevs.vercel.app">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/lucide?t=dark&i=home">
+      <img alt="home" src="https://flamrdevs.cyclic.app/core/icon-button/lucide?t=light&i=home" hspace="1">
+    </picture>
+  </a>
   <a title="github" href="https://github.com/flamrdevs">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/simple?t=dark&i=github">
@@ -41,29 +47,6 @@
     </picture>
   </a>
 </div>
-
-<div align="center">
-  <a title="website" href="https://flamrdevs.vercel.app">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/button?t=dark&v=website">
-      <img alt="website" src="https://flamrdevs.cyclic.app/core/button?t=light&v=website" hspace="1">
-    </picture>
-  </a>
-</div>
-
-<h2 id="table-of-contents">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/icon/lucide?t=dark&i=code">
-    <img alt="lucide code" src="https://flamrdevs.cyclic.app/icon/lucide?t=light&i=code" hspace="1">
-  </picture>
-  <span>
-    Table of Contents
-  </span>
-</h2>
-
-- [Table of Contents](#table-of-contents)
-- [Tech Stacks](#tech-stacks)
-- [License](#license)
 
 <h2 id="tech-stacks">
   <picture>
