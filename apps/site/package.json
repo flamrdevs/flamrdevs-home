@@ -17,7 +17,7 @@
 		"@flamrdevs/x": "workspace:*",
 		"@flamrdevs/x-astro": "workspace:*",
 		"@flamrdevs/x-solid": "workspace:*",
-		"astro": "^3.4.3",
+		"astro": "^3.4.4",
 		"solid-js": "^1.8.4"
 	},
 	"devDependencies": {
