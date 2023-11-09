@@ -153,4 +153,4 @@ const projects: IProject[] = [
 ];
 
 export type { IProject };
-export default projects;
+export default projects.slice(0, 1);
