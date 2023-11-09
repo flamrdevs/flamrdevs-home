@@ -2,9 +2,9 @@ import { splitProps } from "solid-js";
 
 import { Button as KobalteButton } from "@kobalte/core";
 
-import * as ButtonKlass from "@flamrdevs/ui/core/Button.klass.ts";
-import * as IconButtonKlass from "@flamrdevs/ui/core/IconButton.klass.ts";
-import * as klass from "@flamrdevs/ui/core/_klass.ts";
+import * as ButtonKlass from "@flamrdevs/ui/core/Button/klass.ts";
+import * as IconButtonKlass from "@flamrdevs/ui/core/IconButton/klass.ts";
+import * as klass from "@flamrdevs/ui/core/_/klass.ts";
 
 import * as Classes from "../classes.ts";
 import * as Polymorphic from "../polymorphic.ts";

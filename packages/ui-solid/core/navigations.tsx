@@ -2,7 +2,7 @@ import { splitProps } from "solid-js";
 
 import { Link as KobalteLink } from "@kobalte/core";
 
-import * as LinkStyle from "@flamrdevs/ui/core/Link.style.css.ts";
+import * as LinkStyle from "@flamrdevs/ui/core/Link/style.css.ts";
 
 import * as Classes from "../classes.ts";
 import * as Polymorphic from "../polymorphic.ts";

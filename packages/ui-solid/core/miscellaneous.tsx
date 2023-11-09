@@ -3,7 +3,7 @@ import type { JSX } from "solid-js";
 
 import { Separator as KobalteSeparator } from "@kobalte/core";
 
-import * as SeparatorKlass from "@flamrdevs/ui/core/Separator.klass.ts";
+import * as SeparatorKlass from "@flamrdevs/ui/core/Separator/klass.ts";
 
 import * as Classes from "../classes.ts";
 import * as Polymorphic from "../polymorphic.ts";

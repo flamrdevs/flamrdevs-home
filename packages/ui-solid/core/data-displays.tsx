@@ -3,11 +3,11 @@ import type { JSX } from "solid-js";
 
 import { Image as KobalteImage, Progress as KobalteProgress } from "@kobalte/core";
 
-import * as BadgeKlass from "@flamrdevs/ui/core/Badge.klass.ts";
-import * as ImageStyle from "@flamrdevs/ui/core/Image.style.css.ts";
-import * as KbdStyle from "@flamrdevs/ui/core/Kbd.style.css.ts";
-import * as ProgressStyle from "@flamrdevs/ui/core/Progress.style.css.ts";
-import * as klass from "@flamrdevs/ui/core/_klass.ts";
+import * as BadgeKlass from "@flamrdevs/ui/core/Badge/klass.ts";
+import * as ImageStyle from "@flamrdevs/ui/core/Image/style.css.ts";
+import * as KbdStyle from "@flamrdevs/ui/core/Kbd/style.css.ts";
+import * as ProgressStyle from "@flamrdevs/ui/core/Progress/style.css.ts";
+import * as klass from "@flamrdevs/ui/core/_/klass.ts";
 
 import * as Icons from "@flamrdevs/ui/icons/shared.ts";
 

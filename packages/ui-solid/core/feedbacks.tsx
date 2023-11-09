@@ -1,8 +1,8 @@
 import { splitProps } from "solid-js";
 import type { JSX } from "solid-js";
 
-import * as LoaderKlass from "@flamrdevs/ui/core/Loader.klass.ts";
-import * as klass from "@flamrdevs/ui/core/_klass.ts";
+import * as LoaderKlass from "@flamrdevs/ui/core/Loader/klass.ts";
+import * as klass from "@flamrdevs/ui/core/_/klass.ts";
 
 import * as Classes from "../classes.ts";
 

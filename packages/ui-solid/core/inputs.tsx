@@ -2,9 +2,9 @@ import { Show, splitProps } from "solid-js";
 
 import { Checkbox as KobalteCheckbox, Switch as KobalteSwitch } from "@kobalte/core";
 
-import * as CheckboxStyle from "@flamrdevs/ui/core/Checkbox.style.css.ts";
-import * as SwitchStyle from "@flamrdevs/ui/core/Switch.style.css.ts";
-import * as klass from "@flamrdevs/ui/core/_klass.ts";
+import * as CheckboxStyle from "@flamrdevs/ui/core/Checkbox/style.css.ts";
+import * as SwitchStyle from "@flamrdevs/ui/core/Switch/style.css.ts";
+import * as klass from "@flamrdevs/ui/core/_/klass.ts";
 
 import * as Children from "../children.ts";
 import * as Classes from "../classes.ts";

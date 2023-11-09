@@ -1,9 +1,9 @@
 import { splitProps } from "solid-js";
 import { Dynamic } from "solid-js/web";
 
-import * as ContainerKlass from "@flamrdevs/ui/core/Container.klass.ts";
-import * as klass from "@flamrdevs/ui/core/_klass.ts";
-import * as Sprinkles from "@flamrdevs/ui/core/_sprinkles.css.ts";
+import * as ContainerKlass from "@flamrdevs/ui/core/Container/klass.ts";
+import * as klass from "@flamrdevs/ui/core/_/klass.ts";
+import * as Sprinkles from "@flamrdevs/ui/core/_/sprinkles.css.ts";
 
 import * as Classes from "../classes.ts";
 import * as Polymorphic from "../polymorphic.ts";
