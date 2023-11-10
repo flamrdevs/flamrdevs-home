@@ -3,29 +3,21 @@ import { style } from "@vanilla-extract/css";
 import { SCREEN } from "@flamrdevs/ui/core/_/sprinkles.css.ts";
 
 const flamrdevssvg = style({
-	width: "10rem",
-	height: "10rem",
+	width: "12rem",
+	height: "12rem",
 
 	"@media": {
-		[`(min-width: ${SCREEN.xs})`]: {
-			width: "17rem",
-			height: "17rem",
-		},
 		[`(min-width: ${SCREEN.sm})`]: {
-			width: "24rem",
-			height: "24rem",
+			width: "20rem",
+			height: "20rem",
 		},
 		[`(min-width: ${SCREEN.md})`]: {
-			width: "31rem",
-			height: "31rem",
+			width: "28rem",
+			height: "28rem",
 		},
 		[`(min-width: ${SCREEN.lg})`]: {
-			width: "38rem",
-			height: "38rem",
-		},
-		[`(min-width: ${SCREEN.xl})`]: {
-			width: "45rem",
-			height: "45rem",
+			width: "36rem",
+			height: "36rem",
 		},
 	},
 });

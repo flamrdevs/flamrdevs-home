@@ -1,20 +1,16 @@
 import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
 
 const SCREEN = {
-	xs: "640px",
-	sm: "768px",
-	md: "1024px",
-	lg: "1280px",
-	xl: "1536px",
+	sm: "512px",
+	md: "896px",
+	lg: "1536px",
 };
 
 const CONDITIONS = {
 	__: {},
-	xs: { "@media": `screen and (min-width: ${SCREEN.xs})` },
 	sm: { "@media": `screen and (min-width: ${SCREEN.sm})` },
 	md: { "@media": `screen and (min-width: ${SCREEN.md})` },
 	lg: { "@media": `screen and (min-width: ${SCREEN.lg})` },
-	xl: { "@media": `screen and (min-width: ${SCREEN.xl})` },
 } as const;
 
 const DEFAULTCONDITION = "__" satisfies keyof typeof CONDITIONS;

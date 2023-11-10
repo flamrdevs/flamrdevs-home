@@ -9,11 +9,9 @@ const Root = klass({
 	base: _styles.Root_base,
 	variants: {
 		max: {
-			xs: _styles.Root_variants_max_xs,
 			sm: _styles.Root_variants_max_sm,
 			md: _styles.Root_variants_max_md,
 			lg: _styles.Root_variants_max_lg,
-			xl: _styles.Root_variants_max_xl,
 		},
 	},
 });

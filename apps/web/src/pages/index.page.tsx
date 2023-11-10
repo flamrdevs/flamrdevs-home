@@ -21,9 +21,9 @@ const IndexPage = () => {
 				<AnimatedSVGLogo class={flamrdevssvg} />
 			</Center>
 
-			<Container max="sm">
+			<Container max="md" px="4">
 				<Separator orientation="horizontal" />
-				<Center gap="2" p="2">
+				<Center gap="2" p={{ __: "1", md: "2" }}>
 					<Text family="mono">flamrdevs</Text>
 
 					<div style="flex-grow: 1;"></div>
