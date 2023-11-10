@@ -6,7 +6,7 @@
 		"@flamrdevs/ui": "workspace:*",
 		"@flamrdevs/x": "workspace:*",
 		"@flamrdevs/x-astro": "workspace:*",
-		"astro": "^3.4.4"
+		"astro": "^3.5.0"
 	},
 	"devDependencies": {
 		"@flamrdevs/tsc": "workspace:*"
