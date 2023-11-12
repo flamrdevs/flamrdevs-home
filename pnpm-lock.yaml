@@ -17,14 +17,14 @@ importers:
         specifier: ^3.9.0
         version: 3.9.0(@types/node@20.9.0)(vite@4.5.0)
       astro:
-        specifier: ^3.5.0
-        version: 3.5.0(@types/node@20.9.0)(typescript@5.2.2)
+        specifier: ^3.5.3
+        version: 3.5.3(@types/node@20.9.0)(typescript@5.2.2)
       solid-js:
         specifier: ^1.8.4
         version: 1.8.5
       tsx:
-        specifier: ^4.1.0
-        version: 4.1.0
+        specifier: ^4.1.1
+        version: 4.1.1
       turbo:
         specifier: ^1.10.16
         version: 1.10.16
@@ -65,15 +65,15 @@ importers:
         specifier: workspace:*
         version: link:../../packages/x-solid
       astro:
-        specifier: ^3.5.0
-        version: 3.5.0(@types/node@20.9.0)(typescript@5.2.2)
+        specifier: ^3.5.3
+        version: 3.5.3(@types/node@20.9.0)(typescript@5.2.2)
       solid-js:
         specifier: ^1.8.4
         version: 1.8.5
     devDependencies:
       '@astrojs/mdx':
         specifier: ^1.1.4
-        version: 1.1.4(astro@3.5.0)
+        version: 1.1.4(astro@3.5.3)
       '@astrojs/sitemap':
         specifier: ^3.0.3
         version: 3.0.3
@@ -169,8 +169,8 @@ importers:
         specifier: workspace:*
         version: link:../x-astro
       astro:
-        specifier: ^3.5.0
-        version: 3.5.0(@types/node@20.9.0)(typescript@5.2.2)
+        specifier: ^3.5.3
+        version: 3.5.3(@types/node@20.9.0)(typescript@5.2.2)
     devDependencies:
       '@flamrdevs/tsc':
         specifier: workspace:*
@@ -232,7 +232,7 @@ importers:
         version: link:../tsc
       '@solidjs/testing-library':
         specifier: ^0.8.4
-        version: 0.8.4(@solidjs/router@0.9.0)(solid-js@1.8.5)
+        version: 0.8.4(@solidjs/router@0.9.1)(solid-js@1.8.5)
       '@testing-library/jest-dom':
         specifier: ^6.1.4
         version: 6.1.4(vitest@0.34.6)
@@ -296,8 +296,8 @@ importers:
         specifier: workspace:*
         version: link:../x
       astro:
-        specifier: ^3.5.0
-        version: 3.5.0(@types/node@20.9.0)(typescript@5.2.2)
+        specifier: ^3.5.3
+        version: 3.5.3(@types/node@20.9.0)(typescript@5.2.2)
     devDependencies:
       '@flamrdevs/tsc':
         specifier: workspace:*
@@ -312,8 +312,8 @@ importers:
         specifier: workspace:*
         version: link:../x
       '@solidjs/router':
-        specifier: ^0.9.0
-        version: 0.9.0(solid-js@1.8.5)
+        specifier: ^0.9.1
+        version: 0.9.1(solid-js@1.8.5)
       solid-js:
         specifier: ^1.8.4
         version: 1.8.5
@@ -345,13 +345,13 @@ packages:
   /@astrojs/internal-helpers@0.2.1:
     resolution: {integrity: sha512-06DD2ZnItMwUnH81LBLco3tWjcZ1lGU9rLCCBaeUCGYe9cI0wKyY2W3kDyoW1I6GmcWgt1fu+D1CTvz+FIKf8A==}
 
-  /@astrojs/markdown-remark@3.4.0(astro@3.5.0):
+  /@astrojs/markdown-remark@3.4.0(astro@3.5.3):
     resolution: {integrity: sha512-uzLSKBQ4e70aH8gEbBHZ2pnv/KOJKB3WrXFBOF0U5Uwjcr2LNWeIBLjPRQjA4tbtteELh84YPBHny21mhvBGVA==}
     peerDependencies:
       astro: ^3.0.0
     dependencies:
       '@astrojs/prism': 3.0.0
-      astro: 3.5.0(@types/node@20.9.0)(typescript@5.2.2)
+      astro: 3.5.3(@types/node@20.9.0)(typescript@5.2.2)
       github-slugger: 2.0.0
       import-meta-resolve: 3.1.1
       mdast-util-definitions: 6.0.0
@@ -368,16 +368,16 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/mdx@1.1.4(astro@3.5.0):
+  /@astrojs/mdx@1.1.4(astro@3.5.3):
     resolution: {integrity: sha512-yP5O3TuSx/vKTyrw4ZPuRH/sXIKj5zDN03AZQt4Rlv8W7mUCpQnYC3bTOrnhBvNxLRCmB1WL2cip9RUmvd4MQw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       astro: ^3.0.0
     dependencies:
-      '@astrojs/markdown-remark': 3.4.0(astro@3.5.0)
+      '@astrojs/markdown-remark': 3.4.0(astro@3.5.3)
       '@mdx-js/mdx': 2.3.0
       acorn: 8.11.2
-      astro: 3.5.0(@types/node@20.9.0)(typescript@5.2.2)
+      astro: 3.5.3(@types/node@20.9.0)(typescript@5.2.2)
       es-module-lexer: 1.4.0
       estree-util-visit: 1.2.1
       github-slugger: 2.0.0
@@ -1853,21 +1853,21 @@ packages:
       solid-js: 1.8.5
     dev: false
 
-  /@solidjs/router@0.9.0(solid-js@1.8.5):
-    resolution: {integrity: sha512-q1RxUhLa8lKdbhqEPkG+8RwBQKIH5f5AIWiOxVoUTK4UllgsR0C0FNT++ufnIAb9LNkx3ahE4WxAHZqH4l1vEQ==}
+  /@solidjs/router@0.9.1(solid-js@1.8.5):
+    resolution: {integrity: sha512-kRY75piOQsyoH75E/RP6lr7uVGFCjeeCCCJx7Z2D1Vc6+I1yFQjLCvE+6agXGwqDoWi6vbETP1g7gmp/L1mNLg==}
     peerDependencies:
-      solid-js: ^1.5.3
+      solid-js: ^1.8.4
     dependencies:
       solid-js: 1.8.5
 
-  /@solidjs/testing-library@0.8.4(@solidjs/router@0.9.0)(solid-js@1.8.5):
+  /@solidjs/testing-library@0.8.4(@solidjs/router@0.9.1)(solid-js@1.8.5):
     resolution: {integrity: sha512-HHCAlBd4P4TY03tXmoBwTO6FFM7w33LeT8Skab941eLO9l5RN7OxKEBw2fiMYvSFL2h2U7L4+W5N03iC8GbB6Q==}
     engines: {node: '>= 14'}
     peerDependencies:
       '@solidjs/router': '>=0.6.0'
       solid-js: '>=1.0.0'
     dependencies:
-      '@solidjs/router': 0.9.0(solid-js@1.8.5)
+      '@solidjs/router': 0.9.1(solid-js@1.8.5)
       '@testing-library/dom': 9.3.3
       solid-js: 1.8.5
     dev: true
@@ -2361,14 +2361,14 @@ packages:
       typescript-esbuild: 0.3.1
     dev: true
 
-  /astro@3.5.0(@types/node@20.9.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-Wwu9gXIlxqCUEY6Bj9e08TeBm7I/CupyzHrWTNSPL+iwrTo/3/pL+itCeYz2u84jRygBgd2oPEN0FbK/sjj+uQ==}
+  /astro@3.5.3(@types/node@20.9.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-08ya96yvQLdZjwYYpylzDTUGcyuA+Kw9zIT2RHfL7VzXtLTL1ZxhQjSo6CiTBH8Tcrdam88Fez+Q1awwKKajGw==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
       '@astrojs/compiler': 2.3.0
       '@astrojs/internal-helpers': 0.2.1
-      '@astrojs/markdown-remark': 3.4.0(astro@3.5.0)
+      '@astrojs/markdown-remark': 3.4.0(astro@3.5.3)
       '@astrojs/telemetry': 3.0.4
       '@babel/core': 7.23.3
       '@babel/generator': 7.23.3
@@ -2388,7 +2388,7 @@ packages:
       deterministic-object-hash: 1.3.1
       devalue: 4.3.2
       diff: 5.1.0
-      es-module-lexer: 1.4.0
+      es-module-lexer: 1.4.1
       esbuild: 0.19.5
       estree-walker: 3.0.3
       execa: 8.0.1
@@ -3107,6 +3107,10 @@ packages:
 
   /es-module-lexer@1.4.0:
     resolution: {integrity: sha512-lcCr3v3OLezdfFyx9r5NRYHOUTQNnFEQ9E87Mx8Kc+iqyJNkO7MJoB4GQRTlIMw9kLLTwGw0OAkm4BQQud/d9g==}
+    dev: true
+
+  /es-module-lexer@1.4.1:
+    resolution: {integrity: sha512-cXLGjP0c4T3flZJKQSuziYoq7MlT+rnvfZjfp7h+I7K9BNX54kP9nyWvdbwjQ4u1iWbOL4u96fgeZLToQlZC7w==}
 
   /esbuild-plugin-copy@2.1.1(esbuild@0.19.5):
     resolution: {integrity: sha512-Bk66jpevTcV8KMFzZI1P7MZKZ+uDcrZm2G2egZ2jNIvVnivDpodZI+/KnpL3Jnap0PBdIHU7HwFGB8r+vV5CVw==}
@@ -6046,8 +6050,8 @@ packages:
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
 
-  /tsx@4.1.0:
-    resolution: {integrity: sha512-u4l17Yd63Wsk2fzNn1wZCmcS9kwJ/2ysl7wuoVggv2hd3NjLA5JQPpyJMXoWSXOwOvoQUzNcu/sf/35HEsnXsg==}
+  /tsx@4.1.1:
+    resolution: {integrity: sha512-zyPn5BFMB0TB5kMLbYPNx4x/oL/oSlaecdKCv6WeJ0TeSEfx8RTJWjuB5TZ2dSewktgfBsBO/HNA9mrMWqLXMA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:

@@ -13,9 +13,9 @@
 		"@vanilla-extract/css": "^1.14.0",
 		"@vanilla-extract/sprinkles": "^1.6.1",
 		"@vanilla-extract/vite-plugin": "^3.9.0",
-		"astro": "^3.5.0",
+		"astro": "^3.5.3",
 		"solid-js": "^1.8.4",
-		"tsx": "^4.1.0",
+		"tsx": "^4.1.1",
 		"turbo": "^1.10.16",
 		"typescript": "^5.2.2",
 		"vite": "^4.5.0"
