@@ -1,7 +1,5 @@
 import { describe, expect, it } from "vitest";
 
-import {} from "@solidjs/testing-library";
-
 import { Span, renderRootElement } from "../../test.utils.tsx";
 
 import { Box, Block, Flex, Center, Grid, Container } from "../layouts.tsx";

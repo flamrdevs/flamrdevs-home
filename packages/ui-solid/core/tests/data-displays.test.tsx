@@ -1,10 +1,9 @@
 import { describe, expect, it } from "vitest";
 
-import {} from "@solidjs/testing-library";
-
 import { renderRootElement } from "../../test.utils.tsx";
 
-import { Badge, Icon, Image, Kbd, Progress } from "../data-displays.tsx";
+import { Badge, Image, Kbd, Progress } from "../data-displays.tsx";
+import { Icon } from "../../icons/index.tsx";
 
 describe("Badge", () => {
 	it("Basic", () => {

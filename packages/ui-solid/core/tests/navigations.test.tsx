@@ -1,7 +1,5 @@
 import { describe, expect, it } from "vitest";
 
-import {} from "@solidjs/testing-library";
-
 import { A, renderRootElement } from "../../test.utils.tsx";
 
 import { Link } from "../navigations.tsx";

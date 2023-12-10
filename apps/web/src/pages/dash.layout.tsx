@@ -1,15 +1,15 @@
-import { Outlet } from "@flamrdevs/x-solid/modules/router.ts";
+import type { ParentComponent } from "solid-js";
 
 import { Box, Flex, Separator, Text } from "~/components/core.ts";
 import { ButtonLink } from "~/components/router.ts";
 
 import * as DASHCSS from "~/styles/pages/dash.css";
 
-const DashLayout = () => {
+const DashLayout: ParentComponent = (props) => {
 	return (
 		<>
 			<Flex posi="abs" gap="4" class={DASHCSS.container}>
-				<Flex<"main"> as="nav" p="4" gap="4" class={DASHCSS.nav}>
+				<Flex<"nav"> as="nav" p="4" gap="4" class={DASHCSS.nav}>
 					<Text family="mono" size="4" weight="5">
 						Dashboard
 					</Text>
@@ -27,7 +27,7 @@ const DashLayout = () => {
 				</Flex>
 
 				<Box<"main"> as="main" p="4" class={DASHCSS.main}>
-					<Outlet />
+					{props.children}
 				</Box>
 			</Flex>
 		</>

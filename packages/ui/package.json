@@ -1,15 +1,11 @@
 {
 	"name": "@flamrdevs/ui",
 	"private": true,
-	"scripts": {
-		"setup-icons": "tsx icons/setup.ts"
-	},
 	"dependencies": {
 		"@flamrdevs/const": "workspace:*",
 		"@flamrdevs/utils": "workspace:*",
 		"@flamrdevs/x": "workspace:*",
-		"@klass/core": "^3.4.8",
-		"lucide": "^0.292.0"
+		"@klass/core": "^3.4.8"
 	},
 	"devDependencies": {
 		"@flamrdevs/tsc": "workspace:*",

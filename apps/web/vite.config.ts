@@ -10,8 +10,8 @@ import solid from "vite-plugin-solid";
 import { meta, stats } from "./vite.plugins";
 
 export default defineConfig(({ command }) => {
-	const PROD = command === "build";
-	const DEV = !PROD;
+	const PROD = command === "build",
+		DEV = !PROD;
 
 	return {
 		plugins: [

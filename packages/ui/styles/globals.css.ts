@@ -52,7 +52,7 @@ globalStyle("a", {
 	textDecorationLine: "none",
 });
 
-globalStyle(".lucide", {
+globalStyle("svg[lucide]", {
 	fill: "none",
 	strokeWidth: 1.5,
 	strokeLinecap: "round",

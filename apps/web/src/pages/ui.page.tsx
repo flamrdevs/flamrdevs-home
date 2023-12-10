@@ -2,7 +2,8 @@ import { Show } from "solid-js";
 
 import { useStore } from "@flamrdevs/x-solid/libs/store.ts";
 
-import { Box, Container, Flex, Icon, IconButton, Separator } from "~/components/core.ts";
+import { Box, Container, Flex, IconButton, Separator } from "~/components/core.ts";
+import { Icon } from "~/components/icons/index.tsx";
 
 import { ThemeStore, toggleTheme } from "~/stores/theme.ts";
 

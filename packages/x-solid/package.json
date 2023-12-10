@@ -4,8 +4,8 @@
 	"dependencies": {
 		"@flamrdevs/const": "workspace:*",
 		"@flamrdevs/x": "workspace:*",
-		"@solidjs/router": "^0.9.1",
-		"solid-js": "^1.8.4"
+		"@solidjs/router": "^0.10.1",
+		"solid-js": "^1.8.7"
 	},
 	"devDependencies": {
 		"@flamrdevs/tsc": "workspace:*"

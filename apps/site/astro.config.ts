@@ -26,8 +26,8 @@ export default {
 			name: "vanilla-extract",
 			hooks: {
 				"astro:config:setup": ({ command, updateConfig }) => {
-					const PROD = command === "build";
-					const DEV = !PROD;
+					const PROD = command === "build",
+						DEV = !PROD;
 
 					updateConfig({
 						vite: {

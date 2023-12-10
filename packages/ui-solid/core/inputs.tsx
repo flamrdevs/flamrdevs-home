@@ -9,7 +9,7 @@ import * as klass from "@flamrdevs/ui/core/_/klass.ts";
 import * as Children from "../children.ts";
 import * as Classes from "../classes.ts";
 
-import { Icon } from "./data-displays.tsx";
+import { Icon } from "../icons/index.tsx";
 
 type CheckboxProps = Children.WithoutProps<
 	KobalteCheckbox.CheckboxRootProps & {

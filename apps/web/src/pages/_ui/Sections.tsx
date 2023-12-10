@@ -1,5 +1,6 @@
 import { For, Show, createSignal, onMount } from "solid-js";
-import { Badge, Box, Button, Checkbox, Flex, Icon, IconButton, Image, Kbd, Link, Loader, Progress, Separator, Switch, Text } from "~/components/core.ts";
+import { Badge, Box, Button, Checkbox, Flex, IconButton, Image, Kbd, Link, Loader, Progress, Separator, Switch, Text } from "~/components/core.ts";
+import { Icon } from "~/components/icons/index.tsx";
 
 import * as Section from "./Section.tsx";
 
