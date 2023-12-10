@@ -18,10 +18,6 @@ const IndexPage = () => {
 
 	return (
 		<>
-			<Center>
-				<AnimatedSVGLogo class={flamrdevssvg} />
-			</Center>
-
 			<Container max="md" px="4">
 				<Separator orientation="horizontal" />
 				<Center gap="2" p={{ __: "1", md: "2" }}>
@@ -31,7 +27,7 @@ const IndexPage = () => {
 
 					<Separator orientation="vertical" style="height: 1.5rem" />
 
-					<IconButton onClick={toggleTheme}>
+					<IconButton onClick={toggleTheme} aria-label="Toggle theme">
 						<Show when={theme() === "dark"} fallback={<Icon i="Moon" />}>
 							<Icon i="Sun" />
 						</Show>
@@ -39,12 +35,16 @@ const IndexPage = () => {
 
 					<Separator orientation="vertical" style="height: 1.5rem" />
 
-					<IconButtonLink href={LINK.GITHUB} target="_blank">
+					<IconButtonLink href={LINK.GITHUB} target="_blank" aria-label="GitHub">
 						<Icon i="Github" />
 					</IconButtonLink>
 				</Center>
 				<Separator orientation="horizontal" />
 			</Container>
+
+			<Center>
+				<AnimatedSVGLogo class={flamrdevssvg} />
+			</Center>
 		</>
 	);
 };

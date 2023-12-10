@@ -13,7 +13,7 @@ const ToggleThemeIconButton = () => {
 	const theme = useStore(ThemeStore);
 
 	return (
-		<IconButton onClick={toggleTheme}>
+		<IconButton onClick={toggleTheme} aria-label="Toggle theme">
 			<Show when={theme() === "dark"} fallback={<Icon i="Moon" />}>
 				<Icon i="Sun" />
 			</Show>

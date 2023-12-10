@@ -41,7 +41,7 @@ const Color2Select = (props: { color: Color2; setColor: (value: Color2) => void 
 	<Flex gap="1">
 		<For each={COLOR_2}>
 			{(color) => (
-				<IconButton color={color} size="sm" onClick={() => props.setColor(color)}>
+				<IconButton color={color} size="sm" onClick={() => props.setColor(color)} aria-label={`Color ${color}`}>
 					<Show when={props.color === color}>
 						<Icon i="Check" style={{ width: "80%", height: "80%" }} />
 					</Show>
@@ -54,7 +54,7 @@ const Color6Select = (props: { color: Color6; setColor: (value: Color6) => void 
 	<Flex gap="1">
 		<For each={COLOR_6}>
 			{(color) => (
-				<IconButton color={color} size="sm" onClick={() => props.setColor(color)}>
+				<IconButton color={color} size="sm" onClick={() => props.setColor(color)} aria-label={`Color ${color}`}>
 					<Show when={props.color === color}>
 						<Icon i="Check" style={{ width: "80%", height: "80%" }} />
 					</Show>
@@ -159,7 +159,7 @@ const SectionIconButton = () => {
 			<Section.Block
 				left={
 					<Box>
-						<IconButton color={color()} disabled={disabled()}>
+						<IconButton color={color()} disabled={disabled()} aria-label="GitHub">
 							<Icon i="Github" />
 						</IconButton>
 					</Box>
