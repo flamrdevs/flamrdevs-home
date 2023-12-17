@@ -9,8 +9,10 @@ import compress from "astro-compress";
 
 import { stats } from "./astro.integrations";
 
+import { SITE_PROD } from "@flamrdevs/const/host.ts";
+
 export default {
-	site: "https://flamrdevs.vercel.app",
+	site: SITE_PROD,
 	integrations: [
 		mdx(),
 		solid(),

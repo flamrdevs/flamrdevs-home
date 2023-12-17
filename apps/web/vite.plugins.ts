@@ -3,6 +3,8 @@ import path from "path";
 
 import type { PluginOption } from "vite";
 
+import { STATIC_DEV, STATIC_PROD, WEB_DEV, WEB_PROD } from "../../packages/const/host.ts";
+
 const meta = () => {
 	let PROD: boolean | undefined;
 
@@ -13,8 +15,8 @@ const meta = () => {
 		},
 		transformIndexHtml: (html) => {
 			const HOST = {
-				STATIC: (...paths: string[]) => [PROD ? "https://flamrdevs.pages.dev" : "http://localhost:4000", ...paths].join("/"),
-				WEB: (...paths: string[]) => [PROD ? "https://flamrdevs.netlify.app" : "http://localhost:5000", ...paths].join("/"),
+				STATIC: (...paths: string[]) => [PROD ? STATIC_PROD : STATIC_DEV, ...paths].join("/"),
+				WEB: (...paths: string[]) => [PROD ? WEB_PROD : WEB_DEV, ...paths].join("/"),
 			};
 
 			return html
