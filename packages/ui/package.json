@@ -5,7 +5,7 @@
 		"@flamrdevs/const": "workspace:*",
 		"@flamrdevs/utils": "workspace:*",
 		"@flamrdevs/x": "workspace:*",
-		"@klass/core": "^3.4.8"
+		"@klass/core": "^3.4.10"
 	},
 	"devDependencies": {
 		"@flamrdevs/tsc": "workspace:*",

@@ -9,7 +9,7 @@
 		"setup-icons": "tsx src/components/icons/setup.ts"
 	},
 	"dependencies": {
-		"@aptabase/web": "^0.3.2",
+		"@aptabase/web": "^0.4.0",
 		"@flamrdevs/const": "workspace:*",
 		"@flamrdevs/ui": "workspace:*",
 		"@flamrdevs/ui-astro": "workspace:*",
@@ -18,15 +18,15 @@
 		"@flamrdevs/x": "workspace:*",
 		"@flamrdevs/x-astro": "workspace:*",
 		"@flamrdevs/x-solid": "workspace:*",
-		"astro": "^4.0.3",
+		"astro": "^4.0.6",
 		"solid-js": "^1.8.7"
 	},
 	"devDependencies": {
-		"@astrojs/mdx": "^2.0.0",
+		"@astrojs/mdx": "^2.0.1",
 		"@astrojs/sitemap": "^3.0.3",
 		"@astrojs/solid-js": "^3.0.2",
 		"@flamrdevs/tsc": "workspace:*",
-		"astro-compress": "^2.2.3",
-		"lucide": "^0.294.0"
+		"astro-compress": "^2.2.5",
+		"lucide": "^0.298.0"
 	}
 }
