@@ -5,7 +5,7 @@ import { LINK } from "@flamrdevs/const/exports.ts";
 import { useStore } from "@flamrdevs/x-solid/libs/store.ts";
 
 import { Center, Container, IconButton, Separator, Text } from "~/components/core.ts";
-import { Icon } from "~/components/icons/index.tsx";
+import { Lucide } from "~/components/icons/index.ts";
 import { AnimatedSVGLogo } from "~/components/flamrdevs.ts";
 import { IconButtonLink } from "~/components/router.ts";
 
@@ -28,15 +28,15 @@ const IndexPage = () => {
 					<Separator orientation="vertical" style="height: 1.5rem" />
 
 					<IconButton onClick={toggleTheme} aria-label="Toggle theme">
-						<Show when={theme() === "dark"} fallback={<Icon i="Moon" />}>
-							<Icon i="Sun" />
+						<Show when={theme() === "dark"} fallback={<Lucide.Icon i="Moon" />}>
+							<Lucide.Icon i="Sun" />
 						</Show>
 					</IconButton>
 
 					<Separator orientation="vertical" style="height: 1.5rem" />
 
 					<IconButtonLink href={LINK.GITHUB} target="_blank" aria-label="GitHub">
-						<Icon i="Github" />
+						<Lucide.Icon i="Github" />
 					</IconButtonLink>
 				</Center>
 				<Separator orientation="horizontal" />

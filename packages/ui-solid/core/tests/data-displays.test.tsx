@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { renderRootElement } from "../../test.utils.tsx";
 
 import { Badge, Image, Kbd, Progress } from "../data-displays.tsx";
-import { Icon } from "../../icons/index.tsx";
+import { Lucide } from "../../icons/index.ts";
 
 describe("Badge", () => {
 	it("Basic", () => {
@@ -14,7 +14,7 @@ describe("Badge", () => {
 
 describe("Icon", () => {
 	it("Basic", () => {
-		const [element] = renderRootElement((props) => <Icon {...props} i="Github" />);
+		const [element] = renderRootElement((props) => <Lucide.Icon {...props} i="Github" />);
 		expect(element.tagName).toEqual("svg");
 	});
 });

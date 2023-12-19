@@ -3,7 +3,7 @@ import { Show } from "solid-js";
 import { useStore } from "@flamrdevs/x-solid/libs/store.ts";
 
 import { Box, Container, Flex, IconButton, Separator } from "~/components/core.ts";
-import { Icon } from "~/components/icons/index.tsx";
+import { Lucide } from "~/components/icons/index.ts";
 
 import { ThemeStore, toggleTheme } from "~/stores/theme.ts";
 
@@ -14,8 +14,8 @@ const ToggleThemeIconButton = () => {
 
 	return (
 		<IconButton onClick={toggleTheme} aria-label="Toggle theme">
-			<Show when={theme() === "dark"} fallback={<Icon i="Moon" />}>
-				<Icon i="Sun" />
+			<Show when={theme() === "dark"} fallback={<Lucide.Icon i="Moon" />}>
+				<Lucide.Icon i="Sun" />
 			</Show>
 		</IconButton>
 	);

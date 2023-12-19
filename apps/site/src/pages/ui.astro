@@ -1,7 +1,7 @@
 ---
 import { HTMLX } from "~/components/index.ts";
 import { Box, Container, Flex, IconButton, Separator } from "~/components/core.ts";
-import { Icon } from "~/components/icons/index.tsx";
+import { Lucide } from "~/components/icons/index.ts";
 
 import Sections from "./_ui/Sections.tsx";
 ---
@@ -12,11 +12,11 @@ import Sections from "./_ui/Sections.tsx";
 			<Box style={{ "flex-grow": "1" }} />
 			<Separator orientation="vertical" style="height: 1.5rem" />
 			<IconButton id="light-theme-icon-button" aria-label="Light theme">
-				<Icon i="Sun" />
+				<Lucide.Icon i="Sun" />
 			</IconButton>
 			<Separator orientation="vertical" style="height: 1.5rem" />
 			<IconButton id="dark-theme-icon-button" aria-label="Dark theme">
-				<Icon i="Moon" />
+				<Lucide.Icon i="Moon" />
 			</IconButton>
 		</Flex>
 	</Container>
