@@ -26,7 +26,6 @@
 		"@astrojs/sitemap": "^3.0.3",
 		"@astrojs/solid-js": "^3.0.2",
 		"@flamrdevs/tsc": "workspace:*",
-		"astro-compress": "^2.2.5",
 		"lucide": "^0.298.0"
 	}
 }
