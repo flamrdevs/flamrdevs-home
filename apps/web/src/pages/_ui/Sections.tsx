@@ -2,7 +2,7 @@ import { For, Show, createSignal, onMount } from "solid-js";
 
 import * as HOST from "@flamrdevs/utils/host.ts";
 
-import { Badge, Box, Button, Checkbox, Flex, IconButton, Image, Kbd, Link, Loader, Progress, Separator, Switch, Text } from "~/components/core.ts";
+import { Badge, Box, Button, Checkbox, Flex, IconButton, Image, Kbd, Link, Progress, Separator, Spinner, Switch, Text } from "~/components/core.ts";
 import { Lucide } from "~/components/icons/index.ts";
 
 import * as Section from "./Section.tsx";
@@ -237,15 +237,15 @@ const SectionLink = () => {
 	);
 };
 
-const SectionLoader = () => {
-	const [color, setColor] = createColor6("loader");
+const SectionProgress = () => {
+	const [color, setColor] = createColor6("progress");
 
 	return (
-		<Section.Root title="Loader">
+		<Section.Root title="Progress">
 			<Section.Block
 				left={
 					<Box>
-						<Loader color={color()} />
+						<Progress label="Label" color={color()} value={50} />
 					</Box>
 				}
 				right={
@@ -258,15 +258,15 @@ const SectionLoader = () => {
 	);
 };
 
-const SectionProgress = () => {
-	const [color, setColor] = createColor6("progress");
+const SectionSpinner = () => {
+	const [color, setColor] = createColor6("spinner");
 
 	return (
-		<Section.Root title="Progress">
+		<Section.Root title="Spinner">
 			<Section.Block
 				left={
 					<Box>
-						<Progress label="Label" color={color()} value={50} />
+						<Spinner color={color()} />
 					</Box>
 				}
 				right={
@@ -336,9 +336,9 @@ export default () => {
 			<Divider />
 			<SectionLink />
 			<Divider />
-			<SectionLoader />
-			<Divider />
 			<SectionProgress />
+			<Divider />
+			<SectionSpinner />
 			<Divider />
 			<SectionSwitch />
 			<Divider />

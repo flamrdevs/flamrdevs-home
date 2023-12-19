@@ -1,4 +1,4 @@
-import { mergeProps, splitProps } from "solid-js";
+import { splitProps } from "solid-js";
 import type { JSX } from "solid-js";
 
 import { Image as KobalteImage, Progress as KobalteProgress } from "@kobalte/core";
@@ -7,6 +7,7 @@ import * as BadgeKlass from "@flamrdevs/ui/core/Badge/klass.ts";
 import * as ImageStyle from "@flamrdevs/ui/core/Image/style.css.ts";
 import * as KbdStyle from "@flamrdevs/ui/core/Kbd/style.css.ts";
 import * as ProgressStyle from "@flamrdevs/ui/core/Progress/style.css.ts";
+import * as SpinnerKlass from "@flamrdevs/ui/core/Spinner/klass.ts";
 import * as klass from "@flamrdevs/ui/core/_/klass.ts";
 
 import * as Children from "../children.ts";
@@ -67,5 +68,19 @@ const Progress = (props: ProgressProps) => {
 	);
 };
 
-export type { BadgeProps, ImageProps, KbdProps, ProgressProps };
-export { Badge, Image, Kbd, Progress };
+type SpinnerProps = Classes.WithProps<JSX.IntrinsicElements["svg"] & SpinnerKlass.Variants & klass.Color6Variants>;
+
+const Spinner = (props: SpinnerProps) => {
+	const [classes, root, color, rest] = splitProps(props, Classes.Keys, SpinnerKlass.Root.vk, klass.Color6.vk);
+
+	return (
+		<svg {...rest} class={Classes.x([SpinnerKlass.Root(root), klass.Color6(color)], classes)} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			<g class={SpinnerKlass.GStyle}>
+				<circle class={SpinnerKlass.CircleStyle} cx="12" cy="12" r="9.5" fill="none" stroke-width="2" />
+			</g>
+		</svg>
+	);
+};
+
+export type { BadgeProps, ImageProps, KbdProps, ProgressProps, SpinnerProps };
+export { Badge, Image, Kbd, Progress, Spinner };

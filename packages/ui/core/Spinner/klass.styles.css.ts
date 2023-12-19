@@ -9,7 +9,7 @@ export const Root_variants_size_sm = style({ ...tokens.w_8, ...tokens.h_8 });
 export const Root_variants_size_md = style({ ...tokens.w_10, ...tokens.h_10 });
 export const Root_variants_size_lg = style({ ...tokens.w_12, ...tokens.h_12 });
 
-const LoaderSpinO = keyframes({
+const Spinner0 = keyframes({
 	"100%": {
 		transform: "rotate(360deg)",
 	},
@@ -17,10 +17,10 @@ const LoaderSpinO = keyframes({
 
 export const G = style({
 	transformOrigin: "center",
-	animation: `${LoaderSpinO} 2s linear infinite`,
+	animation: `${Spinner0} 2s linear infinite`,
 });
 
-const LoaderSpinI = keyframes({
+const Spinner1 = keyframes({
 	"0%": {
 		strokeDasharray: "0 150",
 		strokeDashoffset: "0",
@@ -37,5 +37,5 @@ const LoaderSpinI = keyframes({
 
 export const Circle = style({
 	strokeLinecap: "round",
-	animation: `${LoaderSpinI} 1.5s ease-in-out infinite`,
+	animation: `${Spinner1} 1.5s ease-in-out infinite`,
 });

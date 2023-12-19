@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import { renderRootElement } from "../../test.utils.tsx";
 
-import { Badge, Image, Kbd, Progress } from "../data-displays.tsx";
+import { Badge, Image, Kbd, Progress, Spinner } from "../data-displays.tsx";
 import { Lucide } from "../../icons/index.ts";
 
 describe("Badge", () => {
@@ -37,5 +37,12 @@ describe("Progress", () => {
 	it("Basic", () => {
 		const [element] = renderRootElement((props) => <Progress {...props} label="Label" />);
 		expect(element.tagName).toEqual("DIV");
+	});
+});
+
+describe("Spinner", () => {
+	it("Basic", () => {
+		const [element] = renderRootElement((props) => <Spinner {...props} />);
+		expect(element.tagName).toEqual("svg");
 	});
 });
