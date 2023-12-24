@@ -68,8 +68,12 @@
     <img alt="solid" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=solid" hspace="1">
   </picture>
   <picture title="node.js">
-    <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/simple?t=dark&i=node.js">
-    <img alt="node.js" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=node.js" hspace="1">
+    <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/simple?t=dark&i=nodedotjs">
+    <img alt="node.js" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=nodedotjs" hspace="1">
+  </picture>
+  <picture title="vitest">
+    <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/simple?t=dark&i=vitest">
+    <img alt="vitest" src="https://flamrdevs.cyclic.app/core/icon-button/simple?t=light&i=vitest" hspace="1">
   </picture>
   <picture title="turborepo">
     <source media="(prefers-color-scheme: dark)" srcset="https://flamrdevs.cyclic.app/core/icon-button/simple?t=dark&i=turborepo">
