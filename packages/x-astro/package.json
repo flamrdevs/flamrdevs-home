@@ -4,7 +4,7 @@
 	"dependencies": {
 		"@flamrdevs/const": "workspace:*",
 		"@flamrdevs/x": "workspace:*",
-		"astro": "^4.0.6"
+		"astro": "^4.0.7"
 	},
 	"devDependencies": {
 		"@flamrdevs/tsc": "workspace:*"
